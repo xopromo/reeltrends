@@ -292,6 +292,44 @@ async def worker():
     save_output(all_items)
 
 
+def get_ttl_days(item: dict) -> float:
+    xf    = item.get("x_factor") or 0
+    views = item.get("views") or 0
+    vel   = item.get("velocity") or 0
+    rep   = item.get("repost_rate") or 0
+    if xf > 10 and views > 500000: return float("inf")
+    if vel > 100 and views > 100000: return float("inf")
+    if rep > 0.01 and views > 50000: return float("inf")  # вирусный репост
+    if xf > 5  and views > 100000: return 365
+    if xf > 2  and views > 10000:  return 90
+    return 30
+
+
+def prune_old(items: list) -> list:
+    now = datetime.now(timezone.utc)
+    kept, removed = [], 0
+    for item in items:
+        ttl = get_ttl_days(item)
+        if ttl == float("inf"):
+            kept.append(item)
+            continue
+        pub_str = item.get("published_at") or item.get("trending_since")
+        if not pub_str:
+            kept.append(item)
+            continue
+        try:
+            pub = datetime.fromisoformat(pub_str.replace("Z", "+00:00"))
+            if (now - pub).total_seconds() / 86400 < ttl:
+                kept.append(item)
+            else:
+                removed += 1
+        except Exception:
+            kept.append(item)
+    if removed:
+        print(f"  Pruned {removed} old items (kept {len(kept)})")
+    return kept
+
+
 def save_output(items: list):
     # Мерж с существующими
     existing = {}
@@ -302,8 +340,10 @@ def save_output(items: list):
         except Exception:
             pass
     fresh = {i["id"]: i for i in items}
+    all_items = list({**existing, **fresh}.values())
+    all_items = prune_old(all_items)
     merged = sorted(
-        {**existing, **fresh}.values(),
+        all_items,
         key=lambda x: x.get("hot_score") or 0,
         reverse=True
     )
