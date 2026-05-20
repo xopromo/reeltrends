@@ -498,8 +498,9 @@ function card(item, rank) {
   else if (today) badge = `<span class="tag tag-today"><svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>сегодня</span>`;
   else if (viral) badge = `<span class="tag tag-viral">вирус</span>`;
 
-  const thumb = item.thumbnail_url
-    ? `<img src="${item.thumbnail_url}" loading="lazy" alt="" onerror="this.outerHTML='<div class=thumb-empty>нет фото</div>'">`
+  const thumbSrc = item.id ? `thumbnails/${item.id}.jpg` : null;
+  const thumb = thumbSrc
+    ? `<img src="${thumbSrc}" loading="lazy" alt="" onerror="this.src='${item.thumbnail_url||''}';this.onerror=null">`
     : `<div class="thumb-empty">нет фото</div>`;
 
   const data = encodeURIComponent(JSON.stringify(item));
@@ -555,7 +556,7 @@ function render() {
 function openModal(encoded) {
   const item = JSON.parse(decodeURIComponent(encoded));
   document.getElementById('ma').textContent = '@'+(item.author?.username||'—');
-  document.getElementById('mt').src = item.thumbnail_url||'';
+  const ms = item.id ? `thumbnails/${item.id}.jpg` : (item.thumbnail_url||''); document.getElementById('mt').src = ms;
   document.getElementById('mv').textContent = fmt(item.views);
   document.getElementById('mx').textContent = item.x_factor!=null ? item.x_factor.toFixed(1)+'x' : '—';
   document.getElementById('mvel').textContent = item.velocity ? '+'+fmt(Math.round(item.velocity))+'/ч' : '—';
