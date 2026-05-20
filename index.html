@@ -369,6 +369,20 @@
 </div>
 
 <script>
+// VK константы — объявляем первыми
+var VK_APP_ID = '54602385';
+var VK_API = 'https://api.vk.com/method';
+var VK_V = '5.199';
+var VK_QUERIES = [
+  'фитнес','недвижимость','юрист','психология','бизнес',
+  'финансы','маркетинг','саморазвитие','авто','кулинария',
+  'юмор','путешествия','здоровье','мотивация','лайфхак',
+  'fitness','motivation','funny','business','cooking',
+];
+var GH_REPO = 'xopromo/reeltrends';
+var GH_FILE = 'vk_groups.json';
+var GH_TOKEN = '';
+
 const REPO = 'xopromo/reeltrends';
 const IG_URL = 'https://raw.githubusercontent.com/'+REPO+'/main/trends.json';
 const YT_URL = 'https://raw.githubusercontent.com/'+REPO+'/main/youtube.json';
@@ -426,8 +440,8 @@ function loadFilters() {
     // Восстанавливаем активные кнопки
     document.querySelectorAll('#sg .fb').forEach(b => b.classList.toggle('on', b.dataset.v === state.sort));
     document.querySelectorAll('#pg .fb').forEach(b => {
-      b.classList.remove('on','on-orange');
-      if (b.dataset.v === state.platform) b.classList.add(state.platform==='youtube'?'on-orange':'on');
+      b.classList.remove('on','on-orange','on-cyan');
+      if (b.dataset.v === state.platform) b.classList.add(state.platform==='youtube'?'on-orange':state.platform==='vk'?'on-cyan':'on');
     });
     document.querySelectorAll('#dg .fb').forEach(b => {
       b.classList.remove('on','on-cyan');
@@ -536,7 +550,7 @@ function resetAllFilters() {
 
   // Восстанавливаем кнопки
   document.querySelectorAll('#sg .fb').forEach(b => b.classList.toggle('on', b.dataset.v === 'hot_score'));
-  document.querySelectorAll('#pg .fb').forEach(b => { b.classList.remove('on','on-orange'); if (b.dataset.v === '') b.classList.add('on'); });
+  document.querySelectorAll('#pg .fb').forEach(b => { b.classList.remove('on','on-orange','on-cyan'); if (b.dataset.v === '') b.classList.add('on'); });
   document.querySelectorAll('#dg .fb').forEach(b => { b.classList.remove('on','on-cyan'); if (b.dataset.v === '') b.classList.add('on'); });
   document.getElementById('qi').value = '';
 
@@ -937,7 +951,7 @@ document.getElementById('pg').addEventListener('click', async e=>{
   // Сбрасываем поиск если был активен
   if (ytSearchActive) clearYtSearch();
   rebuildALL(val);
-  document.querySelectorAll('#pg .fb').forEach(b=>b.classList.remove('on','on-orange'));
+  document.querySelectorAll('#pg .fb').forEach(b=>b.classList.remove('on','on-orange','on-cyan'));
   btn.classList.add(val==='youtube'?'on-orange':val==='vk'?'on-cyan':'on');
   state.platform=val; state.page=1;
   saveFilters();applyFilters();updateResetBtn();
@@ -1429,19 +1443,7 @@ function renderYtResult(v) {
 
 
 // ── VK Scout ──────────────────────────────────────────────────────
-var VK_APP_ID = '54602385';
-const GH_REPO = 'xopromo/reeltrends';
-const GH_FILE = 'vk_groups.json';
-// GH_TOKEN загружается из config.js (не хранится в репо)
-let GH_TOKEN = '';
-var VK_API = 'https://api.vk.com/method';
-var VK_V = '5.199';
-var VK_QUERIES = [
-  'фитнес','недвижимость','юрист','психология','бизнес',
-  'финансы','маркетинг','саморазвитие','авто','кулинария',
-  'юмор','путешествия','здоровье','мотивация','лайфхак',
-  'fitness','motivation','funny','business','cooking',
-];
+
 
 function loadVkTokenUI() {
   const token = localStorage.getItem(VK_TOKEN_KEY);
