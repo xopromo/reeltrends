@@ -21,7 +21,7 @@ API_KEY = os.environ.get("YOUTUBE_API_KEY", "")
 BASE = "https://www.googleapis.com/youtube/v3"
 OUTPUT_FILE = "youtube.json"
 CHANNELS_FILE = "yt_channels.json"
-MAX_CHANNELS = int(os.environ.get("YT_MAX_CHANNELS", "1000"))  # регулируется через GitHub Secret
+MAX_CHANNELS = int(os.environ.get("YT_MAX_CHANNELS") or "1000")  # регулируется через GitHub Secret
 NIGHT_RUN = os.environ.get("YT_NIGHT_RUN", "false").lower() == "true"  # ночной дообор
 
 SEARCH_QUERIES = [
