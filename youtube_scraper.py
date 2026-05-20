@@ -22,6 +22,7 @@ BASE = "https://www.googleapis.com/youtube/v3"
 OUTPUT_FILE = "youtube.json"
 CHANNELS_FILE = "yt_channels.json"
 MAX_CHANNELS = int(os.environ.get("YT_MAX_CHANNELS", "1000"))  # регулируется через GitHub Secret
+NIGHT_RUN = os.environ.get("YT_NIGHT_RUN", "false").lower() == "true"  # ночной дообор
 
 SEARCH_QUERIES = [
     {"q": "фитнес shorts", "lang": "ru", "region": "RU"},
@@ -301,8 +302,15 @@ async def scrape_youtube() -> list:
         run_count = sum(1 for ch in channels.values() if ch.get("last_seen"))
         print(f"✓ Loaded {len(channels)} channels (run #{run_count})")
 
-        # 2. Каждые 7 запусков — ищем новые каналы по запросам
-        if run_count % 7 == 0 or len(channels) < 50:
+        # 2. Поиск новых каналов
+        # Ночной режим — полный переобход всех запросов
+        # Обычный режим — каждые 7 запусков
+        if NIGHT_RUN:
+            print("🌙 Ночной дообор — расширенный поиск каналов...")
+            added = await discover_new_channels(client, channels, SEARCH_QUERIES)
+            channels = prune_channels(channels)
+            save_channels(channels)
+        elif run_count % 7 == 0 or len(channels) < 50:
             print("🔍 Discovering new channels from search queries...")
             added = await discover_new_channels(client, channels, SEARCH_QUERIES)
             channels = prune_channels(channels)
@@ -315,14 +323,24 @@ async def scrape_youtube() -> list:
         chan_stats = await get_channel_stats(client, channel_ids)
 
         # 4. Свежие видео с каналов
-        print(f"📥 Fetching recent videos...")
+        # Ночной режим — берём больше видео с каждого канала
+        videos_per_channel = 10 if NIGHT_RUN else 5
+        cutoff_days = 14 if NIGHT_RUN else 7
+        print(f"📥 Fetching recent videos ({'ночной режим: ' + str(videos_per_channel) + ' видео/канал' if NIGHT_RUN else 'обычный режим'})...")
         all_video_ids = []
         video_to_channel = {}
 
+        cutoff = datetime.now(timezone.utc) - timedelta(days=cutoff_days)
         for cid in channel_ids:
             playlist_id = chan_stats.get(cid, {}).get("uploads_playlist", "")
-            recent = await get_recent_videos(client, playlist_id)
+            recent = await get_recent_videos(client, playlist_id, max_results=videos_per_channel)
             for v in recent:
+                try:
+                    pub = datetime.fromisoformat(v["published_at"].replace("Z", "+00:00"))
+                    if pub < cutoff:
+                        continue
+                except Exception:
+                    continue
                 all_video_ids.append(v["video_id"])
                 video_to_channel[v["video_id"]] = cid
             await asyncio.sleep(0.1)
