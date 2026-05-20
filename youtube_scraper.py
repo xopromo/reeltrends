@@ -1,9 +1,12 @@
 """
-YouTube Shorts scraper.
-1. Ищет каналы по ключевым словам (русские + глобальные)
-2. Мониторит их новые Shorts
-3. Считает x_factor и velocity
-4. Сохраняет в youtube.json
+YouTube Shorts scraper с умным управлением базой каналов.
+
+Логика роста базы:
+1. Каждый запуск — мониторим существующие каналы
+2. Вирусные видео (x_factor > 5) → ищем похожие каналы
+3. Каждые 7 запусков — добавляем новые каналы по поисковым запросам
+4. Каналы с хорошей историей (score > 0) никогда не удаляются
+5. Слабые каналы (score < -3) вытесняются новыми
 """
 
 import asyncio
@@ -11,61 +14,61 @@ import httpx
 import json
 import os
 import re
+import statistics
 from datetime import datetime, timezone, timedelta
 
 API_KEY = os.environ.get("YOUTUBE_API_KEY", "")
 BASE = "https://www.googleapis.com/youtube/v3"
 OUTPUT_FILE = "youtube.json"
+CHANNELS_FILE = "yt_channels.json"
+MAX_CHANNELS = int(os.environ.get("YT_MAX_CHANNELS", "1000"))  # регулируется через GitHub Secret
 
-# ─── Стартовые поисковые запросы ──────────────────────────────────
 SEARCH_QUERIES = [
-    # Русскоязычные ниши
     {"q": "фитнес shorts", "lang": "ru", "region": "RU"},
     {"q": "недвижимость shorts", "lang": "ru", "region": "RU"},
     {"q": "юрист shorts", "lang": "ru", "region": "RU"},
     {"q": "маркетинг shorts", "lang": "ru", "region": "RU"},
     {"q": "психология shorts", "lang": "ru", "region": "RU"},
     {"q": "бизнес shorts", "lang": "ru", "region": "RU"},
-    {"q": "рецепты shorts", "lang": "ru", "region": "RU"},
     {"q": "финансы shorts", "lang": "ru", "region": "RU"},
     {"q": "путешествия shorts", "lang": "ru", "region": "RU"},
     {"q": "юмор пранк shorts", "lang": "ru", "region": "RU"},
-    # Глобальные ниши
+    {"q": "авто shorts", "lang": "ru", "region": "RU"},
+    {"q": "кулинария рецепты shorts", "lang": "ru", "region": "RU"},
+    {"q": "саморазвитие shorts", "lang": "ru", "region": "RU"},
     {"q": "fitness shorts viral", "lang": "en", "region": "US"},
     {"q": "motivation shorts viral", "lang": "en", "region": "US"},
     {"q": "funny shorts viral", "lang": "en", "region": "US"},
     {"q": "life hack shorts viral", "lang": "en", "region": "US"},
     {"q": "tech shorts viral", "lang": "en", "region": "US"},
+    {"q": "finance money shorts", "lang": "en", "region": "US"},
+    {"q": "cooking recipe shorts", "lang": "en", "region": "US"},
+    {"q": "travel shorts viral", "lang": "en", "region": "US"},
 ]
 
-# Уже известные каналы (накапливаются автоматически)
-CHANNELS_FILE = "yt_channels.json"
 
+# ── Helpers ────────────────────────────────────────────────────────
 
 def parse_duration(iso: str) -> int:
-    """PT1M30S → 90 секунд."""
     m = re.match(r"PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?", iso or "")
     if not m:
         return 0
-    h = int(m.group(1) or 0)
-    mins = int(m.group(2) or 0)
-    secs = int(m.group(3) or 0)
-    return h * 3600 + mins * 60 + secs
+    return int(m.group(1) or 0)*3600 + int(m.group(2) or 0)*60 + int(m.group(3) or 0)
 
 
-def calc_x_factor(views: int, channel_median: float) -> float | None:
-    if not channel_median or channel_median <= 0:
-        return None
-    return round(views / channel_median, 2)
+def is_short(duration_iso: str, title: str, description: str) -> bool:
+    secs = parse_duration(duration_iso)
+    has_tag = "#shorts" in (title+description).lower() or "#short" in (title+description).lower()
+    return secs <= 180 and (has_tag or secs <= 60)
 
 
-def calc_velocity(views: int, published_at: str) -> float | None:
+def calc_velocity(views: int, published_at: str) -> float:
     try:
         pub = datetime.fromisoformat(published_at.replace("Z", "+00:00"))
         hours = max(0.5, (datetime.now(timezone.utc) - pub).total_seconds() / 3600)
         return round(views / hours, 1)
     except Exception:
-        return None
+        return 0.0
 
 
 async def api_get(client: httpx.AsyncClient, path: str, params: dict) -> dict:
@@ -75,11 +78,83 @@ async def api_get(client: httpx.AsyncClient, path: str, params: dict) -> dict:
     return r.json()
 
 
-async def discover_channels(client: httpx.AsyncClient) -> dict:
-    """Ищет каналы по ключевым словам, возвращает {channel_id: info}."""
-    channels = {}
+# ── Channel store ──────────────────────────────────────────────────
 
-    for query in SEARCH_QUERIES:
+def load_channels() -> dict:
+    """
+    Структура канала:
+    {
+      id, title, lang, niche,
+      score: float,        # накопленный рейтинг (-inf..+inf)
+      viral_count: int,    # сколько раз давал x_factor > 5
+      last_seen: str,      # когда последний раз давал видео
+      added_at: str
+    }
+    """
+    if os.path.exists(CHANNELS_FILE):
+        try:
+            with open(CHANNELS_FILE) as f:
+                return json.load(f)
+        except Exception:
+            pass
+    return {}
+
+
+def save_channels(channels: dict):
+    with open(CHANNELS_FILE, "w", encoding="utf-8") as f:
+        json.dump(channels, f, ensure_ascii=False, indent=2)
+    print(f"  ✓ Channels saved: {len(channels)}")
+
+
+def update_channel_score(channels: dict, cid: str, shorts_found: list):
+    """Обновляем рейтинг канала на основе его Shorts."""
+    if cid not in channels:
+        return
+    ch = channels[cid]
+
+    if not shorts_found:
+        # Канал не дал видео — небольшой штраф
+        ch["score"] = round(ch.get("score", 0) - 0.5, 1)
+        return
+
+    # Считаем средний x_factor
+    xfactors = [s.get("x_factor") or 0 for s in shorts_found]
+    avg_xf = sum(xfactors) / len(xfactors) if xfactors else 0
+    viral = [s for s in shorts_found if (s.get("x_factor") or 0) >= 5]
+
+    # Обновляем счётчики
+    ch["viral_count"] = ch.get("viral_count", 0) + len(viral)
+    ch["last_seen"] = datetime.now(timezone.utc).isoformat()
+
+    # Скор: +2 за каждый вирусный Short, +0.5 за обычный, -0.2 за пустой
+    delta = len(viral) * 2 + (len(shorts_found) - len(viral)) * 0.5
+    ch["score"] = round(ch.get("score", 0) + delta, 1)
+
+
+def prune_channels(channels: dict) -> dict:
+    """Удаляем слабые каналы если база переполнена."""
+    if len(channels) <= MAX_CHANNELS:
+        return channels
+
+    # Сортируем по score — защищаем хорошие каналы
+    sorted_ch = sorted(channels.values(), key=lambda x: x.get("score", 0), reverse=True)
+
+    # Оставляем топ MAX_CHANNELS
+    kept = {ch["id"]: ch for ch in sorted_ch[:MAX_CHANNELS]}
+    removed = len(channels) - len(kept)
+    if removed > 0:
+        print(f"  Pruned {removed} weak channels (score < {sorted_ch[MAX_CHANNELS].get('score', 0):.1f})")
+    return kept
+
+
+# ── Discovery ──────────────────────────────────────────────────────
+
+async def discover_new_channels(client: httpx.AsyncClient, channels: dict, queries: list) -> int:
+    """Ищет новые каналы по поисковым запросам."""
+    added = 0
+    now = datetime.now(timezone.utc).isoformat()
+
+    for query in queries:
         try:
             data = await api_get(client, "search", {
                 "part": "snippet",
@@ -97,17 +172,58 @@ async def discover_channels(client: httpx.AsyncClient) -> dict:
                         "title": item["snippet"]["channelTitle"],
                         "lang": query["lang"],
                         "niche": query["q"].split()[0],
+                        "score": 0.0,
+                        "viral_count": 0,
+                        "last_seen": None,
+                        "added_at": now,
                     }
-            print(f"  Found {len(data.get('items', []))} channels for: {query['q']}")
+                    added += 1
             await asyncio.sleep(0.3)
         except Exception as e:
-            print(f"  Search failed for {query['q']}: {e}")
+            print(f"  Search failed: {query['q']}: {e}")
 
-    return channels
+    print(f"  Discovered {added} new channels from search")
+    return added
 
+
+async def discover_related_channels(client: httpx.AsyncClient, channels: dict, viral_video_ids: list) -> int:
+    """Ищет каналы похожие на вирусные видео."""
+    added = 0
+    now = datetime.now(timezone.utc).isoformat()
+
+    for vid in viral_video_ids[:10]:  # не более 10 запросов
+        try:
+            data = await api_get(client, "search", {
+                "part": "snippet",
+                "type": "channel",
+                "relatedToVideoId": vid,
+                "maxResults": 5,
+            })
+            for item in data.get("items", []):
+                cid = item["id"].get("channelId")
+                if cid and cid not in channels:
+                    channels[cid] = {
+                        "id": cid,
+                        "title": item["snippet"]["channelTitle"],
+                        "lang": "unknown",
+                        "niche": "related",
+                        "score": 1.0,  # небольшой бонус — найден через вирус
+                        "viral_count": 0,
+                        "last_seen": None,
+                        "added_at": now,
+                    }
+                    added += 1
+            await asyncio.sleep(0.3)
+        except Exception as e:
+            print(f"  Related search failed for {vid}: {e}")
+
+    print(f"  Discovered {added} related channels from viral videos")
+    return added
+
+
+# ── Main scrape ────────────────────────────────────────────────────
 
 async def get_channel_stats(client: httpx.AsyncClient, channel_ids: list) -> dict:
-    """Получает статистику каналов для расчёта медианы."""
     stats = {}
     for i in range(0, len(channel_ids), 50):
         batch = channel_ids[i:i+50]
@@ -122,8 +238,7 @@ async def get_channel_stats(client: httpx.AsyncClient, channel_ids: list) -> dic
                 stats[cid] = {
                     "subscribers": int(s.get("subscriberCount", 0)),
                     "uploads_playlist": item.get("contentDetails", {})
-                        .get("relatedPlaylists", {})
-                        .get("uploads", ""),
+                        .get("relatedPlaylists", {}).get("uploads", ""),
                 }
             await asyncio.sleep(0.2)
         except Exception as e:
@@ -131,29 +246,34 @@ async def get_channel_stats(client: httpx.AsyncClient, channel_ids: list) -> dic
     return stats
 
 
-async def get_recent_shorts(client: httpx.AsyncClient, playlist_id: str, max_results: int = 10) -> list:
-    """Берёт последние видео из плейлиста загрузок канала."""
+async def get_recent_videos(client: httpx.AsyncClient, playlist_id: str) -> list:
     if not playlist_id:
         return []
     try:
         data = await api_get(client, "playlistItems", {
             "part": "snippet",
             "playlistId": playlist_id,
-            "maxResults": max_results,
+            "maxResults": 5,
         })
-        return [
-            {
+        cutoff = datetime.now(timezone.utc) - timedelta(days=7)
+        result = []
+        for item in data.get("items", []):
+            pub = item["snippet"].get("publishedAt", "")
+            try:
+                if datetime.fromisoformat(pub.replace("Z", "+00:00")) < cutoff:
+                    continue
+            except Exception:
+                continue
+            result.append({
                 "video_id": item["snippet"]["resourceId"]["videoId"],
-                "published_at": item["snippet"]["publishedAt"],
-            }
-            for item in data.get("items", [])
-        ]
+                "published_at": pub,
+            })
+        return result
     except Exception:
         return []
 
 
 async def get_video_details(client: httpx.AsyncClient, video_ids: list) -> list:
-    """Получает детали и статистику видео пачками по 50."""
     results = []
     for i in range(0, len(video_ids), 50):
         batch = video_ids[i:i+50]
@@ -169,76 +289,56 @@ async def get_video_details(client: httpx.AsyncClient, video_ids: list) -> list:
     return results
 
 
-def is_short(duration_iso: str, title: str, description: str) -> bool:
-    """Определяет является ли видео Shorts."""
-    secs = parse_duration(duration_iso)
-    has_tag = "#shorts" in (title + description).lower() or "#short" in (title + description).lower()
-    return secs <= 180 and (has_tag or secs <= 60)
-
-
 async def scrape_youtube() -> list:
-    """Основная функция сбора данных."""
     if not API_KEY:
         print("❌ YOUTUBE_API_KEY не задан!")
         return []
 
     async with httpx.AsyncClient(timeout=30) as client:
 
-        # 1. Загружаем или находим каналы
-        if os.path.exists(CHANNELS_FILE):
-            with open(CHANNELS_FILE) as f:
-                channels = json.load(f)
-            print(f"✓ Loaded {len(channels)} channels from cache")
-        else:
-            print("🔍 Discovering channels...")
-            channels = await discover_channels(client)
-            with open(CHANNELS_FILE, "w") as f:
-                json.dump(channels, f, ensure_ascii=False, indent=2)
-            print(f"✓ Discovered {len(channels)} channels")
+        # 1. Загружаем базу каналов
+        channels = load_channels()
+        run_count = sum(1 for ch in channels.values() if ch.get("last_seen"))
+        print(f"✓ Loaded {len(channels)} channels (run #{run_count})")
+
+        # 2. Каждые 7 запусков — ищем новые каналы по запросам
+        if run_count % 7 == 0 or len(channels) < 50:
+            print("🔍 Discovering new channels from search queries...")
+            added = await discover_new_channels(client, channels, SEARCH_QUERIES)
+            channels = prune_channels(channels)
+            save_channels(channels)
 
         channel_ids = list(channels.keys())
 
-        # 2. Получаем статистику каналов (плейлисты загрузок)
-        print(f"📊 Getting channel stats...")
+        # 3. Статистика каналов
+        print(f"📊 Getting channel stats for {len(channel_ids)} channels...")
         chan_stats = await get_channel_stats(client, channel_ids)
 
-        # 3. Для каждого канала берём последние видео
+        # 4. Свежие видео с каналов
+        print(f"📥 Fetching recent videos...")
         all_video_ids = []
-        video_to_channel = {}  # video_id → channel_id
+        video_to_channel = {}
 
-        cutoff = datetime.now(timezone.utc) - timedelta(days=7)  # видео за неделю
-
-        print(f"📥 Fetching recent videos from {len(channel_ids)} channels...")
         for cid in channel_ids:
             playlist_id = chan_stats.get(cid, {}).get("uploads_playlist", "")
-            recent = await get_recent_shorts(client, playlist_id, max_results=5)
-
+            recent = await get_recent_videos(client, playlist_id)
             for v in recent:
-                # Фильтруем старые
-                try:
-                    pub = datetime.fromisoformat(v["published_at"].replace("Z", "+00:00"))
-                    if pub < cutoff:
-                        continue
-                except Exception:
-                    continue
                 all_video_ids.append(v["video_id"])
                 video_to_channel[v["video_id"]] = cid
-
             await asyncio.sleep(0.1)
 
         print(f"  Found {len(all_video_ids)} recent videos")
-
         if not all_video_ids:
-            print("  No recent videos found")
             return []
 
-        # 4. Получаем детали видео
+        # 5. Детали видео
         print(f"📈 Getting video details...")
         videos = await get_video_details(client, all_video_ids)
 
-        # 5. Фильтруем только Shorts и считаем метрики
+        # 6. Фильтруем Shorts и считаем метрики
         shorts = []
-        channel_views = {}  # для расчёта медианы
+        channel_views = {}
+        channel_shorts = {}  # cid → [shorts] для обновления score
 
         for v in videos:
             details = v.get("contentDetails", {})
@@ -252,24 +352,22 @@ async def scrape_youtube() -> list:
             if not is_short(duration, title, desc):
                 continue
 
-            # Только русский и английский контент
+            # Фильтр языка
             audio_lang = snippet.get("defaultAudioLanguage", "")[:2]
             if audio_lang and audio_lang not in ("ru", "en"):
                 continue
 
             views = int(stats.get("viewCount", 0))
-            likes = int(stats.get("likeCount", 0))
-            comments = int(stats.get("commentCount", 0))
-
-            # Минимум 1000 просмотров
             if views < 1000:
                 continue
+
+            likes = int(stats.get("likeCount", 0))
+            comments = int(stats.get("commentCount", 0))
             published_at = snippet.get("publishedAt", "")
             cid = video_to_channel.get(v["id"], "")
             channel_title = snippet.get("channelTitle", "")
             subs = chan_stats.get(cid, {}).get("subscribers", 0)
 
-            # Накапливаем просмотры для расчёта медианы канала
             if cid not in channel_views:
                 channel_views[cid] = []
             channel_views[cid].append(views)
@@ -285,7 +383,7 @@ async def scrape_youtube() -> list:
                 thumb.get("high", {}).get("url") or ""
             )
 
-            shorts.append({
+            item = {
                 "id": v["id"],
                 "url": f"https://www.youtube.com/shorts/{v['id']}",
                 "title": title,
@@ -297,7 +395,7 @@ async def scrape_youtube() -> list:
                 "likes": likes,
                 "comments": comments,
                 "velocity": velocity,
-                "x_factor": None,  # посчитаем после медианы
+                "x_factor": None,
                 "hot_score": None,
                 "platform": "youtube",
                 "niche": niche,
@@ -311,18 +409,23 @@ async def scrape_youtube() -> list:
                     "median_views": 0,
                 },
                 "trending_since": datetime.now(timezone.utc).isoformat(),
-            })
+            }
+            shorts.append(item)
 
-        # 6. Считаем медиану и x_factor
-        import statistics
+            if cid not in channel_shorts:
+                channel_shorts[cid] = []
+            channel_shorts[cid].append(item)
+
+        # 7. Считаем x_factor и hot_score
         for short in shorts:
             cid = short["author"]["channel_id"]
             views_list = channel_views.get(cid, [short["views"]])
-            median = statistics.median(views_list) if views_list else short["views"]
+            median = statistics.median(views_list)
             short["author"]["median_views"] = round(median)
-            short["x_factor"] = calc_x_factor(short["views"], median)
 
-            # hot_score: engagement с затуханием
+            if median > 0:
+                short["x_factor"] = round(short["views"] / median, 2)
+
             if short["views"] > 0:
                 age_h = max(1, (datetime.now(timezone.utc) -
                     datetime.fromisoformat(short["published_at"].replace("Z", "+00:00"))
@@ -330,9 +433,29 @@ async def scrape_youtube() -> list:
                 engagement = short["likes"] + short["comments"] * 3
                 short["hot_score"] = round(engagement / short["views"] / (1 + age_h / 24), 4)
 
-        # Сортируем по hot_score
-        shorts.sort(key=lambda x: x.get("hot_score") or 0, reverse=True)
         print(f"✓ Found {len(shorts)} Shorts")
+
+        # 8. Обновляем score каналов
+        for cid in channel_ids:
+            update_channel_score(channels, cid, channel_shorts.get(cid, []))
+
+        # 9. Ищем похожие каналы на вирусные видео
+        viral_videos = [s for s in shorts if (s.get("x_factor") or 0) >= 5]
+        if viral_videos:
+            print(f"🔗 Finding related channels from {len(viral_videos)} viral videos...")
+            viral_ids = [v["id"] for v in viral_videos]
+            await discover_related_channels(client, channels, viral_ids)
+            channels = prune_channels(channels)
+
+        # 10. Сохраняем обновлённую базу каналов
+        save_channels(channels)
+
+        # Статистика базы
+        good = sum(1 for ch in channels.values() if ch.get("score", 0) > 2)
+        viral_ch = sum(1 for ch in channels.values() if ch.get("viral_count", 0) > 0)
+        print(f"  Channel stats: {len(channels)} total, {good} good (score>2), {viral_ch} ever viral")
+
+        shorts.sort(key=lambda x: x.get("hot_score") or 0, reverse=True)
         return shorts
 
 
@@ -350,13 +473,7 @@ def save(items: list):
     existing = {v["id"]: v for v in load_existing()}
     fresh = {v["id"]: v for v in items}
     merged = {**existing, **fresh}
-
-    sorted_items = sorted(
-        merged.values(),
-        key=lambda x: x.get("hot_score") or 0,
-        reverse=True
-    )
-
+    sorted_items = sorted(merged.values(), key=lambda x: x.get("hot_score") or 0, reverse=True)
     output = {
         "updated_at": datetime.now(timezone.utc).isoformat(),
         "total": len(sorted_items),
@@ -364,7 +481,6 @@ def save(items: list):
     }
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
-
     size = os.path.getsize(OUTPUT_FILE) / 1024
     print(f"✓ Saved {len(sorted_items)} items → {OUTPUT_FILE} ({size:.0f} KB)")
 
