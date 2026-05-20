@@ -1581,16 +1581,11 @@ async function fetchVkVideosFromGroups(groups, setProgress) {
         owner_id: g.id, count: 10, extended: 0
       });
       for (const v of resp.items || []) {
-        // Фильтр: короткое вертикальное
-        if (!v.duration || v.duration > 60) continue;
-        if (!v.height || !v.width || v.height <= v.width) continue;
+        // Минимальный фильтр — только проверяем что видео существует
+        if (!v.id) continue;
         const views = v.views || v.local_views || 0;
-        if (views < 500) continue;
-
         const dateTs = v.date || 0;
         const pub = dateTs ? new Date(dateTs * 1000).toISOString() : '';
-        // Только за последние 7 дней
-        if (dateTs && (Date.now()/1000 - dateTs) > 7*86400) continue;
 
         const likes = v.likes?.count || 0;
         const reposts = v.reposts?.count || 0;
@@ -1713,7 +1708,7 @@ async function runVkScout() {
     );
 
     try {
-      const resp = await vkApi('groups.search', {q, type:'group,page', count:20, sort:6});
+      const resp = await vkApi('groups.search', {q, type:'group', count:20, sort:6});
       for (const g of resp.items||[]) {
         const gid = String(-g.id);
         if (!groups[gid]) {
