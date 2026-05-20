@@ -1564,28 +1564,32 @@ async function saveGroupsToRepo(groups) {
 
 async function fetchVkVideosFromGroups(groups, setProgress) {
   const items = [];
-  const groupIds = Object.values(groups).slice(0, 100); // берём первые 100 групп
-  const total = groupIds.length;
+  // Берём уникальные ниши из групп
+  const niches = [...new Set(Object.values(groups).map(g => g.niche).filter(Boolean))];
+  const queries = niches.length > 0 ? niches : VK_QUERIES.slice(0, 10);
+  const total = queries.length;
   let done = 0;
 
-  for (const g of groupIds) {
+  for (const q of queries) {
     done++;
-    if (done % 10 === 0) {
-      await setProgress(
-        `🎬 Собираю видео... ${done}/${total} групп<br>Найдено видео: <b style="color:var(--cyan)">${items.length}</b>`,
-        'var(--cyan)'
-      );
-    }
+    await setProgress(
+      `🎬 Ищу видео по нише: <b>${q}</b> (${done}/${total})<br>Найдено видео: <b style="color:var(--cyan)">${items.length}</b>`,
+      'var(--cyan)'
+    );
     try {
-      const resp = await vkApi('video.get', {
-        owner_id: g.id, count: 10, extended: 0
+      const resp = await vkApi('video.search', {
+        q, count: 50, filters: 'vk', shorter: 60, sort: 2
       });
       for (const v of resp.items || []) {
-        // Минимальный фильтр — только проверяем что видео существует
         if (!v.id) continue;
         const views = v.views || v.local_views || 0;
+        if (views < 500) continue;
+        // Только вертикальные или квадратные
+        if (v.width && v.height && v.width > v.height * 1.3) continue;
         const dateTs = v.date || 0;
         const pub = dateTs ? new Date(dateTs * 1000).toISOString() : '';
+        // За последние 30 дней
+        if (dateTs && (Date.now()/1000 - dateTs) > 30*86400) continue;
 
         const likes = v.likes?.count || 0;
         const reposts = v.reposts?.count || 0;
@@ -1599,9 +1603,10 @@ async function fetchVkVideosFromGroups(groups, setProgress) {
           if (img.url && img.url.includes('sun') && img.width > 300) { thumb = img.url; break; }
         }
 
+        const ownerId = v.owner_id || 0;
         items.push({
-          id: `-${Math.abs(g.id)}_${v.id}`,
-          url: v.direct_url || v.share_url || `https://vkvideo.ru/video${g.id}_${v.id}`,
+          id: `${ownerId}_${v.id}`,
+          url: v.direct_url || v.share_url || `https://vkvideo.ru/video${ownerId}_${v.id}`,
           title: v.title || '',
           caption: (v.description||'').substring(0,300),
           thumbnail_url: thumb,
@@ -1613,12 +1618,12 @@ async function fetchVkVideosFromGroups(groups, setProgress) {
           x_factor: null,
           hot_score: Math.round(hotScore*10000)/10000,
           platform: 'vk',
-          niche: g.niche || 'other',
+          niche: q,
           lang: 'ru',
           author: {
-            channel_id: String(g.id),
-            username: String(Math.abs(g.id)),
-            display_name: g.title || String(Math.abs(g.id)),
+            channel_id: String(ownerId),
+            username: String(Math.abs(ownerId)),
+            display_name: String(Math.abs(ownerId)),
             platform: 'vk',
             followers_count: 0,
             median_views: 0,
