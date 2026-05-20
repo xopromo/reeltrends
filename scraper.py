@@ -1,12 +1,9 @@
 """
 Scraper — собирает тренды с piratex.ai.
-Сохраняет:
-  trends.json       — метаданные (лёгкий, ~2 MB)
-  thumbnails/       — картинки отдельными файлами
+Сохраняет trends.json с метаданными.
 """
 
 import asyncio
-import base64
 import httpx
 import json
 import os
@@ -21,7 +18,7 @@ HEADERS = {
 }
 
 OUTPUT_FILE = "trends.json"
-THUMB_DIR = "thumbnails"
+MAX_PAGES = 2  # тест — 2 страницы = 40 рилсов. Для полного сбора поменяй на 31
 
 
 async def fetch_page(page: int, sort: str = "hot_score") -> list:
@@ -46,60 +43,11 @@ async def fetch_page(page: int, sort: str = "hot_score") -> list:
             return []
 
 
-async def fetch_thumbnail(reel_id: str) -> bytes | None:
-    """Скачивает thumbnail через прокси piratex."""
-    async with httpx.AsyncClient(headers=HEADERS, timeout=20, follow_redirects=True) as s:
-        try:
-            await s.get(f"{BASE_URL}/api/auth/me")
-            r = await s.get(f"{BASE_URL}/api/trends/thumbnail/{reel_id}")
-            if r.status_code == 200 and r.headers.get("content-type", "").startswith("image"):
-                return r.content
-        except Exception as e:
-            print(f"  thumb failed {reel_id}: {e}")
-    return None
-
-
-async def download_thumbnails(items: dict) -> None:
-    """Скачивает картинки которых ещё нет в папке thumbnails/."""
-    os.makedirs(THUMB_DIR, exist_ok=True)
-
-    # Только те у которых нет файла
-    need = [
-        item_id for item_id in items
-        if not os.path.exists(f"{THUMB_DIR}/{item_id}.jpg")
-    ]
-
-    print(f"  Thumbnails: {len(items)-len(need)} cached, {len(need)} to download")
-    if not need:
-        return
-
-    downloaded = 0
-    BATCH = 5
-
-    for i in range(0, len(need), BATCH):
-        batch = need[i:i + BATCH]
-        tasks = [fetch_thumbnail(reel_id) for reel_id in batch]
-        results = await asyncio.gather(*tasks, return_exceptions=True)
-
-        for reel_id, data in zip(batch, results):
-            if isinstance(data, bytes) and len(data) > 100:
-                path = f"{THUMB_DIR}/{reel_id}.jpg"
-                with open(path, "wb") as f:
-                    f.write(data)
-                downloaded += 1
-
-        if (i // BATCH) % 10 == 0:
-            print(f"  {min(i+BATCH, len(need))}/{len(need)} thumbnails...")
-        await asyncio.sleep(0.3)
-
-    print(f"  ✓ Downloaded {downloaded} new thumbnails")
-
-
 async def scrape() -> dict:
     seen = {}
     for sort in ["hot_score", "x_factor", "views", "recent"]:
         print(f"▶ sort={sort}")
-        for page in range(1, 31):
+        for page in range(1, MAX_PAGES):
             items = await fetch_page(page=page, sort=sort)
             if not items:
                 break
@@ -143,15 +91,11 @@ def save(items: dict):
 
 async def main():
     print(f"Starting at {datetime.now(timezone.utc).isoformat()}")
-
     existing = load_existing()
     print(f"  Existing: {len(existing)} items")
-
     fresh = await scrape()
     merged = {**existing, **fresh}
     print(f"  Merged: {len(merged)} items")
-
-    await download_thumbnails(merged)
     save(merged)
 
 
