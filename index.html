@@ -1429,14 +1429,14 @@ function renderYtResult(v) {
 
 
 // ── VK Scout ──────────────────────────────────────────────────────
-const VK_APP_ID = '54602385';
+var VK_APP_ID = '54602385';
 const GH_REPO = 'xopromo/reeltrends';
 const GH_FILE = 'vk_groups.json';
 // GH_TOKEN загружается из config.js (не хранится в репо)
 let GH_TOKEN = '';
-const VK_API = 'https://api.vk.com/method';
-const VK_V = '5.199';
-const VK_QUERIES = [
+var VK_API = 'https://api.vk.com/method';
+var VK_V = '5.199';
+var VK_QUERIES = [
   'фитнес','недвижимость','юрист','психология','бизнес',
   'финансы','маркетинг','саморазвитие','авто','кулинария',
   'юмор','путешествия','здоровье','мотивация','лайфхак',
