@@ -193,15 +193,7 @@
     </div>
   </div>
 
-  <div class="s-section">
-    <h3>Платформа</h3>
-    <div class="s-chips" id="s-platform">
-      <button class="chip on" data-v="instagram">Instagram</button>
-      <button class="chip on" data-v="youtube">YouTube</button>
-      <button class="chip on" data-v="vk">ВКонтакте</button>
-      <button class="chip on" data-v="tiktok">TikTok</button>
-    </div>
-  </div>
+
 
   <div class="s-section">
     <h3>Минимальные показатели</h3>
@@ -564,7 +556,6 @@ function updateResetBtn() {
 
 function isDefaultSettings() {
   return JSON.stringify(S.langs.slice().sort()) === JSON.stringify(DEFAULT_SETTINGS.langs.slice().sort()) &&
-    JSON.stringify(S.platforms.slice().sort()) === JSON.stringify(DEFAULT_SETTINGS.platforms.slice().sort()) &&
     S.viewsMin === DEFAULT_SETTINGS.viewsMin &&
     S.xfMin === 0 && S.velMin === 0 && S.crMin === 0 &&
     S.durMax === 0 && !S.viralOnly && !S.todayOnly && !S.hideNoThumb && S.subsMin === 0;
@@ -573,7 +564,6 @@ function isDefaultSettings() {
 function updateFilterBadge() {
   const isDefault =
     JSON.stringify(S.langs.sort()) === JSON.stringify(DEFAULT_SETTINGS.langs.sort()) &&
-    JSON.stringify(S.platforms.sort()) === JSON.stringify(DEFAULT_SETTINGS.platforms.sort()) &&
     S.viewsMin === DEFAULT_SETTINGS.viewsMin &&
     S.xfMin === 0 && S.velMin === 0 && S.crMin === 0 &&
     S.durMax === 0 && !S.viralOnly && !S.todayOnly && !S.hideNoThumb &&
@@ -1578,8 +1568,12 @@ async function fetchVkVideosFromGroups(groups, setProgress) {
       });
       for (const v of resp.items || []) {
         if (!v.id) continue;
+        // Только вертикальные (height > width)
+        if (v.width && v.height && v.width >= v.height) continue;
+        // Только до 3 минут
+        if (v.duration && v.duration > 180) continue;
         const views = v.views || v.local_views || 0;
-        if (views < 100) continue;
+        if (views < 200) continue;
         const dateTs = v.date || 0;
         const pub = dateTs ? new Date(dateTs * 1000).toISOString() : '';
 
@@ -1589,10 +1583,24 @@ async function fetchVkVideosFromGroups(groups, setProgress) {
         const vel = dateTs ? Math.round(views / Math.max(0.5, (Date.now()/1000 - dateTs)/3600)) : 0;
         const hotScore = views > 0 ? (likes + reposts*3 + comments*2) / views : 0;
 
-        // Лучший thumbnail
+        // Лучший thumbnail — ищем вертикальный
         let thumb = '';
-        for (const img of (v.image||[])) {
-          if (img.url && img.url.includes('sun') && img.width > 300) { thumb = img.url; break; }
+        // Сначала пробуем first_frame (всегда свежий)
+        const ff = (v.first_frame||[]).find(f => f.height > f.width);
+        if (ff) {
+          thumb = ff.url;
+        } else {
+          // Берём из image — ищем вертикальный или квадратный
+          for (const img of (v.image||[])) {
+            if (!img.url) continue;
+            if (img.height >= img.width && img.width > 100) { thumb = img.url; break; }
+          }
+          // Если не нашли вертикальный — берём любой с нормальным размером
+          if (!thumb) {
+            for (const img of (v.image||[])) {
+              if (img.url && img.width > 300) { thumb = img.url; break; }
+            }
+          }
         }
 
         const ownerId = v.owner_id || 0;
