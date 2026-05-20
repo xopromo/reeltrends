@@ -405,7 +405,6 @@ const subsSteps  = [0,100,500,1000,5000,10000,50000,100000,500000,1000000];
 
 const DEFAULT_SETTINGS = {
   langs: ['ru','en',''],
-  platforms: ['instagram','youtube','tiktok'],
   viewsMin: 2,       // index in viewSteps → 1000
   xfMin: 0,
   velMin: 0,
@@ -470,9 +469,6 @@ function applySettingsToUI() {
     b.classList.toggle('on', S.langs.includes(b.dataset.v));
   });
   // Platforms
-  document.querySelectorAll('#s-platform .chip').forEach(b => {
-    b.classList.toggle('on', S.platforms.includes(b.dataset.v));
-  });
   // Ranges
   document.getElementById('s-views-min').value = S.viewsMin;
   updateRangeLabel('s-views-min','v-min-val',viewSteps);
@@ -510,7 +506,6 @@ function updateRangeLabel(inputId, labelId, steps, suffix='') {
 function applySettings() {
   // Читаем из UI
   S.langs = [...document.querySelectorAll('#s-lang .chip.on')].map(b=>b.dataset.v);
-  S.platforms = [...document.querySelectorAll('#s-platform .chip.on')].map(b=>b.dataset.v);
   S.viewsMin = parseInt(document.getElementById('s-views-min').value);
   S.xfMin = parseInt(document.getElementById('s-xf-min').value);
   S.velMin = parseInt(document.getElementById('s-vel-min').value);
@@ -782,7 +777,7 @@ function passesSettings(item) {
   const lang = item.lang || item.author?.lang || '';
 
   // Платформа (настройки)
-  if (S.platforms.length && !S.platforms.includes(platform)) return false;
+  // Платформа фильтруется кнопками в шапке, не здесь
 
   // Язык — определяем по полю lang + по тексту названия/описания
   if (S.langs.length) {
