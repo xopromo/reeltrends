@@ -195,6 +195,7 @@ let ytData = [];
 let ytLoaded = false;
 let filtered = [];
 let lastUpdAt = null;
+let ytUpdatedAt = null;
 
 const state = { sort:'hot_score', platform:'', days:'', q:'', page:1 };
 
@@ -372,8 +373,12 @@ document.getElementById('pg').addEventListener('click', async e => {
       const r = await fetch(YT_URL+'?t='+Date.now());
       if (r.ok) {
         const data = await r.json();
-        ytData = (data.items||[]).map(item=>({...item, author:{...item.author,platform:'youtube'}}));
+        ytData = (data.items||[])
+          .filter(item => item.views >= 1000)
+          .map(item=>({...item, author:{...item.author,platform:'youtube'}}));
         ytLoaded = true;
+        ytUpdatedAt = data.updated_at;
+        updateCombinedTimer();
         // Мержим в ALL
         const existingIds = new Set(igData.map(x=>x.id));
         ALL = [...igData, ...ytData.filter(x=>!existingIds.has(x.id))];
@@ -449,7 +454,14 @@ function showNewSinceVisit() {
 }
 
 // ── Таймер ────────────────────────────────────────────
-setInterval(()=>{ if(lastUpdAt) document.getElementById('upd').textContent=timeAgoFull(lastUpdAt); }, 15000);
+function updateCombinedTimer() {
+  // Берём самое свежее обновление из Instagram или YouTube
+  const times = [lastUpdAt, ytUpdatedAt].filter(Boolean).map(t => new Date(t));
+  if (!times.length) return;
+  const freshest = new Date(Math.max(...times));
+  document.getElementById('upd').textContent = timeAgoFull(freshest.toISOString());
+}
+setInterval(updateCombinedTimer, 15000);
 
 // ── Load ─────────────────────────────────────────────
 async function load() {
@@ -491,9 +503,46 @@ async function load() {
     localStorage.setItem(VK, new Date().toISOString());
 
     applyFilters();
+
+    // Фоновая загрузка YouTube
+    loadYouTubeBackground();
   } catch(e) {
     document.getElementById('grid').innerHTML = '<div class="empty">'+e.message+'</div>';
     document.getElementById('upd').textContent = 'нет данных';
+  }
+}
+
+async function loadYouTubeBackground() {
+  if (ytLoaded) return;
+  try {
+    const r = await fetch(YT_URL+'?t='+Date.now());
+    if (!r.ok) return;
+    const data = await r.json();
+    ytData = (data.items||[])
+      .filter(item => item.views >= 1000)  // фильтр на фронте
+      .map(item=>({...item, author:{...item.author, platform:'youtube'}}));
+    ytLoaded = true;
+    ytUpdatedAt = data.updated_at;
+
+    // Если сейчас активна вкладка "Все" или "youtube" — обновляем
+    if (state.platform === '' || state.platform === 'youtube') {
+      const eIds = new Set(igData.map(x=>x.id));
+      ALL = state.platform === 'youtube'
+        ? ytData
+        : [...igData, ...ytData.filter(x=>!eIds.has(x.id))];
+      applyFilters();
+    }
+
+    // Обновляем иконку YouTube — показываем что загружено
+    const ytBtn = document.querySelector('#pg .fb[data-v="youtube"]');
+    if (ytBtn) ytBtn.title = 'YouTube Shorts загружен: ' + ytData.length + ' видео';
+
+    // Обновляем таймер если YT свежее
+    updateCombinedTimer();
+
+    console.log('YouTube loaded in background:', ytData.length, 'items');
+  } catch(e) {
+    console.warn('YouTube background load failed:', e);
   }
 }
 
