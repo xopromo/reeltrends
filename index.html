@@ -258,6 +258,29 @@
     <input type="range" id="s-subs-min" min="0" max="8" value="0" style="width:100%;accent-color:var(--amber)" oninput="updateRangeLabel('s-subs-min','subs-min-val',subsSteps)">
   </div>
 
+    <div class="s-section">
+    <h3>ВКонтакте разведка</h3>
+    <div style="font-size:11px;color:var(--cream-muted);margin-bottom:8px;line-height:1.5">
+      Токен нужен для поиска новых групп и видео.<br>
+      Живёт 24 часа. <a href="https://oauth.vk.com/authorize?client_id=54602385&scope=video&response_type=token&redirect_uri=https://oauth.vk.com/blank.html" target="_blank" style="color:var(--cyan)">Получить токен →</a>
+    </div>
+    <div style="display:flex;gap:6px;margin-bottom:8px">
+      <input id="s-vk-token" type="password" placeholder="vk1.a...."
+        style="flex:1;height:32px;background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:0 10px;font-family:inherit;font-size:12px;color:var(--cream);outline:none">
+      <button onclick="saveVkToken()" style="padding:0 12px;height:32px;border-radius:8px;border:1px solid rgba(0,119,255,.3);background:rgba(0,119,255,.1);color:#4d9fff;font-family:inherit;font-size:12px;cursor:pointer">
+        Сохранить
+      </button>
+    </div>
+    <div id="vk-token-status" style="font-size:11px;margin-bottom:8px"></div>
+    <button onclick="runVkScout()" id="vk-scout-btn"
+      style="width:100%;padding:8px;border-radius:9px;border:1px solid rgba(0,119,255,.3);background:rgba(0,119,255,.08);color:#4d9fff;font-family:inherit;font-size:13px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px"
+      data-tip="Ищет новые группы и видео ВКонтакте по 24 нишам">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+      Запустить разведку ВК
+    </button>
+    <div id="vk-scout-progress" style="font-size:11px;color:var(--cream-muted);margin-top:6px;display:none"></div>
+  </div>
+
   <button class="s-apply" onclick="applySettings()">Применить фильтры</button>
   <button class="s-reset" onclick="resetAllFilters()">✕ Сбросить все фильтры и настройки</button>
 </div>
@@ -350,6 +373,7 @@ const PER = 20;
 const VK = 'rt_last_visit';
 const SK = 'rt_settings';
 const FK = 'rt_filters';
+const QK = 'rt_yt_search';  // сохранённые результаты поиска
 
 let ALL=[], igData=[], ytData=[], ytLoaded=false, filtered=[];
 let lastUpdAt=null, ytUpdatedAt=null;
@@ -374,6 +398,7 @@ const DEFAULT_SETTINGS = {
   subsMin: 0,        // index in subsSteps
   directClick: true,  // клик открывает источник напрямую
 };
+const VK_TOKEN_KEY = 'rt_vk_token';
 
 let S = {...DEFAULT_SETTINGS};
 
@@ -546,6 +571,7 @@ function updateFilterBadge() {
 function toggleSettings() {
   const panel = document.getElementById('settings-panel');
   const isOpen = panel.classList.toggle('open');
+  if (isOpen) loadVkTokenUI();
   document.getElementById('main-content').classList.toggle('panel-open', isOpen);
   document.querySelector('header').classList.toggle('panel-open', isOpen);
 }
@@ -1006,6 +1032,8 @@ async function load() {
     loadSettings();
     loadFilters();
     updateResetBtn();
+    pruneSearchCache(); // тихая очистка устаревших
+    restoreYtSearch();  // восстанавливаем сохранённый поиск
 
     // Загружаем YouTube — он главный источник
     await loadYouTubeData();
@@ -1041,6 +1069,75 @@ function showInlineMsg(text, type) {
   setTimeout(() => { el.style.opacity = '0'; setTimeout(() => el.remove(), 300); }, 4000);
 }
 
+// ── Умное старение базы ──────────────────────────────────────────
+function getItemTTLDays(item) {
+  const xf    = item.x_factor || 0;
+  const views = item.views || 0;
+  const vel   = item.velocity || 0;
+
+  // Вечный: высокий x_factor + большие просмотры
+  if (xf > 10 && views > 500000) return Infinity;
+  // Вечный: старое видео но velocity всё ещё высокий
+  if (vel > 100 && views > 100000) return Infinity;
+  // Долгосрочный: год
+  if (xf > 5 && views > 100000) return 365;
+  // Среднесрочный: 3 месяца
+  if (xf > 2 && views > 10000) return 90;
+  // Краткосрочный: месяц
+  return 30;
+}
+
+function pruneSearchCache() {
+  try {
+    const saved = JSON.parse(localStorage.getItem(QK) || '{"items":[]}');
+    const items = saved.items || [];
+    if (!items.length) return;
+
+    const now = Date.now();
+    const before = items.length;
+    const kept = items.filter(item => {
+      const ttl = getItemTTLDays(item);
+      if (ttl === Infinity) return true;
+      const pub = item.published_at || item.trending_since;
+      if (!pub) return true;
+      const ageDays = (now - new Date(pub).getTime()) / 86400000;
+      return ageDays < ttl;
+    });
+
+    if (kept.length < before) {
+      localStorage.setItem(QK, JSON.stringify({...saved, items: kept}));
+      console.log(`Search cache pruned: ${before} → ${kept.length} items`);
+    }
+  } catch(e) {}
+}
+
+function restoreYtSearch() {
+  try {
+    const saved = localStorage.getItem(QK);
+    if (!saved) return;
+    const d = JSON.parse(saved);
+    // Храним навсегда (до явной очистки)
+    ytSearchResults = d.items || [];
+    if (!ytSearchResults.length) return;
+
+    ytSearchActive = true;
+    // Восстанавливаем строку поиска
+    const inp = document.getElementById('yt-inline-input');
+    if (inp) inp.value = d.query || '';
+    const cx = document.getElementById('yt-clear-x');
+    if (cx) cx.style.display = 'block';
+
+    // Добавляем в ytData для будущих поисков
+    const ytIds = new Set(ytData.map(x=>x.id));
+    ytData = [...ytData, ...ytSearchResults.filter(x=>!ytIds.has(x.id))];
+
+    ALL = ytSearchResults.sort((a,b)=>(b.hot_score||0)-(a.hot_score||0));
+    console.log('Restored search cache:', ytSearchResults.length, 'items accumulated');
+  } catch(e) {
+    localStorage.removeItem(QK);
+  }
+}
+
 async function doYtSearch(useApi) {
   const query = document.getElementById('yt-inline-input').value.trim();
   if (!query) return;
@@ -1054,7 +1151,10 @@ async function doYtSearch(useApi) {
     return text.includes(q);
   });
 
-  ytSearchResults = [...localResults];
+  // Мержим с уже накопленными результатами — база только растёт
+  const existIds = new Set(ytSearchResults.map(x=>x.id));
+  const newLocal = localResults.filter(x=>!existIds.has(x.id));
+  ytSearchResults = [...ytSearchResults, ...newLocal];
 
   // Шаг 2: если запрошено — идём в YouTube API
   if (useApi) {
@@ -1133,7 +1233,8 @@ async function doYtSearch(useApi) {
 }
 
 function clearYtSearch() {
-  ytSearchResults = [];
+  // НЕ удаляем из localStorage — база сохраняется!
+  // Просто скрываем активный поиск и возвращаем обычную ленту
   ytSearchActive = false;
   const x = document.getElementById('yt-clear-x');
   if (x) x.style.display = 'none';
@@ -1264,6 +1365,136 @@ function renderYtResult(v) {
       </div>
     </div>
   </div>`;
+}
+
+
+// ── VK Scout ──────────────────────────────────────────────────────
+const VK_APP_ID = '54602385';
+const VK_API = 'https://api.vk.com/method';
+const VK_V = '5.199';
+
+function loadVkTokenUI() {
+  const token = localStorage.getItem(VK_TOKEN_KEY);
+  const inp = document.getElementById('s-vk-token');
+  const status = document.getElementById('vk-token-status');
+  if (!inp || !status) return;
+  if (token) {
+    inp.value = token;
+    const saved = localStorage.getItem(VK_TOKEN_KEY + '_saved_at');
+    if (saved) {
+      const hoursAgo = Math.floor((Date.now() - parseInt(saved)) / 3600000);
+      if (hoursAgo >= 24) {
+        status.style.color = 'var(--red)';
+        status.textContent = '⚠ Токен устарел ('+hoursAgo+'ч) — обновите';
+      } else {
+        status.style.color = 'var(--green)';
+        status.textContent = '✓ Токен активен ('+hoursAgo+'ч из 24)';
+      }
+    }
+  } else {
+    status.style.color = 'var(--cream-muted)';
+    status.textContent = 'Токен не задан';
+  }
+}
+
+function saveVkToken() {
+  const val = document.getElementById('s-vk-token').value.trim();
+  if (!val) return;
+  localStorage.setItem(VK_TOKEN_KEY, val);
+  localStorage.setItem(VK_TOKEN_KEY + '_saved_at', Date.now().toString());
+  loadVkTokenUI();
+  showInlineMsg('VK токен сохранён', 'ok');
+}
+
+async function vkApi(method, params) {
+  const token = localStorage.getItem(VK_TOKEN_KEY);
+  if (!token) throw new Error('VK токен не задан');
+  const url = new URL(VK_API + '/' + method);
+  Object.entries({...params, access_token: token, v: VK_V}).forEach(([k,v]) => url.searchParams.set(k,v));
+  const r = await fetch(url.toString());
+  const d = await r.json();
+  if (d.error) throw new Error('VK ' + d.error.error_code + ': ' + d.error.error_msg);
+  return d.response;
+}
+
+const VK_QUERIES = [
+  'фитнес','недвижимость','юрист','психология','бизнес',
+  'финансы','маркетинг','саморазвитие','авто','кулинария',
+  'юмор','путешествия','здоровье','мотивация','лайфхак',
+  'fitness','motivation','funny','business','cooking',
+];
+
+async function runVkScout() {
+  const token = localStorage.getItem(VK_TOKEN_KEY);
+  if (!token) {
+    showInlineMsg('Сначала сохраните VK токен', 'warn');
+    return;
+  }
+  const hoursAgo = Math.floor((Date.now() - parseInt(localStorage.getItem(VK_TOKEN_KEY+'_saved_at')||'0')) / 3600000);
+  if (hoursAgo >= 24) {
+    showInlineMsg('Токен устарел — получите новый', 'warn');
+    return;
+  }
+
+  const btn = document.getElementById('vk-scout-btn');
+  const progress = document.getElementById('vk-scout-progress');
+  btn.disabled = true;
+  btn.innerHTML = '⏳ Разведка...';
+  progress.style.display = 'block';
+
+  // Загружаем существующие группы
+  let groups = {};
+  try {
+    const r = await fetch('https://raw.githubusercontent.com/xopromo/reeltrends/main/vk_groups.json?t='+Date.now());
+    if (r.ok) groups = await r.json();
+  } catch(e) {}
+
+  let found = 0;
+  const now = new Date().toISOString();
+
+  for (let i = 0; i < VK_QUERIES.length; i++) {
+    const q = VK_QUERIES[i];
+    progress.textContent = `Ищу: "${q}" (${i+1}/${VK_QUERIES.length})... найдено ${found} групп`;
+    try {
+      // Поиск групп
+      const resp = await vkApi('groups.search', {q, type:'group,page', count:20, sort:6});
+      for (const g of resp.items||[]) {
+        const gid = String(-g.id);
+        if (!groups[gid]) {
+          groups[gid] = {id:-g.id, title:g.name||'', niche:q, score:0, added_at:now};
+          found++;
+        }
+      }
+      await new Promise(r=>setTimeout(r,200));
+
+      // Поиск видео → извлекаем группы
+      const vresp = await vkApi('video.search', {q, count:50, filters:'vk', shorter:60, sort:2});
+      for (const v of vresp.items||[]) {
+        if (v.owner_id < 0) {
+          const gid = String(v.owner_id);
+          if (!groups[gid]) {
+            groups[gid] = {id:v.owner_id, title:'', niche:q, score:1, added_at:now};
+            found++;
+          }
+        }
+      }
+      await new Promise(r=>setTimeout(r,200));
+    } catch(e) {
+      console.warn('VK scout error:', q, e.message);
+    }
+  }
+
+  progress.textContent = `✓ Найдено ${found} новых групп. Всего: ${Object.keys(groups).length}`;
+
+  // Сохраняем в localStorage (для следующего использования)
+  try {
+    localStorage.setItem('rt_vk_groups_cache', JSON.stringify(groups));
+  } catch(e) {}
+
+  btn.disabled = false;
+  btn.innerHTML = '<svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg> Запустить разведку ВК';
+
+  showInlineMsg('Разведка завершена! Найдено ' + found + ' новых групп.', 'ok');
 }
 
 </script>
