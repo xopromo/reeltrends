@@ -279,18 +279,24 @@
   </div>
 
   <!-- YouTube поиск -->
-  <div id="yt-search-bar" style="display:flex;gap:8px;margin-bottom:16px;align-items:center">
-    <div style="position:relative;flex:1;max-width:480px">
+  <div id="yt-search-bar" style="display:flex;gap:8px;margin-bottom:16px;align-items:center;flex-wrap:wrap">
+    <div style="position:relative;flex:1;min-width:220px;max-width:480px">
       <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="position:absolute;left:10px;top:50%;transform:translateY(-50%);color:#ff6b6b;pointer-events:none"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-      <input id="yt-inline-input" type="text" placeholder="🎬 Найти Shorts по теме: стоматология, крипта, фитнес..."
+      <input id="yt-inline-input" type="text" placeholder="Найти Shorts по теме: стоматология, крипта..."
         style="width:100%;height:36px;background:rgba(255,80,80,.06);border:1px solid rgba(255,80,80,.25);border-radius:10px;padding:0 12px 0 32px;font-family:inherit;font-size:13px;color:var(--cream);outline:none"
         onfocus="this.style.borderColor='rgba(255,80,80,.5)'" onblur="this.style.borderColor='rgba(255,80,80,.25)'"
-        onkeydown="if(event.key==='Enter')doYtInlineSearch()">
+        onkeydown="if(event.key==='Enter')doYtSearch(false)">
     </div>
-    <button onclick="doYtInlineSearch()" id="yt-inline-btn"
-      style="padding:0 16px;height:36px;border-radius:10px;border:1px solid rgba(255,80,80,.35);background:rgba(255,80,80,.1);color:#ff6b6b;font-family:inherit;font-size:13px;cursor:pointer;white-space:nowrap;display:flex;align-items:center;gap:6px">
-      <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-      Найти
+    <button onclick="doYtSearch(false)" id="yt-btn-local"
+      style="padding:0 14px;height:36px;border-radius:10px;border:1px solid rgba(255,80,80,.35);background:rgba(255,80,80,.1);color:#ff6b6b;font-family:inherit;font-size:12px;cursor:pointer;white-space:nowrap"
+      title="Ищет по уже загруженным видео — бесплатно">
+      Найти в базе
+    </button>
+    <button onclick="doYtSearch(true)" id="yt-btn-api"
+      style="padding:0 14px;height:36px;border-radius:10px;border:1px solid rgba(255,80,80,.5);background:rgba(255,80,80,.18);color:#ff6b6b;font-family:inherit;font-size:12px;cursor:pointer;white-space:nowrap;display:flex;align-items:center;gap:5px"
+      title="Делает новый запрос к YouTube API — тратит токены">
+      <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+      + Найти новые
     </button>
     <span id="yt-inline-limit" style="font-size:11px;color:var(--cream-muted)"></span>
     <button id="yt-inline-clear" onclick="clearYtSearch()" style="display:none;padding:0 12px;height:36px;border-radius:10px;border:1px solid var(--border);background:none;color:var(--cream-muted);font-family:inherit;font-size:12px;cursor:pointer">✕ Очистить</button>
@@ -878,13 +884,28 @@ document.getElementById('nb').addEventListener('click',()=>{state.page++;render(
 
 // ── New since visit ───────────────────────────────────────────────
 function showNewSinceVisit() {
-  const lv=localStorage.getItem(VK);if(!lv)return;
-  const cut=new Date(lv);
-  const items=ALL.filter(i=>i.trending_since&&new Date(i.trending_since)>cut);
-  if(!items.length){alert('Новых рилсов с вашего прошлого визита нет');return;}
-  filtered=items.sort((a,b)=>(b.hot_score||0)-(a.hot_score||0));
+  const btn=document.getElementById('btn-new');
+  const items=btn._newItems;
+  if(!items||!items.length){
+    // Пересчитываем на случай если данные обновились
+    const lv=localStorage.getItem(VK);
+    if(!lv){alert('Нет данных о прошлом визите');return;}
+    const cut=new Date(lv);
+    const fresh=ALL.filter(i=>{
+      const ref=i.published_at||i.trending_since;
+      return ref&&new Date(ref)>cut;
+    });
+    if(!fresh.length){alert('Новых рилсов с вашего прошлого визита нет');return;}
+    filtered=fresh.sort((a,b)=>(b.hot_score||0)-(a.hot_score||0));
+  } else {
+    filtered=items.sort((a,b)=>(b.hot_score||0)-(a.hot_score||0));
+  }
   state.page=1;render();
   document.querySelectorAll('#sg .fb').forEach(b=>b.classList.remove('on','on-cyan'));
+  // Только сейчас записываем новый визит
+  localStorage.setItem(VK,new Date().toISOString());
+  btn._newItems=null;
+  btn.style.display='none';
 }
 
 setInterval(updateCombinedTimer,15000);
@@ -921,10 +942,20 @@ async function load() {
     const lv=localStorage.getItem(VK);
     const btnN=document.getElementById('btn-new');
     if (lv){
-      const ns=ALL.filter(i=>i.trending_since&&new Date(i.trending_since)>new Date(lv));
-      if (ns.length>0){btnN.style.display='inline-block';btnN.textContent='Новое с визита ('+ns.length+')';}
+      const cut=new Date(lv);
+      const ns=ALL.filter(i=>{
+        const ref=i.published_at||i.trending_since;
+        return ref && new Date(ref)>cut;
+      });
+      if (ns.length>0){
+        btnN.style.display='inline-block';
+        btnN.textContent='Новое с визита ('+ns.length+')';
+        btnN._newItems=ns; // сохраняем список
+      }
     }
-    localStorage.setItem(VK,new Date().toISOString());
+    // Записываем визит только когда пользователь нажмёт кнопку (см. showNewSinceVisit)
+    // Но если первый раз — запишем сразу
+    if (!lv) localStorage.setItem(VK,new Date().toISOString());
 
     loadSettings();
     loadFilters();
@@ -947,99 +978,90 @@ load();
 let ytSearchResults = [];  // результаты поиска хранятся отдельно
 let ytSearchActive = false;
 
-async function doYtInlineSearch() {
+async function doYtSearch(useApi) {
   const query = document.getElementById('yt-inline-input').value.trim();
   if (!query) return;
 
-  const usage = getSearchUsage();
-  if (usage.count >= YT_SEARCH_MAX_PER_HOUR) {
-    updateInlineLimitLabel();
+  const q = query.toLowerCase();
+
+  // Шаг 1: ищем в уже загруженных данных (ALL + ytData + igData)
+  const allData = [...new Map([...igData,...ytData].map(x=>[x.id,x])).values()];
+  const localResults = allData.filter(item => {
+    const text = ((item.title||'')+(item.caption||'')+(item.niche||'')+(item.author?.username||'')).toLowerCase();
+    return text.includes(q);
+  });
+
+  ytSearchResults = [...localResults];
+
+  // Шаг 2: если запрошено — идём в YouTube API
+  if (useApi) {
+    const usage = getSearchUsage();
+    if (usage.count >= YT_SEARCH_MAX_PER_HOUR) {
+      updateInlineLimitLabel();
+      // Показываем хотя бы локальные
+    } else {
+      const btnApi = document.getElementById('yt-btn-api');
+      btnApi.textContent = '...';
+      btnApi.disabled = true;
+      try {
+        const since = new Date(Date.now()-7*86400000).toISOString();
+        const sr = await fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&q=${encodeURIComponent(query+' shorts')}&maxResults=20&order=viewCount&publishedAfter=${since}&key=${YT_SEARCH_KEY}`);
+        const sd = await sr.json();
+        if (!sr.ok) throw new Error(sd.error?.message||'Ошибка API');
+        const videoIds = (sd.items||[]).map(i=>i.id.videoId).filter(Boolean);
+        if (videoIds.length) {
+          const dr = await fetch(`https://www.googleapis.com/youtube/v3/videos?part=snippet,statistics,contentDetails&id=${videoIds.join(',')}&key=${YT_SEARCH_KEY}`);
+          const dd = await dr.json();
+          const existIds = new Set(ytSearchResults.map(x=>x.id));
+          const fresh = (dd.items||[])
+            .filter(v => parseDurSec(v.contentDetails?.duration||'') <= 180 && parseInt(v.statistics?.viewCount||0) >= 1000)
+            .filter(v => !existIds.has(v.id))
+            .map(v => {
+              const views=parseInt(v.statistics?.viewCount||0);
+              const likes=parseInt(v.statistics?.likeCount||0);
+              const pub=v.snippet?.publishedAt||'';
+              return {
+                id:v.id, url:`https://www.youtube.com/shorts/${v.id}`,
+                title:v.snippet?.title||'', caption:v.snippet?.description?.substring(0,300)||'',
+                thumbnail_url:v.snippet?.thumbnails?.maxres?.url||v.snippet?.thumbnails?.medium?.url||'',
+                published_at:pub, duration_sec:parseDurSec(v.contentDetails?.duration||''),
+                views, likes, comments:parseInt(v.statistics?.commentCount||0),
+                velocity:pub?Math.round(views/Math.max(0.5,(Date.now()-new Date(pub))/3600000)):0,
+                x_factor:views>1000?Math.round(views/1000*10)/10:null,
+                hot_score:views>0&&likes>0?likes/views:null,
+                platform:'youtube', niche:query, lang:'',
+                author:{channel_id:v.snippet?.channelId||'',username:v.snippet?.channelTitle||'',
+                  display_name:v.snippet?.channelTitle||'',platform:'youtube',followers_count:0,median_views:0},
+                trending_since:new Date().toISOString(), _search_query:query,
+              };
+            });
+          ytSearchResults = [...fresh, ...ytSearchResults];
+          // Добавляем новые в ytData для будущих поисков
+          const ytIds = new Set(ytData.map(x=>x.id));
+          ytData = [...ytData, ...fresh.filter(x=>!ytIds.has(x.id))];
+        }
+        usage.count++;
+        saveSearchUsage(usage);
+        updateInlineLimitLabel();
+      } catch(e) {
+        console.warn('API search failed:', e);
+      } finally {
+        btnApi.innerHTML = '<svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg> + Найти новые';
+        btnApi.disabled = false;
+      }
+    }
+  }
+
+  if (!ytSearchResults.length) {
+    alert(useApi ? 'Ничего не найдено ни в базе, ни на YouTube' : 'Ничего не найдено в базе. Попробуй "+ Найти новые"');
     return;
   }
 
-  const btn = document.getElementById('yt-inline-btn');
-  btn.innerHTML = '...';
-  btn.disabled = true;
-
-  try {
-    const since = new Date(Date.now()-7*86400000).toISOString();
-    const searchRes = await fetch(
-      `https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&q=${encodeURIComponent(query+' shorts')}&maxResults=20&order=viewCount&publishedAfter=${since}&key=${YT_SEARCH_KEY}`
-    );
-    const searchData = await searchRes.json();
-    if (!searchRes.ok) throw new Error(searchData.error?.message || 'Ошибка API');
-
-    const videoIds = (searchData.items||[]).map(i=>i.id.videoId).filter(Boolean);
-    if (!videoIds.length) { alert('Ничего не найдено'); return; }
-
-    const detailRes = await fetch(
-      `https://www.googleapis.com/youtube/v3/videos?part=snippet,statistics,contentDetails&id=${videoIds.join(',')}&key=${YT_SEARCH_KEY}`
-    );
-    const detailData = await detailRes.json();
-
-    // Конвертируем в формат нашей базы
-    ytSearchResults = (detailData.items||[])
-      .filter(v => {
-        const secs = parseDurSec(v.contentDetails?.duration||'');
-        return secs <= 180 && parseInt(v.statistics?.viewCount||0) >= 1000;
-      })
-      .map(v => {
-        const views = parseInt(v.statistics?.viewCount||0);
-        const likes = parseInt(v.statistics?.likeCount||0);
-        const comments = parseInt(v.statistics?.commentCount||0);
-        const pub = v.snippet?.publishedAt||'';
-        const secs = parseDurSec(v.contentDetails?.duration||'');
-        const thumb = v.snippet?.thumbnails?.maxres?.url || v.snippet?.thumbnails?.medium?.url || '';
-        return {
-          id: v.id,
-          url: `https://www.youtube.com/shorts/${v.id}`,
-          title: v.snippet?.title||'',
-          caption: v.snippet?.description?.substring(0,300)||'',
-          thumbnail_url: thumb,
-          published_at: pub,
-          duration_sec: secs,
-          views, likes, comments,
-          velocity: pub ? Math.round(views / Math.max(0.5,(Date.now()-new Date(pub))/3600000)) : 0,
-          x_factor: views > 1000 ? Math.round(views/1000*10)/10 : null,
-          hot_score: views>0&&likes>0 ? likes/views : null,
-          platform: 'youtube',
-          niche: query,
-          lang: 'en',
-          author: {
-            channel_id: v.snippet?.channelId||'',
-            username: v.snippet?.channelTitle||'',
-            display_name: v.snippet?.channelTitle||'',
-            platform: 'youtube',
-            followers_count: 0,
-            median_views: 0,
-          },
-          trending_since: new Date().toISOString(),
-          _search_query: query,
-        };
-      });
-
-    usage.count++;
-    saveSearchUsage(usage);
-    updateInlineLimitLabel();
-
-    if (!ytSearchResults.length) { alert('Нет подходящих Shorts'); return; }
-
-    // Добавляем в ALL и показываем
-    ytSearchActive = true;
-    const eIds = new Set(ALL.map(x=>x.id));
-    const newItems = ytSearchResults.filter(x=>!eIds.has(x.id));
-    ALL = [...ytSearchResults, ...ALL.filter(x=>!ytSearchResults.find(y=>y.id===x.id))];
-
-    document.getElementById('yt-inline-clear').style.display = 'inline-flex';
-    state.page = 1;
-    applyFilters();
-
-  } catch(e) {
-    alert('Ошибка поиска: ' + e.message);
-  } finally {
-    btn.innerHTML = '<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg> Найти';
-    btn.disabled = false;
-  }
+  ytSearchActive = true;
+  ALL = ytSearchResults.sort((a,b)=>(b.hot_score||0)-(a.hot_score||0));
+  document.getElementById('yt-inline-clear').style.display = 'inline-flex';
+  state.page = 1;
+  applyFilters();
 }
 
 function clearYtSearch() {
@@ -1048,6 +1070,7 @@ function clearYtSearch() {
   document.getElementById('yt-inline-clear').style.display = 'none';
   document.getElementById('yt-inline-input').value = '';
   rebuildALL(state.platform);
+  state.page = 1;
   applyFilters();
 }
 
@@ -1224,35 +1247,5 @@ function renderYtResult(v) {
 
 </script>
 
-<!-- YouTube Search Modal -->
-<div id="yt-search-overlay" style="display:none;position:fixed;inset:0;z-index:300;background:rgba(0,0,0,.85);backdrop-filter:blur(8px);align-items:center;justify-content:center;padding:20px">
-  <div style="background:var(--surface);border:1px solid var(--border2);border-radius:18px;width:100%;max-width:560px;max-height:85vh;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 24px 60px rgba(0,0,0,.7)">
-    <div style="padding:16px 20px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:12px">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="#ff4444"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-      <span style="font-family:'DM Serif Display',serif;font-size:17px">Поиск YouTube Shorts</span>
-      <button onclick="closeYtSearch()" style="margin-left:auto;background:none;border:none;color:var(--cream-dim);font-size:22px;cursor:pointer;line-height:1">×</button>
-    </div>
-    <div style="padding:16px 20px;border-bottom:1px solid var(--border)">
-      <div style="display:flex;gap:8px">
-        <input id="yt-search-input" type="text" placeholder="Например: стоматология, крипта, фитнес для похудения..." 
-          style="flex:1;height:38px;background:var(--surface2);border:1px solid var(--border2);border-radius:10px;padding:0 12px;font-family:inherit;font-size:13px;color:var(--cream);outline:none"
-          onkeydown="if(event.key==='Enter')doYtSearch()">
-        <button onclick="doYtSearch()" id="yt-search-btn"
-          style="padding:0 18px;border-radius:10px;border:none;background:#ff4444;color:white;font-family:inherit;font-size:13px;cursor:pointer;white-space:nowrap">
-          Найти
-        </button>
-      </div>
-      <div id="yt-search-limit" style="font-size:11px;color:var(--cream-muted);margin-top:8px"></div>
-    </div>
-    <div id="yt-search-results" style="overflow-y:auto;padding:12px 20px;flex:1">
-      <div style="color:var(--cream-muted);font-size:13px;text-align:center;padding:40px 0">
-        Введите тему и нажмите Найти
-      </div>
-    </div>
-    <div style="padding:12px 20px;border-top:1px solid var(--border);font-size:11px;color:var(--cream-muted)">
-      Результаты показываются только вам. Интересные каналы автоматически добавляются в общую базу при следующем обновлении.
-    </div>
-  </div>
-</div>
 </body>
 </html>
