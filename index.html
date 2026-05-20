@@ -272,7 +272,7 @@
     <button class="fb" id="btn-new" style="display:none;background:rgba(74,222,128,.1);color:#4ade80;border:1px solid rgba(74,222,128,.25);border-radius:10px;padding:5px 12px" onclick="showNewSinceVisit()"></button>
 
     <span class="count-badge" id="cnt">—</span>
-    <button id="btn-reset-filters" onclick="resetAllFilters()" style="display:none;padding:5px 11px;border-radius:10px;border:1px solid rgba(248,113,113,.3);background:rgba(248,113,113,.08);color:var(--red);font-family:inherit;font-size:12px;cursor:pointer;transition:all .15s;white-space:nowrap" title="Сбросить все фильтры">✕ Сбросить</button>
+    <button id="btn-reset-filters" onclick="resetAllFilters()" style="display:none;padding:5px 11px;border-radius:10px;border:1px solid rgba(248,113,113,.3);background:rgba(248,113,113,.08);color:var(--red);font-family:inherit;font-size:12px;cursor:pointer;transition:all .15s;white-space:nowrap" title="Сбросить все фильтры">✕ Сбросить фильтры</button>
   </div>
 
   <!-- YouTube поиск -->
@@ -296,7 +296,7 @@
       + Найти новые
     </button>
     <span id="yt-inline-limit" style="font-size:11px;color:var(--cream-muted)"></span>
-    <button id="yt-inline-clear" onclick="clearYtSearch()" style="display:none;padding:0 12px;height:36px;border-radius:10px;border:1px solid var(--border);background:none;color:var(--cream-muted);font-family:inherit;font-size:12px;cursor:pointer">✕ Очистить</button>
+    <button id="yt-inline-clear" onclick="clearYtSearch()" style="display:none;padding:0 12px;height:36px;border-radius:10px;border:1px solid var(--border);background:none;color:var(--cream-muted);font-family:inherit;font-size:12px;cursor:pointer">✕ Выйти из поиска</button>
   </div>
 
   <div class="grid" id="grid"></div>
@@ -683,6 +683,34 @@ function card(item, rank) {
 }
 
 // ── Filters ───────────────────────────────────────────────────────
+function detectLang(item) {
+  // Сначала определяем по тексту — это точнее чем поле lang
+  const text = ((item.title || '') + ' ' + (item.caption || '') + ' ' + (item.author?.username || ''));
+
+  // Кириллица → русский (самый надёжный признак)
+  if (/[а-яёА-ЯЁ]/.test(text)) return 'ru';
+
+  // Деванагари (хинди)
+  if (/[ऀ-ॿ]/.test(text)) return 'hi';
+
+  // Арабский
+  if (/[؀-ۿ]/.test(text)) return 'ar';
+
+  // Китайский/японский
+  if (/[一-鿿぀-ゟ゠-ヿ]/.test(text)) return 'zh';
+
+  // Латиница → смотрим поле lang для уточнения (es, fr, de, pt...)
+  if (/[a-zA-Z]/.test(text)) {
+    const explicit = (item.lang || item.author?.lang || '').substring(0,2).toLowerCase();
+    if (explicit && explicit !== 'un' && explicit !== 'en') return explicit;
+    return 'en'; // по умолчанию латиница = английский
+  }
+
+  // Текста нет — фоллбэк на поле lang
+  const explicit = (item.lang || item.author?.lang || '').substring(0,2).toLowerCase();
+  return explicit || '';
+}
+
 function passesSettings(item) {
   const platform = (item.author?.platform || item.platform || '').toLowerCase();
   const lang = item.lang || item.author?.lang || '';
@@ -690,10 +718,13 @@ function passesSettings(item) {
   // Платформа (настройки)
   if (S.platforms.length && !S.platforms.includes(platform)) return false;
 
-  // Язык
-  const langCode = lang.substring(0,2);
+  // Язык — определяем по полю lang + по тексту названия/описания
   if (S.langs.length) {
-    const match = S.langs.some(l => l==='' ? !langCode || langCode==='' : langCode===l);
+    const detectedLang = detectLang(item);
+    const match = S.langs.some(l => {
+      if (l === '') return detectedLang === '';
+      return detectedLang === l;
+    });
     if (!match) return false;
   }
 
@@ -1039,6 +1070,11 @@ async function doYtSearch(useApi) {
         usage.count++;
         saveSearchUsage(usage);
         updateInlineLimitLabel();
+        // Обновляем таймер — нашли новые данные
+        if (fresh.length > 0) {
+          ytUpdatedAt = new Date().toISOString();
+          updateCombinedTimer();
+        }
       } catch(e) {
         console.warn('API search failed:', e);
       } finally {
