@@ -1,34 +1,7 @@
 {
-  "updated_at": "2026-05-20T14:20:10.583515+00:00",
-  "total": 100,
+  "updated_at": "2026-05-20T14:42:06.011518+00:00",
+  "total": 102,
   "items": [
-    {
-      "id": "Q87xbsLtQow",
-      "url": "https://www.youtube.com/shorts/Q87xbsLtQow",
-      "title": "fish tank 04 is live",
-      "caption": "fish tank 04 is live\n\n#live\n#fish\n#aquarium\n#fishtanks",
-      "thumbnail_url": "https://i.ytimg.com/vi/Q87xbsLtQow/maxresdefault_live.jpg",
-      "published_at": "2026-05-20T12:02:11Z",
-      "duration_sec": 0,
-      "views": 18,
-      "likes": 6,
-      "comments": 0,
-      "velocity": 7.8,
-      "x_factor": 1.0,
-      "hot_score": 0.3042,
-      "platform": "youtube",
-      "niche": "funny",
-      "lang": "en",
-      "author": {
-        "channel_id": "UCPzBkQaV-AgHX264OMZB_2Q",
-        "username": "Funny viral shorts",
-        "display_name": "Funny viral shorts",
-        "platform": "youtube",
-        "followers_count": 597,
-        "median_views": 18
-      },
-      "trending_since": "2026-05-20T14:20:10.561813+00:00"
-    },
     {
       "id": "nWuz54btrHQ",
       "url": "https://www.youtube.com/shorts/nWuz54btrHQ",
@@ -37,12 +10,12 @@
       "thumbnail_url": "https://i.ytimg.com/vi/nWuz54btrHQ/maxresdefault.jpg",
       "published_at": "2026-05-20T13:11:05Z",
       "duration_sec": 48,
-      "views": 5467,
-      "likes": 751,
-      "comments": 24,
-      "velocity": 4747.5,
-      "x_factor": 0.08,
-      "hot_score": 0.1436,
+      "views": 6372,
+      "likes": 932,
+      "comments": 28,
+      "velocity": 4200.6,
+      "x_factor": 0.1,
+      "hot_score": 0.15,
       "platform": "youtube",
       "niche": "motivation",
       "lang": "en",
@@ -52,9 +25,9 @@
         "display_name": "SKT Official: Business & Motivation",
         "platform": "youtube",
         "followers_count": 4260000,
-        "median_views": 65601
+        "median_views": 66102
       },
-      "trending_since": "2026-05-20T14:20:10.561524+00:00"
+      "trending_since": "2026-05-20T14:42:05.979528+00:00"
     },
     {
       "id": "oSFNXFOn0FI",
@@ -67,9 +40,9 @@
       "views": 131,
       "likes": 16,
       "comments": 1,
-      "velocity": 42.9,
+      "velocity": 38.3,
       "x_factor": 1.0,
-      "hot_score": 0.1287,
+      "hot_score": 0.127,
       "platform": "youtube",
       "niche": "финансы",
       "lang": "ru",
@@ -78,10 +51,10 @@
         "username": "TaroMania Shorts",
         "display_name": "TaroMania Shorts",
         "platform": "youtube",
-        "followers_count": 7910,
+        "followers_count": 7920,
         "median_views": 131
       },
-      "trending_since": "2026-05-20T14:20:10.560186+00:00"
+      "trending_since": "2026-05-20T14:42:05.978315+00:00"
     },
     {
       "id": "xRZFNrhMYTk",
@@ -91,12 +64,12 @@
       "thumbnail_url": "https://i.ytimg.com/vi/xRZFNrhMYTk/maxresdefault.jpg",
       "published_at": "2026-05-20T12:00:37Z",
       "duration_sec": 60,
-      "views": 108,
-      "likes": 12,
+      "views": 124,
+      "likes": 14,
       "comments": 0,
-      "velocity": 46.4,
-      "x_factor": 0.82,
-      "hot_score": 0.1013,
+      "velocity": 46.1,
+      "x_factor": 0.95,
+      "hot_score": 0.1015,
       "platform": "youtube",
       "niche": "финансы",
       "lang": "ru",
@@ -105,37 +78,37 @@
         "username": "TaroMania Shorts",
         "display_name": "TaroMania Shorts",
         "platform": "youtube",
-        "followers_count": 7910,
+        "followers_count": 7920,
         "median_views": 131
       },
-      "trending_since": "2026-05-20T14:20:10.560173+00:00"
+      "trending_since": "2026-05-20T14:42:05.978301+00:00"
     },
     {
-      "id": "8OUCFxurt40",
-      "url": "https://www.youtube.com/shorts/8OUCFxurt40",
-      "title": "this portable speaker is amazing 🤩🔥 | portronics string",
-      "caption": "",
-      "thumbnail_url": "https://i.ytimg.com/vi/8OUCFxurt40/maxresdefault.jpg",
-      "published_at": "2026-05-20T12:00:01Z",
-      "duration_sec": 52,
-      "views": 759,
-      "likes": 41,
-      "comments": 6,
-      "velocity": 324.9,
-      "x_factor": 0.04,
-      "hot_score": 0.0708,
+      "id": "Q87xbsLtQow",
+      "url": "https://www.youtube.com/shorts/Q87xbsLtQow",
+      "title": "fish tank 04 is live",
+      "caption": "fish tank 04 is live\n\n#live\n#fish\n#aquarium\n#fishtanks",
+      "thumbnail_url": "https://i.ytimg.com/vi/Q87xbsLtQow/maxresdefault_live.jpg",
+      "published_at": "2026-05-20T12:02:11Z",
+      "duration_sec": 0,
+      "views": 85,
+      "likes": 8,
+      "comments": 0,
+      "velocity": 31.9,
+      "x_factor": 1.0,
+      "hot_score": 0.0847,
       "platform": "youtube",
-      "niche": "tech",
+      "niche": "funny",
       "lang": "en",
       "author": {
-        "channel_id": "UCJFsSKEV5dX-RkGXfXis13w",
-        "username": "Sky tech Shorts",
-        "display_name": "Sky tech Shorts",
+        "channel_id": "UCPzBkQaV-AgHX264OMZB_2Q",
+        "username": "Funny viral shorts",
+        "display_name": "Funny viral shorts",
         "platform": "youtube",
-        "followers_count": 262000,
-        "median_views": 19178
+        "followers_count": 597,
+        "median_views": 85
       },
-      "trending_since": "2026-05-20T14:20:10.562037+00:00"
+      "trending_since": "2026-05-20T14:42:05.979818+00:00"
     },
     {
       "id": "2AWuisFJxWA",
@@ -145,12 +118,12 @@
       "thumbnail_url": "https://i.ytimg.com/vi/2AWuisFJxWA/maxresdefault.jpg",
       "published_at": "2026-05-20T09:58:10Z",
       "duration_sec": 65,
-      "views": 1313,
-      "likes": 91,
+      "views": 1369,
+      "likes": 93,
       "comments": 5,
-      "velocity": 300.7,
+      "velocity": 289.3,
       "x_factor": 1.0,
-      "hot_score": 0.0683,
+      "hot_score": 0.0659,
       "platform": "youtube",
       "niche": "финансы",
       "lang": "ru",
@@ -160,9 +133,36 @@
         "display_name": "Еж про деньги Shorts",
         "platform": "youtube",
         "followers_count": 40100,
-        "median_views": 1313
+        "median_views": 1369
       },
-      "trending_since": "2026-05-20T14:20:10.560716+00:00"
+      "trending_since": "2026-05-20T14:42:05.978793+00:00"
+    },
+    {
+      "id": "8OUCFxurt40",
+      "url": "https://www.youtube.com/shorts/8OUCFxurt40",
+      "title": "this portable speaker is amazing 🤩🔥 | portronics string",
+      "caption": "",
+      "thumbnail_url": "https://i.ytimg.com/vi/8OUCFxurt40/maxresdefault.jpg",
+      "published_at": "2026-05-20T12:00:01Z",
+      "duration_sec": 52,
+      "views": 858,
+      "likes": 43,
+      "comments": 6,
+      "velocity": 317.6,
+      "x_factor": 0.04,
+      "hot_score": 0.0639,
+      "platform": "youtube",
+      "niche": "tech",
+      "lang": "en",
+      "author": {
+        "channel_id": "UCJFsSKEV5dX-RkGXfXis13w",
+        "username": "Sky tech Shorts",
+        "display_name": "Sky tech Shorts",
+        "platform": "youtube",
+        "followers_count": 262000,
+        "median_views": 19250
+      },
+      "trending_since": "2026-05-20T14:42:05.980042+00:00"
     },
     {
       "id": "wH8Vxtz4_xU",
@@ -172,12 +172,12 @@
       "thumbnail_url": "https://i.ytimg.com/vi/wH8Vxtz4_xU/maxresdefault.jpg",
       "published_at": "2026-05-20T10:00:19Z",
       "duration_sec": 12,
-      "views": 43889,
-      "likes": 3152,
-      "comments": 26,
-      "velocity": 10133.7,
-      "x_factor": 0.41,
-      "hot_score": 0.0623,
+      "views": 47807,
+      "likes": 3353,
+      "comments": 27,
+      "velocity": 10179.5,
+      "x_factor": 0.36,
+      "hot_score": 0.0601,
       "platform": "youtube",
       "niche": "юмор",
       "lang": "ru",
@@ -187,9 +187,9 @@
         "display_name": "Смешновости",
         "platform": "youtube",
         "followers_count": 2350000,
-        "median_views": 106127
+        "median_views": 133661
       },
-      "trending_since": "2026-05-20T14:20:10.561044+00:00"
+      "trending_since": "2026-05-20T14:42:05.979031+00:00"
     },
     {
       "id": "oJivMYL0fhU",
@@ -199,12 +199,12 @@
       "thumbnail_url": "https://i.ytimg.com/vi/oJivMYL0fhU/maxresdefault.jpg",
       "published_at": "2026-05-20T12:00:28Z",
       "duration_sec": 53,
-      "views": 106127,
-      "likes": 7076,
-      "comments": 52,
-      "velocity": 45577.6,
+      "views": 133661,
+      "likes": 8667,
+      "comments": 61,
+      "velocity": 49616.5,
       "x_factor": 1.0,
-      "hot_score": 0.0621,
+      "hot_score": 0.0595,
       "platform": "youtube",
       "niche": "юмор",
       "lang": "ru",
@@ -214,9 +214,9 @@
         "display_name": "Смешновости",
         "platform": "youtube",
         "followers_count": 2350000,
-        "median_views": 106127
+        "median_views": 133661
       },
-      "trending_since": "2026-05-20T14:20:10.561034+00:00"
+      "trending_since": "2026-05-20T14:42:05.979020+00:00"
     },
     {
       "id": "QogOiPGRihc",
@@ -226,12 +226,12 @@
       "thumbnail_url": "https://i.ytimg.com/vi/QogOiPGRihc/maxresdefault.jpg",
       "published_at": "2026-05-20T03:30:23Z",
       "duration_sec": 106,
-      "views": 40210,
-      "likes": 3211,
+      "views": 41081,
+      "likes": 3273,
       "comments": 47,
-      "velocity": 3712.9,
+      "velocity": 3669.5,
       "x_factor": 1.0,
-      "hot_score": 0.0574,
+      "hot_score": 0.0567,
       "platform": "youtube",
       "niche": "motivation",
       "lang": "en",
@@ -241,36 +241,9 @@
         "display_name": "A2 Motivation by Arvind Arora",
         "platform": "youtube",
         "followers_count": 20700000,
-        "median_views": 40210
+        "median_views": 41081
       },
-      "trending_since": "2026-05-20T14:20:10.561695+00:00"
-    },
-    {
-      "id": "gTVXUUJ1gNk",
-      "url": "https://www.youtube.com/shorts/gTVXUUJ1gNk",
-      "title": "Обязательная страховка жилья 😳",
-      "caption": "Обязательная страховка жилья 😳\r\n\r\n\r\n\r\n#shorts",
-      "thumbnail_url": "https://i.ytimg.com/vi/gTVXUUJ1gNk/maxresdefault.jpg",
-      "published_at": "2026-05-20T11:16:55Z",
-      "duration_sec": 61,
-      "views": 639,
-      "likes": 31,
-      "comments": 3,
-      "velocity": 209.2,
-      "x_factor": 0.49,
-      "hot_score": 0.0555,
-      "platform": "youtube",
-      "niche": "финансы",
-      "lang": "ru",
-      "author": {
-        "channel_id": "UCyzewuLUe7ggFcjL2jDUtSw",
-        "username": "Еж про деньги Shorts",
-        "display_name": "Еж про деньги Shorts",
-        "platform": "youtube",
-        "followers_count": 40100,
-        "median_views": 1313
-      },
-      "trending_since": "2026-05-20T14:20:10.560235+00:00"
+      "trending_since": "2026-05-20T14:42:05.979699+00:00"
     },
     {
       "id": "arK9wH7sZYI",
@@ -280,12 +253,12 @@
       "thumbnail_url": "https://i.ytimg.com/vi/arK9wH7sZYI/maxresdefault.jpg",
       "published_at": "2026-05-20T13:57:09Z",
       "duration_sec": 41,
-      "views": 7816,
-      "likes": 393,
-      "comments": 14,
-      "velocity": 15632.0,
-      "x_factor": 0.05,
-      "hot_score": 0.0534,
+      "views": 13288,
+      "likes": 723,
+      "comments": 19,
+      "velocity": 17737.2,
+      "x_factor": 0.09,
+      "hot_score": 0.0564,
       "platform": "youtube",
       "niche": "motivation",
       "lang": "en",
@@ -295,9 +268,36 @@
         "display_name": "Motivation QuoteShala",
         "platform": "youtube",
         "followers_count": 4930000,
-        "median_views": 154925
+        "median_views": 154981
       },
-      "trending_since": "2026-05-20T14:20:10.561325+00:00"
+      "trending_since": "2026-05-20T14:42:05.979316+00:00"
+    },
+    {
+      "id": "gTVXUUJ1gNk",
+      "url": "https://www.youtube.com/shorts/gTVXUUJ1gNk",
+      "title": "Обязательная страховка жилья 😳",
+      "caption": "Обязательная страховка жилья 😳\r\n\r\n\r\n\r\n#shorts",
+      "thumbnail_url": "https://i.ytimg.com/vi/gTVXUUJ1gNk/maxresdefault.jpg",
+      "published_at": "2026-05-20T11:16:55Z",
+      "duration_sec": 61,
+      "views": 648,
+      "likes": 32,
+      "comments": 3,
+      "velocity": 189.5,
+      "x_factor": 0.47,
+      "hot_score": 0.0554,
+      "platform": "youtube",
+      "niche": "финансы",
+      "lang": "ru",
+      "author": {
+        "channel_id": "UCyzewuLUe7ggFcjL2jDUtSw",
+        "username": "Еж про деньги Shorts",
+        "display_name": "Еж про деньги Shorts",
+        "platform": "youtube",
+        "followers_count": 40100,
+        "median_views": 1369
+      },
+      "trending_since": "2026-05-20T14:42:05.978385+00:00"
     },
     {
       "id": "hqXqIxSH1nU",
@@ -307,12 +307,12 @@
       "thumbnail_url": "https://i.ytimg.com/vi/hqXqIxSH1nU/maxresdefault.jpg",
       "published_at": "2026-05-19T09:30:03Z",
       "duration_sec": 60,
-      "views": 1142,
-      "likes": 113,
+      "views": 1148,
+      "likes": 115,
       "comments": 5,
-      "velocity": 39.6,
-      "x_factor": 8.72,
-      "hot_score": 0.0509,
+      "velocity": 39.3,
+      "x_factor": 8.76,
+      "hot_score": 0.0511,
       "platform": "youtube",
       "niche": "финансы",
       "lang": "ru",
@@ -321,64 +321,10 @@
         "username": "TaroMania Shorts",
         "display_name": "TaroMania Shorts",
         "platform": "youtube",
-        "followers_count": 7910,
+        "followers_count": 7920,
         "median_views": 131
       },
-      "trending_since": "2026-05-20T14:20:10.560211+00:00"
-    },
-    {
-      "id": "uYE05W-xcmo",
-      "url": "https://www.youtube.com/shorts/uYE05W-xcmo",
-      "title": "जादुई Paint की Sachhai 😳 #shorts #summer #gadgets",
-      "caption": "",
-      "thumbnail_url": "https://i.ytimg.com/vi/uYE05W-xcmo/maxresdefault.jpg",
-      "published_at": "2026-05-20T08:33:14Z",
-      "duration_sec": 55,
-      "views": 248904,
-      "likes": 14459,
-      "comments": 123,
-      "velocity": 43045.3,
-      "x_factor": 0.13,
-      "hot_score": 0.048,
-      "platform": "youtube",
-      "niche": "tech",
-      "lang": "en",
-      "author": {
-        "channel_id": "UCOTGVctbHD4UJK3R6Evfx9Q",
-        "username": "TECH-iELA Shorts",
-        "display_name": "TECH-iELA Shorts",
-        "platform": "youtube",
-        "followers_count": 10200000,
-        "median_views": 1916558
-      },
-      "trending_since": "2026-05-20T14:20:10.561871+00:00"
-    },
-    {
-      "id": "BU8UrBkbJDk",
-      "url": "https://www.youtube.com/shorts/BU8UrBkbJDk",
-      "title": "S*x Power खत्म होने की असली वजह 😨 #shorts #youtubeshorts by Dr. #arvindarora",
-      "caption": "In this video, we discuss a topic that most people still hesitate to talk about openly—s*xual weakness and the impact it can have on married life. Learn how stress, diabetes, high blood pressure, and lack of communication between couples can slowly damage relationships. This video highlights why honest conversation, understanding, and mutual support are the first steps toward solving such problems and saving a marriage.\n\n👉For Business Inquiries Contact Us At :- \nEmail I'd - \" a2sir.collab@gmail.",
-      "thumbnail_url": "https://i.ytimg.com/vi/BU8UrBkbJDk/maxresdefault.jpg",
-      "published_at": "2026-05-20T08:30:03Z",
-      "duration_sec": 78,
-      "views": 5925,
-      "likes": 328,
-      "comments": 3,
-      "velocity": 1015.3,
-      "x_factor": 0.15,
-      "hot_score": 0.0458,
-      "platform": "youtube",
-      "niche": "motivation",
-      "lang": "en",
-      "author": {
-        "channel_id": "UC6ERimtc5zFrn7x6Bk3HaHA",
-        "username": "A2 Motivation by Arvind Arora",
-        "display_name": "A2 Motivation by Arvind Arora",
-        "platform": "youtube",
-        "followers_count": 20700000,
-        "median_views": 40210
-      },
-      "trending_since": "2026-05-20T14:20:10.561679+00:00"
+      "trending_since": "2026-05-20T14:42:05.978339+00:00"
     },
     {
       "id": "4dizKBp2iuw",
@@ -388,12 +334,12 @@
       "thumbnail_url": "https://i.ytimg.com/vi/4dizKBp2iuw/maxresdefault_live.jpg",
       "published_at": "2026-05-19T20:33:20Z",
       "duration_sec": 0,
-      "views": 6670,
-      "likes": 499,
+      "views": 7103,
+      "likes": 573,
       "comments": 0,
-      "velocity": 375.1,
+      "velocity": 391.4,
       "x_factor": 1.0,
-      "hot_score": 0.043,
+      "hot_score": 0.0459,
       "platform": "youtube",
       "niche": "юмор",
       "lang": "ru",
@@ -403,159 +349,51 @@
         "display_name": "Коммент.Шоу",
         "platform": "youtube",
         "followers_count": 1480000,
-        "median_views": 6670
+        "median_views": 7103
       },
-      "trending_since": "2026-05-20T14:20:10.560966+00:00"
+      "trending_since": "2026-05-20T14:42:05.978951+00:00"
     },
     {
-      "id": "39NqXd5nd6Y",
-      "url": "https://www.youtube.com/shorts/39NqXd5nd6Y",
-      "title": "ЭТО НЕОТВРАТИМО! #feyginnews #shorts #short #feyginlive",
+      "id": "uYE05W-xcmo",
+      "url": "https://www.youtube.com/shorts/uYE05W-xcmo",
+      "title": "जादुई Paint की Sachhai 😳 #shorts #summer #gadgets",
       "caption": "",
-      "thumbnail_url": "https://i.ytimg.com/vi/39NqXd5nd6Y/maxresdefault.jpg",
-      "published_at": "2026-05-19T10:24:27Z",
-      "duration_sec": 36,
-      "views": 5703,
-      "likes": 462,
-      "comments": 16,
-      "velocity": 204.2,
-      "x_factor": 0.66,
-      "hot_score": 0.0413,
-      "platform": "youtube",
-      "niche": "юрист",
-      "lang": "ru",
-      "author": {
-        "channel_id": "UCQBJTVg6csKzQartf8gE4Ow",
-        "username": "ФЕЙГИН SHORTS",
-        "display_name": "ФЕЙГИН SHORTS",
-        "platform": "youtube",
-        "followers_count": 144000,
-        "median_views": 8652
-      },
-      "trending_since": "2026-05-20T14:20:10.559789+00:00"
-    },
-    {
-      "id": "lZNPavlrg18",
-      "url": "https://www.youtube.com/shorts/lZNPavlrg18",
-      "title": "🎧Immersive Packaging📱Green iPhone 15 #GoodThingsSharing #ImmersivePackaging #SleepAid",
-      "caption": "",
-      "thumbnail_url": "https://i.ytimg.com/vi/lZNPavlrg18/maxresdefault.jpg",
-      "published_at": "2026-05-20T11:26:44Z",
-      "duration_sec": 59,
-      "views": 3405,
-      "likes": 129,
-      "comments": 7,
-      "velocity": 1177.9,
-      "x_factor": 1.0,
-      "hot_score": 0.0393,
+      "thumbnail_url": "https://i.ytimg.com/vi/uYE05W-xcmo/maxresdefault.jpg",
+      "published_at": "2026-05-20T08:33:14Z",
+      "duration_sec": 55,
+      "views": 286736,
+      "likes": 15451,
+      "comments": 129,
+      "velocity": 46640.6,
+      "x_factor": 0.15,
+      "hot_score": 0.044,
       "platform": "youtube",
       "niche": "tech",
       "lang": "en",
       "author": {
-        "channel_id": "UCsEzRn6gjCHpC5ddx1MEgUQ",
-        "username": "AK Tech Shorts",
-        "display_name": "AK Tech Shorts",
+        "channel_id": "UCOTGVctbHD4UJK3R6Evfx9Q",
+        "username": "TECH-iELA Shorts",
+        "display_name": "TECH-iELA Shorts",
         "platform": "youtube",
-        "followers_count": 3200000,
-        "median_views": 3405
+        "followers_count": 10200000,
+        "median_views": 1928162
       },
-      "trending_since": "2026-05-20T14:20:10.561928+00:00"
+      "trending_since": "2026-05-20T14:42:05.979874+00:00"
     },
     {
-      "id": "QM19tnNswdc",
-      "url": "https://www.youtube.com/shorts/QM19tnNswdc",
-      "title": "Какой компьютер нужен для GTA 6?",
-      "caption": "Мы — CompShop. Уже 5 лет создаём мощные ПК, которые помогают нашим клиентам решать любые задачи. Нас выбрали более 8000 человек.\n\nМы не кричим, что мы лучшие — мы доказываем это делом: качественными сборками, надёжным сервисом и реальными отзывами на Яндекс.Картах и 2ГИС.\n\nЕсли ты хочешь подобрать себе ПК или глубже разобраться в железе — присоединяйся к нашим сообществам в Telegram и ВКонтакте. А чтобы посмотреть ассортимент или получить консультацию — переходи на наш сайт [ссылка в шапке профи",
-      "thumbnail_url": "https://i.ytimg.com/vi/QM19tnNswdc/maxresdefault.jpg",
-      "published_at": "2026-05-19T15:58:10Z",
-      "duration_sec": 58,
-      "views": 76485,
-      "likes": 4458,
-      "comments": 165,
-      "velocity": 3419.6,
-      "x_factor": 0.87,
-      "hot_score": 0.0335,
-      "platform": "youtube",
-      "niche": "финансы",
-      "lang": "ru",
-      "author": {
-        "channel_id": "UCt0GCMQhS-vfQaQFUZNE1Zw",
-        "username": "CompShop Shorts",
-        "display_name": "CompShop Shorts",
-        "platform": "youtube",
-        "followers_count": 458000,
-        "median_views": 87921
-      },
-      "trending_since": "2026-05-20T14:20:10.560069+00:00"
-    },
-    {
-      "id": "6T5_diqleuQ",
-      "url": "https://www.youtube.com/shorts/6T5_diqleuQ",
-      "title": "Смешновости 173 - для удачного дня! 😂 #истории #история #новости #новость #shorts",
-      "caption": "",
-      "thumbnail_url": "https://i.ytimg.com/vi/6T5_diqleuQ/maxresdefault.jpg",
-      "published_at": "2026-05-20T08:00:12Z",
-      "duration_sec": 40,
-      "views": 437636,
-      "likes": 17403,
-      "comments": 136,
-      "velocity": 69104.8,
-      "x_factor": 4.12,
-      "hot_score": 0.0322,
-      "platform": "youtube",
-      "niche": "юмор",
-      "lang": "ru",
-      "author": {
-        "channel_id": "UCcotIt9z_xyZu3mSzFrWMIg",
-        "username": "Смешновости",
-        "display_name": "Смешновости",
-        "platform": "youtube",
-        "followers_count": 2350000,
-        "median_views": 106127
-      },
-      "trending_since": "2026-05-20T14:20:10.561055+00:00"
-    },
-    {
-      "id": "46-hjQ_Awzc",
-      "url": "https://www.youtube.com/shorts/46-hjQ_Awzc",
-      "title": "Как вы ответили на этот вопрос? 😁",
-      "caption": "",
-      "thumbnail_url": "https://i.ytimg.com/vi/46-hjQ_Awzc/maxresdefault.jpg",
-      "published_at": "2026-05-19T11:29:37Z",
-      "duration_sec": 52,
-      "views": 9780,
-      "likes": 558,
-      "comments": 23,
-      "velocity": 364.3,
-      "x_factor": 1.0,
-      "hot_score": 0.0303,
-      "platform": "youtube",
-      "niche": "бизнес",
-      "lang": "ru",
-      "author": {
-        "channel_id": "UCJI9PxywTaidvE02FHGZuEw",
-        "username": "Артем Сенаторов Shorts",
-        "display_name": "Артем Сенаторов Shorts",
-        "platform": "youtube",
-        "followers_count": 116000,
-        "median_views": 9780
-      },
-      "trending_since": "2026-05-20T14:20:10.560000+00:00"
-    },
-    {
-      "id": "zK8RvlWulbs",
-      "url": "https://www.youtube.com/shorts/zK8RvlWulbs",
-      "title": "राजस्थान के भूतिया गाँव के पीछे विज्ञान ! #shorts #youtubeshorts by Dr. #arvindarora",
-      "caption": "In this video, we uncover the terrifying mystery of Rajasthan’s Kuldhara Village and the hidden science behind its so-called curse. Is it really haunted… or is there a dangerous sonic secret buried for centuries?\n\n👉For Business Inquiries Contact Us At :- \nEmail I'd - \" a2sir.collab@gmail.com \"\n\n✅INSTAGRAM : @arvind.aroraj\n\n✅ FACEBOOK PAGE : A2 motivation Arvind Arora\n\n✅ TWITTER : @ArorajArvind \n\n✅Arvind Arora Show Instagram : @thearvindarora.show\n\nPlease Note :- Some of the pics and footages are",
-      "thumbnail_url": "https://i.ytimg.com/vi/zK8RvlWulbs/maxresdefault.jpg",
-      "published_at": "2026-05-19T14:30:45Z",
-      "duration_sec": 89,
-      "views": 88084,
-      "likes": 4898,
-      "comments": 107,
-      "velocity": 3697.3,
-      "x_factor": 2.19,
-      "hot_score": 0.0297,
+      "id": "BU8UrBkbJDk",
+      "url": "https://www.youtube.com/shorts/BU8UrBkbJDk",
+      "title": "S*x Power खत्म होने की असली वजह 😨 #shorts #youtubeshorts by Dr. #arvindarora",
+      "caption": "In this video, we discuss a topic that most people still hesitate to talk about openly—s*xual weakness and the impact it can have on married life. Learn how stress, diabetes, high blood pressure, and lack of communication between couples can slowly damage relationships. This video highlights why honest conversation, understanding, and mutual support are the first steps toward solving such problems and saving a marriage.\n\n👉For Business Inquiries Contact Us At :- \nEmail I'd - \" a2sir.collab@gmail.",
+      "thumbnail_url": "https://i.ytimg.com/vi/BU8UrBkbJDk/maxresdefault.jpg",
+      "published_at": "2026-05-20T08:30:03Z",
+      "duration_sec": 78,
+      "views": 6278,
+      "likes": 336,
+      "comments": 3,
+      "velocity": 1012.4,
+      "x_factor": 0.15,
+      "hot_score": 0.0437,
       "platform": "youtube",
       "niche": "motivation",
       "lang": "en",
@@ -565,9 +403,198 @@
         "display_name": "A2 Motivation by Arvind Arora",
         "platform": "youtube",
         "followers_count": 20700000,
-        "median_views": 40210
+        "median_views": 41081
       },
-      "trending_since": "2026-05-20T14:20:10.561712+00:00"
+      "trending_since": "2026-05-20T14:42:05.979682+00:00"
+    },
+    {
+      "id": "39NqXd5nd6Y",
+      "url": "https://www.youtube.com/shorts/39NqXd5nd6Y",
+      "title": "ЭТО НЕОТВРАТИМО! #feyginnews #shorts #short #feyginlive",
+      "caption": "",
+      "thumbnail_url": "https://i.ytimg.com/vi/39NqXd5nd6Y/maxresdefault.jpg",
+      "published_at": "2026-05-19T10:24:27Z",
+      "duration_sec": 36,
+      "views": 5880,
+      "likes": 467,
+      "comments": 16,
+      "velocity": 207.8,
+      "x_factor": 0.67,
+      "hot_score": 0.0402,
+      "platform": "youtube",
+      "niche": "юрист",
+      "lang": "ru",
+      "author": {
+        "channel_id": "UCQBJTVg6csKzQartf8gE4Ow",
+        "username": "ФЕЙГИН SHORTS",
+        "display_name": "ФЕЙГИН SHORTS",
+        "platform": "youtube",
+        "followers_count": 144000,
+        "median_views": 8749
+      },
+      "trending_since": "2026-05-20T14:42:05.977990+00:00"
+    },
+    {
+      "id": "p4DyIcA3-I4",
+      "url": "https://www.youtube.com/shorts/p4DyIcA3-I4",
+      "title": "Идея для детской комнаты и рабочего пространства #дизайнинтерьера",
+      "caption": "Мой блог https://kakzhivutdrugie.ru/\nТГ - КАК ЖИВУТ ДРУГИЕ. Оля Качанова https://t.me/kakzhivutdrugie\nВК - Как живут другие. Румтуры. Лайфхаки. Ремонт. https://vk.com/kakzhivutdrugie \nДзен - Как живут другие https://dzen.ru/kakzhivutdrugie \nYoutube https://www.youtube.com/@kakjivutdrugie\n\nХотите стать героем выпуска? Пишите мне ➡️ roomtour2020@bk.ru\n*********************************************************\nДрузья, спасибо за просмотр. Подписывайтесь, жмите LIKE!\nРада видеть вас на канале Ольга К",
+      "thumbnail_url": "https://i.ytimg.com/vi/p4DyIcA3-I4/maxresdefault.jpg",
+      "published_at": "2026-05-20T14:21:11Z",
+      "duration_sec": 59,
+      "views": 199,
+      "likes": 8,
+      "comments": 0,
+      "velocity": 398.0,
+      "x_factor": 1.0,
+      "hot_score": 0.0386,
+      "platform": "youtube",
+      "niche": "недвижимость",
+      "lang": "ru",
+      "author": {
+        "channel_id": "UCariTJGjElRj7kKIFj3ukSQ",
+        "username": "КАК ЖИВУТ ДРУГИЕ SHORTS",
+        "display_name": "КАК ЖИВУТ ДРУГИЕ SHORTS",
+        "platform": "youtube",
+        "followers_count": 97900,
+        "median_views": 199
+      },
+      "trending_since": "2026-05-20T14:42:05.977634+00:00"
+    },
+    {
+      "id": "lZNPavlrg18",
+      "url": "https://www.youtube.com/shorts/lZNPavlrg18",
+      "title": "🎧Immersive Packaging📱Green iPhone 15 #GoodThingsSharing #ImmersivePackaging #SleepAid",
+      "caption": "",
+      "thumbnail_url": "https://i.ytimg.com/vi/lZNPavlrg18/maxresdefault.jpg",
+      "published_at": "2026-05-20T11:26:44Z",
+      "duration_sec": 59,
+      "views": 3853,
+      "likes": 142,
+      "comments": 7,
+      "velocity": 1183.3,
+      "x_factor": 1.0,
+      "hot_score": 0.0373,
+      "platform": "youtube",
+      "niche": "tech",
+      "lang": "en",
+      "author": {
+        "channel_id": "UCsEzRn6gjCHpC5ddx1MEgUQ",
+        "username": "AK Tech Shorts",
+        "display_name": "AK Tech Shorts",
+        "platform": "youtube",
+        "followers_count": 3200000,
+        "median_views": 3853
+      },
+      "trending_since": "2026-05-20T14:42:05.979933+00:00"
+    },
+    {
+      "id": "QM19tnNswdc",
+      "url": "https://www.youtube.com/shorts/QM19tnNswdc",
+      "title": "Какой компьютер нужен для GTA 6?",
+      "caption": "Мы — CompShop. Уже 5 лет создаём мощные ПК, которые помогают нашим клиентам решать любые задачи. Нас выбрали более 8000 человек.\n\nМы не кричим, что мы лучшие — мы доказываем это делом: качественными сборками, надёжным сервисом и реальными отзывами на Яндекс.Картах и 2ГИС.\n\nЕсли ты хочешь подобрать себе ПК или глубже разобраться в железе — присоединяйся к нашим сообществам в Telegram и ВКонтакте. А чтобы посмотреть ассортимент или получить консультацию — переходи на наш сайт [ссылка в шапке профи",
+      "thumbnail_url": "https://i.ytimg.com/vi/QM19tnNswdc/maxresdefault.jpg",
+      "published_at": "2026-05-19T15:58:10Z",
+      "duration_sec": 58,
+      "views": 77260,
+      "likes": 4485,
+      "comments": 165,
+      "velocity": 3398.7,
+      "x_factor": 0.87,
+      "hot_score": 0.0331,
+      "platform": "youtube",
+      "niche": "финансы",
+      "lang": "ru",
+      "author": {
+        "channel_id": "UCt0GCMQhS-vfQaQFUZNE1Zw",
+        "username": "CompShop Shorts",
+        "display_name": "CompShop Shorts",
+        "platform": "youtube",
+        "followers_count": 458000,
+        "median_views": 88414
+      },
+      "trending_since": "2026-05-20T14:42:05.978200+00:00"
+    },
+    {
+      "id": "6T5_diqleuQ",
+      "url": "https://www.youtube.com/shorts/6T5_diqleuQ",
+      "title": "Смешновости 173 - для удачного дня! 😂 #истории #история #новости #новость #shorts",
+      "caption": "",
+      "thumbnail_url": "https://i.ytimg.com/vi/6T5_diqleuQ/maxresdefault.jpg",
+      "published_at": "2026-05-20T08:00:12Z",
+      "duration_sec": 40,
+      "views": 472729,
+      "likes": 18620,
+      "comments": 148,
+      "velocity": 70574.2,
+      "x_factor": 3.54,
+      "hot_score": 0.0315,
+      "platform": "youtube",
+      "niche": "юмор",
+      "lang": "ru",
+      "author": {
+        "channel_id": "UCcotIt9z_xyZu3mSzFrWMIg",
+        "username": "Смешновости",
+        "display_name": "Смешновости",
+        "platform": "youtube",
+        "followers_count": 2350000,
+        "median_views": 133661
+      },
+      "trending_since": "2026-05-20T14:42:05.979041+00:00"
+    },
+    {
+      "id": "46-hjQ_Awzc",
+      "url": "https://www.youtube.com/shorts/46-hjQ_Awzc",
+      "title": "Как вы ответили на этот вопрос? 😁",
+      "caption": "",
+      "thumbnail_url": "https://i.ytimg.com/vi/46-hjQ_Awzc/maxresdefault.jpg",
+      "published_at": "2026-05-19T11:29:37Z",
+      "duration_sec": 52,
+      "views": 9966,
+      "likes": 560,
+      "comments": 23,
+      "velocity": 366.3,
+      "x_factor": 1.43,
+      "hot_score": 0.0296,
+      "platform": "youtube",
+      "niche": "бизнес",
+      "lang": "ru",
+      "author": {
+        "channel_id": "UCJI9PxywTaidvE02FHGZuEw",
+        "username": "Артем Сенаторов Shorts",
+        "display_name": "Артем Сенаторов Shorts",
+        "platform": "youtube",
+        "followers_count": 116000,
+        "median_views": 6975
+      },
+      "trending_since": "2026-05-20T14:42:05.978135+00:00"
+    },
+    {
+      "id": "zK8RvlWulbs",
+      "url": "https://www.youtube.com/shorts/zK8RvlWulbs",
+      "title": "राजस्थान के भूतिया गाँव के पीछे विज्ञान ! #shorts #youtubeshorts by Dr. #arvindarora",
+      "caption": "In this video, we uncover the terrifying mystery of Rajasthan’s Kuldhara Village and the hidden science behind its so-called curse. Is it really haunted… or is there a dangerous sonic secret buried for centuries?\n\n👉For Business Inquiries Contact Us At :- \nEmail I'd - \" a2sir.collab@gmail.com \"\n\n✅INSTAGRAM : @arvind.aroraj\n\n✅ FACEBOOK PAGE : A2 motivation Arvind Arora\n\n✅ TWITTER : @ArorajArvind \n\n✅Arvind Arora Show Instagram : @thearvindarora.show\n\nPlease Note :- Some of the pics and footages are",
+      "thumbnail_url": "https://i.ytimg.com/vi/zK8RvlWulbs/maxresdefault.jpg",
+      "published_at": "2026-05-19T14:30:45Z",
+      "duration_sec": 89,
+      "views": 88420,
+      "likes": 4912,
+      "comments": 107,
+      "velocity": 3655.4,
+      "x_factor": 2.15,
+      "hot_score": 0.0295,
+      "platform": "youtube",
+      "niche": "motivation",
+      "lang": "en",
+      "author": {
+        "channel_id": "UC6ERimtc5zFrn7x6Bk3HaHA",
+        "username": "A2 Motivation by Arvind Arora",
+        "display_name": "A2 Motivation by Arvind Arora",
+        "platform": "youtube",
+        "followers_count": 20700000,
+        "median_views": 41081
+      },
+      "trending_since": "2026-05-20T14:42:05.979717+00:00"
     },
     {
       "id": "vnvsDVs0fPc",
@@ -577,11 +604,11 @@
       "thumbnail_url": "https://i.ytimg.com/vi/vnvsDVs0fPc/maxresdefault.jpg",
       "published_at": "2026-05-20T02:17:18Z",
       "duration_sec": 33,
-      "views": 884,
+      "views": 877,
       "likes": 38,
       "comments": 0,
-      "velocity": 73.4,
-      "x_factor": 8.42,
+      "velocity": 70.6,
+      "x_factor": 8.35,
       "hot_score": 0.0286,
       "platform": "youtube",
       "niche": "motivation",
@@ -594,61 +621,7 @@
         "followers_count": 133000,
         "median_views": 105
       },
-      "trending_since": "2026-05-20T14:20:10.561618+00:00"
-    },
-    {
-      "id": "6spLvrZOWtA",
-      "url": "https://www.youtube.com/shorts/6spLvrZOWtA",
-      "title": "Налог на бездетность, демография пробила дно 😐",
-      "caption": "Налог на бездетность, демография пробила дно 😐\r\n\r\n\r\n\r\n#shorts",
-      "thumbnail_url": "https://i.ytimg.com/vi/6spLvrZOWtA/maxresdefault.jpg",
-      "published_at": "2026-05-18T17:06:15Z",
-      "duration_sec": 63,
-      "views": 27327,
-      "likes": 1409,
-      "comments": 221,
-      "velocity": 604.2,
-      "x_factor": 20.81,
-      "hot_score": 0.0263,
-      "platform": "youtube",
-      "niche": "финансы",
-      "lang": "ru",
-      "author": {
-        "channel_id": "UCyzewuLUe7ggFcjL2jDUtSw",
-        "username": "Еж про деньги Shorts",
-        "display_name": "Еж про деньги Shorts",
-        "platform": "youtube",
-        "followers_count": 40100,
-        "median_views": 1313
-      },
-      "trending_since": "2026-05-20T14:20:10.560728+00:00"
-    },
-    {
-      "id": "ufW3p5knrlo",
-      "url": "https://www.youtube.com/shorts/ufW3p5knrlo",
-      "title": "3 फीट की रीता ने कैसे बदली 10 हजार बच्चों की जिंदगी ! #shorts #youtubeshorts by Dr. #arvindarora",
-      "caption": "3-foot-tall Rita changed the destiny of 10,000 children! People mocked her and subjected her to ragging, yet by enduring it all, she became an inspiration. This is the story of Rita Ji, who transformed her physical limitation into her greatest strength. Rita Rani was born into an affluent family. For the first year of her life, everything was normal; thereafter, however, her growth ceased. Her family spent hundreds of thousands of rupees—even seeking medical treatment abroad—but fate had other p",
-      "thumbnail_url": "https://i.ytimg.com/vi/ufW3p5knrlo/maxresdefault.jpg",
-      "published_at": "2026-05-19T03:30:23Z",
-      "duration_sec": 86,
-      "views": 52038,
-      "likes": 3219,
-      "comments": 24,
-      "velocity": 1494.1,
-      "x_factor": 1.29,
-      "hot_score": 0.0258,
-      "platform": "youtube",
-      "niche": "motivation",
-      "lang": "en",
-      "author": {
-        "channel_id": "UC6ERimtc5zFrn7x6Bk3HaHA",
-        "username": "A2 Motivation by Arvind Arora",
-        "display_name": "A2 Motivation by Arvind Arora",
-        "platform": "youtube",
-        "followers_count": 20700000,
-        "median_views": 40210
-      },
-      "trending_since": "2026-05-20T14:20:10.561764+00:00"
+      "trending_since": "2026-05-20T14:42:05.979620+00:00"
     },
     {
       "id": "uKxd-LNQomI",
@@ -658,12 +631,12 @@
       "thumbnail_url": "https://i.ytimg.com/vi/uKxd-LNQomI/maxresdefault.jpg",
       "published_at": "2026-05-20T10:41:15Z",
       "duration_sec": 61,
-      "views": 644,
-      "likes": 10,
+      "views": 661,
+      "likes": 11,
       "comments": 3,
-      "velocity": 176.5,
-      "x_factor": 0.49,
-      "hot_score": 0.0256,
+      "velocity": 164.7,
+      "x_factor": 0.48,
+      "hot_score": 0.0259,
       "platform": "youtube",
       "niche": "финансы",
       "lang": "ru",
@@ -673,9 +646,63 @@
         "display_name": "Еж про деньги Shorts",
         "platform": "youtube",
         "followers_count": 40100,
-        "median_views": 1313
+        "median_views": 1369
       },
-      "trending_since": "2026-05-20T14:20:10.560702+00:00"
+      "trending_since": "2026-05-20T14:42:05.978778+00:00"
+    },
+    {
+      "id": "ufW3p5knrlo",
+      "url": "https://www.youtube.com/shorts/ufW3p5knrlo",
+      "title": "3 फीट की रीता ने कैसे बदली 10 हजार बच्चों की जिंदगी ! #shorts #youtubeshorts by Dr. #arvindarora",
+      "caption": "3-foot-tall Rita changed the destiny of 10,000 children! People mocked her and subjected her to ragging, yet by enduring it all, she became an inspiration. This is the story of Rita Ji, who transformed her physical limitation into her greatest strength. Rita Rani was born into an affluent family. For the first year of her life, everything was normal; thereafter, however, her growth ceased. Her family spent hundreds of thousands of rupees—even seeking medical treatment abroad—but fate had other p",
+      "thumbnail_url": "https://i.ytimg.com/vi/ufW3p5knrlo/maxresdefault.jpg",
+      "published_at": "2026-05-19T03:30:23Z",
+      "duration_sec": 86,
+      "views": 52146,
+      "likes": 3227,
+      "comments": 24,
+      "velocity": 1481.6,
+      "x_factor": 1.27,
+      "hot_score": 0.0256,
+      "platform": "youtube",
+      "niche": "motivation",
+      "lang": "en",
+      "author": {
+        "channel_id": "UC6ERimtc5zFrn7x6Bk3HaHA",
+        "username": "A2 Motivation by Arvind Arora",
+        "display_name": "A2 Motivation by Arvind Arora",
+        "platform": "youtube",
+        "followers_count": 20700000,
+        "median_views": 41081
+      },
+      "trending_since": "2026-05-20T14:42:05.979775+00:00"
+    },
+    {
+      "id": "6spLvrZOWtA",
+      "url": "https://www.youtube.com/shorts/6spLvrZOWtA",
+      "title": "Налог на бездетность, демография пробила дно 😐",
+      "caption": "Налог на бездетность, демография пробила дно 😐\r\n\r\n\r\n\r\n#shorts",
+      "thumbnail_url": "https://i.ytimg.com/vi/6spLvrZOWtA/maxresdefault.jpg",
+      "published_at": "2026-05-18T17:06:15Z",
+      "duration_sec": 63,
+      "views": 28821,
+      "likes": 1435,
+      "comments": 223,
+      "velocity": 632.1,
+      "x_factor": 21.05,
+      "hot_score": 0.0252,
+      "platform": "youtube",
+      "niche": "финансы",
+      "lang": "ru",
+      "author": {
+        "channel_id": "UCyzewuLUe7ggFcjL2jDUtSw",
+        "username": "Еж про деньги Shorts",
+        "display_name": "Еж про деньги Shorts",
+        "platform": "youtube",
+        "followers_count": 40100,
+        "median_views": 1369
+      },
+      "trending_since": "2026-05-20T14:42:05.978807+00:00"
     },
     {
       "id": "WRHLznMxp1g",
@@ -685,12 +712,12 @@
       "thumbnail_url": "https://i.ytimg.com/vi/WRHLznMxp1g/maxresdefault.jpg",
       "published_at": "2026-05-19T14:45:17Z",
       "duration_sec": 46,
-      "views": 1841,
-      "likes": 89,
+      "views": 1862,
+      "likes": 90,
       "comments": 1,
-      "velocity": 78.1,
+      "velocity": 77.8,
       "x_factor": 0.98,
-      "hot_score": 0.0252,
+      "hot_score": 0.025,
       "platform": "youtube",
       "niche": "маркетинг",
       "lang": "ru",
@@ -700,9 +727,9 @@
         "display_name": "Антиблогер Shorts",
         "platform": "youtube",
         "followers_count": 1070000,
-        "median_views": 1879
+        "median_views": 1894
       },
-      "trending_since": "2026-05-20T14:20:10.559888+00:00"
+      "trending_since": "2026-05-20T14:42:05.978015+00:00"
     },
     {
       "id": "hyXU-78fEQk",
@@ -712,10 +739,10 @@
       "thumbnail_url": "https://i.ytimg.com/vi/hyXU-78fEQk/maxresdefault.jpg",
       "published_at": "2026-05-19T11:21:20Z",
       "duration_sec": 55,
-      "views": 1917,
-      "likes": 92,
+      "views": 1925,
+      "likes": 93,
       "comments": 1,
-      "velocity": 71.1,
+      "velocity": 70.4,
       "x_factor": 1.02,
       "hot_score": 0.0233,
       "platform": "youtube",
@@ -727,9 +754,9 @@
         "display_name": "Антиблогер Shorts",
         "platform": "youtube",
         "followers_count": 1070000,
-        "median_views": 1879
+        "median_views": 1894
       },
-      "trending_since": "2026-05-20T14:20:10.559900+00:00"
+      "trending_since": "2026-05-20T14:42:05.978026+00:00"
     },
     {
       "id": "5NwhNf1Y8Ys",
@@ -739,12 +766,12 @@
       "thumbnail_url": "https://i.ytimg.com/vi/5NwhNf1Y8Ys/maxresdefault.jpg",
       "published_at": "2026-05-20T09:46:28Z",
       "duration_sec": 41,
-      "views": 6012,
-      "likes": 157,
+      "views": 6469,
+      "likes": 163,
       "comments": 2,
-      "velocity": 1317.9,
-      "x_factor": 0.9,
-      "hot_score": 0.0228,
+      "velocity": 1312.9,
+      "x_factor": 0.91,
+      "hot_score": 0.0217,
       "platform": "youtube",
       "niche": "юмор",
       "lang": "ru",
@@ -754,9 +781,9 @@
         "display_name": "Коммент.Шоу",
         "platform": "youtube",
         "followers_count": 1480000,
-        "median_views": 6670
+        "median_views": 7103
       },
-      "trending_since": "2026-05-20T14:20:10.560995+00:00"
+      "trending_since": "2026-05-20T14:42:05.978980+00:00"
     },
     {
       "id": "m9Nz0SdlsWk",
@@ -769,9 +796,9 @@
       "views": 105,
       "likes": 3,
       "comments": 0,
-      "velocity": 11.3,
+      "velocity": 10.9,
       "x_factor": 1.0,
-      "hot_score": 0.0206,
+      "hot_score": 0.0204,
       "platform": "youtube",
       "niche": "motivation",
       "lang": "en",
@@ -783,34 +810,7 @@
         "followers_count": 133000,
         "median_views": 105
       },
-      "trending_since": "2026-05-20T14:20:10.561602+00:00"
-    },
-    {
-      "id": "Q20xKavWS6c",
-      "url": "https://www.youtube.com/shorts/Q20xKavWS6c",
-      "title": "ОНА НЕ СМОГЛА СОХРАНИТЬ ТАЧКУ / beamng.drive",
-      "caption": "",
-      "thumbnail_url": "https://i.ytimg.com/vi/Q20xKavWS6c/maxresdefault.jpg",
-      "published_at": "2026-05-20T11:49:40Z",
-      "duration_sec": 54,
-      "views": 2276,
-      "likes": 41,
-      "comments": 2,
-      "velocity": 907.3,
-      "x_factor": 0.31,
-      "hot_score": 0.0187,
-      "platform": "youtube",
-      "niche": "финансы",
-      "lang": "ru",
-      "author": {
-        "channel_id": "UCt2jUi1X3l6xPx3FhcHd-zw",
-        "username": "Banshiro Shorts",
-        "display_name": "Banshiro Shorts",
-        "platform": "youtube",
-        "followers_count": 1920000,
-        "median_views": 7341
-      },
-      "trending_since": "2026-05-20T14:20:10.560146+00:00"
+      "trending_since": "2026-05-20T14:42:05.979606+00:00"
     },
     {
       "id": "CnlPjZObkIo",
@@ -820,12 +820,12 @@
       "thumbnail_url": "https://i.ytimg.com/vi/CnlPjZObkIo/maxresdefault.jpg",
       "published_at": "2026-05-19T09:00:18Z",
       "duration_sec": 85,
-      "views": 21705,
+      "views": 21749,
       "likes": 883,
       "comments": 7,
-      "velocity": 740.0,
-      "x_factor": 0.54,
-      "hot_score": 0.0187,
+      "velocity": 732.4,
+      "x_factor": 0.53,
+      "hot_score": 0.0186,
       "platform": "youtube",
       "niche": "motivation",
       "lang": "en",
@@ -835,9 +835,9 @@
         "display_name": "A2 Motivation by Arvind Arora",
         "platform": "youtube",
         "followers_count": 20700000,
-        "median_views": 40210
+        "median_views": 41081
       },
-      "trending_since": "2026-05-20T14:20:10.561738+00:00"
+      "trending_since": "2026-05-20T14:42:05.979745+00:00"
     },
     {
       "id": "SErJhCTnuuo",
@@ -847,12 +847,12 @@
       "thumbnail_url": "https://i.ytimg.com/vi/SErJhCTnuuo/maxresdefault.jpg",
       "published_at": "2026-05-19T13:30:36Z",
       "duration_sec": 40,
-      "views": 116832,
-      "likes": 4270,
-      "comments": 30,
-      "velocity": 4706.0,
-      "x_factor": 0.75,
-      "hot_score": 0.0183,
+      "views": 117890,
+      "likes": 4291,
+      "comments": 31,
+      "velocity": 4679.7,
+      "x_factor": 0.76,
+      "hot_score": 0.0181,
       "platform": "youtube",
       "niche": "motivation",
       "lang": "en",
@@ -862,9 +862,9 @@
         "display_name": "Motivation QuoteShala",
         "platform": "youtube",
         "followers_count": 4930000,
-        "median_views": 154925
+        "median_views": 154981
       },
-      "trending_since": "2026-05-20T14:20:10.561371+00:00"
+      "trending_since": "2026-05-20T14:42:05.979373+00:00"
     },
     {
       "id": "TEUMsSmA6qo",
@@ -877,9 +877,9 @@
       "views": 1039,
       "likes": 38,
       "comments": 0,
-      "velocity": 39.1,
+      "velocity": 38.6,
       "x_factor": 9.9,
-      "hot_score": 0.0174,
+      "hot_score": 0.0172,
       "platform": "youtube",
       "niche": "motivation",
       "lang": "en",
@@ -891,7 +891,7 @@
         "followers_count": 133000,
         "median_views": 105
       },
-      "trending_since": "2026-05-20T14:20:10.561629+00:00"
+      "trending_since": "2026-05-20T14:42:05.979632+00:00"
     },
     {
       "id": "_A8yoQ2Ql5U",
@@ -901,12 +901,12 @@
       "thumbnail_url": "https://i.ytimg.com/vi/_A8yoQ2Ql5U/maxresdefault.jpg",
       "published_at": "2026-05-19T10:00:41Z",
       "duration_sec": 22,
-      "views": 70689,
-      "likes": 2574,
+      "views": 71352,
+      "likes": 2598,
       "comments": 32,
-      "velocity": 2495.7,
-      "x_factor": 0.67,
-      "hot_score": 0.0173,
+      "velocity": 2487.0,
+      "x_factor": 0.53,
+      "hot_score": 0.0172,
       "platform": "youtube",
       "niche": "юмор",
       "lang": "ru",
@@ -916,9 +916,9 @@
         "display_name": "Смешновости",
         "platform": "youtube",
         "followers_count": 2350000,
-        "median_views": 106127
+        "median_views": 133661
       },
-      "trending_since": "2026-05-20T14:20:10.561077+00:00"
+      "trending_since": "2026-05-20T14:42:05.979065+00:00"
     },
     {
       "id": "ou_uotYd0eE",
@@ -928,12 +928,12 @@
       "thumbnail_url": "https://i.ytimg.com/vi/ou_uotYd0eE/maxresdefault.jpg",
       "published_at": "2026-05-19T09:07:24Z",
       "duration_sec": 87,
-      "views": 21574,
-      "likes": 696,
+      "views": 21799,
+      "likes": 701,
       "comments": 34,
-      "velocity": 738.5,
+      "velocity": 737.0,
       "x_factor": 1.0,
-      "hot_score": 0.0167,
+      "hot_score": 0.0165,
       "platform": "youtube",
       "niche": "юмор",
       "lang": "ru",
@@ -943,36 +943,36 @@
         "display_name": "Влад Алмазов",
         "platform": "youtube",
         "followers_count": 364000,
-        "median_views": 21574
+        "median_views": 21799
       },
-      "trending_since": "2026-05-20T14:20:10.561144+00:00"
+      "trending_since": "2026-05-20T14:42:05.979129+00:00"
     },
     {
-      "id": "khzt8o2MxTo",
-      "url": "https://www.youtube.com/shorts/khzt8o2MxTo",
-      "title": "Лимонад из облепихи с имбирем и мятой #Shorts",
-      "caption": "Предлагаю приготовить освежающий напиток из облепихи, мяты, имбиря и цитрусовых.\n\nИнгредиенты:\n- Облепиха свежая или замороженная - 100 г\n- Лайм - 0,5 шт\n- Лимон - 3 кружочка\n- Мята - 15 крупных листьев\n- Имбирь - 15 г\n- Мед или сахар по вкусу\n- Лимонад газированный\n- Кипяток\n\nМой Рутьюб-канал \"Шуршу По Дому\" https://rutube.ru/channel/23485423\nЯ во \"ВКонтакте\" https://vk.ru/club235991691\nНа этих каналах, кроме основных видео, я выкладываю еще и shorts-версии своих кулинарных рецептов для тех, кт",
-      "thumbnail_url": "https://i.ytimg.com/vi/khzt8o2MxTo/maxresdefault.jpg",
-      "published_at": "2026-05-20T08:00:35Z",
-      "duration_sec": 42,
-      "views": 527,
-      "likes": 8,
-      "comments": 1,
-      "velocity": 83.3,
-      "x_factor": 1.0,
-      "hot_score": 0.0165,
+      "id": "Q20xKavWS6c",
+      "url": "https://www.youtube.com/shorts/Q20xKavWS6c",
+      "title": "ОНА НЕ СМОГЛА СОХРАНИТЬ ТАЧКУ / beamng.drive",
+      "caption": "",
+      "thumbnail_url": "https://i.ytimg.com/vi/Q20xKavWS6c/maxresdefault.jpg",
+      "published_at": "2026-05-20T11:49:40Z",
+      "duration_sec": 54,
+      "views": 2844,
+      "likes": 46,
+      "comments": 2,
+      "velocity": 989.6,
+      "x_factor": 0.37,
+      "hot_score": 0.0163,
       "platform": "youtube",
-      "niche": "рецепты",
+      "niche": "финансы",
       "lang": "ru",
       "author": {
-        "channel_id": "UC9PhfEHvpjUuRChWNhic8Bg",
-        "username": "Кулинарные коротышки Shorts",
-        "display_name": "Кулинарные коротышки Shorts",
+        "channel_id": "UCt2jUi1X3l6xPx3FhcHd-zw",
+        "username": "Banshiro Shorts",
+        "display_name": "Banshiro Shorts",
         "platform": "youtube",
-        "followers_count": 8190,
-        "median_views": 527
+        "followers_count": 1920000,
+        "median_views": 7640
       },
-      "trending_since": "2026-05-20T14:20:10.560050+00:00"
+      "trending_since": "2026-05-20T14:42:05.978274+00:00"
     },
     {
       "id": "teeEMeAFw5c",
@@ -985,9 +985,9 @@
       "views": 527,
       "likes": 8,
       "comments": 2,
-      "velocity": 31.2,
+      "velocity": 30.5,
       "x_factor": 1.0,
-      "hot_score": 0.0156,
+      "hot_score": 0.0154,
       "platform": "youtube",
       "niche": "путешествия",
       "lang": "ru",
@@ -999,7 +999,34 @@
         "followers_count": 55600,
         "median_views": 527
       },
-      "trending_since": "2026-05-20T14:20:10.560912+00:00"
+      "trending_since": "2026-05-20T14:42:05.978892+00:00"
+    },
+    {
+      "id": "khzt8o2MxTo",
+      "url": "https://www.youtube.com/shorts/khzt8o2MxTo",
+      "title": "Лимонад из облепихи с имбирем и мятой #Shorts",
+      "caption": "Предлагаю приготовить освежающий напиток из облепихи, мяты, имбиря и цитрусовых.\n\nИнгредиенты:\n- Облепиха свежая или замороженная - 100 г\n- Лайм - 0,5 шт\n- Лимон - 3 кружочка\n- Мята - 15 крупных листьев\n- Имбирь - 15 г\n- Мед или сахар по вкусу\n- Лимонад газированный\n- Кипяток\n\nМой Рутьюб-канал \"Шуршу По Дому\" https://rutube.ru/channel/23485423\nЯ во \"ВКонтакте\" https://vk.ru/club235991691\nНа этих каналах, кроме основных видео, я выкладываю еще и shorts-версии своих кулинарных рецептов для тех, кт",
+      "thumbnail_url": "https://i.ytimg.com/vi/khzt8o2MxTo/maxresdefault.jpg",
+      "published_at": "2026-05-20T08:00:35Z",
+      "duration_sec": 42,
+      "views": 563,
+      "likes": 8,
+      "comments": 1,
+      "velocity": 84.1,
+      "x_factor": 1.0,
+      "hot_score": 0.0153,
+      "platform": "youtube",
+      "niche": "рецепты",
+      "lang": "ru",
+      "author": {
+        "channel_id": "UC9PhfEHvpjUuRChWNhic8Bg",
+        "username": "Кулинарные коротышки Shorts",
+        "display_name": "Кулинарные коротышки Shorts",
+        "platform": "youtube",
+        "followers_count": 8190,
+        "median_views": 563
+      },
+      "trending_since": "2026-05-20T14:42:05.978182+00:00"
     },
     {
       "id": "Rhv9-8hki8c",
@@ -1009,10 +1036,10 @@
       "thumbnail_url": "https://i.ytimg.com/vi/Rhv9-8hki8c/maxresdefault.jpg",
       "published_at": "2026-05-18T18:03:24Z",
       "duration_sec": 19,
-      "views": 85438,
-      "likes": 3292,
+      "views": 85587,
+      "likes": 3301,
       "comments": 87,
-      "velocity": 1929.5,
+      "velocity": 1917.1,
       "x_factor": 0.75,
       "hot_score": 0.0146,
       "platform": "youtube",
@@ -1024,9 +1051,9 @@
         "display_name": "HumorBagel",
         "platform": "youtube",
         "followers_count": 1120000,
-        "median_views": 114582
+        "median_views": 114667
       },
-      "trending_since": "2026-05-20T14:20:10.561095+00:00"
+      "trending_since": "2026-05-20T14:42:05.979083+00:00"
     },
     {
       "id": "2o7s3u_Rkyg",
@@ -1036,12 +1063,12 @@
       "thumbnail_url": "https://i.ytimg.com/vi/2o7s3u_Rkyg/maxresdefault.jpg",
       "published_at": "2026-05-18T15:52:51Z",
       "duration_sec": 59,
-      "views": 507475,
-      "likes": 20271,
+      "views": 512669,
+      "likes": 20348,
       "comments": 183,
-      "velocity": 10923.9,
-      "x_factor": 5.77,
-      "hot_score": 0.014,
+      "velocity": 10949.6,
+      "x_factor": 5.8,
+      "hot_score": 0.0138,
       "platform": "youtube",
       "niche": "финансы",
       "lang": "ru",
@@ -1051,36 +1078,9 @@
         "display_name": "CompShop Shorts",
         "platform": "youtube",
         "followers_count": 458000,
-        "median_views": 87921
+        "median_views": 88414
       },
-      "trending_since": "2026-05-20T14:20:10.560087+00:00"
-    },
-    {
-      "id": "ot6p_O5ZhcQ",
-      "url": "https://www.youtube.com/shorts/ot6p_O5ZhcQ",
-      "title": "Кто здесь молодёжь? Маякните в комментариях 👋",
-      "caption": "",
-      "thumbnail_url": "https://i.ytimg.com/vi/ot6p_O5ZhcQ/maxresdefault.jpg",
-      "published_at": "2026-05-18T11:22:27Z",
-      "duration_sec": 38,
-      "views": 3922,
-      "likes": 120,
-      "comments": 15,
-      "velocity": 77.0,
-      "x_factor": 0.4,
-      "hot_score": 0.0135,
-      "platform": "youtube",
-      "niche": "бизнес",
-      "lang": "ru",
-      "author": {
-        "channel_id": "UCJI9PxywTaidvE02FHGZuEw",
-        "username": "Артем Сенаторов Shorts",
-        "display_name": "Артем Сенаторов Shorts",
-        "platform": "youtube",
-        "followers_count": 116000,
-        "median_views": 9780
-      },
-      "trending_since": "2026-05-20T14:20:10.560013+00:00"
+      "trending_since": "2026-05-20T14:42:05.978218+00:00"
     },
     {
       "id": "PoGdBUCptvc",
@@ -1090,11 +1090,11 @@
       "thumbnail_url": "https://i.ytimg.com/vi/PoGdBUCptvc/maxresdefault.jpg",
       "published_at": "2026-05-18T12:07:05Z",
       "duration_sec": 65,
-      "views": 3834,
-      "likes": 137,
+      "views": 3838,
+      "likes": 138,
       "comments": 7,
-      "velocity": 76.3,
-      "x_factor": 2.92,
+      "velocity": 75.9,
+      "x_factor": 2.8,
       "hot_score": 0.0133,
       "platform": "youtube",
       "niche": "финансы",
@@ -1105,9 +1105,36 @@
         "display_name": "Еж про деньги Shorts",
         "platform": "youtube",
         "followers_count": 40100,
-        "median_views": 1313
+        "median_views": 1369
       },
-      "trending_since": "2026-05-20T14:20:10.560740+00:00"
+      "trending_since": "2026-05-20T14:42:05.978819+00:00"
+    },
+    {
+      "id": "ot6p_O5ZhcQ",
+      "url": "https://www.youtube.com/shorts/ot6p_O5ZhcQ",
+      "title": "Кто здесь молодёжь? Маякните в комментариях 👋",
+      "caption": "",
+      "thumbnail_url": "https://i.ytimg.com/vi/ot6p_O5ZhcQ/maxresdefault.jpg",
+      "published_at": "2026-05-18T11:22:27Z",
+      "duration_sec": 38,
+      "views": 3984,
+      "likes": 120,
+      "comments": 15,
+      "velocity": 77.6,
+      "x_factor": 0.57,
+      "hot_score": 0.0132,
+      "platform": "youtube",
+      "niche": "бизнес",
+      "lang": "ru",
+      "author": {
+        "channel_id": "UCJI9PxywTaidvE02FHGZuEw",
+        "username": "Артем Сенаторов Shorts",
+        "display_name": "Артем Сенаторов Shorts",
+        "platform": "youtube",
+        "followers_count": 116000,
+        "median_views": 6975
+      },
+      "trending_since": "2026-05-20T14:42:05.978149+00:00"
     },
     {
       "id": "vE_aSJr0K58",
@@ -1117,12 +1144,12 @@
       "thumbnail_url": "https://i.ytimg.com/vi/vE_aSJr0K58/maxresdefault.jpg",
       "published_at": "2026-05-20T03:10:59Z",
       "duration_sec": 47,
-      "views": 262313,
-      "likes": 4703,
-      "comments": 20,
-      "velocity": 23519.1,
+      "views": 290871,
+      "likes": 5052,
+      "comments": 22,
+      "velocity": 25252.3,
       "x_factor": 1.0,
-      "hot_score": 0.0124,
+      "hot_score": 0.0119,
       "platform": "youtube",
       "niche": "motivation",
       "lang": "en",
@@ -1132,9 +1159,9 @@
         "display_name": "BoltMotivation",
         "platform": "youtube",
         "followers_count": 2830000,
-        "median_views": 262313
+        "median_views": 290871
       },
-      "trending_since": "2026-05-20T14:20:10.561196+00:00"
+      "trending_since": "2026-05-20T14:42:05.979186+00:00"
     },
     {
       "id": "bJQqDbB5nfM",
@@ -1144,10 +1171,10 @@
       "thumbnail_url": "https://i.ytimg.com/vi/bJQqDbB5nfM/maxresdefault.jpg",
       "published_at": "2026-05-19T13:30:01Z",
       "duration_sec": 32,
-      "views": 3068043,
-      "likes": 72652,
-      "comments": 415,
-      "velocity": 123532.1,
+      "views": 3095005,
+      "likes": 73413,
+      "comments": 420,
+      "velocity": 122810.9,
       "x_factor": 0.25,
       "hot_score": 0.0118,
       "platform": "youtube",
@@ -1159,9 +1186,9 @@
         "display_name": "Tech Master",
         "platform": "youtube",
         "followers_count": 28600000,
-        "median_views": 12180810
+        "median_views": 12193069
       },
-      "trending_since": "2026-05-20T14:20:10.561949+00:00"
+      "trending_since": "2026-05-20T14:42:05.979954+00:00"
     },
     {
       "id": "QORITFfj9BI",
@@ -1171,11 +1198,11 @@
       "thumbnail_url": "https://i.ytimg.com/vi/QORITFfj9BI/maxresdefault.jpg",
       "published_at": "2026-05-16T12:27:16Z",
       "duration_sec": 41,
-      "views": 11600,
-      "likes": 647,
+      "views": 11618,
+      "likes": 649,
       "comments": 6,
-      "velocity": 118.5,
-      "x_factor": 1.34,
+      "velocity": 118.3,
+      "x_factor": 1.33,
       "hot_score": 0.0113,
       "platform": "youtube",
       "niche": "юрист",
@@ -1186,9 +1213,9 @@
         "display_name": "ФЕЙГИН SHORTS",
         "platform": "youtube",
         "followers_count": 144000,
-        "median_views": 8652
+        "median_views": 8749
       },
-      "trending_since": "2026-05-20T14:20:10.559871+00:00"
+      "trending_since": "2026-05-20T14:42:05.978001+00:00"
     },
     {
       "id": "XR_6oldvwgU",
@@ -1198,12 +1225,12 @@
       "thumbnail_url": "https://i.ytimg.com/vi/XR_6oldvwgU/maxresdefault.jpg",
       "published_at": "2026-05-16T13:00:55Z",
       "duration_sec": 46,
-      "views": 99357,
-      "likes": 4895,
+      "views": 99569,
+      "likes": 4899,
       "comments": 41,
-      "velocity": 1020.9,
+      "velocity": 1019.3,
       "x_factor": 1.13,
-      "hot_score": 0.01,
+      "hot_score": 0.0099,
       "platform": "youtube",
       "niche": "финансы",
       "lang": "ru",
@@ -1213,9 +1240,9 @@
         "display_name": "CompShop Shorts",
         "platform": "youtube",
         "followers_count": 458000,
-        "median_views": 87921
+        "median_views": 88414
       },
-      "trending_since": "2026-05-20T14:20:10.560116+00:00"
+      "trending_since": "2026-05-20T14:42:05.978244+00:00"
     },
     {
       "id": "X9Amb_NjBug",
@@ -1225,11 +1252,11 @@
       "thumbnail_url": "https://i.ytimg.com/vi/X9Amb_NjBug/maxresdefault.jpg",
       "published_at": "2026-05-19T12:00:44Z",
       "duration_sec": 14,
-      "views": 173878,
-      "likes": 3329,
+      "views": 174867,
+      "likes": 3347,
       "comments": 86,
-      "velocity": 6605.3,
-      "x_factor": 1.64,
+      "velocity": 6551.9,
+      "x_factor": 1.31,
       "hot_score": 0.0098,
       "platform": "youtube",
       "niche": "юмор",
@@ -1240,9 +1267,9 @@
         "display_name": "Смешновости",
         "platform": "youtube",
         "followers_count": 2350000,
-        "median_views": 106127
+        "median_views": 133661
       },
-      "trending_since": "2026-05-20T14:20:10.561067+00:00"
+      "trending_since": "2026-05-20T14:42:05.979054+00:00"
     },
     {
       "id": "I8WQLXICm-M",
@@ -1255,8 +1282,8 @@
       "views": 3800,
       "likes": 206,
       "comments": 3,
-      "velocity": 30.9,
-      "x_factor": 2.02,
+      "velocity": 30.8,
+      "x_factor": 2.01,
       "hot_score": 0.0092,
       "platform": "youtube",
       "niche": "маркетинг",
@@ -1267,9 +1294,9 @@
         "display_name": "Антиблогер Shorts",
         "platform": "youtube",
         "followers_count": 1070000,
-        "median_views": 1879
+        "median_views": 1894
       },
-      "trending_since": "2026-05-20T14:20:10.559928+00:00"
+      "trending_since": "2026-05-20T14:42:05.978053+00:00"
     },
     {
       "id": "kEdlKfadj0w",
@@ -1279,11 +1306,11 @@
       "thumbnail_url": "https://i.ytimg.com/vi/kEdlKfadj0w/maxresdefault.jpg",
       "published_at": "2026-05-15T14:59:08Z",
       "duration_sec": 60,
-      "views": 53281,
-      "likes": 2523,
+      "views": 53340,
+      "likes": 2527,
       "comments": 70,
-      "velocity": 446.4,
-      "x_factor": 0.61,
+      "velocity": 445.6,
+      "x_factor": 0.6,
       "hot_score": 0.0086,
       "platform": "youtube",
       "niche": "финансы",
@@ -1294,9 +1321,9 @@
         "display_name": "CompShop Shorts",
         "platform": "youtube",
         "followers_count": 458000,
-        "median_views": 87921
+        "median_views": 88414
       },
-      "trending_since": "2026-05-20T14:20:10.560134+00:00"
+      "trending_since": "2026-05-20T14:42:05.978262+00:00"
     },
     {
       "id": "50fP56yPGWE",
@@ -1306,12 +1333,12 @@
       "thumbnail_url": "https://i.ytimg.com/vi/50fP56yPGWE/maxresdefault.jpg",
       "published_at": "2026-05-17T08:25:04Z",
       "duration_sec": 51,
-      "views": 5748660,
-      "likes": 179604,
-      "comments": 7325,
-      "velocity": 73777.9,
+      "views": 5757181,
+      "likes": 180034,
+      "comments": 7337,
+      "velocity": 73542.4,
       "x_factor": 0.47,
-      "hot_score": 0.0083,
+      "hot_score": 0.0082,
       "platform": "youtube",
       "niche": "tech",
       "lang": "en",
@@ -1321,9 +1348,9 @@
         "display_name": "Tech Master",
         "platform": "youtube",
         "followers_count": 28600000,
-        "median_views": 12180810
+        "median_views": 12193069
       },
-      "trending_since": "2026-05-20T14:20:10.561981+00:00"
+      "trending_since": "2026-05-20T14:42:05.979986+00:00"
     },
     {
       "id": "9Ww5BOH2QWk",
@@ -1333,12 +1360,12 @@
       "thumbnail_url": "https://i.ytimg.com/vi/9Ww5BOH2QWk/maxresdefault.jpg",
       "published_at": "2026-05-20T14:00:03Z",
       "duration_sec": 48,
-      "views": 3448,
-      "likes": 18,
+      "views": 4426,
+      "likes": 27,
       "comments": 3,
-      "velocity": 6896.0,
-      "x_factor": 0.52,
-      "hot_score": 0.0075,
+      "velocity": 6315.4,
+      "x_factor": 0.62,
+      "hot_score": 0.0078,
       "platform": "youtube",
       "niche": "юмор",
       "lang": "ru",
@@ -1348,9 +1375,9 @@
         "display_name": "Коммент.Шоу",
         "platform": "youtube",
         "followers_count": 1480000,
-        "median_views": 6670
+        "median_views": 7103
       },
-      "trending_since": "2026-05-20T14:20:10.560981+00:00"
+      "trending_since": "2026-05-20T14:42:05.978966+00:00"
     },
     {
       "id": "YXGmT1EEmns",
@@ -1360,12 +1387,12 @@
       "thumbnail_url": "https://i.ytimg.com/vi/YXGmT1EEmns/maxresdefault.jpg",
       "published_at": "2026-05-17T16:10:02Z",
       "duration_sec": 42,
-      "views": 205894,
-      "likes": 5656,
+      "views": 206156,
+      "likes": 5662,
       "comments": 124,
-      "velocity": 2934.3,
+      "velocity": 2922.8,
       "x_factor": 1.33,
-      "hot_score": 0.0075,
+      "hot_score": 0.0074,
       "platform": "youtube",
       "niche": "motivation",
       "lang": "en",
@@ -1375,9 +1402,9 @@
         "display_name": "Motivation QuoteShala",
         "platform": "youtube",
         "followers_count": 4930000,
-        "median_views": 154925
+        "median_views": 154981
       },
-      "trending_since": "2026-05-20T14:20:10.561422+00:00"
+      "trending_since": "2026-05-20T14:42:05.979423+00:00"
     },
     {
       "id": "bt4s9W-4Owg",
@@ -1387,11 +1414,11 @@
       "thumbnail_url": "https://i.ytimg.com/vi/bt4s9W-4Owg/maxresdefault.jpg",
       "published_at": "2026-05-19T09:34:09Z",
       "duration_sec": 37,
-      "views": 34334,
-      "likes": 544,
+      "views": 34442,
+      "likes": 546,
       "comments": 3,
-      "velocity": 1193.5,
-      "x_factor": 5.15,
+      "velocity": 1182.3,
+      "x_factor": 4.85,
       "hot_score": 0.0073,
       "platform": "youtube",
       "niche": "юмор",
@@ -1402,9 +1429,9 @@
         "display_name": "Коммент.Шоу",
         "platform": "youtube",
         "followers_count": 1480000,
-        "median_views": 6670
+        "median_views": 7103
       },
-      "trending_since": "2026-05-20T14:20:10.561022+00:00"
+      "trending_since": "2026-05-20T14:42:05.979009+00:00"
     },
     {
       "id": "68ZGlXDrcuA",
@@ -1417,8 +1444,8 @@
       "views": 14929,
       "likes": 301,
       "comments": 88,
-      "velocity": 146.3,
-      "x_factor": 1.53,
+      "velocity": 145.8,
+      "x_factor": 2.14,
       "hot_score": 0.0072,
       "platform": "youtube",
       "niche": "бизнес",
@@ -1429,9 +1456,9 @@
         "display_name": "Артем Сенаторов Shorts",
         "platform": "youtube",
         "followers_count": 116000,
-        "median_views": 9780
+        "median_views": 6975
       },
-      "trending_since": "2026-05-20T14:20:10.560029+00:00"
+      "trending_since": "2026-05-20T14:42:05.978164+00:00"
     },
     {
       "id": "plPUlcvTrmk",
@@ -1441,11 +1468,11 @@
       "thumbnail_url": "https://i.ytimg.com/vi/plPUlcvTrmk/maxresdefault.jpg",
       "published_at": "2026-05-19T02:50:46Z",
       "duration_sec": 39,
-      "views": 195228,
-      "likes": 3322,
+      "views": 196435,
+      "likes": 3339,
       "comments": 44,
-      "velocity": 5500.9,
-      "x_factor": 0.74,
+      "velocity": 5478.5,
+      "x_factor": 0.68,
       "hot_score": 0.0071,
       "platform": "youtube",
       "niche": "motivation",
@@ -1456,9 +1483,9 @@
         "display_name": "BoltMotivation",
         "platform": "youtube",
         "followers_count": 2830000,
-        "median_views": 262313
+        "median_views": 290871
       },
-      "trending_since": "2026-05-20T14:20:10.561215+00:00"
+      "trending_since": "2026-05-20T14:42:05.979206+00:00"
     },
     {
       "id": "k-_p1JEFExc",
@@ -1468,11 +1495,11 @@
       "thumbnail_url": "https://i.ytimg.com/vi/k-_p1JEFExc/maxresdefault.jpg",
       "published_at": "2026-05-14T13:41:00Z",
       "duration_sec": 42,
-      "views": 125735,
-      "likes": 5985,
+      "views": 125833,
+      "likes": 5990,
       "comments": 78,
-      "velocity": 869.2,
-      "x_factor": 1.92,
+      "velocity": 867.7,
+      "x_factor": 1.9,
       "hot_score": 0.007,
       "platform": "youtube",
       "niche": "motivation",
@@ -1483,9 +1510,9 @@
         "display_name": "SKT Official: Business & Motivation",
         "platform": "youtube",
         "followers_count": 4260000,
-        "median_views": 65601
+        "median_views": 66102
       },
-      "trending_since": "2026-05-20T14:20:10.561561+00:00"
+      "trending_since": "2026-05-20T14:42:05.979566+00:00"
     },
     {
       "id": "ngfDcJHu_3E",
@@ -1495,10 +1522,10 @@
       "thumbnail_url": "https://i.ytimg.com/vi/ngfDcJHu_3E/maxresdefault.jpg",
       "published_at": "2026-05-18T09:10:41Z",
       "duration_sec": 56,
-      "views": 2198981,
-      "likes": 48767,
-      "comments": 265,
-      "velocity": 41366.7,
+      "views": 2219181,
+      "likes": 49200,
+      "comments": 267,
+      "velocity": 41461.7,
       "x_factor": 1.15,
       "hot_score": 0.007,
       "platform": "youtube",
@@ -1510,9 +1537,9 @@
         "display_name": "TECH-iELA Shorts",
         "platform": "youtube",
         "followers_count": 10200000,
-        "median_views": 1916558
+        "median_views": 1928162
       },
-      "trending_since": "2026-05-20T14:20:10.561883+00:00"
+      "trending_since": "2026-05-20T14:42:05.979886+00:00"
     },
     {
       "id": "toD1aNZMGXs",
@@ -1525,7 +1552,7 @@
       "views": 465,
       "likes": 7,
       "comments": 0,
-      "velocity": 16.1,
+      "velocity": 15.9,
       "x_factor": 0.71,
       "hot_score": 0.0068,
       "platform": "youtube",
@@ -1536,10 +1563,10 @@
         "username": "Психолог Екатерина Хорькова - шортс",
         "display_name": "Психолог Екатерина Хорькова - шортс",
         "platform": "youtube",
-        "followers_count": 24,
+        "followers_count": 25,
         "median_views": 658
       },
-      "trending_since": "2026-05-20T14:20:10.559977+00:00"
+      "trending_since": "2026-05-20T14:42:05.978100+00:00"
     },
     {
       "id": "HxYew0cZoBg",
@@ -1549,10 +1576,10 @@
       "thumbnail_url": "https://i.ytimg.com/vi/HxYew0cZoBg/maxresdefault.jpg",
       "published_at": "2026-05-18T08:48:21Z",
       "duration_sec": 58,
-      "views": 76354,
-      "likes": 1631,
+      "views": 76510,
+      "likes": 1633,
       "comments": 11,
-      "velocity": 1426.4,
+      "velocity": 1419.6,
       "x_factor": 1.0,
       "hot_score": 0.0067,
       "platform": "youtube",
@@ -1564,9 +1591,9 @@
         "display_name": "Tech FC Shorts",
         "platform": "youtube",
         "followers_count": 8340000,
-        "median_views": 76354
+        "median_views": 76510
       },
-      "trending_since": "2026-05-20T14:20:10.562027+00:00"
+      "trending_since": "2026-05-20T14:42:05.980031+00:00"
     },
     {
       "id": "5fCOx9IBqx8",
@@ -1579,9 +1606,9 @@
       "views": 1799,
       "likes": 37,
       "comments": 0,
-      "velocity": 35.2,
-      "x_factor": 0.96,
-      "hot_score": 0.0066,
+      "velocity": 34.9,
+      "x_factor": 0.95,
+      "hot_score": 0.0065,
       "platform": "youtube",
       "niche": "маркетинг",
       "lang": "ru",
@@ -1591,9 +1618,9 @@
         "display_name": "Антиблогер Shorts",
         "platform": "youtube",
         "followers_count": 1070000,
-        "median_views": 1879
+        "median_views": 1894
       },
-      "trending_since": "2026-05-20T14:20:10.559916+00:00"
+      "trending_since": "2026-05-20T14:42:05.978041+00:00"
     },
     {
       "id": "ECpVFd0psX0",
@@ -1603,12 +1630,12 @@
       "thumbnail_url": "https://i.ytimg.com/vi/ECpVFd0psX0/maxresdefault.jpg",
       "published_at": "2026-05-19T14:00:26Z",
       "duration_sec": 51,
-      "views": 15778,
-      "likes": 160,
+      "views": 16207,
+      "likes": 161,
       "comments": 17,
-      "velocity": 648.5,
-      "x_factor": 2.37,
-      "hot_score": 0.0066,
+      "velocity": 656.3,
+      "x_factor": 2.28,
+      "hot_score": 0.0064,
       "platform": "youtube",
       "niche": "юмор",
       "lang": "ru",
@@ -1618,9 +1645,9 @@
         "display_name": "Коммент.Шоу",
         "platform": "youtube",
         "followers_count": 1480000,
-        "median_views": 6670
+        "median_views": 7103
       },
-      "trending_since": "2026-05-20T14:20:10.561008+00:00"
+      "trending_since": "2026-05-20T14:42:05.978995+00:00"
     },
     {
       "id": "PmMO72hDWVA",
@@ -1630,10 +1657,10 @@
       "thumbnail_url": "https://i.ytimg.com/vi/PmMO72hDWVA/maxresdefault.jpg",
       "published_at": "2026-05-15T15:42:18Z",
       "duration_sec": 42,
-      "views": 271830,
-      "likes": 9974,
+      "views": 271935,
+      "likes": 9982,
       "comments": 78,
-      "velocity": 2291.4,
+      "velocity": 2285.2,
       "x_factor": 1.75,
       "hot_score": 0.0063,
       "platform": "youtube",
@@ -1645,9 +1672,9 @@
         "display_name": "Motivation QuoteShala",
         "platform": "youtube",
         "followers_count": 4930000,
-        "median_views": 154925
+        "median_views": 154981
       },
-      "trending_since": "2026-05-20T14:20:10.561466+00:00"
+      "trending_since": "2026-05-20T14:42:05.979471+00:00"
     },
     {
       "id": "tDF4Dl8kbCs",
@@ -1657,12 +1684,12 @@
       "thumbnail_url": "https://i.ytimg.com/vi/tDF4Dl8kbCs/maxresdefault.jpg",
       "published_at": "2026-05-17T23:00:55Z",
       "duration_sec": 18,
-      "views": 76074,
-      "likes": 1624,
+      "views": 76639,
+      "likes": 1631,
       "comments": 19,
-      "velocity": 1201.4,
+      "velocity": 1203.4,
       "x_factor": 1.0,
-      "hot_score": 0.0061,
+      "hot_score": 0.006,
       "platform": "youtube",
       "niche": "funny",
       "lang": "en",
@@ -1672,9 +1699,9 @@
         "display_name": "Funniest YT Clips",
         "platform": "youtube",
         "followers_count": 1200000,
-        "median_views": 76074
+        "median_views": 76639
       },
-      "trending_since": "2026-05-20T14:20:10.561774+00:00"
+      "trending_since": "2026-05-20T14:42:05.979787+00:00"
     },
     {
       "id": "VvXDy2_cwhI",
@@ -1684,12 +1711,12 @@
       "thumbnail_url": "https://i.ytimg.com/vi/VvXDy2_cwhI/maxresdefault.jpg",
       "published_at": "2026-05-18T07:24:42Z",
       "duration_sec": 36,
-      "views": 191078,
-      "likes": 2746,
+      "views": 191600,
+      "likes": 2752,
       "comments": 294,
-      "velocity": 3478.9,
+      "velocity": 3465.4,
       "x_factor": 1.19,
-      "hot_score": 0.0058,
+      "hot_score": 0.0057,
       "platform": "youtube",
       "niche": "психология",
       "lang": "ru",
@@ -1699,9 +1726,9 @@
         "display_name": "Психолог Вероника Степанова",
         "platform": "youtube",
         "followers_count": 3160000,
-        "median_views": 160242
+        "median_views": 160578
       },
-      "trending_since": "2026-05-20T14:20:10.559953+00:00"
+      "trending_since": "2026-05-20T14:42:05.978077+00:00"
     },
     {
       "id": "WVZOUx16akg",
@@ -1711,10 +1738,10 @@
       "thumbnail_url": "https://i.ytimg.com/vi/WVZOUx16akg/maxresdefault.jpg",
       "published_at": "2026-05-17T06:23:50Z",
       "duration_sec": 39,
-      "views": 129406,
-      "likes": 2575,
+      "views": 129557,
+      "likes": 2576,
       "comments": 211,
-      "velocity": 1618.8,
+      "velocity": 1613.3,
       "x_factor": 0.81,
       "hot_score": 0.0057,
       "platform": "youtube",
@@ -1726,9 +1753,9 @@
         "display_name": "Психолог Вероника Степанова",
         "platform": "youtube",
         "followers_count": 3160000,
-        "median_views": 160242
+        "median_views": 160578
       },
-      "trending_since": "2026-05-20T14:20:10.559965+00:00"
+      "trending_since": "2026-05-20T14:42:05.978089+00:00"
     },
     {
       "id": "ao44pH48m4U",
@@ -1741,7 +1768,7 @@
       "views": 850,
       "likes": 19,
       "comments": 2,
-      "velocity": 8.5,
+      "velocity": 8.4,
       "x_factor": 1.29,
       "hot_score": 0.0057,
       "platform": "youtube",
@@ -1752,10 +1779,10 @@
         "username": "Психолог Екатерина Хорькова - шортс",
         "display_name": "Психолог Екатерина Хорькова - шортс",
         "platform": "youtube",
-        "followers_count": 24,
+        "followers_count": 25,
         "median_views": 658
       },
-      "trending_since": "2026-05-20T14:20:10.559987+00:00"
+      "trending_since": "2026-05-20T14:42:05.978111+00:00"
     },
     {
       "id": "LAa3g6klbl0",
@@ -1765,10 +1792,10 @@
       "thumbnail_url": "https://i.ytimg.com/vi/LAa3g6klbl0/maxresdefault.jpg",
       "published_at": "2026-05-14T13:30:18Z",
       "duration_sec": 38,
-      "views": 154925,
-      "likes": 6091,
+      "views": 154981,
+      "likes": 6092,
       "comments": 55,
-      "velocity": 1069.7,
+      "velocity": 1067.4,
       "x_factor": 1.0,
       "hot_score": 0.0057,
       "platform": "youtube",
@@ -1780,9 +1807,9 @@
         "display_name": "Motivation QuoteShala",
         "platform": "youtube",
         "followers_count": 4930000,
-        "median_views": 154925
+        "median_views": 154981
       },
-      "trending_since": "2026-05-20T14:20:10.561512+00:00"
+      "trending_since": "2026-05-20T14:42:05.979515+00:00"
     },
     {
       "id": "-t3td2Ag868",
@@ -1792,11 +1819,11 @@
       "thumbnail_url": "https://i.ytimg.com/vi/-t3td2Ag868/maxresdefault.jpg",
       "published_at": "2026-05-16T08:48:26Z",
       "duration_sec": 54,
-      "views": 3672306,
-      "likes": 103186,
-      "comments": 348,
-      "velocity": 36170.0,
-      "x_factor": 1.92,
+      "views": 3680097,
+      "likes": 103388,
+      "comments": 349,
+      "velocity": 36116.8,
+      "x_factor": 1.91,
       "hot_score": 0.0054,
       "platform": "youtube",
       "niche": "tech",
@@ -1807,9 +1834,9 @@
         "display_name": "TECH-iELA Shorts",
         "platform": "youtube",
         "followers_count": 10200000,
-        "median_views": 1916558
+        "median_views": 1928162
       },
-      "trending_since": "2026-05-20T14:20:10.561894+00:00"
+      "trending_since": "2026-05-20T14:42:05.979898+00:00"
     },
     {
       "id": "Uwljc4Tn8Sc",
@@ -1822,7 +1849,7 @@
       "views": 563,
       "likes": 5,
       "comments": 0,
-      "velocity": 33.2,
+      "velocity": 32.5,
       "x_factor": 1.07,
       "hot_score": 0.0052,
       "platform": "youtube",
@@ -1836,7 +1863,7 @@
         "followers_count": 55600,
         "median_views": 527
       },
-      "trending_since": "2026-05-20T14:20:10.560924+00:00"
+      "trending_since": "2026-05-20T14:42:05.978907+00:00"
     },
     {
       "id": "1zUbtG_3NvY",
@@ -1846,10 +1873,10 @@
       "thumbnail_url": "https://i.ytimg.com/vi/1zUbtG_3NvY/maxresdefault.jpg",
       "published_at": "2026-05-15T14:30:01Z",
       "duration_sec": 25,
-      "views": 183119,
-      "likes": 5277,
+      "views": 183177,
+      "likes": 5280,
       "comments": 133,
-      "velocity": 1528.1,
+      "velocity": 1523.9,
       "x_factor": 1.6,
       "hot_score": 0.0052,
       "platform": "youtube",
@@ -1861,36 +1888,9 @@
         "display_name": "HumorBagel",
         "platform": "youtube",
         "followers_count": 1120000,
-        "median_views": 114582
+        "median_views": 114667
       },
-      "trending_since": "2026-05-20T14:20:10.561116+00:00"
-    },
-    {
-      "id": "6d7gmDAG8kQ",
-      "url": "https://www.youtube.com/shorts/6d7gmDAG8kQ",
-      "title": "УДИВИЛ МОЛЧА🤫#magic #shorts #владалмазов #приколы #фокусы",
-      "caption": "",
-      "thumbnail_url": "https://i.ytimg.com/vi/6d7gmDAG8kQ/maxresdefault.jpg",
-      "published_at": "2026-05-17T08:59:22Z",
-      "duration_sec": 71,
-      "views": 73742,
-      "likes": 1450,
-      "comments": 42,
-      "velocity": 953.4,
-      "x_factor": 3.42,
-      "hot_score": 0.0051,
-      "platform": "youtube",
-      "niche": "юмор",
-      "lang": "ru",
-      "author": {
-        "channel_id": "UCd7v5DzNWpYqPUxzBeMUz5w",
-        "username": "Влад Алмазов",
-        "display_name": "Влад Алмазов",
-        "platform": "youtube",
-        "followers_count": 364000,
-        "median_views": 21574
-      },
-      "trending_since": "2026-05-20T14:20:10.561154+00:00"
+      "trending_since": "2026-05-20T14:42:05.979100+00:00"
     },
     {
       "id": "_uOp6qxvBAM",
@@ -1900,10 +1900,10 @@
       "thumbnail_url": "https://i.ytimg.com/vi/_uOp6qxvBAM/maxresdefault.jpg",
       "published_at": "2026-05-15T12:01:04Z",
       "duration_sec": 42,
-      "views": 37596,
-      "likes": 1110,
+      "views": 37642,
+      "likes": 1114,
       "comments": 17,
-      "velocity": 307.4,
+      "velocity": 306.8,
       "x_factor": 1.96,
       "hot_score": 0.0051,
       "platform": "youtube",
@@ -1915,9 +1915,36 @@
         "display_name": "Sky tech Shorts",
         "platform": "youtube",
         "followers_count": 262000,
-        "median_views": 19178
+        "median_views": 19250
       },
-      "trending_since": "2026-05-20T14:20:10.562053+00:00"
+      "trending_since": "2026-05-20T14:42:05.980061+00:00"
+    },
+    {
+      "id": "6d7gmDAG8kQ",
+      "url": "https://www.youtube.com/shorts/6d7gmDAG8kQ",
+      "title": "УДИВИЛ МОЛЧА🤫#magic #shorts #владалмазов #приколы #фокусы",
+      "caption": "",
+      "thumbnail_url": "https://i.ytimg.com/vi/6d7gmDAG8kQ/maxresdefault.jpg",
+      "published_at": "2026-05-17T08:59:22Z",
+      "duration_sec": 71,
+      "views": 73904,
+      "likes": 1452,
+      "comments": 42,
+      "velocity": 951.0,
+      "x_factor": 3.39,
+      "hot_score": 0.005,
+      "platform": "youtube",
+      "niche": "юмор",
+      "lang": "ru",
+      "author": {
+        "channel_id": "UCd7v5DzNWpYqPUxzBeMUz5w",
+        "username": "Влад Алмазов",
+        "display_name": "Влад Алмазов",
+        "platform": "youtube",
+        "followers_count": 364000,
+        "median_views": 21799
+      },
+      "trending_since": "2026-05-20T14:42:05.979139+00:00"
     },
     {
       "id": "p-8ocOB0pm4",
@@ -1927,11 +1954,11 @@
       "thumbnail_url": "https://i.ytimg.com/vi/p-8ocOB0pm4/maxresdefault.jpg",
       "published_at": "2026-05-16T18:54:15Z",
       "duration_sec": 43,
-      "views": 1460596,
-      "likes": 31449,
+      "views": 1463373,
+      "likes": 31496,
       "comments": 766,
-      "velocity": 15974.7,
-      "x_factor": 5.57,
+      "velocity": 15941.3,
+      "x_factor": 5.03,
       "hot_score": 0.0048,
       "platform": "youtube",
       "niche": "motivation",
@@ -1942,9 +1969,9 @@
         "display_name": "BoltMotivation",
         "platform": "youtube",
         "followers_count": 2830000,
-        "median_views": 262313
+        "median_views": 290871
       },
-      "trending_since": "2026-05-20T14:20:10.561235+00:00"
+      "trending_since": "2026-05-20T14:42:05.979225+00:00"
     },
     {
       "id": "mUff29NVhtg",
@@ -1954,10 +1981,10 @@
       "thumbnail_url": "https://i.ytimg.com/vi/mUff29NVhtg/maxresdefault.jpg",
       "published_at": "2026-05-13T16:36:23Z",
       "duration_sec": 23,
-      "views": 114582,
-      "likes": 3737,
+      "views": 114667,
+      "likes": 3739,
       "comments": 95,
-      "velocity": 691.4,
+      "velocity": 690.4,
       "x_factor": 1.0,
       "hot_score": 0.0044,
       "platform": "youtube",
@@ -1969,9 +1996,9 @@
         "display_name": "HumorBagel",
         "platform": "youtube",
         "followers_count": 1120000,
-        "median_views": 114582
+        "median_views": 114667
       },
-      "trending_since": "2026-05-20T14:20:10.561133+00:00"
+      "trending_since": "2026-05-20T14:42:05.979117+00:00"
     },
     {
       "id": "go3Pt_mtFGc",
@@ -1981,11 +2008,11 @@
       "thumbnail_url": "https://i.ytimg.com/vi/go3Pt_mtFGc/maxresdefault.jpg",
       "published_at": "2026-05-15T13:59:47Z",
       "duration_sec": 54,
-      "views": 20766,
+      "views": 20777,
       "likes": 456,
       "comments": 23,
-      "velocity": 172.6,
-      "x_factor": 0.96,
+      "velocity": 172.1,
+      "x_factor": 0.95,
       "hot_score": 0.0042,
       "platform": "youtube",
       "niche": "юмор",
@@ -1996,9 +2023,9 @@
         "display_name": "Влад Алмазов",
         "platform": "youtube",
         "followers_count": 364000,
-        "median_views": 21574
+        "median_views": 21799
       },
-      "trending_since": "2026-05-20T14:20:10.561165+00:00"
+      "trending_since": "2026-05-20T14:42:05.979151+00:00"
     },
     {
       "id": "UMdrNrP9q04",
@@ -2008,11 +2035,11 @@
       "thumbnail_url": "https://i.ytimg.com/vi/UMdrNrP9q04/maxresdefault.jpg",
       "published_at": "2026-05-18T09:00:11Z",
       "duration_sec": 60,
-      "views": 24115838,
-      "likes": 313930,
-      "comments": 557,
-      "velocity": 452173.0,
-      "x_factor": 1.98,
+      "views": 24373372,
+      "likes": 317912,
+      "comments": 558,
+      "velocity": 453892.1,
+      "x_factor": 2.0,
       "hot_score": 0.0041,
       "platform": "youtube",
       "niche": "tech",
@@ -2023,9 +2050,9 @@
         "display_name": "Tech Master",
         "platform": "youtube",
         "followers_count": 28600000,
-        "median_views": 12180810
+        "median_views": 12193069
       },
-      "trending_since": "2026-05-20T14:20:10.561965+00:00"
+      "trending_since": "2026-05-20T14:42:05.979970+00:00"
     },
     {
       "id": "TW8k-yKk0SY",
@@ -2035,10 +2062,10 @@
       "thumbnail_url": "https://i.ytimg.com/vi/TW8k-yKk0SY/maxresdefault.jpg",
       "published_at": "2026-05-15T08:25:13Z",
       "duration_sec": 60,
-      "views": 18164568,
-      "likes": 457277,
+      "views": 18185075,
+      "likes": 457961,
       "comments": 685,
-      "velocity": 144259.4,
+      "velocity": 144004.4,
       "x_factor": 1.49,
       "hot_score": 0.004,
       "platform": "youtube",
@@ -2050,9 +2077,9 @@
         "display_name": "Tech Master",
         "platform": "youtube",
         "followers_count": 28600000,
-        "median_views": 12180810
+        "median_views": 12193069
       },
-      "trending_since": "2026-05-20T14:20:10.562000+00:00"
+      "trending_since": "2026-05-20T14:42:05.980004+00:00"
     },
     {
       "id": "gvyjHL7Ov9Q",
@@ -2065,7 +2092,7 @@
       "views": 1481,
       "likes": 22,
       "comments": 8,
-      "velocity": 9.0,
+      "velocity": 8.9,
       "x_factor": 1.0,
       "hot_score": 0.0039,
       "platform": "youtube",
@@ -2079,7 +2106,7 @@
         "followers_count": 69,
         "median_views": 1481
       },
-      "trending_since": "2026-05-20T14:20:10.560935+00:00"
+      "trending_since": "2026-05-20T14:42:05.978920+00:00"
     },
     {
       "id": "GegQwH6Ow0s",
@@ -2089,10 +2116,10 @@
       "thumbnail_url": "https://i.ytimg.com/vi/GegQwH6Ow0s/maxresdefault.jpg",
       "published_at": "2026-05-14T08:46:08Z",
       "duration_sec": 40,
-      "views": 1634136,
-      "likes": 44677,
-      "comments": 315,
-      "velocity": 10925.8,
+      "views": 1637143,
+      "likes": 44750,
+      "comments": 319,
+      "velocity": 10919.2,
       "x_factor": 0.85,
       "hot_score": 0.0039,
       "platform": "youtube",
@@ -2104,9 +2131,9 @@
         "display_name": "TECH-iELA Shorts",
         "platform": "youtube",
         "followers_count": 10200000,
-        "median_views": 1916558
+        "median_views": 1928162
       },
-      "trending_since": "2026-05-20T14:20:10.561904+00:00"
+      "trending_since": "2026-05-20T14:42:05.979909+00:00"
     },
     {
       "id": "CgX-nifZ48g",
@@ -2116,11 +2143,11 @@
       "thumbnail_url": "https://i.ytimg.com/vi/CgX-nifZ48g/maxresdefault.jpg",
       "published_at": "2026-05-14T18:02:05Z",
       "duration_sec": 49,
-      "views": 1074529,
-      "likes": 22534,
+      "views": 1074580,
+      "likes": 22535,
       "comments": 118,
-      "velocity": 7658.7,
-      "x_factor": 4.1,
+      "velocity": 7639.2,
+      "x_factor": 3.69,
       "hot_score": 0.0031,
       "platform": "youtube",
       "niche": "motivation",
@@ -2131,9 +2158,9 @@
         "display_name": "BoltMotivation",
         "platform": "youtube",
         "followers_count": 2830000,
-        "median_views": 262313
+        "median_views": 290871
       },
-      "trending_since": "2026-05-20T14:20:10.561275+00:00"
+      "trending_since": "2026-05-20T14:42:05.979265+00:00"
     },
     {
       "id": "tsuaOvXXaZo",
@@ -2146,7 +2173,7 @@
       "views": 1540,
       "likes": 13,
       "comments": 0,
-      "velocity": 34.0,
+      "velocity": 33.7,
       "x_factor": 1.12,
       "hot_score": 0.0029,
       "platform": "youtube",
@@ -2160,7 +2187,7 @@
         "followers_count": 293,
         "median_views": 1369
       },
-      "trending_since": "2026-05-20T14:20:10.559741+00:00"
+      "trending_since": "2026-05-20T14:42:05.977944+00:00"
     },
     {
       "id": "TsXP0pABcLc",
@@ -2170,10 +2197,10 @@
       "thumbnail_url": "https://i.ytimg.com/vi/TsXP0pABcLc/maxresdefault.jpg",
       "published_at": "2026-05-16T21:00:20Z",
       "duration_sec": 19,
-      "views": 71037,
+      "views": 71102,
       "likes": 912,
       "comments": 6,
-      "velocity": 795.2,
+      "velocity": 792.7,
       "x_factor": 0.93,
       "hot_score": 0.0028,
       "platform": "youtube",
@@ -2185,9 +2212,9 @@
         "display_name": "Funniest YT Clips",
         "platform": "youtube",
         "followers_count": 1200000,
-        "median_views": 76074
+        "median_views": 76639
       },
-      "trending_since": "2026-05-20T14:20:10.561784+00:00"
+      "trending_since": "2026-05-20T14:42:05.979798+00:00"
     },
     {
       "id": "OD-8fOVcSYM",
@@ -2197,11 +2224,11 @@
       "thumbnail_url": "https://i.ytimg.com/vi/OD-8fOVcSYM/maxresdefault.jpg",
       "published_at": "2026-05-15T19:31:23Z",
       "duration_sec": 39,
-      "views": 210488,
-      "likes": 3109,
+      "views": 210538,
+      "likes": 3110,
       "comments": 54,
-      "velocity": 1833.3,
-      "x_factor": 0.8,
+      "velocity": 1827.9,
+      "x_factor": 0.72,
       "hot_score": 0.0027,
       "platform": "youtube",
       "niche": "motivation",
@@ -2212,9 +2239,9 @@
         "display_name": "BoltMotivation",
         "platform": "youtube",
         "followers_count": 2830000,
-        "median_views": 262313
+        "median_views": 290871
       },
-      "trending_since": "2026-05-20T14:20:10.561256+00:00"
+      "trending_since": "2026-05-20T14:42:05.979245+00:00"
     },
     {
       "id": "L3vvNGzD7sc",
@@ -2224,11 +2251,11 @@
       "thumbnail_url": "https://i.ytimg.com/vi/L3vvNGzD7sc/maxresdefault.jpg",
       "published_at": "2026-05-14T10:37:37Z",
       "duration_sec": 53,
-      "views": 12406,
-      "likes": 226,
+      "views": 12436,
+      "likes": 227,
       "comments": 3,
       "velocity": 84.0,
-      "x_factor": 1.69,
+      "x_factor": 1.63,
       "hot_score": 0.0026,
       "platform": "youtube",
       "niche": "финансы",
@@ -2239,9 +2266,36 @@
         "display_name": "Banshiro Shorts",
         "platform": "youtube",
         "followers_count": 1920000,
-        "median_views": 7341
+        "median_views": 7640
       },
-      "trending_since": "2026-05-20T14:20:10.560159+00:00"
+      "trending_since": "2026-05-20T14:42:05.978286+00:00"
+    },
+    {
+      "id": "UFIpSfclRJk",
+      "url": "https://www.youtube.com/shorts/UFIpSfclRJk",
+      "title": "\"I'm a good citizen\" 🤣 #kingar4 #funnymoments #funniestytclips #shorts",
+      "caption": "",
+      "thumbnail_url": "https://i.ytimg.com/vi/UFIpSfclRJk/maxresdefault.jpg",
+      "published_at": "2026-05-14T23:00:23Z",
+      "duration_sec": 24,
+      "views": 483666,
+      "likes": 7692,
+      "comments": 51,
+      "velocity": 3564.4,
+      "x_factor": 6.31,
+      "hot_score": 0.0024,
+      "platform": "youtube",
+      "niche": "funny",
+      "lang": "en",
+      "author": {
+        "channel_id": "UCdTQfOZ4xB-A0lm2QzM1NVQ",
+        "username": "Funniest YT Clips",
+        "display_name": "Funniest YT Clips",
+        "platform": "youtube",
+        "followers_count": 1200000,
+        "median_views": 76639
+      },
+      "trending_since": "2026-05-20T14:42:05.979809+00:00"
     },
     {
       "id": "F2K-bdWNvGw",
@@ -2254,9 +2308,9 @@
       "views": 898,
       "likes": 4,
       "comments": 0,
-      "velocity": 42.1,
+      "velocity": 41.4,
       "x_factor": 0.66,
-      "hot_score": 0.0024,
+      "hot_score": 0.0023,
       "platform": "youtube",
       "niche": "юрист",
       "lang": "ru",
@@ -2268,34 +2322,7 @@
         "followers_count": 293,
         "median_views": 1369
       },
-      "trending_since": "2026-05-20T14:20:10.559707+00:00"
-    },
-    {
-      "id": "UFIpSfclRJk",
-      "url": "https://www.youtube.com/shorts/UFIpSfclRJk",
-      "title": "\"I'm a good citizen\" 🤣 #kingar4 #funnymoments #funniestytclips #shorts",
-      "caption": "",
-      "thumbnail_url": "https://i.ytimg.com/vi/UFIpSfclRJk/maxresdefault.jpg",
-      "published_at": "2026-05-14T23:00:23Z",
-      "duration_sec": 24,
-      "views": 483403,
-      "likes": 7688,
-      "comments": 51,
-      "velocity": 3572.0,
-      "x_factor": 6.35,
-      "hot_score": 0.0024,
-      "platform": "youtube",
-      "niche": "funny",
-      "lang": "en",
-      "author": {
-        "channel_id": "UCdTQfOZ4xB-A0lm2QzM1NVQ",
-        "username": "Funniest YT Clips",
-        "display_name": "Funniest YT Clips",
-        "platform": "youtube",
-        "followers_count": 1200000,
-        "median_views": 76074
-      },
-      "trending_since": "2026-05-20T14:20:10.561795+00:00"
+      "trending_since": "2026-05-20T14:42:05.977908+00:00"
     },
     {
       "id": "-oFsnwr1WdI",
@@ -2305,10 +2332,10 @@
       "thumbnail_url": "https://i.ytimg.com/vi/-oFsnwr1WdI/maxresdefault.jpg",
       "published_at": "2026-05-14T08:25:31Z",
       "duration_sec": 48,
-      "views": 12180810,
-      "likes": 202986,
-      "comments": 943,
-      "velocity": 81253.6,
+      "views": 12193069,
+      "likes": 203230,
+      "comments": 944,
+      "velocity": 81137.6,
       "x_factor": 1.0,
       "hot_score": 0.0023,
       "platform": "youtube",
@@ -2320,9 +2347,9 @@
         "display_name": "Tech Master",
         "platform": "youtube",
         "followers_count": 28600000,
-        "median_views": 12180810
+        "median_views": 12193069
       },
-      "trending_since": "2026-05-20T14:20:10.562016+00:00"
+      "trending_since": "2026-05-20T14:42:05.980020+00:00"
     },
     {
       "id": "HE9pYTjyEmw",
@@ -2335,7 +2362,7 @@
       "views": 8604,
       "likes": 82,
       "comments": 2,
-      "velocity": 68.9,
+      "velocity": 68.7,
       "x_factor": 1.0,
       "hot_score": 0.0016,
       "platform": "youtube",
@@ -2349,7 +2376,7 @@
         "followers_count": 802000,
         "median_views": 8604
       },
-      "trending_since": "2026-05-20T14:20:10.561175+00:00"
+      "trending_since": "2026-05-20T14:42:05.979165+00:00"
     },
     {
       "id": "4AUFns6-Ens",
@@ -2362,7 +2389,7 @@
       "views": 1369,
       "likes": 6,
       "comments": 0,
-      "velocity": 30.2,
+      "velocity": 30.0,
       "x_factor": 1.0,
       "hot_score": 0.0015,
       "platform": "youtube",
@@ -2376,7 +2403,7 @@
         "followers_count": 293,
         "median_views": 1369
       },
-      "trending_since": "2026-05-20T14:20:10.559758+00:00"
+      "trending_since": "2026-05-20T14:42:05.977961+00:00"
     },
     {
       "id": "EqPLg0CIZnw",
@@ -2389,7 +2416,7 @@
       "views": 2015,
       "likes": 14,
       "comments": 0,
-      "velocity": 21.6,
+      "velocity": 21.5,
       "x_factor": 1.47,
       "hot_score": 0.0014,
       "platform": "youtube",
@@ -2403,7 +2430,7 @@
         "followers_count": 293,
         "median_views": 1369
       },
-      "trending_since": "2026-05-20T14:20:10.559776+00:00"
+      "trending_since": "2026-05-20T14:42:05.977977+00:00"
     },
     {
       "id": "4WE2yJUBnEg",
@@ -2416,7 +2443,7 @@
       "views": 28139,
       "likes": 39,
       "comments": 0,
-      "velocity": 194.7,
+      "velocity": 194.2,
       "x_factor": 1.0,
       "hot_score": 0.0002,
       "platform": "youtube",
@@ -2430,7 +2457,7 @@
         "followers_count": 2210,
         "median_views": 28139
       },
-      "trending_since": "2026-05-20T14:20:10.561661+00:00"
+      "trending_since": "2026-05-20T14:42:05.979664+00:00"
     },
     {
       "id": "MYZt0987ue8",
@@ -2457,7 +2484,7 @@
         "followers_count": 25,
         "median_views": 0
       },
-      "trending_since": "2026-05-20T14:20:10.559503+00:00"
+      "trending_since": "2026-05-20T14:42:05.977717+00:00"
     },
     {
       "id": "6UYHHdkm-jc",
@@ -2484,7 +2511,7 @@
         "followers_count": 25,
         "median_views": 0
       },
-      "trending_since": "2026-05-20T14:20:10.559532+00:00"
+      "trending_since": "2026-05-20T14:42:05.977736+00:00"
     },
     {
       "id": "-R7yplGUFWY",
@@ -2511,7 +2538,7 @@
         "followers_count": 25,
         "median_views": 0
       },
-      "trending_since": "2026-05-20T14:20:10.559550+00:00"
+      "trending_since": "2026-05-20T14:42:05.977754+00:00"
     },
     {
       "id": "JsthArTaodU",
@@ -2538,7 +2565,7 @@
         "followers_count": 25,
         "median_views": 0
       },
-      "trending_since": "2026-05-20T14:20:10.559563+00:00"
+      "trending_since": "2026-05-20T14:42:05.977768+00:00"
     },
     {
       "id": "gNBSFHTkaas",
@@ -2565,7 +2592,7 @@
         "followers_count": 25,
         "median_views": 0
       },
-      "trending_since": "2026-05-20T14:20:10.559578+00:00"
+      "trending_since": "2026-05-20T14:42:05.977782+00:00"
     },
     {
       "id": "avv73Z8WqoM",
@@ -2592,7 +2619,7 @@
         "followers_count": 293,
         "median_views": 1369
       },
-      "trending_since": "2026-05-20T14:20:10.559725+00:00"
+      "trending_since": "2026-05-20T14:42:05.977926+00:00"
     },
     {
       "id": "OG8vWym-7fY",
@@ -2619,7 +2646,7 @@
         "followers_count": 55600,
         "median_views": 527
       },
-      "trending_since": "2026-05-20T14:20:10.560889+00:00"
+      "trending_since": "2026-05-20T14:42:05.978873+00:00"
     },
     {
       "id": "XCI2sBR4znY",
@@ -2629,11 +2656,11 @@
       "thumbnail_url": "https://i.ytimg.com/vi/XCI2sBR4znY/maxresdefault.jpg",
       "published_at": "2026-05-20T13:30:13Z",
       "duration_sec": 7,
-      "views": 29,
+      "views": 46,
       "likes": 0,
       "comments": 0,
-      "velocity": 34.8,
-      "x_factor": 0.28,
+      "velocity": 38.4,
+      "x_factor": 0.44,
       "hot_score": 0.0,
       "platform": "youtube",
       "niche": "motivation",
@@ -2646,7 +2673,7 @@
         "followers_count": 133000,
         "median_views": 105
       },
-      "trending_since": "2026-05-20T14:20:10.561574+00:00"
+      "trending_since": "2026-05-20T14:42:05.979579+00:00"
     },
     {
       "id": "VYnPuZ93HIk",
@@ -2659,7 +2686,7 @@
       "views": 8,
       "likes": 0,
       "comments": 0,
-      "velocity": 5.3,
+      "velocity": 4.3,
       "x_factor": 0.08,
       "hot_score": 0.0,
       "platform": "youtube",
@@ -2673,7 +2700,7 @@
         "followers_count": 133000,
         "median_views": 105
       },
-      "trending_since": "2026-05-20T14:20:10.561591+00:00"
+      "trending_since": "2026-05-20T14:42:05.979596+00:00"
     },
     {
       "id": "N00-N2J_AOk",
@@ -2700,7 +2727,34 @@
         "followers_count": 0,
         "median_views": 12
       },
-      "trending_since": "2026-05-20T14:20:10.561860+00:00"
+      "trending_since": "2026-05-20T14:42:05.979862+00:00"
+    },
+    {
+      "id": "O3EbQc0Xops",
+      "url": "https://www.youtube.com/shorts/O3EbQc0Xops",
+      "title": "Что думаете?",
+      "caption": "",
+      "thumbnail_url": "https://i.ytimg.com/vi/O3EbQc0Xops/maxresdefault.jpg",
+      "published_at": "2026-05-20T14:40:37Z",
+      "duration_sec": 56,
+      "views": 0,
+      "likes": 0,
+      "comments": 0,
+      "velocity": 0.0,
+      "x_factor": 0.0,
+      "hot_score": null,
+      "platform": "youtube",
+      "niche": "бизнес",
+      "lang": "ru",
+      "author": {
+        "channel_id": "UCJI9PxywTaidvE02FHGZuEw",
+        "username": "Артем Сенаторов Shorts",
+        "display_name": "Артем Сенаторов Shorts",
+        "platform": "youtube",
+        "followers_count": 116000,
+        "median_views": 6975
+      },
+      "trending_since": "2026-05-20T14:42:05.978123+00:00"
     }
   ]
 }
