@@ -14,7 +14,8 @@
   }
   *{box-sizing:border-box;margin:0;padding:0}
   body{background:var(--bg);color:var(--cream);font-family:'DM Sans',sans-serif;min-height:100vh}
-  header{position:sticky;top:0;z-index:100;background:rgba(12,12,12,.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);height:52px;display:flex;align-items:center;justify-content:space-between;padding:0 20px}
+  header{position:sticky;top:0;z-index:100;background:rgba(12,12,12,.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);height:52px;display:flex;align-items:center;justify-content:space-between;padding:0 20px;transition:padding-right .25s}
+  header.panel-open{padding-right:340px}
   .logo{font-family:'DM Serif Display',serif;font-size:18px;color:var(--cream);display:flex;align-items:center;gap:8px;text-decoration:none}
   .logo-icon{width:28px;height:28px;border-radius:8px;background:var(--surface2);border:1px solid var(--border2);display:flex;align-items:center;justify-content:center;font-size:15px}
   .header-right{display:flex;align-items:center;gap:10px}
@@ -59,7 +60,8 @@
   .filter-active-badge{display:none;width:8px;height:8px;border-radius:50%;background:var(--amber);position:absolute;top:4px;right:4px}
   .settings-btn{position:relative}
 
-  main{max-width:1200px;margin:0 auto;padding:28px 20px;transition:margin-right .25s}
+  main{max-width:1200px;margin:0 auto;padding:28px 20px 60px;transition:margin-right .25s}
+  main.panel-open{margin-right:320px}
   .page-head{margin-bottom:20px}
   .page-title{font-family:'DM Serif Display',serif;font-size:26px;font-weight:400;margin-bottom:4px}
   .page-sub{font-size:13px;color:var(--cream-dim)}
@@ -76,7 +78,7 @@
   .search input::placeholder{color:var(--cream-muted)}
   .search input:focus{border-color:var(--border2)}
   .count-badge{font-size:11px;color:var(--cream-muted);background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:4px 10px;white-space:nowrap}
-  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(185px,1fr));gap:10px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(185px,1fr));gap:10px;align-items:start}
   .card{background:var(--surface);border:1px solid var(--border);border-radius:14px;overflow:hidden;cursor:pointer;transition:transform .2s,border-color .2s,box-shadow .2s;display:flex;flex-direction:column}
   .card:hover{transform:scale(1.02);border-color:var(--border2);box-shadow:0 8px 28px rgba(0,0,0,.5)}
   .thumb{position:relative;aspect-ratio:3/4;background:var(--surface2);overflow:hidden}
@@ -132,7 +134,7 @@
   .mcap{font-size:12px;color:var(--cream-dim);line-height:1.6;max-height:100px;overflow-y:auto;margin-bottom:12px}
   .mlink{display:block;padding:9px;border-radius:9px;background:rgba(232,228,217,.08);border:1px solid var(--border2);color:var(--cream);font-size:12px;text-align:center;text-decoration:none;transition:background .15s}
   .mlink:hover{background:rgba(232,228,217,.13)}
-  @media(max-width:600px){.grid{grid-template-columns:repeat(2,1fr);gap:8px}main{padding:16px}.settings-panel{width:100%}}
+  @media(max-width:600px){.grid{grid-template-columns:repeat(2,1fr);gap:8px}main{padding:16px}.settings-panel{width:100%}main.panel-open{margin-right:0}header.panel-open{padding-right:20px}}
 </style>
 </head>
 <body>
@@ -227,6 +229,10 @@
       <label class="s-toggle"><input type="checkbox" id="s-hide-nothumb"><span class="s-slider"></span></label>
     </div>
     <div class="s-row" style="margin-top:8px">
+      <span class="s-label">Клик → сразу открыть источник</span>
+      <label class="s-toggle"><input type="checkbox" id="s-direct-click" checked><span class="s-slider"></span></label>
+    </div>
+    <div class="s-row" style="margin-top:8px">
       <span class="s-label">Мин. подписчиков канала</span>
       <span class="s-range-val" id="subs-min-val">0</span>
     </div>
@@ -301,6 +307,7 @@ const YT_URL = 'https://raw.githubusercontent.com/'+REPO+'/main/youtube.json';
 const PER = 20;
 const VK = 'rt_last_visit';
 const SK = 'rt_settings';
+const FK = 'rt_filters';
 
 let ALL=[], igData=[], ytData=[], ytLoaded=false, filtered=[];
 let lastUpdAt=null, ytUpdatedAt=null;
@@ -323,9 +330,40 @@ const DEFAULT_SETTINGS = {
   todayOnly: false,
   hideNoThumb: false,
   subsMin: 0,        // index in subsSteps
+  directClick: true,  // клик открывает источник напрямую
 };
 
 let S = {...DEFAULT_SETTINGS};
+
+function saveFilters() {
+  localStorage.setItem(FK, JSON.stringify({
+    sort: state.sort,
+    platform: state.platform,
+    days: state.days,
+  }));
+}
+
+function loadFilters() {
+  try {
+    const saved = localStorage.getItem(FK);
+    if (!saved) return;
+    const f = JSON.parse(saved);
+    if (f.sort) state.sort = f.sort;
+    if (f.platform !== undefined) state.platform = f.platform;
+    if (f.days !== undefined) state.days = f.days;
+
+    // Восстанавливаем активные кнопки
+    document.querySelectorAll('#sg .fb').forEach(b => b.classList.toggle('on', b.dataset.v === state.sort));
+    document.querySelectorAll('#pg .fb').forEach(b => {
+      b.classList.remove('on','on-orange');
+      if (b.dataset.v === state.platform) b.classList.add(state.platform==='youtube'?'on-orange':'on');
+    });
+    document.querySelectorAll('#dg .fb').forEach(b => {
+      b.classList.remove('on','on-cyan');
+      if (b.dataset.v === state.days) b.classList.add(state.days==='1'?'on-cyan':'on');
+    });
+  } catch(e) {}
+}
 
 function loadSettings() {
   try {
@@ -368,6 +406,7 @@ function applySettingsToUI() {
   document.getElementById('s-viral-only').checked = S.viralOnly;
   document.getElementById('s-today-only').checked = S.todayOnly;
   document.getElementById('s-hide-nothumb').checked = S.hideNoThumb;
+  document.getElementById('s-direct-click').checked = S.directClick !== false;
 }
 
 function updateRangeLabel(inputId, labelId, steps, suffix='') {
@@ -395,12 +434,13 @@ function applySettings() {
   S.viralOnly = document.getElementById('s-viral-only').checked;
   S.todayOnly = document.getElementById('s-today-only').checked;
   S.hideNoThumb = document.getElementById('s-hide-nothumb').checked;
+  S.directClick = document.getElementById('s-direct-click').checked;
   S.subsMin = parseInt(document.getElementById('s-subs-min').value);
 
   saveSettings();
   updateFilterBadge();
   applyFilters();
-  toggleSettings();
+  // панель остаётся открытой
 }
 
 function resetSettings() {
@@ -425,8 +465,21 @@ function updateFilterBadge() {
 
 function toggleSettings() {
   const panel = document.getElementById('settings-panel');
-  panel.classList.toggle('open');
+  const isOpen = panel.classList.toggle('open');
+  document.getElementById('main-content').classList.toggle('panel-open', isOpen);
+  document.querySelector('header').classList.toggle('panel-open', isOpen);
 }
+
+// Закрываем при клике вне панели
+document.addEventListener('click', e => {
+  const panel = document.getElementById('settings-panel');
+  const btn = document.getElementById('settings-toggle');
+  if (panel.classList.contains('open') && !panel.contains(e.target) && !btn.contains(e.target)) {
+    panel.classList.remove('open');
+    document.getElementById('main-content').classList.remove('panel-open');
+    document.querySelector('header').classList.remove('panel-open');
+  }
+});
 
 // Chip multi-select
 document.querySelectorAll('.s-chips').forEach(group => {
@@ -480,7 +533,8 @@ function isViral(item) {
   return item.published_at&&item.x_factor>=5&&(Date.now()-new Date(item.published_at))/3600000<48;
 }
 function isToday(item) {
-  return item.trending_since&&(Date.now()-new Date(item.trending_since))/3600000<24;
+  const ref = item.published_at || item.trending_since;
+  return ref && (Date.now()-new Date(ref))/3600000 < 24;
 }
 
 function thumbUrl(item) {
@@ -488,6 +542,19 @@ function thumbUrl(item) {
   if (!u) return null;
   if ((item.author?.platform||item.platform)==='youtube') return u;
   return 'https://images.weserv.nl/?url='+encodeURIComponent(u)+'&w=400&output=jpg';
+}
+
+// Запасные варианты для Instagram если основной не загрузился
+function thumbFallbacks(item) {
+  const u = item.thumbnail_url||'';
+  if (!u) return [];
+  const platform = item.author?.platform||item.platform||'';
+  if (platform === 'youtube') return [u];
+  // Пробуем: weserv → прямой CDN URL → заглушка
+  return [
+    'https://images.weserv.nl/?url='+encodeURIComponent(u)+'&w=400&output=jpg',
+    u,  // прямой URL (может сработать если CDN ещё живой)
+  ];
 }
 
 function picon(platform) {
@@ -499,6 +566,21 @@ function picon(platform) {
 }
 
 // ── Render ────────────────────────────────────────────────────────
+function tryNextThumb(img) {
+  try {
+    const fallbacks = JSON.parse(decodeURIComponent(img.dataset.fallbacks || '[]'));
+    const fi = parseInt(img.dataset.fi || '0') + 1;
+    if (fi < fallbacks.length) {
+      img.dataset.fi = fi;
+      img.src = fallbacks[fi];
+    } else {
+      img.outerHTML = '<div class="thumb-empty">нет фото</div>';
+    }
+  } catch(e) {
+    img.outerHTML = '<div class="thumb-empty">нет фото</div>';
+  }
+}
+
 function skeletons() {
   return Array.from({length:8}).map(()=>`<div class="skel"><div class="skel-t"></div><div class="skel-b"><div class="skel-l" style="width:65%"></div><div class="skel-l" style="width:40%"></div></div></div>`).join('');
 }
@@ -512,9 +594,11 @@ function card(item, rank) {
   else if (today) badge=`<span class="tag tag-today"><svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>сегодня</span>`;
   else if (viral) badge=`<span class="tag tag-viral">вирус</span>`;
   const ts=thumbUrl(item);
-  const thumb=ts?`<img src="${ts}" loading="lazy" alt="" onerror="this.outerHTML='<div class=thumb-empty>нет фото</div>'">`:`<div class="thumb-empty">нет фото</div>`;
+  const fallbacks = thumbFallbacks(item);
+  const fbJson = encodeURIComponent(JSON.stringify(fallbacks));
+  const thumb=ts?`<img src="${ts}" loading="lazy" alt="" data-fallbacks="${fbJson}" data-fi="0" onerror="tryNextThumb(this)">`:`<div class="thumb-empty">нет фото</div>`;
   const data=encodeURIComponent(JSON.stringify(item));
-  return `<div class="card" onclick="openModal('${data}')">
+  return `<div class="card" onclick="handleCardClick(event,'${data}','${encodeURIComponent(item.url||'')}')">
     <div class="thumb">${thumb}
       <div class="thumb-top">${picon(platform)}${badge}</div>
       <div class="thumb-bot">
@@ -569,13 +653,21 @@ function passesSettings(item) {
   }
 
   // Длительность
-  if (S.durMax > 0 && (item.duration_sec||0) > S.durMax) return false;
+  if (S.durMax > 0) {
+    const dur = item.duration_sec || 0;
+    const platform = (item.author?.platform || item.platform || '');
+    // Для Instagram duration часто null — не фильтруем если нет данных
+    if (dur > 0 && dur > S.durMax) return false;
+  }
 
   // Только вирусные
   if (S.viralOnly && (item.x_factor||0) < 5) return false;
 
   // Только новые за 24ч
-  if (S.todayOnly && !isToday(item)) return false;
+  if (S.todayOnly) {
+    const ref = item.published_at || item.trending_since;
+    if (!ref || (Date.now()-new Date(ref))/3600000 >= 24) return false;
+  }
 
   // Скрыть без картинки
   if (S.hideNoThumb && !item.thumbnail_url) return false;
@@ -611,7 +703,7 @@ function applyFilters() {
   }
 
   // Сортировка
-  const sm={hot_score:x=>-(x.hot_score||0),x_factor:x=>-(x.x_factor||0),views:x=>-(x.views||0),recent:x=>x.trending_since?new Date(x.trending_since):0};
+  const sm={hot_score:x=>-(x.hot_score||0),x_factor:x=>-(x.x_factor||0),views:x=>-(x.views||0),recent:x=>-(new Date(x.published_at||x.trending_since||0).getTime())};
   arr.sort((a,b)=>{const fn=sm[state.sort]||sm.hot_score;return fn(a)<fn(b)?-1:1;});
 
   filtered=arr;
@@ -632,6 +724,14 @@ function render() {
 }
 
 // ── Modal ─────────────────────────────────────────────────────────
+function handleCardClick(e, encoded, urlEncoded) {
+  if (S.directClick !== false) {
+    const url = decodeURIComponent(urlEncoded);
+    if (url) { window.open(url, '_blank', 'noopener'); return; }
+  }
+  openModal(encoded);
+}
+
 function openModal(encoded) {
   const item=JSON.parse(decodeURIComponent(encoded));
   document.getElementById('ma').textContent='@'+(item.author?.username||'—');
@@ -647,6 +747,8 @@ document.addEventListener('keydown',e=>{
   if(e.key==='Escape'){
     document.getElementById('modal').style.display='none';
     document.getElementById('settings-panel').classList.remove('open');
+    document.getElementById('main-content').classList.remove('panel-open');
+    document.querySelector('header').classList.remove('panel-open');
     hideTikTokTooltip();
   }
 });
@@ -688,7 +790,7 @@ document.getElementById('pg').addEventListener('click', async e=>{
   document.querySelectorAll('#pg .fb').forEach(b=>b.classList.remove('on','on-orange'));
   btn.classList.add(val==='youtube'?'on-orange':'on');
   state.platform=val; state.page=1;
-  applyFilters();
+  saveFilters();applyFilters();
 });
 
 function rebuildALL(platform) {
@@ -707,7 +809,7 @@ document.getElementById('sg').addEventListener('click',e=>{
 document.getElementById('dg').addEventListener('click',e=>{
   const btn=e.target.closest('[data-v]');if(!btn)return;
   document.querySelectorAll('#dg .fb').forEach(b=>b.classList.remove('on','on-cyan'));
-  btn.classList.add(btn.dataset.v==='1'?'on-cyan':'on');state.days=btn.dataset.v;state.page=1;applyFilters();
+  btn.classList.add(btn.dataset.v==='1'?'on-cyan':'on');state.days=btn.dataset.v;state.page=1;saveFilters();applyFilters();
 });
 let qt;
 document.getElementById('qi').addEventListener('input',e=>{
@@ -767,6 +869,7 @@ async function load() {
     localStorage.setItem(VK,new Date().toISOString());
 
     loadSettings();
+    loadFilters();
 
     // Загружаем YouTube — он главный источник
     await loadYouTubeData();
