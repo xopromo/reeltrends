@@ -131,11 +131,21 @@ def save(items: dict, prev_ids: set):
         ) > cutoff_24h
     ]
 
+    # Читаем текущую версию и инкрементируем
+    cur_version = 0
+    if os.path.exists(OUTPUT_FILE):
+        try:
+            with open(OUTPUT_FILE) as f:
+                cur_version = json.load(f).get("version", 0)
+        except Exception:
+            pass
+
     output = {
         "updated_at": now.isoformat(),
         "total": len(sorted_items),
         "new_count": len(new_ids),           # новых с прошлого запуска
         "new_last_24h": len(new_last_24h),   # новых за 24 часа
+        "version": cur_version + 1,          # растёт при каждом обновлении
         "items": sorted_items,
     }
 
