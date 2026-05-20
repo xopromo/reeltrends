@@ -252,9 +252,18 @@ async def scrape_youtube() -> list:
             if not is_short(duration, title, desc):
                 continue
 
+            # Только русский и английский контент
+            audio_lang = snippet.get("defaultAudioLanguage", "")[:2]
+            if audio_lang and audio_lang not in ("ru", "en"):
+                continue
+
             views = int(stats.get("viewCount", 0))
             likes = int(stats.get("likeCount", 0))
             comments = int(stats.get("commentCount", 0))
+
+            # Минимум 1000 просмотров
+            if views < 1000:
+                continue
             published_at = snippet.get("publishedAt", "")
             cid = video_to_channel.get(v["id"], "")
             channel_title = snippet.get("channelTitle", "")
