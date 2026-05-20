@@ -16,24 +16,14 @@ jobs:
         with:
           python-version: '3.12'
       - run: pip install httpx
-
-      - name: Run Instagram scraper
-        run: python scraper.py
-
+      - run: python scraper.py
       - name: Update version
         run: |
-          echo "{"deployed_at":"$(date -u +%Y-%m-%dT%H:%M:%SZ)","commit":"${GITHUB_SHA::7}"}" > version.json
-
-      - name: Inject token into index.html
-        env:
-          GH_WRITE_TOKEN: ${{ secrets.GH_WRITE_TOKEN }}
-        run: |
-          sed -i "s|%%GH_WRITE_TOKEN%%|${GH_WRITE_TOKEN}|g" index.html
-
+          echo "{\"deployed_at\":\"$(date -u +%Y-%m-%dT%H:%M:%SZ)\",\"commit\":\"${GITHUB_SHA::7}\"}" > version.json
       - name: Commit
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add trends.json index.html version.json
+          git add trends.json version.json
           git diff --staged --quiet || git commit -m "instagram $(date -u +'%H:%M UTC')"
           git push
