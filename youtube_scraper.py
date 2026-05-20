@@ -247,16 +247,16 @@ async def get_channel_stats(client: httpx.AsyncClient, channel_ids: list) -> dic
     return stats
 
 
-async def get_recent_videos(client: httpx.AsyncClient, playlist_id: str) -> list:
+async def get_recent_videos(client: httpx.AsyncClient, playlist_id: str, max_results: int = 5, days: int = 7) -> list:
     if not playlist_id:
         return []
     try:
         data = await api_get(client, "playlistItems", {
             "part": "snippet",
             "playlistId": playlist_id,
-            "maxResults": 5,
+            "maxResults": max_results,
         })
-        cutoff = datetime.now(timezone.utc) - timedelta(days=7)
+        cutoff = datetime.now(timezone.utc) - timedelta(days=days)
         result = []
         for item in data.get("items", []):
             pub = item["snippet"].get("publishedAt", "")
@@ -333,7 +333,7 @@ async def scrape_youtube() -> list:
         cutoff = datetime.now(timezone.utc) - timedelta(days=cutoff_days)
         for cid in channel_ids:
             playlist_id = chan_stats.get(cid, {}).get("uploads_playlist", "")
-            recent = await get_recent_videos(client, playlist_id, max_results=videos_per_channel)
+            recent = await get_recent_videos(client, playlist_id, max_results=videos_per_channel, days=cutoff_days)
             for v in recent:
                 try:
                     pub = datetime.fromisoformat(v["published_at"].replace("Z", "+00:00"))
