@@ -134,6 +134,24 @@
   .mcap{font-size:12px;color:var(--cream-dim);line-height:1.6;max-height:100px;overflow-y:auto;margin-bottom:12px}
   .mlink{display:block;padding:9px;border-radius:9px;background:rgba(232,228,217,.08);border:1px solid var(--border2);color:var(--cream);font-size:12px;text-align:center;text-decoration:none;transition:background .15s}
   .mlink:hover{background:rgba(232,228,217,.13)}
+/* Тултипы */
+  [data-tip]{position:relative}
+  [data-tip]:hover::after{
+    content:attr(data-tip);
+    position:absolute;bottom:calc(100% + 6px);left:50%;transform:translateX(-50%);
+    background:#1c1c1c;border:1px solid rgba(255,255,255,.13);color:#9e9a8e;
+    font-size:11px;line-height:1.4;padding:5px 9px;border-radius:7px;
+    white-space:nowrap;z-index:999;pointer-events:none;
+    max-width:220px;white-space:normal;text-align:center;
+    animation:tip-in .12s ease;
+  }
+  [data-tip]:hover::before{
+    content:'';position:absolute;bottom:calc(100% + 1px);left:50%;transform:translateX(-50%);
+    border:5px solid transparent;border-top-color:#1c1c1c;z-index:999;pointer-events:none;
+    animation:tip-in .12s ease;
+  }
+  @keyframes tip-in{from{opacity:0;transform:translateX(-50%) translateY(4px)}to{opacity:1;transform:translateX(-50%) translateY(0)}}
+
   @media(max-width:600px){.grid{grid-template-columns:repeat(2,1fr);gap:8px}main{padding:16px}.settings-panel{width:100%}main.panel-open{margin-right:0}header.panel-open{padding-right:20px}}
 </style>
 </head>
@@ -148,10 +166,10 @@
     <div class="status-pill">
       <div class="dot"></div>
       <span id="upd">загрузка...</span>
-      <span id="new-badge" style="display:none;background:rgba(74,222,128,.15);color:#4ade80;border:1px solid rgba(74,222,128,.3);border-radius:20px;padding:2px 8px;font-size:10px;font-weight:600"></span>
+      <span id="new-badge" style="display:none;background:rgba(74,222,128,.15);color:#4ade80;border:1px solid rgba(74,222,128,.3);border-radius:20px;padding:2px 8px;font-size:10px;font-weight:600" data-tip="Новых видео за последние 24 часа"></span>
       <span id="ver-badge" style="display:none;color:var(--cream-muted);font-size:10px;opacity:.6"></span>
     </div>
-    <button class="settings-btn" id="settings-toggle" onclick="toggleSettings()" title="Настройки фильтров">
+    <button class="settings-btn" id="settings-toggle" onclick="toggleSettings()" data-tip="Постоянные фильтры: язык, просмотры, x-factor, длина видео и др.">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
       </svg>
@@ -187,19 +205,19 @@
   <div class="s-section">
     <h3>Минимальные показатели</h3>
     <div class="s-range">
-      <div class="s-row"><span class="s-label">Просмотры мин.</span><span class="s-range-val" id="v-min-val">1K</span></div>
+      <div class="s-row"><span class="s-label" data-tip="Скрыть видео с меньшим числом просмотров">Просмотры мин.</span><span class="s-range-val" id="v-min-val">1K</span></div>
       <input type="range" id="s-views-min" min="0" max="7" value="2" oninput="updateRangeLabel('s-views-min','v-min-val',viewSteps)">
     </div>
     <div class="s-range" style="margin-top:10px">
-      <div class="s-row"><span class="s-label">X-factor мин.</span><span class="s-range-val" id="xf-min-val">0x</span></div>
+      <div class="s-row"><span class="s-label" data-tip="X-factor = просмотры ÷ медиана канала. 5x — вирусное для этого автора">X-factor мин.</span><span class="s-range-val" id="xf-min-val">0x</span></div>
       <input type="range" id="s-xf-min" min="0" max="20" value="0" oninput="updateRangeLabel('s-xf-min','xf-min-val',null)">
     </div>
     <div class="s-range" style="margin-top:10px">
-      <div class="s-row"><span class="s-label">Velocity мин. (просм/ч)</span><span class="s-range-val" id="vel-min-val">0</span></div>
+      <div class="s-row"><span class="s-label" data-tip="Скорость набора просмотров в час. Высокая velocity = видео активно растёт">Velocity мин. (просм/ч)</span><span class="s-range-val" id="vel-min-val">0</span></div>
       <input type="range" id="s-vel-min" min="0" max="10" value="0" oninput="updateRangeLabel('s-vel-min','vel-min-val',velSteps)">
     </div>
     <div class="s-range" style="margin-top:10px">
-      <div class="s-row"><span class="s-label">CR мин. (коммент/просм)</span><span class="s-range-val" id="cr-min-val">0%</span></div>
+      <div class="s-row"><span class="s-label" data-tip="Comment Rate: доля зрителей оставивших комментарий. Высокий CR = сильная реакция">CR мин. (коммент/просм)</span><span class="s-range-val" id="cr-min-val">0%</span></div>
       <input type="range" id="s-cr-min" min="0" max="10" value="0" oninput="updateRangeLabel('s-cr-min','cr-min-val',null,'%')">
     </div>
   </div>
@@ -218,23 +236,23 @@
   <div class="s-section">
     <h3>Дополнительно</h3>
     <div class="s-row">
-      <span class="s-label">Только вирусные (x_factor ≥ 5)</span>
+      <span class="s-label" data-tip="Показывает только видео набравшие в 5+ раз больше просмотров чем обычно у этого автора">Только вирусные (x_factor ≥ 5)</span>
       <label class="s-toggle"><input type="checkbox" id="s-viral-only"><span class="s-slider"></span></label>
     </div>
     <div class="s-row" style="margin-top:8px">
-      <span class="s-label">Только новые за 24ч</span>
+      <span class="s-label" data-tip="Показывает только видео опубликованные за последние 24 часа">Только новые за 24ч</span>
       <label class="s-toggle"><input type="checkbox" id="s-today-only"><span class="s-slider"></span></label>
     </div>
     <div class="s-row" style="margin-top:8px">
-      <span class="s-label">Скрыть без картинки</span>
+      <span class="s-label" data-tip="Убирает карточки у которых не загрузилась миниатюра">Скрыть без картинки</span>
       <label class="s-toggle"><input type="checkbox" id="s-hide-nothumb"><span class="s-slider"></span></label>
     </div>
     <div class="s-row" style="margin-top:8px">
-      <span class="s-label">Клик → сразу открыть источник</span>
+      <span class="s-label" data-tip="По умолчанию клик на карточку открывает видео в Instagram или YouTube. Выключи чтобы видеть детали перед переходом">Клик → сразу открыть источник</span>
       <label class="s-toggle"><input type="checkbox" id="s-direct-click" checked><span class="s-slider"></span></label>
     </div>
     <div class="s-row" style="margin-top:8px">
-      <span class="s-label">Мин. подписчиков канала</span>
+      <span class="s-label" data-tip="Скрывает видео от авторов с маленькой аудиторией">Мин. подписчиков канала</span>
       <span class="s-range-val" id="subs-min-val">0</span>
     </div>
     <input type="range" id="s-subs-min" min="0" max="8" value="0" style="width:100%;accent-color:var(--amber)" oninput="updateRangeLabel('s-subs-min','subs-min-val',subsSteps)">
@@ -252,22 +270,22 @@
 
   <div class="filters">
     <div class="fg" id="sg">
-      <button class="fb on" data-v="hot_score">Горячее</button>
-      <button class="fb" data-v="x_factor">X-factor</button>
-      <button class="fb" data-v="views">Просмотры</button>
-      <button class="fb" data-v="recent">Свежие</button>
+      <button class="fb on" data-v="hot_score" data-tip="Сортировка по вовлечённости с учётом свежести — самые горячие прямо сейчас">Горячее</button>
+      <button class="fb" data-v="x_factor" data-tip="Просмотры ÷ медиана канала. Показывает насколько видео аномально для этого автора">X-factor</button>
+      <button class="fb" data-v="views" data-tip="Просто по числу просмотров — самые популярные вверху">Просмотры</button>
+      <button class="fb" data-v="recent" data-tip="Сортировка по дате публикации — самые новые первыми">Свежие</button>
     </div>
     <div class="fg" id="pg">
-      <button class="fb on" data-v="">Все</button>
+      <button class="fb on" data-v="" data-tip="Все платформы вместе: Instagram и YouTube">Все</button>
       <button class="fb" data-v="youtube"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:-2px"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></button>
       <button class="fb" data-v="instagram"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:-2px"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></button>
-      <button class="fb" id="btn-tiktok" data-v="tiktok" onclick="showTikTokSoon(event)" style="opacity:.5" title="Скоро">TT</button>
+      <button class="fb" id="btn-tiktok" data-v="tiktok" onclick="showTikTokSoon(event)" data-tip="TikTok — скоро" style="opacity:.5" title="Скоро">TT</button>
     </div>
     <div class="fg" id="dg">
-      <button class="fb on" data-v="">Всё</button>
-      <button class="fb" data-v="1">Сегодня</button>
-      <button class="fb" data-v="7">Неделя</button>
-      <button class="fb" data-v="30">Месяц</button>
+      <button class="fb on" data-v="" data-tip="Все видео без ограничения по дате">Всё</button>
+      <button class="fb" data-v="1" data-tip="Опубликованы за последние 24 часа">Сегодня</button>
+      <button class="fb" data-v="7" data-tip="Опубликованы за последние 7 дней">Неделя</button>
+      <button class="fb" data-v="30" data-tip="Опубликованы за последние 30 дней">Месяц</button>
     </div>
     <button class="fb" id="btn-new" style="display:none;background:rgba(74,222,128,.1);color:#4ade80;border:1px solid rgba(74,222,128,.25);border-radius:10px;padding:5px 12px" onclick="showNewSinceVisit()"></button>
 
@@ -282,21 +300,22 @@
       <input id="yt-inline-input" type="text" placeholder="Найти Shorts по теме: стоматология, крипта..."
         style="width:100%;height:36px;background:rgba(255,80,80,.06);border:1px solid rgba(255,80,80,.25);border-radius:10px;padding:0 12px 0 32px;font-family:inherit;font-size:13px;color:var(--cream);outline:none"
         onfocus="this.style.borderColor='rgba(255,80,80,.5)'" onblur="this.style.borderColor='rgba(255,80,80,.25)'"
-        onkeydown="if(event.key==='Enter')doYtSearch(false)">
+        onkeydown="if(event.key==='Enter')doYtSearch(false)"
+        oninput="handleYtInputChange(this.value)">
+      <button id="yt-clear-x" onclick="clearYtSearch()" style="display:none;position:absolute;right:8px;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;color:rgba(255,80,80,.7);font-size:16px;line-height:1;padding:2px 4px;border-radius:4px" data-tip="Выйти из поиска" onmouseover="this.style.color='#ff6b6b'" onmouseout="this.style.color='rgba(255,80,80,.7)'">×</button>
     </div>
     <button onclick="doYtSearch(false)" id="yt-btn-local"
       style="padding:0 14px;height:36px;border-radius:10px;border:1px solid rgba(255,80,80,.35);background:rgba(255,80,80,.1);color:#ff6b6b;font-family:inherit;font-size:12px;cursor:pointer;white-space:nowrap"
-      title="Ищет по уже загруженным видео — бесплатно">
+      data-tip="Мгновенный поиск по уже загруженным видео. Бесплатно, не тратит токены">
       Найти в базе
     </button>
     <button onclick="doYtSearch(true)" id="yt-btn-api"
       style="padding:0 14px;height:36px;border-radius:10px;border:1px solid rgba(255,80,80,.5);background:rgba(255,80,80,.18);color:#ff6b6b;font-family:inherit;font-size:12px;cursor:pointer;white-space:nowrap;display:flex;align-items:center;gap:5px"
-      title="Делает новый запрос к YouTube API — тратит токены">
+      data-tip="Ищет свежие Shorts на YouTube прямо сейчас. Тратит 1 из 5 запросов в час">
       <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
       + Найти новые
     </button>
     <span id="yt-inline-limit" style="font-size:11px;color:var(--cream-muted)"></span>
-    <button id="yt-inline-clear" onclick="clearYtSearch()" style="display:none;padding:0 12px;height:36px;border-radius:10px;border:1px solid var(--border);background:none;color:var(--cream-muted);font-family:inherit;font-size:12px;cursor:pointer">✕ Выйти из поиска</button>
   </div>
 
   <div class="grid" id="grid"></div>
@@ -916,13 +935,13 @@ function showNewSinceVisit() {
   if(!items||!items.length){
     // Пересчитываем на случай если данные обновились
     const lv=localStorage.getItem(VK);
-    if(!lv){alert('Нет данных о прошлом визите');return;}
+    if(!lv) return;
     const cut=new Date(lv);
     const fresh=ALL.filter(i=>{
       const ref=i.published_at||i.trending_since;
       return ref&&new Date(ref)>cut;
     });
-    if(!fresh.length){alert('Новых рилсов с вашего прошлого визита нет');return;}
+    if(!fresh.length){ showInlineMsg('Новых рилсов с вашего прошлого визита нет', 'warn'); return; }
     filtered=fresh.sort((a,b)=>(b.hot_score||0)-(a.hot_score||0));
   } else {
     filtered=items.sort((a,b)=>(b.hot_score||0)-(a.hot_score||0));
@@ -1005,6 +1024,23 @@ load();
 let ytSearchResults = [];  // результаты поиска хранятся отдельно
 let ytSearchActive = false;
 
+function showInlineMsg(text, type) {
+  // Показываем сообщение под строкой поиска вместо alert
+  let el = document.getElementById('yt-inline-msg');
+  if (!el) {
+    el = document.createElement('div');
+    el.id = 'yt-inline-msg';
+    el.style.cssText = 'font-size:12px;padding:6px 12px;border-radius:8px;margin-top:4px;transition:opacity .3s';
+    document.getElementById('yt-search-bar').after(el);
+  }
+  el.style.color = type === 'warn' ? 'var(--amber)' : 'var(--green)';
+  el.style.background = type === 'warn' ? 'rgba(251,191,36,.08)' : 'rgba(74,222,128,.08)';
+  el.style.border = type === 'warn' ? '1px solid rgba(251,191,36,.2)' : '1px solid rgba(74,222,128,.2)';
+  el.style.opacity = '1';
+  el.textContent = text;
+  setTimeout(() => { el.style.opacity = '0'; setTimeout(() => el.remove(), 300); }, 4000);
+}
+
 async function doYtSearch(useApi) {
   const query = document.getElementById('yt-inline-input').value.trim();
   if (!query) return;
@@ -1085,13 +1121,13 @@ async function doYtSearch(useApi) {
   }
 
   if (!ytSearchResults.length) {
-    alert(useApi ? 'Ничего не найдено ни в базе, ни на YouTube' : 'Ничего не найдено в базе. Попробуй "+ Найти новые"');
+    showInlineMsg(useApi ? 'Ничего не найдено ни в базе, ни на YouTube' : 'Ничего не найдено в базе — попробуй "+ Найти новые"', 'warn');
     return;
   }
 
   ytSearchActive = true;
   ALL = ytSearchResults.sort((a,b)=>(b.hot_score||0)-(a.hot_score||0));
-  document.getElementById('yt-inline-clear').style.display = 'inline-flex';
+  const cx = document.getElementById('yt-clear-x'); if (cx) cx.style.display = 'block';
   state.page = 1;
   applyFilters();
 }
@@ -1099,22 +1135,33 @@ async function doYtSearch(useApi) {
 function clearYtSearch() {
   ytSearchResults = [];
   ytSearchActive = false;
-  document.getElementById('yt-inline-clear').style.display = 'none';
+  const x = document.getElementById('yt-clear-x');
+  if (x) x.style.display = 'none';
   document.getElementById('yt-inline-input').value = '';
   rebuildALL(state.platform);
   state.page = 1;
   applyFilters();
 }
 
+function handleYtInputChange(val) {
+  // Показываем крестик если есть текст
+  const x = document.getElementById('yt-clear-x');
+  if (x) x.style.display = val ? 'block' : 'none';
+  // Выходим из поиска если поле очищено
+  if (!val && ytSearchActive) clearYtSearch();
+}
+
 function updateInlineLimitLabel() {
   const u = getSearchUsage();
   const left = YT_SEARCH_MAX_PER_HOUR - u.count;
-  const resetIn = Math.ceil((u.resetAt - Date.now()) / 60000);
   const el = document.getElementById('yt-inline-limit');
   if (!el) return;
   if (left <= 0) {
+    const now = new Date();
+    const nextHour = new Date(now.getFullYear(), now.getMonth(), now.getDate(), now.getHours()+1, 0, 0, 0);
+    const resetIn = Math.ceil((nextHour - now) / 60000);
     el.style.color = 'var(--red)';
-    el.textContent = `Лимит. Сброс через ${resetIn}м`;
+    el.textContent = `Лимит. Сброс в ${nextHour.getHours()}:00 (через ${resetIn}м)`;
   } else {
     el.style.color = 'var(--cream-muted)';
     el.textContent = `${left}/${YT_SEARCH_MAX_PER_HOUR} запросов`;
@@ -1134,11 +1181,17 @@ const YT_SEARCH_COOLDOWN = 60 * 60 * 1000; // 1 час
 function getSearchUsage() {
   try {
     const d = JSON.parse(localStorage.getItem(YT_SEARCH_LIMIT_KEY) || '{}');
-    const now = Date.now();
-    // Сбрасываем если прошёл час
-    if (!d.resetAt || now > d.resetAt) return { count: 0, resetAt: now + YT_SEARCH_COOLDOWN };
+    // Сбрасываем в начале каждого часа (00 минут)
+    const now = new Date();
+    const thisHourStart = new Date(now.getFullYear(), now.getMonth(), now.getDate(), now.getHours(), 0, 0, 0).getTime();
+    if (!d.hourStart || d.hourStart < thisHourStart) {
+      return { count: 0, hourStart: thisHourStart };
+    }
     return d;
-  } catch(e) { return { count: 0, resetAt: Date.now() + YT_SEARCH_COOLDOWN }; }
+  } catch(e) {
+    const now = new Date();
+    return { count: 0, hourStart: new Date(now.getFullYear(), now.getMonth(), now.getDate(), now.getHours(), 0, 0, 0).getTime() };
+  }
 }
 
 function saveSearchUsage(usage) {
