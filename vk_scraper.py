@@ -27,6 +27,22 @@ MODE          = os.environ.get("VK_MODE", "worker")  # scout | worker
 BASE      = "https://api.vk.com/method"
 VERSION   = "5.199"
 GROUPS_FILE = "vk_groups.json"
+
+# Стартовые группы — работяга начнёт с них до первой разведки
+SEED_GROUPS = [
+    {"id": -29534144,   "title": "MDK",              "niche": "юмор"},
+    {"id": -40316705,   "title": "Лепра",             "niche": "юмор"},
+    {"id": -57846937,   "title": "Орёл и решка",      "niche": "путешествия"},
+    {"id": -22822305,   "title": "Futured",           "niche": "мотивация"},
+    {"id": -47200925,   "title": "Psychology",        "niche": "психология"},
+    {"id": -91038986,   "title": "Бизнес молодость",  "niche": "бизнес"},
+    {"id": -16108331,   "title": "Эстетика спорта",   "niche": "фитнес"},
+    {"id": -128666765,  "title": "Лайфхак",           "niche": "лайфхак"},
+    {"id": -42909645,   "title": "Психология жизни",  "niche": "психология"},
+    {"id": -34547719,   "title": "Подслушано",        "niche": "юмор"},
+    {"id": -66589208,   "title": "Маркетинг и бизнес","niche": "маркетинг"},
+    {"id": -63489781,   "title": "Финансы для людей", "niche": "финансы"},
+]
 OUTPUT_FILE = "vk.json"
 MAX_GROUPS  = 500
 
@@ -56,13 +72,21 @@ async def api(client: httpx.AsyncClient, method: str, params: dict) -> dict:
 
 
 def load_groups() -> dict:
+    groups = {}
     if os.path.exists(GROUPS_FILE):
         try:
             with open(GROUPS_FILE) as f:
-                return json.load(f)
+                groups = json.load(f)
         except Exception:
             pass
-    return {}
+    # Добавляем стартовые группы если база пустая
+    if not groups:
+        now = datetime.now(timezone.utc).isoformat()
+        for g in SEED_GROUPS:
+            gid = str(g["id"])
+            groups[gid] = {**g, "score": 0.0, "added_at": now}
+        print(f"  ✓ Loaded {len(groups)} seed groups")
+    return groups
 
 
 def save_groups(groups: dict):
@@ -227,6 +251,8 @@ async def worker():
     groups = load_groups()
     if not groups:
         print("⚠ No groups found. Run scout first.")
+        # Создаём пустые файлы чтобы Actions не падал
+        save_output([])
         return
 
     print(f"✓ Monitoring {len(groups)} groups")
