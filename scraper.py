@@ -110,6 +110,48 @@ def load_existing() -> dict:
     return {}
 
 
+def get_ttl_days(item: dict) -> float:
+    """Срок хранения видео в зависимости от его качества."""
+    xf    = item.get("x_factor") or 0
+    views = item.get("views") or 0
+    vel   = item.get("velocity") or 0
+
+    if xf > 10 and views > 500000: return float("inf")  # вечный
+    if vel > 100 and views > 100000: return float("inf") # вечный
+    if xf > 5  and views > 100000: return 365
+    if xf > 2  and views > 10000:  return 90
+    return 30
+
+
+def prune_old(items: dict) -> dict:
+    """Удаляет устаревшие видео по TTL."""
+    from datetime import timedelta
+    now = datetime.now(timezone.utc)
+    kept = {}
+    removed = 0
+    for vid, item in items.items():
+        ttl = get_ttl_days(item)
+        if ttl == float("inf"):
+            kept[vid] = item
+            continue
+        pub_str = item.get("trending_since") or item.get("published_at")
+        if not pub_str:
+            kept[vid] = item
+            continue
+        try:
+            pub = datetime.fromisoformat(pub_str.replace("Z", "+00:00"))
+            age_days = (now - pub).total_seconds() / 86400
+            if age_days < ttl:
+                kept[vid] = item
+            else:
+                removed += 1
+        except Exception:
+            kept[vid] = item
+    if removed:
+        print(f"  Pruned {removed} old items (kept {len(kept)})")
+    return kept
+
+
 def save(items: dict, prev_ids: set):
     now = datetime.now(timezone.utc)
     sorted_items = sorted(
@@ -164,6 +206,7 @@ async def main():
     print(f"  Existing: {len(existing)} items")
     fresh = await scrape()
     merged = {**existing, **fresh}
+    merged = prune_old(merged)
     print(f"  Merged: {len(merged)} items")
     save(merged, prev_ids)
 
