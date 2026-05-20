@@ -1061,12 +1061,14 @@ async function load() {
     updateResetBtn();
     pruneSearchCache(); // тихая очистка устаревших
     restoreVkCache();   // восстанавливаем VK кеш
-    restoreYtSearch();  // восстанавливаем сохранённый поиск
 
     // Загружаем YouTube — он главный источник
     await loadYouTubeData();
     rebuildALL('');  // мержим оба источника
-    applyFilters();
+
+    // Восстанавливаем YT поиск ПОСЛЕ загрузки данных
+    restoreYtSearch();
+    if (!ytSearchActive) applyFilters();
 
   } catch(e) {
     document.getElementById('grid').innerHTML='<div class="empty">'+e.message+'</div>';
@@ -1156,12 +1158,10 @@ function restoreYtSearch() {
     const saved = localStorage.getItem(QK);
     if (!saved) return;
     const d = JSON.parse(saved);
-    // Храним навсегда (до явной очистки)
     ytSearchResults = d.items || [];
     if (!ytSearchResults.length) return;
 
-    ytSearchActive = true;
-    // Восстанавливаем строку поиска
+    // Восстанавливаем строку поиска и крестик
     const inp = document.getElementById('yt-inline-input');
     if (inp) inp.value = d.query || '';
     const cx = document.getElementById('yt-clear-x');
@@ -1171,10 +1171,14 @@ function restoreYtSearch() {
     const ytIds = new Set(ytData.map(x=>x.id));
     ytData = [...ytData, ...ytSearchResults.filter(x=>!ytIds.has(x.id))];
 
+    // Активируем поиск в ленте
+    ytSearchActive = true;
     ALL = ytSearchResults.sort((a,b)=>(b.hot_score||0)-(a.hot_score||0));
-    console.log('Restored search cache:', ytSearchResults.length, 'items accumulated');
+    applyFilters();
+    console.log('Restored YT search cache:', ytSearchResults.length, 'items');
   } catch(e) {
-    localStorage.removeItem(QK);
+    console.warn('YT search restore error:', e);
+    // НЕ удаляем кеш при ошибке!
   }
 }
 
@@ -1455,10 +1459,12 @@ function saveVkToken() {
   const raw = document.getElementById('s-vk-token').value.trim();
   if (!raw) return;
   const token = parseVkToken(raw);
+  if (!token || token.length < 20) { showInlineMsg('Неверный формат токена', 'warn'); return; }
   localStorage.setItem(VK_TOKEN_KEY, token);
   localStorage.setItem(VK_TOKEN_KEY + '_saved_at', Date.now().toString());
-  // Показываем только начало токена
-  document.getElementById('s-vk-token').value = token.substring(0,20) + '...';
+  // Очищаем поле — токен сохранён, вводить заново не надо
+  document.getElementById('s-vk-token').value = '';
+  document.getElementById('s-vk-token').placeholder = token.substring(0,20) + '... (сохранён)';
   loadVkTokenUI();
   showInlineMsg('VK токен сохранён', 'ok');
 }
@@ -1652,6 +1658,7 @@ async function runVkScout() {
 
   let found = 0;
   let errors = 0;
+  let lastError = '';
   const now = new Date().toISOString();
   const total = VK_QUERIES.length;
 
@@ -1664,7 +1671,8 @@ async function runVkScout() {
       `[${bar}] ${pct}% — ниша ${i+1}/${total}<br>` +
       `🔍 <b>${q}</b><br>` +
       `✓ Найдено новых групп: <b style="color:var(--green)">${found}</b>` +
-      (errors ? ` &nbsp;⚠ ошибок: ${errors}` : '')
+      (errors ? ` &nbsp;⚠ ошибок: ${errors}` : '') +
+      (lastError ? `<br><span style="color:var(--red);font-size:10px">${lastError}</span>` : '')
     );
 
     try {
@@ -1679,6 +1687,7 @@ async function runVkScout() {
       await new Promise(r=>setTimeout(r,150));
     } catch(e) {
       errors++;
+      lastError = e.message;
       console.warn('groups.search failed:', q, e.message);
     }
 
