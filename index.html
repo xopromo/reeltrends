@@ -1026,6 +1026,7 @@ async function loadYouTubeData() {
 // ── Main load ─────────────────────────────────────────────────────
 async function load() {
   document.getElementById('grid').innerHTML=skeletons();
+  // GH_TOKEN будет доступен через Cloudflare Worker (в разработке)
   // Загружаем версию деплоя
   fetch('https://raw.githubusercontent.com/xopromo/reeltrends/main/version.json?t='+Date.now())
     .then(r=>r.ok?r.json():null)
@@ -1429,9 +1430,10 @@ function renderYtResult(v) {
 
 // ── VK Scout ──────────────────────────────────────────────────────
 const VK_APP_ID = '54602385';
-const GH_TOKEN = '%%GH_WRITE_TOKEN%%'; // заменяется при деплое через Actions
 const GH_REPO = 'xopromo/reeltrends';
 const GH_FILE = 'vk_groups.json';
+// GH_TOKEN загружается из config.js (не хранится в репо)
+let GH_TOKEN = '';
 const VK_API = 'https://api.vk.com/method';
 const VK_V = '5.199';
 const VK_QUERIES = [
