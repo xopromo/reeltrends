@@ -1564,14 +1564,10 @@ async function fetchVkVideosFromGroups(groups, setProgress) {
     );
     try {
       const resp = await vkApi('video.search', {
-        q, count: 200, filters: 'vk', sort: 2
+        q, count: 100, filters: 'vk', shorter: 60, sort: 2
       });
       for (const v of resp.items || []) {
         if (!v.id) continue;
-        // Только вертикальные (height > width)
-        if (v.width && v.height && v.width >= v.height) continue;
-        // Только до 3 минут
-        if (v.duration && v.duration > 180) continue;
         const views = v.views || v.local_views || 0;
         if (views < 200) continue;
         const dateTs = v.date || 0;
