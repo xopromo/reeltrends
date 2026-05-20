@@ -270,10 +270,7 @@
       <button class="fb" data-v="30">Месяц</button>
     </div>
     <button class="fb" id="btn-new" style="display:none;background:rgba(74,222,128,.1);color:#4ade80;border:1px solid rgba(74,222,128,.25);border-radius:10px;padding:5px 12px" onclick="showNewSinceVisit()"></button>
-    <div class="search">
-      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-      <input type="text" placeholder="Поиск..." id="qi">
-    </div>
+
     <span class="count-badge" id="cnt">—</span>
     <button id="btn-reset-filters" onclick="resetAllFilters()" style="display:none;padding:5px 11px;border-radius:10px;border:1px solid rgba(248,113,113,.3);background:rgba(248,113,113,.08);color:var(--red);font-family:inherit;font-size:12px;cursor:pointer;transition:all .15s;white-space:nowrap" title="Сбросить все фильтры">✕ Сбросить</button>
   </div>
@@ -850,6 +847,8 @@ document.getElementById('pg').addEventListener('click', async e=>{
     await loadYouTubeData();
     btn.innerHTML='<svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:-2px"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>';
   }
+  // Сбрасываем поиск если был активен
+  if (ytSearchActive) clearYtSearch();
   rebuildALL(val);
   document.querySelectorAll('#pg .fb').forEach(b=>b.classList.remove('on','on-orange'));
   btn.classList.add(val==='youtube'?'on-orange':'on');
@@ -875,10 +874,7 @@ document.getElementById('dg').addEventListener('click',e=>{
   document.querySelectorAll('#dg .fb').forEach(b=>b.classList.remove('on','on-cyan'));
   btn.classList.add(btn.dataset.v==='1'?'on-cyan':'on');state.days=btn.dataset.v;state.page=1;saveFilters();applyFilters();updateResetBtn();
 });
-let qt;
-document.getElementById('qi').addEventListener('input',e=>{
-  clearTimeout(qt);qt=setTimeout(()=>{state.q=e.target.value;applyFilters();updateResetBtn();},350);
-});
+
 document.getElementById('pb').addEventListener('click',()=>{state.page--;render();scrollTo(0,0);});
 document.getElementById('nb').addEventListener('click',()=>{state.page++;render();scrollTo(0,0);});
 
@@ -1142,70 +1138,6 @@ document.getElementById('yt-search-overlay').addEventListener('click', e => {
   if (e.target === document.getElementById('yt-search-overlay')) closeYtSearch();
 });
 
-async function doYtSearch() {
-  const query = document.getElementById('yt-search-input').value.trim();
-  if (!query) return;
-
-  // Проверяем лимит
-  const usage = getSearchUsage();
-  if (usage.count >= YT_SEARCH_MAX_PER_HOUR) {
-    updateSearchLimitLabel();
-    return;
-  }
-
-  const btn = document.getElementById('yt-search-btn');
-  const results = document.getElementById('yt-search-results');
-  btn.textContent = '...';
-  btn.disabled = true;
-  results.innerHTML = '<div style="color:var(--cream-muted);font-size:13px;text-align:center;padding:40px 0">Ищем Shorts...</div>';
-
-  try {
-    // Шаг 1: ищем видео по запросу
-    const searchRes = await fetch(
-      `https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&q=${encodeURIComponent(query + ' shorts')}&maxResults=20&order=viewCount&publishedAfter=${new Date(Date.now()-7*86400000).toISOString()}&key=${YT_SEARCH_KEY}`
-    );
-    const searchData = await searchRes.json();
-
-    if (!searchRes.ok) throw new Error(searchData.error?.message || 'Ошибка API');
-
-    const videoIds = (searchData.items || []).map(i => i.id.videoId).filter(Boolean);
-    if (!videoIds.length) {
-      results.innerHTML = '<div style="color:var(--cream-muted);font-size:13px;text-align:center;padding:40px 0">Ничего не найдено</div>';
-      return;
-    }
-
-    // Шаг 2: получаем статистику
-    const detailRes = await fetch(
-      `https://www.googleapis.com/youtube/v3/videos?part=snippet,statistics,contentDetails&id=${videoIds.join(',')}&key=${YT_SEARCH_KEY}`
-    );
-    const detailData = await detailRes.json();
-    const videos = (detailData.items || []).filter(v => {
-      const dur = v.contentDetails?.duration || '';
-      const secs = parseDurSec(dur);
-      return secs <= 180 && parseInt(v.statistics?.viewCount || 0) >= 1000;
-    });
-
-    // Обновляем счётчик
-    usage.count++;
-    saveSearchUsage(usage);
-    updateSearchLimitLabel();
-
-    if (!videos.length) {
-      results.innerHTML = '<div style="color:var(--cream-muted);font-size:13px;text-align:center;padding:40px 0">Нет подходящих Shorts по этому запросу</div>';
-      return;
-    }
-
-    // Рендерим результаты
-    results.innerHTML = `<div style="font-size:11px;color:var(--cream-muted);margin-bottom:12px">Найдено ${videos.length} Shorts за последние 7 дней</div>` +
-      videos.map(v => renderYtResult(v)).join('');
-
-  } catch(e) {
-    results.innerHTML = `<div style="color:var(--red);font-size:13px;text-align:center;padding:40px 0">${e.message}</div>`;
-  } finally {
-    btn.textContent = 'Найти';
-    btn.disabled = false;
-  }
-}
 
 function parseDurSec(iso) {
   const m = iso.match(/PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?/);
