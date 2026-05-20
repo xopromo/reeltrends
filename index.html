@@ -273,12 +273,17 @@
       <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
       <input type="text" placeholder="Поиск..." id="qi">
     </div>
-    <button onclick="openYtSearch()" style="padding:5px 12px;border-radius:10px;border:1px solid rgba(255,0,0,.3);background:rgba(255,0,0,.08);color:#ff6b6b;font-family:inherit;font-size:12px;cursor:pointer;white-space:nowrap;display:flex;align-items:center;gap:5px">
-      <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-      Найти Shorts
-    </button>
     <span class="count-badge" id="cnt">—</span>
     <button id="btn-reset-filters" onclick="resetAllFilters()" style="display:none;padding:5px 11px;border-radius:10px;border:1px solid rgba(248,113,113,.3);background:rgba(248,113,113,.08);color:var(--red);font-family:inherit;font-size:12px;cursor:pointer;transition:all .15s;white-space:nowrap" title="Сбросить все фильтры">✕ Сбросить</button>
+  </div>
+
+  <!-- YouTube поиск -->
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px">
+    <button onclick="openYtSearch()" style="padding:7px 16px;border-radius:10px;border:1px solid rgba(255,80,80,.35);background:rgba(255,80,80,.08);color:#ff6b6b;font-family:inherit;font-size:13px;cursor:pointer;display:flex;align-items:center;gap:7px;transition:background .15s" onmouseover="this.style.background='rgba(255,80,80,.16)'" onmouseout="this.style.background='rgba(255,80,80,.08)'">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+      Найти Shorts по теме
+    </button>
+    <span style="font-size:11px;color:var(--cream-muted)">Мгновенный поиск YouTube Shorts по любой нише</span>
   </div>
 
   <div class="grid" id="grid"></div>
