@@ -1026,6 +1026,21 @@ async function loadYouTubeData() {
 // ── Main load ─────────────────────────────────────────────────────
 async function load() {
   document.getElementById('grid').innerHTML=skeletons();
+  // Загружаем версию деплоя
+  fetch('https://raw.githubusercontent.com/xopromo/reeltrends/main/version.json?t='+Date.now())
+    .then(r=>r.ok?r.json():null)
+    .then(v=>{
+      if (!v) return;
+      const vb = document.getElementById('ver-badge');
+      if (vb) {
+        const deployedAt = new Date(v.deployed_at);
+        const minAgo = Math.floor((Date.now()-deployedAt)/60000);
+        const timeStr = minAgo < 60 ? minAgo+'м назад' : Math.floor(minAgo/60)+'ч назад';
+        vb.textContent = 'код: '+timeStr+' · '+v.commit;
+        vb.style.display = 'inline';
+        vb.title = 'Задеплоено: '+deployedAt.toLocaleString('ru');
+      }
+    }).catch(()=>{});
   try {
     const r=await fetch(IG_URL+'?t='+Date.now());
     if (!r.ok) throw new Error('trends.json не найден — запусти Actions вручную');
@@ -1419,6 +1434,12 @@ const GH_REPO = 'xopromo/reeltrends';
 const GH_FILE = 'vk_groups.json';
 const VK_API = 'https://api.vk.com/method';
 const VK_V = '5.199';
+const VK_QUERIES = [
+  'фитнес','недвижимость','юрист','психология','бизнес',
+  'финансы','маркетинг','саморазвитие','авто','кулинария',
+  'юмор','путешествия','здоровье','мотивация','лайфхак',
+  'fitness','motivation','funny','business','cooking',
+];
 
 function loadVkTokenUI() {
   const token = localStorage.getItem(VK_TOKEN_KEY);
@@ -1469,23 +1490,35 @@ function saveVkToken() {
   showInlineMsg('VK токен сохранён', 'ok');
 }
 
-async function vkApi(method, params) {
-  const token = localStorage.getItem(VK_TOKEN_KEY);
-  if (!token) throw new Error('VK токен не задан');
-  const url = new URL(VK_API + '/' + method);
-  Object.entries({...params, access_token: token, v: VK_V}).forEach(([k,v]) => url.searchParams.set(k,v));
-  const r = await fetch(url.toString());
-  const d = await r.json();
-  if (d.error) throw new Error('VK ' + d.error.error_code + ': ' + d.error.error_msg);
-  return d.response;
+function vkApi(method, params) {
+  // JSONP — обходит CORS ограничения VK API
+  return new Promise((resolve, reject) => {
+    const token = localStorage.getItem(VK_TOKEN_KEY);
+    if (!token) { reject(new Error('VK токен не задан')); return; }
+    const cbName = 'vkcb' + Date.now() + Math.floor(Math.random()*9999);
+    const allParams = {...params, access_token: token, v: VK_V, callback: cbName};
+    const qs = Object.entries(allParams).map(([k,v])=>encodeURIComponent(k)+'='+encodeURIComponent(v)).join('&');
+    const url = VK_API + '/' + method + '?' + qs;
+    const script = document.createElement('script');
+    const timer = setTimeout(() => {
+      reject(new Error('Timeout'));
+      delete window[cbName];
+      script.remove();
+    }, 10000);
+    window[cbName] = (data) => {
+      clearTimeout(timer);
+      delete window[cbName];
+      script.remove();
+      if (data.error) reject(new Error('VK ' + data.error.error_code + ': ' + data.error.error_msg));
+      else resolve(data.response);
+    };
+    script.src = url;
+    script.onerror = () => { clearTimeout(timer); delete window[cbName]; reject(new Error('Script load error')); };
+    document.head.appendChild(script);
+  });
 }
 
-const VK_QUERIES = [
-  'фитнес','недвижимость','юрист','психология','бизнес',
-  'финансы','маркетинг','саморазвитие','авто','кулинария',
-  'юмор','путешествия','здоровье','мотивация','лайфхак',
-  'fitness','motivation','funny','business','cooking',
-];
+
 
 async function saveGroupsToRepo(groups) {
   try {
