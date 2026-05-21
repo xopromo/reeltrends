@@ -457,15 +457,7 @@ async def scrape_youtube() -> list:
         for cid in channel_ids:
             update_channel_score(channels, cid, channel_shorts.get(cid, []))
 
-        # 9. Ищем похожие каналы на вирусные видео
-        viral_videos = [s for s in shorts if (s.get("x_factor") or 0) >= 5]
-        if viral_videos:
-            print(f"🔗 Finding related channels from {len(viral_videos)} viral videos...")
-            viral_ids = [v["id"] for v in viral_videos]
-            await discover_related_channels(client, channels, viral_ids)
-            channels = prune_channels(channels)
-
-        # 10. Сохраняем обновлённую базу каналов
+        # 9. Сохраняем обновлённую базу каналов
         save_channels(channels)
 
         # Статистика базы
