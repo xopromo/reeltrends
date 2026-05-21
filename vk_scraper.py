@@ -265,14 +265,24 @@ async def worker():
             gid   = ginfo["id"]
             niche = ginfo.get("niche", "other")
             try:
-                resp = await api(client, "video.get", {
-                    "owner_id": gid,
-                    "count":    10,
-                    "extended": 0,
-                })
-                items = resp.get("items", [])
+                # Сначала пробуем album_id=-2 (клипы), потом обычные видео
+                items = []
+                for album_id in [-2, None]:
+                    params = {"owner_id": gid, "count": 20, "extended": 0}
+                    if album_id is not None:
+                        params["album_id"] = album_id
+                    try:
+                        resp = await api(client, "video.get", params)
+                        batch = resp.get("items", [])
+                        if batch:
+                            items.extend(batch)
+                            if album_id == -2:
+                                break  # нашли клипы — не берём обычные видео
+                    except Exception:
+                        pass
                 for v in items:
-                    # Фильтр: короткое вертикальное + свежее
+                    # Для клипов (album_id=-2) не проверяем вертикальность
+                    # Для обычных видео — только вертикальные короткие
                     if not is_short_vertical(v):
                         continue
                     date_ts = v.get("date", 0)
