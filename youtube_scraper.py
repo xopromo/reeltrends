@@ -22,7 +22,8 @@ BASE = "https://www.googleapis.com/youtube/v3"
 OUTPUT_FILE = "youtube.json"
 CHANNELS_FILE = "yt_channels.json"
 MAX_CHANNELS = int(os.environ.get("YT_MAX_CHANNELS") or "1000")  # регулируется через GitHub Secret
-NIGHT_RUN = os.environ.get("YT_NIGHT_RUN", "false").lower() == "true"  # ночной дообор
+NIGHT_RUN = os.environ.get("YT_NIGHT_RUN", "false").lower() == "true"
+MANUAL_RUN = os.environ.get("YT_MANUAL_RUN", "false").lower() == "true"  # ночной дообор
 
 SEARCH_QUERIES = [
     {"q": "фитнес shorts", "lang": "ru", "region": "RU"},
@@ -187,6 +188,46 @@ async def discover_new_channels(client: httpx.AsyncClient, channels: dict, queri
     return added
 
 
+async def discover_channels_via_shorts(client: httpx.AsyncClient, channels: dict, queries: list) -> int:
+    """Ищет каналы через популярные Shorts — надёжнее channel search."""
+    added = 0
+    now = datetime.now(timezone.utc).isoformat()
+    since = (datetime.now(timezone.utc) - timedelta(days=30)).strftime("%Y-%m-%dT%H:%M:%SZ")
+
+    for query in queries[:10]:  # первые 10 запросов
+        try:
+            data = await api_get(client, "search", {
+                "part": "snippet",
+                "type": "video",
+                "q": query["q"] + " shorts",
+                "videoDuration": "short",
+                "order": "viewCount",
+                "publishedAfter": since,
+                "relevanceLanguage": query["lang"],
+                "maxResults": 10,
+            })
+            for item in data.get("items", []):
+                cid = item["snippet"].get("channelId")
+                if cid and cid not in channels:
+                    channels[cid] = {
+                        "id": cid,
+                        "title": item["snippet"].get("channelTitle", ""),
+                        "lang": query["lang"],
+                        "niche": query["q"].split()[0],
+                        "score": 1.0,  # бонус — найден через популярное видео
+                        "viral_count": 0,
+                        "last_seen": None,
+                        "added_at": now,
+                    }
+                    added += 1
+            await asyncio.sleep(0.3)
+        except Exception as e:
+            print(f"  Video search failed: {query['q']}: {e}")
+
+    print(f"  Discovered {added} new channels via Shorts search")
+    return added
+
+
 async def discover_related_channels(client: httpx.AsyncClient, channels: dict, viral_video_ids: list) -> int:
     """Ищет каналы похожие на вирусные видео."""
     added = 0
@@ -308,11 +349,13 @@ async def scrape_youtube() -> list:
         if NIGHT_RUN:
             print("🌙 Ночной дообор — расширенный поиск каналов...")
             added = await discover_new_channels(client, channels, SEARCH_QUERIES)
+            added += await discover_channels_via_shorts(client, channels, SEARCH_QUERIES)
             channels = prune_channels(channels)
             save_channels(channels)
-        elif run_count % 7 == 0 or len(channels) < 50:
+        elif MANUAL_RUN or run_count % 3 == 0 or len(channels) < 100:
             print("🔍 Discovering new channels from search queries...")
             added = await discover_new_channels(client, channels, SEARCH_QUERIES)
+            added += await discover_channels_via_shorts(client, channels, SEARCH_QUERIES)
             channels = prune_channels(channels)
             save_channels(channels)
 
