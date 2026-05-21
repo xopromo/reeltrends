@@ -380,7 +380,13 @@ const REPO = 'xopromo/reeltrends';
 const IG_URL = 'https://raw.githubusercontent.com/'+REPO+'/main/trends.json';
 const YT_URL = 'https://raw.githubusercontent.com/'+REPO+'/main/youtube.json';
 const VK_JSON_URL = 'https://raw.githubusercontent.com/'+REPO+'/main/vk.json';
-const PER = 20;
+// PER вычисляется динамически — кратно числу колонок
+function calcPER() {
+  const gridWidth = document.getElementById('grid')?.offsetWidth || window.innerWidth - 280;
+  const cols = Math.max(1, Math.floor(gridWidth / 192)); // 180px + 12px gap
+  return cols * Math.ceil(24 / cols); // ближайшее кратное cols >= 24
+}
+let PER = 24; // начальное значение, пересчитывается после загрузки
 const VK = 'rt_last_visit';
 const SK = 'rt_settings';
 const FK = 'rt_filters';
@@ -540,9 +546,18 @@ function resetAllFilters() {
   document.querySelectorAll('#sg .fb').forEach(b => b.classList.toggle('on', b.dataset.v === 'hot_score'));
   document.querySelectorAll('#pg .fb').forEach(b => { b.classList.remove('on','on-orange','on-cyan'); if (b.dataset.v === '') b.classList.add('on'); });
   document.querySelectorAll('#dg .fb').forEach(b => { b.classList.remove('on','on-cyan'); if (b.dataset.v === '') b.classList.add('on'); });
-  document.getElementById('qi').value = '';
+  const qiEl = document.getElementById('qi'); if (qiEl) qiEl.value = '';
 
+  // Сбрасываем поиск если был активен
+  if (ytSearchActive) {
+    ytSearchActive = false;
+    const cx = document.getElementById('yt-clear-x');
+    if (cx) cx.style.display = 'none';
+    const inp = document.getElementById('yt-inline-input');
+    if (inp) inp.value = '';
+  }
   rebuildALL('');
+  state.page = 1;
   applyFilters();
   updateResetBtn();
 }
@@ -857,6 +872,7 @@ function applyFilters() {
 
 function render() {
   const grid=document.getElementById('grid');
+  PER = calcPER();
   const total=filtered.length, pages=Math.max(1,Math.ceil(total/PER));
   const p=Math.min(state.page,pages), slice=filtered.slice((p-1)*PER,p*PER);
   document.getElementById('cnt').textContent=total+' рилсов';
