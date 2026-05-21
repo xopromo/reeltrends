@@ -26,6 +26,7 @@ jobs:
         env:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
           YT_NIGHT_RUN: ${{ (github.event.schedule == '30 23 * * *' || inputs.night_run == 'true') && 'true' || 'false' }}
+          YT_MANUAL_RUN: ${{ github.event_name == 'workflow_dispatch' && 'true' || 'false' }}
         run: python youtube_scraper.py
       - name: Update version
         run: |
