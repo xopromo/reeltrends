@@ -140,17 +140,22 @@
     content:attr(data-tip);
     position:absolute;bottom:calc(100% + 6px);left:50%;transform:translateX(-50%);
     background:#1c1c1c;border:1px solid rgba(255,255,255,.13);color:#9e9a8e;
-    font-size:11px;line-height:1.4;padding:5px 9px;border-radius:7px;
-    white-space:nowrap;z-index:999;pointer-events:none;
-    max-width:220px;white-space:normal;text-align:center;
-    animation:tip-in .12s ease;
+    font-size:11px;line-height:1.5;padding:7px 11px;border-radius:7px;
+    white-space:normal;z-index:999;pointer-events:none;
+    width:240px;max-width:280px;text-align:center;
+    animation:tip-in var(--tip-delay,.6s) ease;
+    opacity:0;
+  }
+  [data-tip]:hover::after{
+    animation:tip-in var(--tip-delay,.6s) ease forwards;
   }
   [data-tip]:hover::before{
     content:'';position:absolute;bottom:calc(100% + 1px);left:50%;transform:translateX(-50%);
     border:5px solid transparent;border-top-color:#1c1c1c;z-index:999;pointer-events:none;
-    animation:tip-in .12s ease;
+    animation:tip-in var(--tip-delay,.6s) ease forwards;
+    opacity:0;
   }
-  @keyframes tip-in{from{opacity:0;transform:translateX(-50%) translateY(4px)}to{opacity:1;transform:translateX(-50%) translateY(0)}}
+  @keyframes tip-in{0%{opacity:0;transform:translateX(-50%) translateY(4px)}90%{opacity:0;transform:translateX(-50%) translateY(4px)}100%{opacity:1;transform:translateX(-50%) translateY(0)}}
 
   @media(max-width:600px){.grid{grid-template-columns:repeat(2,1fr);gap:8px}main{padding:16px}.settings-panel{width:100%}main.panel-open{margin-right:0}header.panel-open{padding-right:20px}}
 </style>
@@ -272,6 +277,15 @@
       Запустить разведку ВК
     </button>
     <div id="vk-scout-progress" style="font-size:11px;color:var(--cream-muted);margin-top:6px;display:none"></div>
+  </div>
+
+  <div class="s-section">
+    <h3>Интерфейс</h3>
+    <div class="s-range">
+      <div class="s-row"><span class="s-label" data-tip="Задержка перед появлением подсказок при наведении мыши">Задержка тултипов (мс)</span><span class="s-range-val" id="tip-delay-val">600</span></div>
+      <input type="range" id="s-tip-delay" min="0" max="2000" step="100" value="600"
+        oninput="document.getElementById('tip-delay-val').textContent=this.value; document.documentElement.style.setProperty('--tip-delay', this.value+'ms'); S.tipDelay=+this.value;">
+    </div>
   </div>
 
   <button class="s-apply" onclick="applySettings()">Применить фильтры</button>
@@ -413,6 +427,7 @@ const DEFAULT_SETTINGS = {
   hideNoThumb: false,
   subsMin: 0,        // index in subsSteps
   directClick: true,  // клик открывает источник напрямую
+  tipDelay: 600,
 };
 const VK_TOKEN_KEY = 'rt_vk_token';
 
@@ -462,6 +477,10 @@ function saveSettings() {
 }
 
 function applySettingsToUI() {
+  // Применяем задержку тултипов
+  document.documentElement.style.setProperty('--tip-delay', (S.tipDelay||600)+'ms');
+  const td = document.getElementById('s-tip-delay');
+  if (td) { td.value = S.tipDelay||600; document.getElementById('tip-delay-val').textContent = S.tipDelay||600; }
   // Langs
   document.querySelectorAll('#s-lang .chip').forEach(b => {
     b.classList.toggle('on', S.langs.includes(b.dataset.v));
