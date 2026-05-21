@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-05-21T12:41:19.910357+00:00",
-  "total": 157,
+  "updated_at": "2026-05-21T13:12:36.822949+00:00",
+  "total": 158,
   "items": [
     {
       "id": "nWuz54btrHQ",
@@ -28,6 +28,33 @@
         "median_views": 66102
       },
       "trending_since": "2026-05-20T14:42:05.979528+00:00"
+    },
+    {
+      "id": "KGYpw6PnPUA",
+      "url": "https://www.youtube.com/shorts/KGYpw6PnPUA",
+      "title": "Из за неработающего интернета Россияне начали массово переходить на зарубежные E-Sim 😲",
+      "caption": "Из за неработающего интернета Россияне начали массово переходить на зарубежные E-Sim 😲\r\n\r\n\r\n\r\n#shorts",
+      "thumbnail_url": "https://i.ytimg.com/vi/KGYpw6PnPUA/maxresdefault.jpg",
+      "published_at": "2026-05-21T09:07:34Z",
+      "duration_sec": 61,
+      "views": 1018,
+      "likes": 137,
+      "comments": 6,
+      "velocity": 249.3,
+      "x_factor": 0.68,
+      "hot_score": 0.1301,
+      "platform": "youtube",
+      "niche": "финансы",
+      "lang": "ru",
+      "author": {
+        "channel_id": "UCyzewuLUe7ggFcjL2jDUtSw",
+        "username": "Еж про деньги Shorts",
+        "display_name": "Еж про деньги Shorts",
+        "platform": "youtube",
+        "followers_count": 40200,
+        "median_views": 1494
+      },
+      "trending_since": "2026-05-21T13:12:36.815637+00:00"
     },
     {
       "id": "oSFNXFOn0FI",
@@ -91,12 +118,12 @@
       "thumbnail_url": "https://i.ytimg.com/vi/OLNkrKRbYfg/maxresdefault.jpg",
       "published_at": "2026-05-21T08:00:09Z",
       "duration_sec": 29,
-      "views": 59503,
-      "likes": 4861,
-      "comments": 30,
-      "velocity": 12697.5,
-      "x_factor": 1.0,
-      "hot_score": 0.0696,
+      "views": 67765,
+      "likes": 5297,
+      "comments": 31,
+      "velocity": 13012.4,
+      "x_factor": 0.69,
+      "hot_score": 0.0654,
       "platform": "youtube",
       "niche": "юмор",
       "lang": "ru",
@@ -106,9 +133,9 @@
         "display_name": "Смешновости",
         "platform": "youtube",
         "followers_count": 2350000,
-        "median_views": 59503
+        "median_views": 98656
       },
-      "trending_since": "2026-05-21T12:41:19.360263+00:00"
+      "trending_since": "2026-05-21T13:12:36.815815+00:00"
     },
     {
       "id": "8OUCFxurt40",
@@ -138,33 +165,6 @@
       "trending_since": "2026-05-20T14:42:05.980042+00:00"
     },
     {
-      "id": "3ueeGKNemO4",
-      "url": "https://www.youtube.com/shorts/3ueeGKNemO4",
-      "title": "Купила всё в магазине 😂 #истории #история #новости #новость #shorts",
-      "caption": "",
-      "thumbnail_url": "https://i.ytimg.com/vi/3ueeGKNemO4/maxresdefault.jpg",
-      "published_at": "2026-05-21T10:00:07Z",
-      "duration_sec": 21,
-      "views": 29447,
-      "likes": 2028,
-      "comments": 14,
-      "velocity": 10960.0,
-      "x_factor": 0.49,
-      "hot_score": 0.0632,
-      "platform": "youtube",
-      "niche": "юмор",
-      "lang": "ru",
-      "author": {
-        "channel_id": "UCcotIt9z_xyZu3mSzFrWMIg",
-        "username": "Смешновости",
-        "display_name": "Смешновости",
-        "platform": "youtube",
-        "followers_count": 2350000,
-        "median_views": 59503
-      },
-      "trending_since": "2026-05-21T12:41:19.360247+00:00"
-    },
-    {
       "id": "2AWuisFJxWA",
       "url": "https://www.youtube.com/shorts/2AWuisFJxWA",
       "title": "Россия опередила все страны по количеству автомобильных штрафов 😎",
@@ -190,6 +190,33 @@
         "median_views": 3847
       },
       "trending_since": "2026-05-20T15:11:38.640421+00:00"
+    },
+    {
+      "id": "3ueeGKNemO4",
+      "url": "https://www.youtube.com/shorts/3ueeGKNemO4",
+      "title": "Купила всё в магазине 😂 #истории #история #новости #новость #shorts",
+      "caption": "",
+      "thumbnail_url": "https://i.ytimg.com/vi/3ueeGKNemO4/maxresdefault.jpg",
+      "published_at": "2026-05-21T10:00:07Z",
+      "duration_sec": 21,
+      "views": 36196,
+      "likes": 2321,
+      "comments": 16,
+      "velocity": 11282.1,
+      "x_factor": 0.37,
+      "hot_score": 0.0577,
+      "platform": "youtube",
+      "niche": "юмор",
+      "lang": "ru",
+      "author": {
+        "channel_id": "UCcotIt9z_xyZu3mSzFrWMIg",
+        "username": "Смешновости",
+        "display_name": "Смешновости",
+        "platform": "youtube",
+        "followers_count": 2350000,
+        "median_views": 98656
+      },
+      "trending_since": "2026-05-21T13:12:36.815805+00:00"
     },
     {
       "id": "QogOiPGRihc",
@@ -273,6 +300,33 @@
       "trending_since": "2026-05-20T15:11:38.640576+00:00"
     },
     {
+      "id": "gTVXUUJ1gNk",
+      "url": "https://www.youtube.com/shorts/gTVXUUJ1gNk",
+      "title": "Обязательная страховка жилья 😳",
+      "caption": "Обязательная страховка жилья 😳\r\n\r\n\r\n\r\n#shorts",
+      "thumbnail_url": "https://i.ytimg.com/vi/gTVXUUJ1gNk/maxresdefault.jpg",
+      "published_at": "2026-05-20T11:16:55Z",
+      "duration_sec": 61,
+      "views": 1970,
+      "likes": 156,
+      "comments": 12,
+      "velocity": 76.0,
+      "x_factor": 1.32,
+      "hot_score": 0.0468,
+      "platform": "youtube",
+      "niche": "финансы",
+      "lang": "ru",
+      "author": {
+        "channel_id": "UCyzewuLUe7ggFcjL2jDUtSw",
+        "username": "Еж про деньги Shorts",
+        "display_name": "Еж про деньги Shorts",
+        "platform": "youtube",
+        "followers_count": 40200,
+        "median_views": 1494
+      },
+      "trending_since": "2026-05-21T13:12:36.815648+00:00"
+    },
+    {
       "id": "xRZFNrhMYTk",
       "url": "https://www.youtube.com/shorts/xRZFNrhMYTk",
       "title": "ВАЖНОЕ СОБЫТИЕ #таро #tarot #гадание #будущее #tarotlove #amore #tarocchi #перемены #событие #что #",
@@ -283,9 +337,9 @@
       "views": 1109,
       "likes": 99,
       "comments": 2,
-      "velocity": 44.9,
+      "velocity": 44.0,
       "x_factor": 0.91,
-      "hot_score": 0.0467,
+      "hot_score": 0.0462,
       "platform": "youtube",
       "niche": "финансы",
       "lang": "ru",
@@ -297,61 +351,7 @@
         "followers_count": 7920,
         "median_views": 1225
       },
-      "trending_since": "2026-05-21T12:41:19.359516+00:00"
-    },
-    {
-      "id": "gTVXUUJ1gNk",
-      "url": "https://www.youtube.com/shorts/gTVXUUJ1gNk",
-      "title": "Обязательная страховка жилья 😳",
-      "caption": "Обязательная страховка жилья 😳\r\n\r\n\r\n\r\n#shorts",
-      "thumbnail_url": "https://i.ytimg.com/vi/gTVXUUJ1gNk/maxresdefault.jpg",
-      "published_at": "2026-05-20T11:16:55Z",
-      "duration_sec": 61,
-      "views": 1898,
-      "likes": 145,
-      "comments": 12,
-      "velocity": 74.7,
-      "x_factor": 1.0,
-      "hot_score": 0.0463,
-      "platform": "youtube",
-      "niche": "финансы",
-      "lang": "ru",
-      "author": {
-        "channel_id": "UCyzewuLUe7ggFcjL2jDUtSw",
-        "username": "Еж про деньги Shorts",
-        "display_name": "Еж про деньги Shorts",
-        "platform": "youtube",
-        "followers_count": 40200,
-        "median_views": 1898
-      },
-      "trending_since": "2026-05-21T12:41:19.360015+00:00"
-    },
-    {
-      "id": "JdP0eBCYyTQ",
-      "url": "https://www.youtube.com/shorts/JdP0eBCYyTQ",
-      "title": "Нельзя смеяться | Смех с водой | Часть 427 #shorts",
-      "caption": "Заходи в гости: https://commentshow.ru\n\nНе забывайте подписаться в социалках:\nТелеграм: https://t.me/comment_show\nВКонтакте: https://vk.com/komment_show\nTikTok: https://www.tiktok.com/@comment_show\nТелега Нельзя смеяться: https://t.me/nesocial\nСмешные видосы присылай сюда: https://t.me/nesocial_bot\n\n#футбол #рпл #спартак #зенит #динамо #цска #спорт #трансляции #интервью #фнл #тренер #голы #сочи #краснодар #рубин #урал #уфа #нижнийновгород #футболисты #матчтв #локомотив",
-      "thumbnail_url": "https://i.ytimg.com/vi/JdP0eBCYyTQ/maxresdefault.jpg",
-      "published_at": "2026-05-21T10:02:59Z",
-      "duration_sec": 33,
-      "views": 1374,
-      "likes": 66,
-      "comments": 1,
-      "velocity": 520.7,
-      "x_factor": 0.07,
-      "hot_score": 0.0452,
-      "platform": "youtube",
-      "niche": "юмор",
-      "lang": "ru",
-      "author": {
-        "channel_id": "UC0ctt9lkdKnza7QQfI7i9YA",
-        "username": "Коммент.Шоу",
-        "display_name": "Коммент.Шоу",
-        "platform": "youtube",
-        "followers_count": 1480000,
-        "median_views": 20753
-      },
-      "trending_since": "2026-05-21T12:41:19.360141+00:00"
+      "trending_since": "2026-05-21T13:12:36.815580+00:00"
     },
     {
       "id": "uYE05W-xcmo",
@@ -408,6 +408,33 @@
       "trending_since": "2026-05-20T14:42:05.979682+00:00"
     },
     {
+      "id": "JdP0eBCYyTQ",
+      "url": "https://www.youtube.com/shorts/JdP0eBCYyTQ",
+      "title": "Нельзя смеяться | Смех с водой | Часть 427 #shorts",
+      "caption": "Заходи в гости: https://commentshow.ru\n\nНе забывайте подписаться в социалках:\nТелеграм: https://t.me/comment_show\nВКонтакте: https://vk.com/komment_show\nTikTok: https://www.tiktok.com/@comment_show\nТелега Нельзя смеяться: https://t.me/nesocial\nСмешные видосы присылай сюда: https://t.me/nesocial_bot\n\n#футбол #рпл #спартак #зенит #динамо #цска #спорт #трансляции #интервью #фнл #тренер #голы #сочи #краснодар #рубин #урал #уфа #нижнийновгород #футболисты #матчтв #локомотив",
+      "thumbnail_url": "https://i.ytimg.com/vi/JdP0eBCYyTQ/maxresdefault.jpg",
+      "published_at": "2026-05-21T10:02:59Z",
+      "duration_sec": 33,
+      "views": 1648,
+      "likes": 75,
+      "comments": 1,
+      "velocity": 521.4,
+      "x_factor": 0.08,
+      "hot_score": 0.0418,
+      "platform": "youtube",
+      "niche": "юмор",
+      "lang": "ru",
+      "author": {
+        "channel_id": "UC0ctt9lkdKnza7QQfI7i9YA",
+        "username": "Коммент.Шоу",
+        "display_name": "Коммент.Шоу",
+        "platform": "youtube",
+        "followers_count": 1480000,
+        "median_views": 20884
+      },
+      "trending_since": "2026-05-21T13:12:36.815719+00:00"
+    },
+    {
       "id": "bs82XI9__iI",
       "url": "https://www.youtube.com/shorts/bs82XI9__iI",
       "title": "Необычная ванная 😂 #истории #история #новости #новость #shorts",
@@ -415,12 +442,12 @@
       "thumbnail_url": "https://i.ytimg.com/vi/bs82XI9__iI/maxresdefault.jpg",
       "published_at": "2026-05-21T12:00:38Z",
       "duration_sec": 18,
-      "views": 47861,
-      "likes": 2015,
-      "comments": 31,
-      "velocity": 70575.2,
-      "x_factor": 0.8,
-      "hot_score": 0.0423,
+      "views": 98656,
+      "likes": 4142,
+      "comments": 54,
+      "velocity": 82235.9,
+      "x_factor": 1.0,
+      "hot_score": 0.0415,
       "platform": "youtube",
       "niche": "юмор",
       "lang": "ru",
@@ -430,63 +457,9 @@
         "display_name": "Смешновости",
         "platform": "youtube",
         "followers_count": 2350000,
-        "median_views": 59503
+        "median_views": 98656
       },
-      "trending_since": "2026-05-21T12:41:19.360235+00:00"
-    },
-    {
-      "id": "whATZpeya1Y",
-      "url": "https://www.youtube.com/shorts/whATZpeya1Y",
-      "title": "Какие услуги предлагают сборщики ПК?",
-      "caption": "Мы — CompShop. Уже 5 лет создаём мощные ПК, которые помогают нашим клиентам решать любые задачи. Нас выбрали более 8000 человек.\n\nМы не кричим, что мы лучшие — мы доказываем это делом: качественными сборками, надёжным сервисом и реальными отзывами на Яндекс.Картах и 2ГИС.\n\nЕсли ты хочешь подобрать себе ПК или глубже разобраться в железе — присоединяйся к нашим сообществам в Telegram и ВКонтакте. А чтобы посмотреть ассортимент или получить консультацию — переходи на наш сайт [ссылка в шапке профи",
-      "thumbnail_url": "https://i.ytimg.com/vi/whATZpeya1Y/maxresdefault.jpg",
-      "published_at": "2026-05-20T16:30:42Z",
-      "duration_sec": 60,
-      "views": 26193,
-      "likes": 1855,
-      "comments": 48,
-      "velocity": 1298.2,
-      "x_factor": 0.27,
-      "hot_score": 0.0415,
-      "platform": "youtube",
-      "niche": "финансы",
-      "lang": "ru",
-      "author": {
-        "channel_id": "UCt0GCMQhS-vfQaQFUZNE1Zw",
-        "username": "CompShop Shorts",
-        "display_name": "CompShop Shorts",
-        "platform": "youtube",
-        "followers_count": 458000,
-        "median_views": 98206
-      },
-      "trending_since": "2026-05-21T12:41:19.359391+00:00"
-    },
-    {
-      "id": "XxebgfmdgiU",
-      "url": "https://www.youtube.com/shorts/XxebgfmdgiU",
-      "title": "Я РАССЕКРЕТИЛ ТЕБЯ🤣 #magic #фокусы #юмор #приколы #shorts Арена Магии - Влад Алмазов",
-      "caption": "",
-      "thumbnail_url": "https://i.ytimg.com/vi/XxebgfmdgiU/maxresdefault.jpg",
-      "published_at": "2026-05-21T08:48:10Z",
-      "duration_sec": 54,
-      "views": 1865,
-      "likes": 72,
-      "comments": 6,
-      "velocity": 479.9,
-      "x_factor": 0.06,
-      "hot_score": 0.0415,
-      "platform": "youtube",
-      "niche": "юмор",
-      "lang": "ru",
-      "author": {
-        "channel_id": "UCd7v5DzNWpYqPUxzBeMUz5w",
-        "username": "Влад Алмазов",
-        "display_name": "Влад Алмазов",
-        "platform": "youtube",
-        "followers_count": 364000,
-        "median_views": 33194
-      },
-      "trending_since": "2026-05-21T12:41:19.360346+00:00"
+      "trending_since": "2026-05-21T13:12:36.815794+00:00"
     },
     {
       "id": "53hQuGke6ms",
@@ -516,6 +489,60 @@
       "trending_since": "2026-05-20T15:11:38.641917+00:00"
     },
     {
+      "id": "whATZpeya1Y",
+      "url": "https://www.youtube.com/shorts/whATZpeya1Y",
+      "title": "Какие услуги предлагают сборщики ПК?",
+      "caption": "Мы — CompShop. Уже 5 лет создаём мощные ПК, которые помогают нашим клиентам решать любые задачи. Нас выбрали более 8000 человек.\n\nМы не кричим, что мы лучшие — мы доказываем это делом: качественными сборками, надёжным сервисом и реальными отзывами на Яндекс.Картах и 2ГИС.\n\nЕсли ты хочешь подобрать себе ПК или глубже разобраться в железе — присоединяйся к нашим сообществам в Telegram и ВКонтакте. А чтобы посмотреть ассортимент или получить консультацию — переходи на наш сайт [ссылка в шапке профи",
+      "thumbnail_url": "https://i.ytimg.com/vi/whATZpeya1Y/maxresdefault.jpg",
+      "published_at": "2026-05-20T16:30:42Z",
+      "duration_sec": 60,
+      "views": 26737,
+      "likes": 1875,
+      "comments": 49,
+      "velocity": 1291.7,
+      "x_factor": 0.27,
+      "hot_score": 0.0406,
+      "platform": "youtube",
+      "niche": "финансы",
+      "lang": "ru",
+      "author": {
+        "channel_id": "UCt0GCMQhS-vfQaQFUZNE1Zw",
+        "username": "CompShop Shorts",
+        "display_name": "CompShop Shorts",
+        "platform": "youtube",
+        "followers_count": 458000,
+        "median_views": 98371
+      },
+      "trending_since": "2026-05-21T13:12:36.815469+00:00"
+    },
+    {
+      "id": "XxebgfmdgiU",
+      "url": "https://www.youtube.com/shorts/XxebgfmdgiU",
+      "title": "Я РАССЕКРЕТИЛ ТЕБЯ🤣 #magic #фокусы #юмор #приколы #shorts Арена Магии - Влад Алмазов",
+      "caption": "",
+      "thumbnail_url": "https://i.ytimg.com/vi/XxebgfmdgiU/maxresdefault.jpg",
+      "published_at": "2026-05-21T08:48:10Z",
+      "duration_sec": 54,
+      "views": 2082,
+      "likes": 74,
+      "comments": 6,
+      "velocity": 472.4,
+      "x_factor": 0.06,
+      "hot_score": 0.0373,
+      "platform": "youtube",
+      "niche": "юмор",
+      "lang": "ru",
+      "author": {
+        "channel_id": "UCd7v5DzNWpYqPUxzBeMUz5w",
+        "username": "Влад Алмазов",
+        "display_name": "Влад Алмазов",
+        "platform": "youtube",
+        "followers_count": 364000,
+        "median_views": 33516
+      },
+      "trending_since": "2026-05-21T13:12:36.815883+00:00"
+    },
+    {
       "id": "hqXqIxSH1nU",
       "url": "https://www.youtube.com/shorts/hqXqIxSH1nU",
       "title": "Что изменится в вашей жизни #таро #tarot #гаданиенапару #гадание #гаданиеонлайн #будущее #перемены #",
@@ -526,9 +553,9 @@
       "views": 1341,
       "likes": 131,
       "comments": 6,
-      "velocity": 26.2,
+      "velocity": 25.9,
       "x_factor": 1.09,
-      "hot_score": 0.0355,
+      "hot_score": 0.0352,
       "platform": "youtube",
       "niche": "финансы",
       "lang": "ru",
@@ -540,34 +567,7 @@
         "followers_count": 7920,
         "median_views": 1225
       },
-      "trending_since": "2026-05-21T12:41:19.359548+00:00"
-    },
-    {
-      "id": "G-9TcinLdOU",
-      "url": "https://www.youtube.com/shorts/G-9TcinLdOU",
-      "title": "Дизельный топовый Мерседес. #shorts Лиса рулит",
-      "caption": "https://lenalisa.ru/avto \n#лисарулит",
-      "thumbnail_url": "https://i.ytimg.com/vi/G-9TcinLdOU/maxresdefault.jpg",
-      "published_at": "2026-05-21T11:00:38Z",
-      "duration_sec": 61,
-      "views": 1241,
-      "likes": 47,
-      "comments": 0,
-      "velocity": 739.5,
-      "x_factor": 0.7,
-      "hot_score": 0.0354,
-      "platform": "youtube",
-      "niche": "авто",
-      "lang": "ru",
-      "author": {
-        "channel_id": "UCewdPDTqkg6tFCdwgQD2SQQ",
-        "username": "Лиса рулит shorts",
-        "display_name": "Лиса рулит shorts",
-        "platform": "youtube",
-        "followers_count": 607000,
-        "median_views": 1764
-      },
-      "trending_since": "2026-05-21T12:41:19.361357+00:00"
+      "trending_since": "2026-05-21T13:12:36.815608+00:00"
     },
     {
       "id": "lZNPavlrg18",
@@ -597,33 +597,6 @@
       "trending_since": "2026-05-20T15:11:38.641478+00:00"
     },
     {
-      "id": "3DUrLB8gds8",
-      "url": "https://www.youtube.com/shorts/3DUrLB8gds8",
-      "title": "Раскрываем секреты. @lenalisa33  #shorts Лиса рулит",
-      "caption": "https://youtu.be/3298NXDp6sY  \n\nhttps://lenalisa.ru/avto \n#лисарулит",
-      "thumbnail_url": "https://i.ytimg.com/vi/3DUrLB8gds8/maxresdefault.jpg",
-      "published_at": "2026-05-21T09:00:09Z",
-      "duration_sec": 56,
-      "views": 2073,
-      "likes": 80,
-      "comments": 0,
-      "velocity": 562.4,
-      "x_factor": 1.17,
-      "hot_score": 0.0335,
-      "platform": "youtube",
-      "niche": "авто",
-      "lang": "ru",
-      "author": {
-        "channel_id": "UCewdPDTqkg6tFCdwgQD2SQQ",
-        "username": "Лиса рулит shorts",
-        "display_name": "Лиса рулит shorts",
-        "platform": "youtube",
-        "followers_count": 607000,
-        "median_views": 1764
-      },
-      "trending_since": "2026-05-21T12:41:19.361369+00:00"
-    },
-    {
       "id": "-s9eIhG6pcw",
       "url": "https://www.youtube.com/shorts/-s9eIhG6pcw",
       "title": "Презентация Haval. #shorts Лиса рулит",
@@ -631,12 +604,12 @@
       "thumbnail_url": "https://i.ytimg.com/vi/-s9eIhG6pcw/maxresdefault.jpg",
       "published_at": "2026-05-21T07:00:00Z",
       "duration_sec": 44,
-      "views": 1456,
-      "likes": 59,
+      "views": 1546,
+      "likes": 63,
       "comments": 0,
-      "velocity": 255.9,
-      "x_factor": 0.83,
-      "hot_score": 0.0328,
+      "velocity": 248.9,
+      "x_factor": 0.77,
+      "hot_score": 0.0324,
       "platform": "youtube",
       "niche": "авто",
       "lang": "ru",
@@ -646,9 +619,36 @@
         "display_name": "Лиса рулит shorts",
         "platform": "youtube",
         "followers_count": 607000,
-        "median_views": 1764
+        "median_views": 2000
       },
-      "trending_since": "2026-05-21T12:41:19.361380+00:00"
+      "trending_since": "2026-05-21T13:12:36.816797+00:00"
+    },
+    {
+      "id": "3DUrLB8gds8",
+      "url": "https://www.youtube.com/shorts/3DUrLB8gds8",
+      "title": "Раскрываем секреты. @lenalisa33  #shorts Лиса рулит",
+      "caption": "https://youtu.be/3298NXDp6sY  \n\nhttps://lenalisa.ru/avto \n#лисарулит",
+      "thumbnail_url": "https://i.ytimg.com/vi/3DUrLB8gds8/maxresdefault.jpg",
+      "published_at": "2026-05-21T09:00:09Z",
+      "duration_sec": 56,
+      "views": 2266,
+      "likes": 83,
+      "comments": 0,
+      "velocity": 538.5,
+      "x_factor": 1.13,
+      "hot_score": 0.0312,
+      "platform": "youtube",
+      "niche": "авто",
+      "lang": "ru",
+      "author": {
+        "channel_id": "UCewdPDTqkg6tFCdwgQD2SQQ",
+        "username": "Лиса рулит shorts",
+        "display_name": "Лиса рулит shorts",
+        "platform": "youtube",
+        "followers_count": 607000,
+        "median_views": 2000
+      },
+      "trending_since": "2026-05-21T13:12:36.816785+00:00"
     },
     {
       "id": "6T5_diqleuQ",
@@ -705,6 +705,33 @@
       "trending_since": "2026-05-20T14:42:05.979717+00:00"
     },
     {
+      "id": "G-9TcinLdOU",
+      "url": "https://www.youtube.com/shorts/G-9TcinLdOU",
+      "title": "Дизельный топовый Мерседес. #shorts Лиса рулит",
+      "caption": "https://lenalisa.ru/avto \n#лисарулит",
+      "thumbnail_url": "https://i.ytimg.com/vi/G-9TcinLdOU/maxresdefault.jpg",
+      "published_at": "2026-05-21T11:00:38Z",
+      "duration_sec": 61,
+      "views": 1734,
+      "likes": 55,
+      "comments": 0,
+      "velocity": 788.3,
+      "x_factor": 0.87,
+      "hot_score": 0.0291,
+      "platform": "youtube",
+      "niche": "авто",
+      "lang": "ru",
+      "author": {
+        "channel_id": "UCewdPDTqkg6tFCdwgQD2SQQ",
+        "username": "Лиса рулит shorts",
+        "display_name": "Лиса рулит shorts",
+        "platform": "youtube",
+        "followers_count": 607000,
+        "median_views": 2000
+      },
+      "trending_since": "2026-05-21T13:12:36.816773+00:00"
+    },
+    {
       "id": "vnvsDVs0fPc",
       "url": "https://www.youtube.com/shorts/vnvsDVs0fPc",
       "title": "விஷமான கோபம் - கோபம் அழிக்கும், #ஊக்கம் #தமிழ்ஊக்கம் #கோபம் #வாழ்க்கைபாடம் #shorts",
@@ -759,33 +786,6 @@
       "trending_since": "2026-05-20T15:11:38.641886+00:00"
     },
     {
-      "id": "ANGQctsHBOU",
-      "url": "https://www.youtube.com/shorts/ANGQctsHBOU",
-      "title": "आपका अपना है क्या ☹️#jayakishori #dailymotivation #jayakishorimotivation #lifelessons #lifecoach",
-      "caption": "आपका अपना \nहै क्या ☹️\n\n#jayakishori #dailymotivation #jayakishorimotivation #lifelessons #lifecoach",
-      "thumbnail_url": "https://i.ytimg.com/vi/ANGQctsHBOU/maxresdefault.jpg",
-      "published_at": "2026-05-19T12:35:14Z",
-      "duration_sec": 53,
-      "views": 20731,
-      "likes": 1402,
-      "comments": 73,
-      "velocity": 431.0,
-      "x_factor": 1.0,
-      "hot_score": 0.026,
-      "platform": "youtube",
-      "niche": "motivation",
-      "lang": "en",
-      "author": {
-        "channel_id": "UCCR5eciEJIMvX2o1tiYOUKQ",
-        "username": "JayaKishori Motivation",
-        "display_name": "JayaKishori Motivation",
-        "platform": "youtube",
-        "followers_count": 1780000,
-        "median_views": 20731
-      },
-      "trending_since": "2026-05-21T12:41:19.361690+00:00"
-    },
-    {
       "id": "uKxd-LNQomI",
       "url": "https://www.youtube.com/shorts/uKxd-LNQomI",
       "title": "Зумеры не хотят ехать работать в Сибирь 😨",
@@ -811,6 +811,33 @@
         "median_views": 1369
       },
       "trending_since": "2026-05-20T14:42:05.978778+00:00"
+    },
+    {
+      "id": "ANGQctsHBOU",
+      "url": "https://www.youtube.com/shorts/ANGQctsHBOU",
+      "title": "आपका अपना है क्या ☹️#jayakishori #dailymotivation #jayakishorimotivation #lifelessons #lifecoach",
+      "caption": "आपका अपना \nहै क्या ☹️\n\n#jayakishori #dailymotivation #jayakishorimotivation #lifelessons #lifecoach",
+      "thumbnail_url": "https://i.ytimg.com/vi/ANGQctsHBOU/maxresdefault.jpg",
+      "published_at": "2026-05-19T12:35:14Z",
+      "duration_sec": 53,
+      "views": 20806,
+      "likes": 1403,
+      "comments": 73,
+      "velocity": 427.9,
+      "x_factor": 1.0,
+      "hot_score": 0.0258,
+      "platform": "youtube",
+      "niche": "motivation",
+      "lang": "en",
+      "author": {
+        "channel_id": "UCCR5eciEJIMvX2o1tiYOUKQ",
+        "username": "JayaKishori Motivation",
+        "display_name": "JayaKishori Motivation",
+        "platform": "youtube",
+        "followers_count": 1780000,
+        "median_views": 20806
+      },
+      "trending_since": "2026-05-21T13:12:36.817064+00:00"
     },
     {
       "id": "ufW3p5knrlo",
@@ -874,12 +901,12 @@
       "thumbnail_url": "https://i.ytimg.com/vi/7qJaZaxB8fI/maxresdefault.jpg",
       "published_at": "2026-05-21T02:46:47Z",
       "duration_sec": 53,
-      "views": 44940,
-      "likes": 1307,
-      "comments": 29,
-      "velocity": 4535.3,
-      "x_factor": 0.16,
-      "hot_score": 0.022,
+      "views": 46768,
+      "likes": 1371,
+      "comments": 31,
+      "velocity": 4483.8,
+      "x_factor": 0.17,
+      "hot_score": 0.0218,
       "platform": "youtube",
       "niche": "motivation",
       "lang": "en",
@@ -889,36 +916,9 @@
         "display_name": "BoltMotivation",
         "platform": "youtube",
         "followers_count": 2830000,
-        "median_views": 277140
+        "median_views": 277738
       },
-      "trending_since": "2026-05-21T12:41:19.360431+00:00"
-    },
-    {
-      "id": "wH8Vxtz4_xU",
-      "url": "https://www.youtube.com/shorts/wH8Vxtz4_xU",
-      "title": "Самый ласковой котик 🥰 #истории #история #новости #новость #shorts",
-      "caption": "",
-      "thumbnail_url": "https://i.ytimg.com/vi/wH8Vxtz4_xU/maxresdefault.jpg",
-      "published_at": "2026-05-20T10:00:19Z",
-      "duration_sec": 12,
-      "views": 205392,
-      "likes": 9202,
-      "comments": 97,
-      "velocity": 7697.4,
-      "x_factor": 3.45,
-      "hot_score": 0.0219,
-      "platform": "youtube",
-      "niche": "юмор",
-      "lang": "ru",
-      "author": {
-        "channel_id": "UCcotIt9z_xyZu3mSzFrWMIg",
-        "username": "Смешновости",
-        "display_name": "Смешновости",
-        "platform": "youtube",
-        "followers_count": 2350000,
-        "median_views": 59503
-      },
-      "trending_since": "2026-05-21T12:41:19.360291+00:00"
+      "trending_since": "2026-05-21T13:12:36.815960+00:00"
     },
     {
       "id": "QM19tnNswdc",
@@ -928,12 +928,12 @@
       "thumbnail_url": "https://i.ytimg.com/vi/QM19tnNswdc/maxresdefault.jpg",
       "published_at": "2026-05-19T15:58:10Z",
       "duration_sec": 58,
-      "views": 91940,
-      "likes": 5215,
-      "comments": 187,
-      "velocity": 2055.9,
+      "views": 92126,
+      "likes": 5235,
+      "comments": 188,
+      "velocity": 2036.3,
       "x_factor": 0.94,
-      "hot_score": 0.0219,
+      "hot_score": 0.0218,
       "platform": "youtube",
       "niche": "финансы",
       "lang": "ru",
@@ -943,9 +943,36 @@
         "display_name": "CompShop Shorts",
         "platform": "youtube",
         "followers_count": 458000,
-        "median_views": 98206
+        "median_views": 98371
       },
-      "trending_since": "2026-05-21T12:41:19.359411+00:00"
+      "trending_since": "2026-05-21T13:12:36.815487+00:00"
+    },
+    {
+      "id": "wH8Vxtz4_xU",
+      "url": "https://www.youtube.com/shorts/wH8Vxtz4_xU",
+      "title": "Самый ласковой котик 🥰 #истории #история #новости #новость #shorts",
+      "caption": "",
+      "thumbnail_url": "https://i.ytimg.com/vi/wH8Vxtz4_xU/maxresdefault.jpg",
+      "published_at": "2026-05-20T10:00:19Z",
+      "duration_sec": 12,
+      "views": 207287,
+      "likes": 9271,
+      "comments": 97,
+      "velocity": 7619.5,
+      "x_factor": 2.1,
+      "hot_score": 0.0216,
+      "platform": "youtube",
+      "niche": "юмор",
+      "lang": "ru",
+      "author": {
+        "channel_id": "UCcotIt9z_xyZu3mSzFrWMIg",
+        "username": "Смешновости",
+        "display_name": "Смешновости",
+        "platform": "youtube",
+        "followers_count": 2350000,
+        "median_views": 98656
+      },
+      "trending_since": "2026-05-21T13:12:36.815840+00:00"
     },
     {
       "id": "O3EbQc0Xops",
@@ -955,12 +982,12 @@
       "thumbnail_url": "https://i.ytimg.com/vi/O3EbQc0Xops/maxresdefault.jpg",
       "published_at": "2026-05-20T14:40:37Z",
       "duration_sec": 56,
-      "views": 4510,
-      "likes": 109,
+      "views": 4592,
+      "likes": 112,
       "comments": 26,
-      "velocity": 204.9,
-      "x_factor": 0.57,
-      "hot_score": 0.0216,
+      "velocity": 203.8,
+      "x_factor": 0.58,
+      "hot_score": 0.0213,
       "platform": "youtube",
       "niche": "бизнес",
       "lang": "ru",
@@ -970,9 +997,9 @@
         "display_name": "Артем Сенаторов Shorts",
         "platform": "youtube",
         "followers_count": 116000,
-        "median_views": 7927
+        "median_views": 7968
       },
-      "trending_since": "2026-05-21T12:41:19.359318+00:00"
+      "trending_since": "2026-05-21T13:12:36.815398+00:00"
     },
     {
       "id": "m9Nz0SdlsWk",
@@ -1009,12 +1036,12 @@
       "thumbnail_url": "https://i.ytimg.com/vi/WRHLznMxp1g/maxresdefault.jpg",
       "published_at": "2026-05-19T14:45:17Z",
       "duration_sec": 46,
-      "views": 2178,
+      "views": 2187,
       "likes": 120,
       "comments": 2,
-      "velocity": 47.4,
+      "velocity": 47.1,
       "x_factor": 1.0,
-      "hot_score": 0.0199,
+      "hot_score": 0.0196,
       "platform": "youtube",
       "niche": "маркетинг",
       "lang": "ru",
@@ -1024,36 +1051,9 @@
         "display_name": "Антиблогер Shorts",
         "platform": "youtube",
         "followers_count": 1070000,
-        "median_views": 2188
+        "median_views": 2192
       },
-      "trending_since": "2026-05-21T12:41:19.359206+00:00"
-    },
-    {
-      "id": "46-hjQ_Awzc",
-      "url": "https://www.youtube.com/shorts/46-hjQ_Awzc",
-      "title": "Как вы ответили на этот вопрос? 😁",
-      "caption": "",
-      "thumbnail_url": "https://i.ytimg.com/vi/46-hjQ_Awzc/maxresdefault.jpg",
-      "published_at": "2026-05-19T11:29:37Z",
-      "duration_sec": 52,
-      "views": 11344,
-      "likes": 574,
-      "comments": 23,
-      "velocity": 230.6,
-      "x_factor": 1.43,
-      "hot_score": 0.0186,
-      "platform": "youtube",
-      "niche": "бизнес",
-      "lang": "ru",
-      "author": {
-        "channel_id": "UCJI9PxywTaidvE02FHGZuEw",
-        "username": "Артем Сенаторов Shorts",
-        "display_name": "Артем Сенаторов Shorts",
-        "platform": "youtube",
-        "followers_count": 116000,
-        "median_views": 7927
-      },
-      "trending_since": "2026-05-21T12:41:19.359332+00:00"
+      "trending_since": "2026-05-21T13:12:36.815279+00:00"
     },
     {
       "id": "CnlPjZObkIo",
@@ -1083,6 +1083,33 @@
       "trending_since": "2026-05-20T14:42:05.979745+00:00"
     },
     {
+      "id": "46-hjQ_Awzc",
+      "url": "https://www.youtube.com/shorts/46-hjQ_Awzc",
+      "title": "Как вы ответили на этот вопрос? 😁",
+      "caption": "",
+      "thumbnail_url": "https://i.ytimg.com/vi/46-hjQ_Awzc/maxresdefault.jpg",
+      "published_at": "2026-05-19T11:29:37Z",
+      "duration_sec": 52,
+      "views": 11344,
+      "likes": 574,
+      "comments": 23,
+      "velocity": 228.2,
+      "x_factor": 1.42,
+      "hot_score": 0.0185,
+      "platform": "youtube",
+      "niche": "бизнес",
+      "lang": "ru",
+      "author": {
+        "channel_id": "UCJI9PxywTaidvE02FHGZuEw",
+        "username": "Артем Сенаторов Shorts",
+        "display_name": "Артем Сенаторов Shorts",
+        "platform": "youtube",
+        "followers_count": 116000,
+        "median_views": 7968
+      },
+      "trending_since": "2026-05-21T13:12:36.815414+00:00"
+    },
+    {
       "id": "39NqXd5nd6Y",
       "url": "https://www.youtube.com/shorts/39NqXd5nd6Y",
       "title": "ЭТО НЕОТВРАТИМО! #feyginnews #shorts #short #feyginlive",
@@ -1090,12 +1117,12 @@
       "thumbnail_url": "https://i.ytimg.com/vi/39NqXd5nd6Y/maxresdefault.jpg",
       "published_at": "2026-05-19T10:24:27Z",
       "duration_sec": 36,
-      "views": 11425,
-      "likes": 591,
+      "views": 11443,
+      "likes": 592,
       "comments": 18,
-      "velocity": 227.2,
+      "velocity": 225.2,
       "x_factor": 0.95,
-      "hot_score": 0.0182,
+      "hot_score": 0.0181,
       "platform": "youtube",
       "niche": "юрист",
       "lang": "ru",
@@ -1105,9 +1132,9 @@
         "display_name": "ФЕЙГИН SHORTS",
         "platform": "youtube",
         "followers_count": 144000,
-        "median_views": 12016
+        "median_views": 12031
       },
-      "trending_since": "2026-05-21T12:41:19.359177+00:00"
+      "trending_since": "2026-05-21T13:12:36.815252+00:00"
     },
     {
       "id": "SErJhCTnuuo",
@@ -1147,9 +1174,9 @@
       "views": 1438,
       "likes": 50,
       "comments": 0,
-      "velocity": 64.4,
+      "velocity": 62.9,
       "x_factor": 1.0,
-      "hot_score": 0.018,
+      "hot_score": 0.0178,
       "platform": "youtube",
       "niche": "недвижимость",
       "lang": "ru",
@@ -1161,34 +1188,7 @@
         "followers_count": 97900,
         "median_views": 1438
       },
-      "trending_since": "2026-05-21T12:41:19.358798+00:00"
-    },
-    {
-      "id": "oJivMYL0fhU",
-      "url": "https://www.youtube.com/shorts/oJivMYL0fhU",
-      "title": "Разрешил детям не спать 😂 #истории #история #новости #новость #shorts",
-      "caption": "",
-      "thumbnail_url": "https://i.ytimg.com/vi/oJivMYL0fhU/maxresdefault.jpg",
-      "published_at": "2026-05-20T12:00:28Z",
-      "duration_sec": 53,
-      "views": 1861574,
-      "likes": 65385,
-      "comments": 396,
-      "velocity": 75425.6,
-      "x_factor": 31.29,
-      "hot_score": 0.0176,
-      "platform": "youtube",
-      "niche": "юмор",
-      "lang": "ru",
-      "author": {
-        "channel_id": "UCcotIt9z_xyZu3mSzFrWMIg",
-        "username": "Смешновости",
-        "display_name": "Смешновости",
-        "platform": "youtube",
-        "followers_count": 2350000,
-        "median_views": 59503
-      },
-      "trending_since": "2026-05-21T12:41:19.360279+00:00"
+      "trending_since": "2026-05-21T13:12:36.814944+00:00"
     },
     {
       "id": "TEUMsSmA6qo",
@@ -1216,6 +1216,33 @@
         "median_views": 1053
       },
       "trending_since": "2026-05-20T15:11:38.641252+00:00"
+    },
+    {
+      "id": "oJivMYL0fhU",
+      "url": "https://www.youtube.com/shorts/oJivMYL0fhU",
+      "title": "Разрешил детям не спать 😂 #истории #история #новости #новость #shorts",
+      "caption": "",
+      "thumbnail_url": "https://i.ytimg.com/vi/oJivMYL0fhU/maxresdefault.jpg",
+      "published_at": "2026-05-20T12:00:28Z",
+      "duration_sec": 53,
+      "views": 1921241,
+      "likes": 66592,
+      "comments": 404,
+      "velocity": 76232.3,
+      "x_factor": 19.47,
+      "hot_score": 0.0172,
+      "platform": "youtube",
+      "niche": "юмор",
+      "lang": "ru",
+      "author": {
+        "channel_id": "UCcotIt9z_xyZu3mSzFrWMIg",
+        "username": "Смешновости",
+        "display_name": "Смешновости",
+        "platform": "youtube",
+        "followers_count": 2350000,
+        "median_views": 98656
+      },
+      "trending_since": "2026-05-21T13:12:36.815829+00:00"
     },
     {
       "id": "_A8yoQ2Ql5U",
@@ -1255,9 +1282,9 @@
       "views": 2197,
       "likes": 108,
       "comments": 1,
-      "velocity": 44.5,
+      "velocity": 44.1,
       "x_factor": 1.0,
-      "hot_score": 0.0165,
+      "hot_score": 0.0164,
       "platform": "youtube",
       "niche": "маркетинг",
       "lang": "ru",
@@ -1267,9 +1294,9 @@
         "display_name": "Антиблогер Shorts",
         "platform": "youtube",
         "followers_count": 1070000,
-        "median_views": 2188
+        "median_views": 2192
       },
-      "trending_since": "2026-05-21T12:41:19.359219+00:00"
+      "trending_since": "2026-05-21T13:12:36.815291+00:00"
     },
     {
       "id": "teeEMeAFw5c",
@@ -1326,33 +1353,6 @@
       "trending_since": "2026-05-20T14:42:05.978182+00:00"
     },
     {
-      "id": "Vn3pZYk3ypo",
-      "url": "https://www.youtube.com/shorts/Vn3pZYk3ypo",
-      "title": "Giving flyer to an actor & shampoo prank on strangers #shortvideo",
-      "caption": "",
-      "thumbnail_url": "https://i.ytimg.com/vi/Vn3pZYk3ypo/maxresdefault.jpg",
-      "published_at": "2026-05-21T10:24:09Z",
-      "duration_sec": 60,
-      "views": 1177,
-      "likes": 18,
-      "comments": 0,
-      "velocity": 514.8,
-      "x_factor": 0.24,
-      "hot_score": 0.014,
-      "platform": "youtube",
-      "niche": "юмор",
-      "lang": "ru",
-      "author": {
-        "channel_id": "UCzqz2FIe0cNR-BF24nclveQ",
-        "username": "Funny Prank Moments",
-        "display_name": "Funny Prank Moments",
-        "platform": "youtube",
-        "followers_count": 802000,
-        "median_views": 4914
-      },
-      "trending_since": "2026-05-21T12:41:19.360392+00:00"
-    },
-    {
       "id": "PoGdBUCptvc",
       "url": "https://www.youtube.com/shorts/PoGdBUCptvc",
       "title": "В России предложили ограничить доступ к соцсетям детям до 14 лет 😮",
@@ -1387,11 +1387,11 @@
       "thumbnail_url": "https://i.ytimg.com/vi/Ah-gLp5EycQ/maxresdefault.jpg",
       "published_at": "2026-05-20T13:00:24Z",
       "duration_sec": 61,
-      "views": 10736,
-      "likes": 215,
-      "comments": 13,
-      "velocity": 453.3,
-      "x_factor": 6.08,
+      "views": 10881,
+      "likes": 218,
+      "comments": 14,
+      "velocity": 449.6,
+      "x_factor": 5.44,
       "hot_score": 0.0119,
       "platform": "youtube",
       "niche": "авто",
@@ -1402,9 +1402,9 @@
         "display_name": "Лиса рулит shorts",
         "platform": "youtube",
         "followers_count": 607000,
-        "median_views": 1764
+        "median_views": 2000
       },
-      "trending_since": "2026-05-21T12:41:19.361391+00:00"
+      "trending_since": "2026-05-21T13:12:36.816807+00:00"
     },
     {
       "id": "k0CG4Ej4xnk",
@@ -1417,9 +1417,9 @@
       "views": 18886,
       "likes": 840,
       "comments": 20,
-      "velocity": 261.7,
-      "x_factor": 1.11,
-      "hot_score": 0.0119,
+      "velocity": 259.8,
+      "x_factor": 1.1,
+      "hot_score": 0.0118,
       "platform": "youtube",
       "niche": "travel",
       "lang": "en",
@@ -1429,9 +1429,9 @@
         "display_name": "Shortleft Travels",
         "platform": "youtube",
         "followers_count": 101000,
-        "median_views": 17084
+        "median_views": 17116
       },
-      "trending_since": "2026-05-21T12:41:19.362814+00:00"
+      "trending_since": "2026-05-21T13:12:36.817994+00:00"
     },
     {
       "id": "bJQqDbB5nfM",
@@ -1461,6 +1461,33 @@
       "trending_since": "2026-05-20T14:42:05.979954+00:00"
     },
     {
+      "id": "Vn3pZYk3ypo",
+      "url": "https://www.youtube.com/shorts/Vn3pZYk3ypo",
+      "title": "Giving flyer to an actor & shampoo prank on strangers #shortvideo",
+      "caption": "",
+      "thumbnail_url": "https://i.ytimg.com/vi/Vn3pZYk3ypo/maxresdefault.jpg",
+      "published_at": "2026-05-21T10:24:09Z",
+      "duration_sec": 60,
+      "views": 1435,
+      "likes": 18,
+      "comments": 0,
+      "velocity": 511.1,
+      "x_factor": 0.28,
+      "hot_score": 0.0112,
+      "platform": "youtube",
+      "niche": "юмор",
+      "lang": "ru",
+      "author": {
+        "channel_id": "UCzqz2FIe0cNR-BF24nclveQ",
+        "username": "Funny Prank Moments",
+        "display_name": "Funny Prank Moments",
+        "platform": "youtube",
+        "followers_count": 802000,
+        "median_views": 5043
+      },
+      "trending_since": "2026-05-21T13:12:36.815928+00:00"
+    },
+    {
       "id": "Rhv9-8hki8c",
       "url": "https://www.youtube.com/shorts/Rhv9-8hki8c",
       "title": "the tunnel amplified EVERYTHING 💀😂#shorts #funny #prank",
@@ -1468,10 +1495,10 @@
       "thumbnail_url": "https://i.ytimg.com/vi/Rhv9-8hki8c/maxresdefault.jpg",
       "published_at": "2026-05-18T18:03:24Z",
       "duration_sec": 19,
-      "views": 92009,
-      "likes": 3495,
+      "views": 92136,
+      "likes": 3498,
       "comments": 90,
-      "velocity": 1380.9,
+      "velocity": 1372.0,
       "x_factor": 0.66,
       "hot_score": 0.0108,
       "platform": "youtube",
@@ -1483,9 +1510,9 @@
         "display_name": "HumorBagel",
         "platform": "youtube",
         "followers_count": 1120000,
-        "median_views": 139546
+        "median_views": 139638
       },
-      "trending_since": "2026-05-21T12:41:19.360311+00:00"
+      "trending_since": "2026-05-21T13:12:36.815856+00:00"
     },
     {
       "id": "cC2GIVP2fuY",
@@ -1495,12 +1522,12 @@
       "thumbnail_url": "https://i.ytimg.com/vi/cC2GIVP2fuY/maxresdefault.jpg",
       "published_at": "2026-05-19T19:07:11Z",
       "duration_sec": 34,
-      "views": 13211,
+      "views": 13231,
       "likes": 366,
       "comments": 3,
-      "velocity": 317.8,
+      "velocity": 314.3,
       "x_factor": 0.53,
-      "hot_score": 0.0104,
+      "hot_score": 0.0103,
       "platform": "youtube",
       "niche": "фитнес",
       "lang": "ru",
@@ -1510,9 +1537,9 @@
         "display_name": "Aerobic Fitness South Africa Shorts",
         "platform": "youtube",
         "followers_count": 430000,
-        "median_views": 25090
+        "median_views": 25132
       },
-      "trending_since": "2026-05-21T12:41:19.361043+00:00"
+      "trending_since": "2026-05-21T13:12:36.816512+00:00"
     },
     {
       "id": "wrp-mZukHrc",
@@ -1522,12 +1549,12 @@
       "thumbnail_url": "https://i.ytimg.com/vi/wrp-mZukHrc/maxresdefault.jpg",
       "published_at": "2026-05-20T17:01:18Z",
       "duration_sec": 39,
-      "views": 17842,
-      "likes": 245,
+      "views": 17984,
+      "likes": 247,
       "comments": 29,
-      "velocity": 907.2,
-      "x_factor": 1.76,
-      "hot_score": 0.0102,
+      "velocity": 890.8,
+      "x_factor": 1.77,
+      "hot_score": 0.0101,
       "platform": "youtube",
       "niche": "finance",
       "lang": "en",
@@ -1539,7 +1566,7 @@
         "followers_count": 666000,
         "median_views": 10159
       },
-      "trending_since": "2026-05-21T12:41:19.361820+00:00"
+      "trending_since": "2026-05-21T13:12:36.817180+00:00"
     },
     {
       "id": "UyzFUmMoeEA",
@@ -1549,11 +1576,11 @@
       "thumbnail_url": "https://i.ytimg.com/vi/UyzFUmMoeEA/maxresdefault.jpg",
       "published_at": "2026-05-20T12:30:27Z",
       "duration_sec": 10,
-      "views": 15283,
-      "likes": 274,
+      "views": 15346,
+      "likes": 277,
       "comments": 10,
-      "velocity": 632.0,
-      "x_factor": 0.89,
+      "velocity": 621.2,
+      "x_factor": 0.9,
       "hot_score": 0.0099,
       "platform": "youtube",
       "niche": "travel",
@@ -1564,9 +1591,9 @@
         "display_name": "Shortleft Travels",
         "platform": "youtube",
         "followers_count": 101000,
-        "median_views": 17084
+        "median_views": 17116
       },
-      "trending_since": "2026-05-21T12:41:19.362779+00:00"
+      "trending_since": "2026-05-21T13:12:36.817966+00:00"
     },
     {
       "id": "2o7s3u_Rkyg",
@@ -1576,12 +1603,12 @@
       "thumbnail_url": "https://i.ytimg.com/vi/2o7s3u_Rkyg/maxresdefault.jpg",
       "published_at": "2026-05-18T15:52:51Z",
       "duration_sec": 59,
-      "views": 598045,
-      "likes": 22314,
+      "views": 600365,
+      "likes": 22396,
       "comments": 200,
-      "velocity": 8691.5,
-      "x_factor": 6.09,
-      "hot_score": 0.0099,
+      "velocity": 8659.6,
+      "x_factor": 6.1,
+      "hot_score": 0.0098,
       "platform": "youtube",
       "niche": "финансы",
       "lang": "ru",
@@ -1591,9 +1618,9 @@
         "display_name": "CompShop Shorts",
         "platform": "youtube",
         "followers_count": 458000,
-        "median_views": 98206
+        "median_views": 98371
       },
-      "trending_since": "2026-05-21T12:41:19.359433+00:00"
+      "trending_since": "2026-05-21T13:12:36.815504+00:00"
     },
     {
       "id": "ot6p_O5ZhcQ",
@@ -1606,9 +1633,9 @@
       "views": 4156,
       "likes": 120,
       "comments": 15,
-      "velocity": 56.7,
+      "velocity": 56.3,
       "x_factor": 0.52,
-      "hot_score": 0.0098,
+      "hot_score": 0.0097,
       "platform": "youtube",
       "niche": "бизнес",
       "lang": "ru",
@@ -1618,9 +1645,9 @@
         "display_name": "Артем Сенаторов Shorts",
         "platform": "youtube",
         "followers_count": 116000,
-        "median_views": 7927
+        "median_views": 7968
       },
-      "trending_since": "2026-05-21T12:41:19.359344+00:00"
+      "trending_since": "2026-05-21T13:12:36.815426+00:00"
     },
     {
       "id": "X9Amb_NjBug",
@@ -1662,7 +1689,7 @@
       "comments": 2,
       "velocity": 10.2,
       "x_factor": 0.96,
-      "hot_score": 0.0096,
+      "hot_score": 0.0095,
       "platform": "youtube",
       "niche": "саморазвитие",
       "lang": "ru",
@@ -1674,7 +1701,7 @@
         "followers_count": 212000,
         "median_views": 1092
       },
-      "trending_since": "2026-05-21T12:41:19.361542+00:00"
+      "trending_since": "2026-05-21T13:12:36.816936+00:00"
     },
     {
       "id": "0HyubjrfH68",
@@ -1711,12 +1738,12 @@
       "thumbnail_url": "https://i.ytimg.com/vi/ou_uotYd0eE/maxresdefault.jpg",
       "published_at": "2026-05-19T09:07:24Z",
       "duration_sec": 87,
-      "views": 44922,
-      "likes": 1133,
+      "views": 45546,
+      "likes": 1138,
       "comments": 52,
-      "velocity": 871.2,
-      "x_factor": 1.35,
-      "hot_score": 0.0091,
+      "velocity": 874.4,
+      "x_factor": 1.36,
+      "hot_score": 0.009,
       "platform": "youtube",
       "niche": "юмор",
       "lang": "ru",
@@ -1726,9 +1753,9 @@
         "display_name": "Влад Алмазов",
         "platform": "youtube",
         "followers_count": 364000,
-        "median_views": 33194
+        "median_views": 33516
       },
-      "trending_since": "2026-05-21T12:41:19.360358+00:00"
+      "trending_since": "2026-05-21T13:12:36.815896+00:00"
     },
     {
       "id": "QORITFfj9BI",
@@ -1738,12 +1765,12 @@
       "thumbnail_url": "https://i.ytimg.com/vi/QORITFfj9BI/maxresdefault.jpg",
       "published_at": "2026-05-16T12:27:16Z",
       "duration_sec": 41,
-      "views": 12607,
+      "views": 12619,
       "likes": 669,
       "comments": 6,
-      "velocity": 104.9,
+      "velocity": 104.5,
       "x_factor": 1.05,
-      "hot_score": 0.0091,
+      "hot_score": 0.009,
       "platform": "youtube",
       "niche": "юрист",
       "lang": "ru",
@@ -1753,9 +1780,9 @@
         "display_name": "ФЕЙГИН SHORTS",
         "platform": "youtube",
         "followers_count": 144000,
-        "median_views": 12016
+        "median_views": 12031
       },
-      "trending_since": "2026-05-21T12:41:19.359192+00:00"
+      "trending_since": "2026-05-21T13:12:36.815265+00:00"
     },
     {
       "id": "5NwhNf1Y8Ys",
@@ -1765,12 +1792,12 @@
       "thumbnail_url": "https://i.ytimg.com/vi/5NwhNf1Y8Ys/maxresdefault.jpg",
       "published_at": "2026-05-20T09:46:28Z",
       "duration_sec": 41,
-      "views": 20833,
-      "likes": 387,
+      "views": 21023,
+      "likes": 390,
       "comments": 4,
-      "velocity": 774.1,
-      "x_factor": 1.0,
-      "hot_score": 0.009,
+      "velocity": 766.3,
+      "x_factor": 1.01,
+      "hot_score": 0.0089,
       "platform": "youtube",
       "niche": "юмор",
       "lang": "ru",
@@ -1780,9 +1807,36 @@
         "display_name": "Коммент.Шоу",
         "platform": "youtube",
         "followers_count": 1480000,
-        "median_views": 20753
+        "median_views": 20884
       },
-      "trending_since": "2026-05-21T12:41:19.360206+00:00"
+      "trending_since": "2026-05-21T13:12:36.815771+00:00"
+    },
+    {
+      "id": "9FK2KoUtFek",
+      "url": "https://www.youtube.com/shorts/9FK2KoUtFek",
+      "title": "Nvidia is still not including China in its revenue outlook.",
+      "caption": "Nvidia is uncertain if any imports will be allowed into China despite the U.S. license approval to ship H200.",
+      "thumbnail_url": "https://i.ytimg.com/vi/9FK2KoUtFek/maxresdefault.jpg",
+      "published_at": "2026-05-20T22:30:27Z",
+      "duration_sec": 20,
+      "views": 1414,
+      "likes": 17,
+      "comments": 1,
+      "velocity": 96.2,
+      "x_factor": 1.1,
+      "hot_score": 0.0088,
+      "platform": "youtube",
+      "niche": "finance",
+      "lang": "en",
+      "author": {
+        "channel_id": "UCEAZeUIeJs0IjQiqTCdVSIg",
+        "username": "Yahoo Finance",
+        "display_name": "Yahoo Finance",
+        "platform": "youtube",
+        "followers_count": 1500000,
+        "median_views": 1284
+      },
+      "trending_since": "2026-05-21T13:12:36.817536+00:00"
     },
     {
       "id": "kEdlKfadj0w",
@@ -1846,10 +1900,10 @@
       "thumbnail_url": "https://i.ytimg.com/vi/XR_6oldvwgU/maxresdefault.jpg",
       "published_at": "2026-05-16T13:00:55Z",
       "duration_sec": 46,
-      "views": 104472,
-      "likes": 5054,
-      "comments": 41,
-      "velocity": 873.0,
+      "views": 104616,
+      "likes": 5060,
+      "comments": 42,
+      "velocity": 870.4,
       "x_factor": 1.06,
       "hot_score": 0.0083,
       "platform": "youtube",
@@ -1861,36 +1915,9 @@
         "display_name": "CompShop Shorts",
         "platform": "youtube",
         "followers_count": 458000,
-        "median_views": 98206
+        "median_views": 98371
       },
-      "trending_since": "2026-05-21T12:41:19.359462+00:00"
-    },
-    {
-      "id": "9FK2KoUtFek",
-      "url": "https://www.youtube.com/shorts/9FK2KoUtFek",
-      "title": "Nvidia is still not including China in its revenue outlook.",
-      "caption": "Nvidia is uncertain if any imports will be allowed into China despite the U.S. license approval to ship H200.",
-      "thumbnail_url": "https://i.ytimg.com/vi/9FK2KoUtFek/maxresdefault.jpg",
-      "published_at": "2026-05-20T22:30:27Z",
-      "duration_sec": 20,
-      "views": 1380,
-      "likes": 15,
-      "comments": 1,
-      "velocity": 97.3,
-      "x_factor": 1.09,
-      "hot_score": 0.0082,
-      "platform": "youtube",
-      "niche": "finance",
-      "lang": "en",
-      "author": {
-        "channel_id": "UCEAZeUIeJs0IjQiqTCdVSIg",
-        "username": "Yahoo Finance",
-        "display_name": "Yahoo Finance",
-        "platform": "youtube",
-        "followers_count": 1500000,
-        "median_views": 1262
-      },
-      "trending_since": "2026-05-21T12:41:19.362251+00:00"
+      "trending_since": "2026-05-21T13:12:36.815528+00:00"
     },
     {
       "id": "I8WQLXICm-M",
@@ -1903,7 +1930,7 @@
       "views": 3813,
       "likes": 206,
       "comments": 3,
-      "velocity": 26.2,
+      "velocity": 26.1,
       "x_factor": 1.74,
       "hot_score": 0.008,
       "platform": "youtube",
@@ -1915,9 +1942,9 @@
         "display_name": "Антиблогер Shorts",
         "platform": "youtube",
         "followers_count": 1070000,
-        "median_views": 2188
+        "median_views": 2192
       },
-      "trending_since": "2026-05-21T12:41:19.359246+00:00"
+      "trending_since": "2026-05-21T13:12:36.815320+00:00"
     },
     {
       "id": "hsim7h1EjDA",
@@ -1954,12 +1981,12 @@
       "thumbnail_url": "https://i.ytimg.com/vi/ufPnn-W6XRM/maxresdefault.jpg",
       "published_at": "2026-05-20T23:01:22Z",
       "duration_sec": 17,
-      "views": 1143,
+      "views": 1153,
       "likes": 14,
       "comments": 0,
-      "velocity": 83.6,
-      "x_factor": 0.91,
-      "hot_score": 0.0078,
+      "velocity": 81.3,
+      "x_factor": 0.9,
+      "hot_score": 0.0076,
       "platform": "youtube",
       "niche": "finance",
       "lang": "en",
@@ -1969,9 +1996,9 @@
         "display_name": "Yahoo Finance",
         "platform": "youtube",
         "followers_count": 1500000,
-        "median_views": 1262
+        "median_views": 1284
       },
-      "trending_since": "2026-05-21T12:41:19.362238+00:00"
+      "trending_since": "2026-05-21T13:12:36.817524+00:00"
     },
     {
       "id": "-N1D1oYMCiE",
@@ -2001,33 +2028,6 @@
       "trending_since": "2026-05-20T15:11:38.642683+00:00"
     },
     {
-      "id": "F4fbxSHi3yc",
-      "url": "https://www.youtube.com/shorts/F4fbxSHi3yc",
-      "title": "Почему расставание кажется неизбежным #саморазвитие #отношения",
-      "caption": "#пробуждение #просветление #настоящиймомент #осознанность #самореализация #присутствие",
-      "thumbnail_url": "https://i.ytimg.com/vi/F4fbxSHi3yc/maxresdefault.jpg",
-      "published_at": "2026-05-19T08:41:34Z",
-      "duration_sec": 36,
-      "views": 1112,
-      "likes": 20,
-      "comments": 2,
-      "velocity": 21.4,
-      "x_factor": 1.07,
-      "hot_score": 0.0074,
-      "platform": "youtube",
-      "niche": "саморазвитие",
-      "lang": "ru",
-      "author": {
-        "channel_id": "UCGqvMLB8gXi8l4Q5eu49xjw",
-        "username": "GIVING SCHOOL SHORTS | СМЫСЛ ЖИЗНИ | САМОРАЗВИТИЕ",
-        "display_name": "GIVING SCHOOL SHORTS | СМЫСЛ ЖИЗНИ | САМОРАЗВИТИЕ",
-        "platform": "youtube",
-        "followers_count": 10300,
-        "median_views": 1040
-      },
-      "trending_since": "2026-05-21T12:41:19.361648+00:00"
-    },
-    {
       "id": "YXGmT1EEmns",
       "url": "https://www.youtube.com/shorts/YXGmT1EEmns",
       "title": "4 Worst Girls Product ⚠️Cause CANCER",
@@ -2055,6 +2055,33 @@
       "trending_since": "2026-05-20T14:42:05.979423+00:00"
     },
     {
+      "id": "F4fbxSHi3yc",
+      "url": "https://www.youtube.com/shorts/F4fbxSHi3yc",
+      "title": "Почему расставание кажется неизбежным #саморазвитие #отношения",
+      "caption": "#пробуждение #просветление #настоящиймомент #осознанность #самореализация #присутствие",
+      "thumbnail_url": "https://i.ytimg.com/vi/F4fbxSHi3yc/maxresdefault.jpg",
+      "published_at": "2026-05-19T08:41:34Z",
+      "duration_sec": 36,
+      "views": 1112,
+      "likes": 20,
+      "comments": 2,
+      "velocity": 21.2,
+      "x_factor": 1.07,
+      "hot_score": 0.0073,
+      "platform": "youtube",
+      "niche": "саморазвитие",
+      "lang": "ru",
+      "author": {
+        "channel_id": "UCGqvMLB8gXi8l4Q5eu49xjw",
+        "username": "GIVING SCHOOL SHORTS | СМЫСЛ ЖИЗНИ | САМОРАЗВИТИЕ",
+        "display_name": "GIVING SCHOOL SHORTS | СМЫСЛ ЖИЗНИ | САМОРАЗВИТИЕ",
+        "platform": "youtube",
+        "followers_count": 10300,
+        "median_views": 1040
+      },
+      "trending_since": "2026-05-21T13:12:36.817023+00:00"
+    },
+    {
       "id": "QjEo-lH3lo8",
       "url": "https://www.youtube.com/shorts/QjEo-lH3lo8",
       "title": "Догадались, какую тачку спрятали в видео? Пишите варианты в комментариях🤣",
@@ -2062,12 +2089,12 @@
       "thumbnail_url": "https://i.ytimg.com/vi/QjEo-lH3lo8/maxresdefault.jpg",
       "published_at": "2026-05-19T09:35:10Z",
       "duration_sec": 12,
-      "views": 7184,
-      "likes": 59,
+      "views": 7277,
+      "likes": 60,
       "comments": 35,
-      "velocity": 140.6,
-      "x_factor": 3.74,
-      "hot_score": 0.0073,
+      "velocity": 141.0,
+      "x_factor": 3.76,
+      "hot_score": 0.0072,
       "platform": "youtube",
       "niche": "авто",
       "lang": "ru",
@@ -2077,9 +2104,9 @@
         "display_name": "SferaCar Shorts",
         "platform": "youtube",
         "followers_count": 2380,
-        "median_views": 1919
+        "median_views": 1937
       },
-      "trending_since": "2026-05-21T12:41:19.361326+00:00"
+      "trending_since": "2026-05-21T13:12:36.816742+00:00"
     },
     {
       "id": "bt4s9W-4Owg",
@@ -2116,10 +2143,10 @@
       "thumbnail_url": "https://i.ytimg.com/vi/Q20xKavWS6c/maxresdefault.jpg",
       "published_at": "2026-05-20T11:49:40Z",
       "duration_sec": 54,
-      "views": 23801,
-      "likes": 335,
+      "views": 23929,
+      "likes": 337,
       "comments": 2,
-      "velocity": 957.4,
+      "velocity": 942.7,
       "x_factor": 1.0,
       "hot_score": 0.007,
       "platform": "youtube",
@@ -2131,9 +2158,9 @@
         "display_name": "Banshiro Shorts",
         "platform": "youtube",
         "followers_count": 1920000,
-        "median_views": 23801
+        "median_views": 23929
       },
-      "trending_since": "2026-05-21T12:41:19.359490+00:00"
+      "trending_since": "2026-05-21T13:12:36.815556+00:00"
     },
     {
       "id": "k-_p1JEFExc",
@@ -2190,33 +2217,6 @@
       "trending_since": "2026-05-20T14:42:05.979886+00:00"
     },
     {
-      "id": "XqQ112x3Dlo",
-      "url": "https://www.youtube.com/shorts/XqQ112x3Dlo",
-      "title": "БАТЯ И УДАЛЕНКА",
-      "caption": "У кого были такие диалоги?)\nОбщий сбор в комментариях!",
-      "thumbnail_url": "https://i.ytimg.com/vi/XqQ112x3Dlo/maxresdefault.jpg",
-      "published_at": "2026-05-20T17:37:48Z",
-      "duration_sec": 31,
-      "views": 1505,
-      "likes": 16,
-      "comments": 1,
-      "velocity": 79.0,
-      "x_factor": 0.55,
-      "hot_score": 0.007,
-      "platform": "youtube",
-      "niche": "бизнес",
-      "lang": "ru",
-      "author": {
-        "channel_id": "UCRUPzFJ7b7kNFfuH3xZ74PQ",
-        "username": "BUDILOVICH SHORTS",
-        "display_name": "BUDILOVICH SHORTS",
-        "platform": "youtube",
-        "followers_count": 5510,
-        "median_views": 2736
-      },
-      "trending_since": "2026-05-21T12:41:19.361079+00:00"
-    },
-    {
       "id": "toD1aNZMGXs",
       "url": "https://www.youtube.com/shorts/toD1aNZMGXs",
       "title": "#психология",
@@ -2251,10 +2251,10 @@
       "thumbnail_url": "https://i.ytimg.com/vi/50fP56yPGWE/maxresdefault.jpg",
       "published_at": "2026-05-17T08:25:04Z",
       "duration_sec": 51,
-      "views": 6192176,
-      "likes": 191983,
-      "comments": 7773,
-      "velocity": 61754.4,
+      "views": 6206057,
+      "likes": 192338,
+      "comments": 7791,
+      "velocity": 61572.6,
       "x_factor": 1.0,
       "hot_score": 0.0067,
       "platform": "youtube",
@@ -2266,9 +2266,9 @@
         "display_name": "Tech Master",
         "platform": "youtube",
         "followers_count": 28600000,
-        "median_views": 6192176
+        "median_views": 6206057
       },
-      "trending_since": "2026-05-21T12:41:19.360998+00:00"
+      "trending_since": "2026-05-21T13:12:36.816465+00:00"
     },
     {
       "id": "HxYew0cZoBg",
@@ -2298,6 +2298,33 @@
       "trending_since": "2026-05-20T14:42:05.980031+00:00"
     },
     {
+      "id": "XqQ112x3Dlo",
+      "url": "https://www.youtube.com/shorts/XqQ112x3Dlo",
+      "title": "БАТЯ И УДАЛЕНКА",
+      "caption": "У кого были такие диалоги?)\nОбщий сбор в комментариях!",
+      "thumbnail_url": "https://i.ytimg.com/vi/XqQ112x3Dlo/maxresdefault.jpg",
+      "published_at": "2026-05-20T17:37:48Z",
+      "duration_sec": 31,
+      "views": 1502,
+      "likes": 15,
+      "comments": 1,
+      "velocity": 76.7,
+      "x_factor": 0.55,
+      "hot_score": 0.0066,
+      "platform": "youtube",
+      "niche": "бизнес",
+      "lang": "ru",
+      "author": {
+        "channel_id": "UCRUPzFJ7b7kNFfuH3xZ74PQ",
+        "username": "BUDILOVICH SHORTS",
+        "display_name": "BUDILOVICH SHORTS",
+        "platform": "youtube",
+        "followers_count": 5510,
+        "median_views": 2735
+      },
+      "trending_since": "2026-05-21T13:12:36.816543+00:00"
+    },
+    {
       "id": "PmMO72hDWVA",
       "url": "https://www.youtube.com/shorts/PmMO72hDWVA",
       "title": "5 SIGNS ⚠️ Your Mangoes Are Fake!",
@@ -2323,33 +2350,6 @@
         "median_views": 154981
       },
       "trending_since": "2026-05-20T14:42:05.979471+00:00"
-    },
-    {
-      "id": "68ZGlXDrcuA",
-      "url": "https://www.youtube.com/shorts/68ZGlXDrcuA",
-      "title": "Как вам Елена Прекрасна в новом фильме?",
-      "caption": "",
-      "thumbnail_url": "https://i.ytimg.com/vi/68ZGlXDrcuA/maxresdefault.jpg",
-      "published_at": "2026-05-16T08:17:23Z",
-      "duration_sec": 51,
-      "views": 15024,
-      "likes": 302,
-      "comments": 90,
-      "velocity": 120.8,
-      "x_factor": 1.9,
-      "hot_score": 0.0062,
-      "platform": "youtube",
-      "niche": "бизнес",
-      "lang": "ru",
-      "author": {
-        "channel_id": "UCJI9PxywTaidvE02FHGZuEw",
-        "username": "Артем Сенаторов Shorts",
-        "display_name": "Артем Сенаторов Shorts",
-        "platform": "youtube",
-        "followers_count": 116000,
-        "median_views": 7927
-      },
-      "trending_since": "2026-05-21T12:41:19.359360+00:00"
     },
     {
       "id": "tEAfpjeM4Qg",
@@ -2379,6 +2379,33 @@
       "trending_since": "2026-05-20T15:11:38.641758+00:00"
     },
     {
+      "id": "68ZGlXDrcuA",
+      "url": "https://www.youtube.com/shorts/68ZGlXDrcuA",
+      "title": "Как вам Елена Прекрасна в новом фильме?",
+      "caption": "",
+      "thumbnail_url": "https://i.ytimg.com/vi/68ZGlXDrcuA/maxresdefault.jpg",
+      "published_at": "2026-05-16T08:17:23Z",
+      "duration_sec": 51,
+      "views": 15024,
+      "likes": 302,
+      "comments": 90,
+      "velocity": 120.3,
+      "x_factor": 1.89,
+      "hot_score": 0.0061,
+      "platform": "youtube",
+      "niche": "бизнес",
+      "lang": "ru",
+      "author": {
+        "channel_id": "UCJI9PxywTaidvE02FHGZuEw",
+        "username": "Артем Сенаторов Shorts",
+        "display_name": "Артем Сенаторов Shorts",
+        "platform": "youtube",
+        "followers_count": 116000,
+        "median_views": 7968
+      },
+      "trending_since": "2026-05-21T13:12:36.815442+00:00"
+    },
+    {
       "id": "ouJtLeaMjyc",
       "url": "https://www.youtube.com/shorts/ouJtLeaMjyc",
       "title": "The Car Loan Mistake People Keep Making",
@@ -2389,9 +2416,9 @@
       "views": 10159,
       "likes": 186,
       "comments": 15,
-      "velocity": 150.1,
+      "velocity": 149.0,
       "x_factor": 1.0,
-      "hot_score": 0.006,
+      "hot_score": 0.0059,
       "platform": "youtube",
       "niche": "finance",
       "lang": "en",
@@ -2403,34 +2430,7 @@
         "followers_count": 666000,
         "median_views": 10159
       },
-      "trending_since": "2026-05-21T12:41:19.361915+00:00"
-    },
-    {
-      "id": "T47bQ-cMewM",
-      "url": "https://www.youtube.com/shorts/T47bQ-cMewM",
-      "title": "This Decision Can Follow You for Life",
-      "caption": "🎓  Brian Preston (CFP®, CPA) and Bo Hanson (CFA®, CFP®) share professional insights to help you own your financial future.\n\nJump start your journey with our FREE financial resources: https://moneyguy.com/resources/\n\nSubscribe on YouTube for early access and go beyond the podcast: https://www.youtube.com/c/MoneyGuyShow?sub_confirmation=1\n\nConnect with us on social media for more content: https://moneyguy.com/link-in-bio/\n\nTake the relationship to the next level and become a client: https://moneyg",
-      "thumbnail_url": "https://i.ytimg.com/vi/T47bQ-cMewM/maxresdefault.jpg",
-      "published_at": "2026-05-19T17:00:22Z",
-      "duration_sec": 40,
-      "views": 10095,
-      "likes": 158,
-      "comments": 2,
-      "velocity": 231.1,
-      "x_factor": 0.99,
-      "hot_score": 0.0058,
-      "platform": "youtube",
-      "niche": "finance",
-      "lang": "en",
-      "author": {
-        "channel_id": "UC9vUu4vlIlMC0dHQCTvQPbg",
-        "username": "The Money Guy Show",
-        "display_name": "The Money Guy Show",
-        "platform": "youtube",
-        "followers_count": 666000,
-        "median_views": 10159
-      },
-      "trending_since": "2026-05-21T12:41:19.361863+00:00"
+      "trending_since": "2026-05-21T13:12:36.817261+00:00"
     },
     {
       "id": "_WMHFBWnWrw",
@@ -2440,10 +2440,10 @@
       "thumbnail_url": "https://i.ytimg.com/vi/_WMHFBWnWrw/maxresdefault.jpg",
       "published_at": "2026-05-15T16:00:55Z",
       "duration_sec": 27,
-      "views": 284826,
-      "likes": 10660,
+      "views": 285104,
+      "likes": 10667,
       "comments": 211,
-      "velocity": 2024.7,
+      "velocity": 2019.2,
       "x_factor": 1.0,
       "hot_score": 0.0058,
       "platform": "youtube",
@@ -2455,9 +2455,36 @@
         "display_name": "Allrecipes",
         "platform": "youtube",
         "followers_count": 3280000,
-        "median_views": 284826
+        "median_views": 285104
       },
-      "trending_since": "2026-05-21T12:41:19.362374+00:00"
+      "trending_since": "2026-05-21T13:12:36.817656+00:00"
+    },
+    {
+      "id": "T47bQ-cMewM",
+      "url": "https://www.youtube.com/shorts/T47bQ-cMewM",
+      "title": "This Decision Can Follow You for Life",
+      "caption": "🎓  Brian Preston (CFP®, CPA) and Bo Hanson (CFA®, CFP®) share professional insights to help you own your financial future.\n\nJump start your journey with our FREE financial resources: https://moneyguy.com/resources/\n\nSubscribe on YouTube for early access and go beyond the podcast: https://www.youtube.com/c/MoneyGuyShow?sub_confirmation=1\n\nConnect with us on social media for more content: https://moneyguy.com/link-in-bio/\n\nTake the relationship to the next level and become a client: https://moneyg",
+      "thumbnail_url": "https://i.ytimg.com/vi/T47bQ-cMewM/maxresdefault.jpg",
+      "published_at": "2026-05-19T17:00:22Z",
+      "duration_sec": 40,
+      "views": 10141,
+      "likes": 159,
+      "comments": 2,
+      "velocity": 229.4,
+      "x_factor": 1.0,
+      "hot_score": 0.0057,
+      "platform": "youtube",
+      "niche": "finance",
+      "lang": "en",
+      "author": {
+        "channel_id": "UC9vUu4vlIlMC0dHQCTvQPbg",
+        "username": "The Money Guy Show",
+        "display_name": "The Money Guy Show",
+        "platform": "youtube",
+        "followers_count": 666000,
+        "median_views": 10159
+      },
+      "trending_since": "2026-05-21T13:12:36.817217+00:00"
     },
     {
       "id": "ao44pH48m4U",
@@ -2521,12 +2548,12 @@
       "thumbnail_url": "https://i.ytimg.com/vi/9Ww5BOH2QWk/maxresdefault.jpg",
       "published_at": "2026-05-20T14:00:03Z",
       "duration_sec": 48,
-      "views": 23724,
-      "likes": 230,
+      "views": 24095,
+      "likes": 232,
       "comments": 9,
-      "velocity": 1045.7,
-      "x_factor": 1.14,
-      "hot_score": 0.0056,
+      "velocity": 1038.2,
+      "x_factor": 1.15,
+      "hot_score": 0.0055,
       "platform": "youtube",
       "niche": "юмор",
       "lang": "ru",
@@ -2536,9 +2563,9 @@
         "display_name": "Коммент.Шоу",
         "platform": "youtube",
         "followers_count": 1480000,
-        "median_views": 20753
+        "median_views": 20884
       },
-      "trending_since": "2026-05-21T12:41:19.360190+00:00"
+      "trending_since": "2026-05-21T13:12:36.815758+00:00"
     },
     {
       "id": "-t3td2Ag868",
@@ -2578,7 +2605,7 @@
       "views": 1843,
       "likes": 40,
       "comments": 0,
-      "velocity": 25.1,
+      "velocity": 24.9,
       "x_factor": 0.84,
       "hot_score": 0.0053,
       "platform": "youtube",
@@ -2590,9 +2617,9 @@
         "display_name": "Антиблогер Shorts",
         "platform": "youtube",
         "followers_count": 1070000,
-        "median_views": 2188
+        "median_views": 2192
       },
-      "trending_since": "2026-05-21T12:41:19.359235+00:00"
+      "trending_since": "2026-05-21T13:12:36.815307+00:00"
     },
     {
       "id": "faYsOJPArkU",
@@ -2619,7 +2646,7 @@
         "followers_count": 212000,
         "median_views": 1092
       },
-      "trending_since": "2026-05-21T12:41:19.361558+00:00"
+      "trending_since": "2026-05-21T13:12:36.816948+00:00"
     },
     {
       "id": "DrDjxUcNZIQ",
@@ -2646,7 +2673,7 @@
         "followers_count": 10300,
         "median_views": 1040
       },
-      "trending_since": "2026-05-21T12:41:19.361676+00:00"
+      "trending_since": "2026-05-21T13:12:36.817050+00:00"
     },
     {
       "id": "VF2pyWQAbLA",
@@ -2659,9 +2686,9 @@
       "views": 1652,
       "likes": 16,
       "comments": 0,
-      "velocity": 81.8,
+      "velocity": 79.8,
       "x_factor": 1.0,
-      "hot_score": 0.0053,
+      "hot_score": 0.0052,
       "platform": "youtube",
       "niche": "finance",
       "lang": "en",
@@ -2673,7 +2700,7 @@
         "followers_count": 17100,
         "median_views": 1652
       },
-      "trending_since": "2026-05-21T12:41:19.362131+00:00"
+      "trending_since": "2026-05-21T13:12:36.817422+00:00"
     },
     {
       "id": "Uwljc4Tn8Sc",
@@ -2713,8 +2740,8 @@
       "views": 1693,
       "likes": 13,
       "comments": 2,
-      "velocity": 61.3,
-      "x_factor": 0.88,
+      "velocity": 60.2,
+      "x_factor": 0.87,
       "hot_score": 0.0052,
       "platform": "youtube",
       "niche": "авто",
@@ -2725,9 +2752,9 @@
         "display_name": "SferaCar Shorts",
         "platform": "youtube",
         "followers_count": 2380,
-        "median_views": 1919
+        "median_views": 1937
       },
-      "trending_since": "2026-05-21T12:41:19.361315+00:00"
+      "trending_since": "2026-05-21T13:12:36.816732+00:00"
     },
     {
       "id": "_uOp6qxvBAM",
@@ -2794,9 +2821,9 @@
       "views": 1020,
       "likes": 9,
       "comments": 0,
-      "velocity": 50.6,
+      "velocity": 49.3,
       "x_factor": 1.0,
-      "hot_score": 0.0048,
+      "hot_score": 0.0047,
       "platform": "youtube",
       "niche": "travel",
       "lang": "en",
@@ -2808,7 +2835,7 @@
         "followers_count": 1,
         "median_views": 1020
       },
-      "trending_since": "2026-05-21T12:41:19.362673+00:00"
+      "trending_since": "2026-05-21T13:12:36.817880+00:00"
     },
     {
       "id": "WVZOUx16akg",
@@ -2818,10 +2845,10 @@
       "thumbnail_url": "https://i.ytimg.com/vi/WVZOUx16akg/maxresdefault.jpg",
       "published_at": "2026-05-17T06:23:50Z",
       "duration_sec": 39,
-      "views": 133829,
-      "likes": 2657,
+      "views": 133906,
+      "likes": 2659,
       "comments": 216,
-      "velocity": 1308.3,
+      "velocity": 1302.4,
       "x_factor": 0.78,
       "hot_score": 0.0047,
       "platform": "youtube",
@@ -2833,36 +2860,9 @@
         "display_name": "Психолог Вероника Степанова",
         "platform": "youtube",
         "followers_count": 3160000,
-        "median_views": 170782
+        "median_views": 170906
       },
-      "trending_since": "2026-05-21T12:41:19.359288+00:00"
-    },
-    {
-      "id": "vE_aSJr0K58",
-      "url": "https://www.youtube.com/shorts/vE_aSJr0K58",
-      "title": "He Thought His Hero Forgot His Promise…🥺💔",
-      "caption": "When 11-year-old Finlay met his favorite player Jack Grealish, he asked him to do a special celebration the next time he scored. Jack promised he would, but months went by without a goal and Finlay thought his hero had forgotten. Then the World Cup came around, and Jack finally got his chance on the biggest stage in football. ⚡\n\nFair Use Disclaimer\n\nThis video is for educational and transformative purposes, falling under the Fair Use Doctrine (17 U.S.C. §107). It provides original commentary, cr",
-      "thumbnail_url": "https://i.ytimg.com/vi/vE_aSJr0K58/maxresdefault.jpg",
-      "published_at": "2026-05-20T03:10:59Z",
-      "duration_sec": 47,
-      "views": 1141838,
-      "likes": 12102,
-      "comments": 54,
-      "velocity": 34079.0,
-      "x_factor": 4.12,
-      "hot_score": 0.0045,
-      "platform": "youtube",
-      "niche": "motivation",
-      "lang": "en",
-      "author": {
-        "channel_id": "UCy2vByAZhHucf8wV1Lr8hKw",
-        "username": "BoltMotivation",
-        "display_name": "BoltMotivation",
-        "platform": "youtube",
-        "followers_count": 2830000,
-        "median_views": 277140
-      },
-      "trending_since": "2026-05-21T12:41:19.360453+00:00"
+      "trending_since": "2026-05-21T13:12:36.815359+00:00"
     },
     {
       "id": "tDF4Dl8kbCs",
@@ -2875,7 +2875,7 @@
       "views": 94352,
       "likes": 1889,
       "comments": 22,
-      "velocity": 1101.3,
+      "velocity": 1094.6,
       "x_factor": 1.0,
       "hot_score": 0.0045,
       "platform": "youtube",
@@ -2889,7 +2889,34 @@
         "followers_count": 1200000,
         "median_views": 94352
       },
-      "trending_since": "2026-05-21T12:41:19.360880+00:00"
+      "trending_since": "2026-05-21T13:12:36.816357+00:00"
+    },
+    {
+      "id": "vE_aSJr0K58",
+      "url": "https://www.youtube.com/shorts/vE_aSJr0K58",
+      "title": "He Thought His Hero Forgot His Promise…🥺💔",
+      "caption": "When 11-year-old Finlay met his favorite player Jack Grealish, he asked him to do a special celebration the next time he scored. Jack promised he would, but months went by without a goal and Finlay thought his hero had forgotten. Then the World Cup came around, and Jack finally got his chance on the biggest stage in football. ⚡\n\nFair Use Disclaimer\n\nThis video is for educational and transformative purposes, falling under the Fair Use Doctrine (17 U.S.C. §107). It provides original commentary, cr",
+      "thumbnail_url": "https://i.ytimg.com/vi/vE_aSJr0K58/maxresdefault.jpg",
+      "published_at": "2026-05-20T03:10:59Z",
+      "duration_sec": 47,
+      "views": 1158112,
+      "likes": 12201,
+      "comments": 54,
+      "velocity": 34034.9,
+      "x_factor": 4.17,
+      "hot_score": 0.0044,
+      "platform": "youtube",
+      "niche": "motivation",
+      "lang": "en",
+      "author": {
+        "channel_id": "UCy2vByAZhHucf8wV1Lr8hKw",
+        "username": "BoltMotivation",
+        "display_name": "BoltMotivation",
+        "platform": "youtube",
+        "followers_count": 2830000,
+        "median_views": 277738
+      },
+      "trending_since": "2026-05-21T13:12:36.815978+00:00"
     },
     {
       "id": "1zUbtG_3NvY",
@@ -2899,12 +2926,12 @@
       "thumbnail_url": "https://i.ytimg.com/vi/1zUbtG_3NvY/maxresdefault.jpg",
       "published_at": "2026-05-15T14:30:01Z",
       "duration_sec": 25,
-      "views": 187083,
-      "likes": 5380,
+      "views": 187139,
+      "likes": 5382,
       "comments": 134,
-      "velocity": 1315.7,
+      "velocity": 1311.3,
       "x_factor": 1.34,
-      "hot_score": 0.0045,
+      "hot_score": 0.0044,
       "platform": "youtube",
       "niche": "юмор",
       "lang": "ru",
@@ -2914,9 +2941,9 @@
         "display_name": "HumorBagel",
         "platform": "youtube",
         "followers_count": 1120000,
-        "median_views": 139546
+        "median_views": 139638
       },
-      "trending_since": "2026-05-21T12:41:19.360332+00:00"
+      "trending_since": "2026-05-21T13:12:36.815872+00:00"
     },
     {
       "id": "7YyGr5nwDQs",
@@ -2926,10 +2953,10 @@
       "thumbnail_url": "https://i.ytimg.com/vi/7YyGr5nwDQs/maxresdefault.jpg",
       "published_at": "2026-05-15T17:40:00Z",
       "duration_sec": 35,
-      "views": 212063,
-      "likes": 6109,
+      "views": 212113,
+      "likes": 6111,
       "comments": 80,
-      "velocity": 1525.4,
+      "velocity": 1520.0,
       "x_factor": 1.0,
       "hot_score": 0.0044,
       "platform": "youtube",
@@ -2941,9 +2968,9 @@
         "display_name": "Joshua Weissman Recipes ",
         "platform": "youtube",
         "followers_count": 771000,
-        "median_views": 212063
+        "median_views": 212113
       },
-      "trending_since": "2026-05-21T12:41:19.362457+00:00"
+      "trending_since": "2026-05-21T13:12:36.817727+00:00"
     },
     {
       "id": "mUff29NVhtg",
@@ -2980,10 +3007,10 @@
       "thumbnail_url": "https://i.ytimg.com/vi/plPUlcvTrmk/maxresdefault.jpg",
       "published_at": "2026-05-19T02:50:46Z",
       "duration_sec": 39,
-      "views": 277140,
-      "likes": 3938,
+      "views": 277738,
+      "likes": 3946,
       "comments": 44,
-      "velocity": 4791.3,
+      "velocity": 4758.7,
       "x_factor": 1.0,
       "hot_score": 0.0043,
       "platform": "youtube",
@@ -2995,9 +3022,9 @@
         "display_name": "BoltMotivation",
         "platform": "youtube",
         "followers_count": 2830000,
-        "median_views": 277140
+        "median_views": 277738
       },
-      "trending_since": "2026-05-21T12:41:19.360474+00:00"
+      "trending_since": "2026-05-21T13:12:36.815996+00:00"
     },
     {
       "id": "VvXDy2_cwhI",
@@ -3007,10 +3034,10 @@
       "thumbnail_url": "https://i.ytimg.com/vi/VvXDy2_cwhI/maxresdefault.jpg",
       "published_at": "2026-05-18T07:24:42Z",
       "duration_sec": 36,
-      "views": 207735,
+      "views": 207907,
       "likes": 2908,
       "comments": 301,
-      "velocity": 2688.2,
+      "velocity": 2672.4,
       "x_factor": 1.22,
       "hot_score": 0.0043,
       "platform": "youtube",
@@ -3022,36 +3049,9 @@
         "display_name": "Психолог Вероника Степанова",
         "platform": "youtube",
         "followers_count": 3160000,
-        "median_views": 170782
+        "median_views": 170906
       },
-      "trending_since": "2026-05-21T12:41:19.359272+00:00"
-    },
-    {
-      "id": "V2KEX86zu4g",
-      "url": "https://www.youtube.com/shorts/V2KEX86zu4g",
-      "title": "Продается дом с интересной пристройкой в Молдове",
-      "caption": "Во время путешествий важно, чтобы карта работала в любой стране. С этой картой можно оплачивать отели, рестораны и покупки за границей, пополнять её через СБП и пользоваться Apple Pay.\nЧтобы оформить: Telegram → поиск «плати по миру» → открыть бота → выпустить карту. #платипомиру #platipomiry2026\n\nCopyright Notice: In accordance with Section 107 of the Copyright Act of 1976, this material is used under the 'fair use' provision for activities such as criticism, commentary, news reporting, teachin",
-      "thumbnail_url": "https://i.ytimg.com/vi/V2KEX86zu4g/maxresdefault.jpg",
-      "published_at": "2026-05-21T08:52:11Z",
-      "duration_sec": 17,
-      "views": 17754,
-      "likes": 82,
-      "comments": 2,
-      "velocity": 4648.9,
-      "x_factor": 0.82,
-      "hot_score": 0.0043,
-      "platform": "youtube",
-      "niche": "авто",
-      "lang": "ru",
-      "author": {
-        "channel_id": "UCmm_wyq_63cSV5uPGe8_HwQ",
-        "username": "Kruzak Shorts | Лучшие Авто Видео со всей России",
-        "display_name": "Kruzak Shorts | Лучшие Авто Видео со всей России",
-        "platform": "youtube",
-        "followers_count": 402000,
-        "median_views": 21681
-      },
-      "trending_since": "2026-05-21T12:41:19.361194+00:00"
+      "trending_since": "2026-05-21T13:12:36.815346+00:00"
     },
     {
       "id": "UMdrNrP9q04",
@@ -3088,11 +3088,11 @@
       "thumbnail_url": "https://i.ytimg.com/vi/6d7gmDAG8kQ/maxresdefault.jpg",
       "published_at": "2026-05-17T08:59:22Z",
       "duration_sec": 71,
-      "views": 79010,
-      "likes": 1513,
+      "views": 79178,
+      "likes": 1515,
       "comments": 42,
-      "velocity": 792.5,
-      "x_factor": 2.38,
+      "velocity": 790.0,
+      "x_factor": 2.36,
       "hot_score": 0.004,
       "platform": "youtube",
       "niche": "юмор",
@@ -3103,9 +3103,9 @@
         "display_name": "Влад Алмазов",
         "platform": "youtube",
         "followers_count": 364000,
-        "median_views": 33194
+        "median_views": 33516
       },
-      "trending_since": "2026-05-21T12:41:19.360369+00:00"
+      "trending_since": "2026-05-21T13:12:36.815905+00:00"
     },
     {
       "id": "TW8k-yKk0SY",
@@ -3142,12 +3142,12 @@
       "thumbnail_url": "https://i.ytimg.com/vi/b6r5YZJopDE/maxresdefault.jpg",
       "published_at": "2026-05-17T19:40:16Z",
       "duration_sec": 24,
-      "views": 36970,
-      "likes": 658,
+      "views": 37033,
+      "likes": 659,
       "comments": 11,
-      "velocity": 415.3,
+      "velocity": 413.6,
       "x_factor": 1.47,
-      "hot_score": 0.004,
+      "hot_score": 0.0039,
       "platform": "youtube",
       "niche": "фитнес",
       "lang": "ru",
@@ -3157,9 +3157,9 @@
         "display_name": "Aerobic Fitness South Africa Shorts",
         "platform": "youtube",
         "followers_count": 430000,
-        "median_views": 25090
+        "median_views": 25132
       },
-      "trending_since": "2026-05-21T12:41:19.361065+00:00"
+      "trending_since": "2026-05-21T13:12:36.816530+00:00"
     },
     {
       "id": "gvyjHL7Ov9Q",
@@ -3223,11 +3223,11 @@
       "thumbnail_url": "https://i.ytimg.com/vi/p-8ocOB0pm4/maxresdefault.jpg",
       "published_at": "2026-05-16T18:54:15Z",
       "duration_sec": 43,
-      "views": 1598891,
-      "likes": 32771,
-      "comments": 783,
-      "velocity": 14051.9,
-      "x_factor": 5.77,
+      "views": 1601115,
+      "likes": 32786,
+      "comments": 784,
+      "velocity": 14007.3,
+      "x_factor": 5.76,
       "hot_score": 0.0038,
       "platform": "youtube",
       "niche": "motivation",
@@ -3238,9 +3238,9 @@
         "display_name": "BoltMotivation",
         "platform": "youtube",
         "followers_count": 2830000,
-        "median_views": 277140
+        "median_views": 277738
       },
-      "trending_since": "2026-05-21T12:41:19.360494+00:00"
+      "trending_since": "2026-05-21T13:12:36.816012+00:00"
     },
     {
       "id": "ECpVFd0psX0",
@@ -3250,11 +3250,11 @@
       "thumbnail_url": "https://i.ytimg.com/vi/ECpVFd0psX0/maxresdefault.jpg",
       "published_at": "2026-05-19T14:00:26Z",
       "duration_sec": 51,
-      "views": 20673,
+      "views": 20744,
       "likes": 174,
       "comments": 18,
-      "velocity": 442.9,
-      "x_factor": 1.0,
+      "velocity": 439.5,
+      "x_factor": 0.99,
       "hot_score": 0.0037,
       "platform": "youtube",
       "niche": "юмор",
@@ -3265,9 +3265,36 @@
         "display_name": "Коммент.Шоу",
         "platform": "youtube",
         "followers_count": 1480000,
-        "median_views": 20753
+        "median_views": 20884
       },
-      "trending_since": "2026-05-21T12:41:19.360221+00:00"
+      "trending_since": "2026-05-21T13:12:36.815784+00:00"
+    },
+    {
+      "id": "V2KEX86zu4g",
+      "url": "https://www.youtube.com/shorts/V2KEX86zu4g",
+      "title": "Продается дом с интересной пристройкой в Молдове",
+      "caption": "Во время путешествий важно, чтобы карта работала в любой стране. С этой картой можно оплачивать отели, рестораны и покупки за границей, пополнять её через СБП и пользоваться Apple Pay.\nЧтобы оформить: Telegram → поиск «плати по миру» → открыть бота → выпустить карту. #платипомиру #platipomiry2026\n\nCopyright Notice: In accordance with Section 107 of the Copyright Act of 1976, this material is used under the 'fair use' provision for activities such as criticism, commentary, news reporting, teachin",
+      "thumbnail_url": "https://i.ytimg.com/vi/V2KEX86zu4g/maxresdefault.jpg",
+      "published_at": "2026-05-21T08:52:11Z",
+      "duration_sec": 17,
+      "views": 24433,
+      "likes": 95,
+      "comments": 3,
+      "velocity": 5629.1,
+      "x_factor": 0.97,
+      "hot_score": 0.0036,
+      "platform": "youtube",
+      "niche": "авто",
+      "lang": "ru",
+      "author": {
+        "channel_id": "UCmm_wyq_63cSV5uPGe8_HwQ",
+        "username": "Kruzak Shorts | Лучшие Авто Видео со всей России",
+        "display_name": "Kruzak Shorts | Лучшие Авто Видео со всей России",
+        "platform": "youtube",
+        "followers_count": 402000,
+        "median_views": 25188
+      },
+      "trending_since": "2026-05-21T13:12:36.816626+00:00"
     },
     {
       "id": "go3Pt_mtFGc",
@@ -3277,11 +3304,11 @@
       "thumbnail_url": "https://i.ytimg.com/vi/go3Pt_mtFGc/maxresdefault.jpg",
       "published_at": "2026-05-15T13:59:47Z",
       "duration_sec": 54,
-      "views": 21467,
-      "likes": 475,
+      "views": 21485,
+      "likes": 476,
       "comments": 23,
-      "velocity": 150.4,
-      "x_factor": 0.65,
+      "velocity": 150.0,
+      "x_factor": 0.64,
       "hot_score": 0.0036,
       "platform": "youtube",
       "niche": "юмор",
@@ -3292,9 +3319,9 @@
         "display_name": "Влад Алмазов",
         "platform": "youtube",
         "followers_count": 364000,
-        "median_views": 33194
+        "median_views": 33516
       },
-      "trending_since": "2026-05-21T12:41:19.360380+00:00"
+      "trending_since": "2026-05-21T13:12:36.815916+00:00"
     },
     {
       "id": "kbA6fm4hQTs",
@@ -3307,9 +3334,9 @@
       "views": 1040,
       "likes": 15,
       "comments": 0,
-      "velocity": 13.7,
+      "velocity": 13.6,
       "x_factor": 1.0,
-      "hot_score": 0.0035,
+      "hot_score": 0.0034,
       "platform": "youtube",
       "niche": "саморазвитие",
       "lang": "ru",
@@ -3321,7 +3348,7 @@
         "followers_count": 10300,
         "median_views": 1040
       },
-      "trending_since": "2026-05-21T12:41:19.361662+00:00"
+      "trending_since": "2026-05-21T13:12:36.817036+00:00"
     },
     {
       "id": "XlOCGGBqzRA",
@@ -3331,12 +3358,12 @@
       "thumbnail_url": "https://i.ytimg.com/vi/XlOCGGBqzRA/maxresdefault.jpg",
       "published_at": "2026-05-20T11:06:10Z",
       "duration_sec": 14,
-      "views": 25608,
-      "likes": 169,
+      "views": 25943,
+      "likes": 168,
       "comments": 4,
-      "velocity": 1000.9,
-      "x_factor": 1.18,
-      "hot_score": 0.0034,
+      "velocity": 993.7,
+      "x_factor": 1.03,
+      "hot_score": 0.0033,
       "platform": "youtube",
       "niche": "авто",
       "lang": "ru",
@@ -3346,9 +3373,9 @@
         "display_name": "Kruzak Shorts | Лучшие Авто Видео со всей России",
         "platform": "youtube",
         "followers_count": 402000,
-        "median_views": 21681
+        "median_views": 25188
       },
-      "trending_since": "2026-05-21T12:41:19.361241+00:00"
+      "trending_since": "2026-05-21T13:12:36.816668+00:00"
     },
     {
       "id": "CgX-nifZ48g",
@@ -3415,7 +3442,7 @@
       "views": 26503,
       "likes": 229,
       "comments": 2,
-      "velocity": 516.5,
+      "velocity": 511.3,
       "x_factor": 0.89,
       "hot_score": 0.0028,
       "platform": "youtube",
@@ -3427,9 +3454,9 @@
         "display_name": "Village Recipe Shorts",
         "platform": "youtube",
         "followers_count": 19500,
-        "median_views": 29699
+        "median_views": 29736
       },
-      "trending_since": "2026-05-21T12:41:19.362533+00:00"
+      "trending_since": "2026-05-21T13:12:36.817793+00:00"
     },
     {
       "id": "sNxNlGrL2l0",
@@ -3493,11 +3520,11 @@
       "thumbnail_url": "https://i.ytimg.com/vi/fkAgq0FlDCk/maxresdefault.jpg",
       "published_at": "2026-05-20T13:18:27Z",
       "duration_sec": 13,
-      "views": 51407,
-      "likes": 263,
+      "views": 52391,
+      "likes": 269,
       "comments": 4,
-      "velocity": 2198.6,
-      "x_factor": 2.37,
+      "velocity": 2191.8,
+      "x_factor": 2.08,
       "hot_score": 0.0027,
       "platform": "youtube",
       "niche": "авто",
@@ -3508,9 +3535,9 @@
         "display_name": "Kruzak Shorts | Лучшие Авто Видео со всей России",
         "platform": "youtube",
         "followers_count": 402000,
-        "median_views": 21681
+        "median_views": 25188
       },
-      "trending_since": "2026-05-21T12:41:19.361217+00:00"
+      "trending_since": "2026-05-21T13:12:36.816647+00:00"
     },
     {
       "id": "L3vvNGzD7sc",
@@ -3547,10 +3574,10 @@
       "thumbnail_url": "https://i.ytimg.com/vi/OD-8fOVcSYM/maxresdefault.jpg",
       "published_at": "2026-05-15T19:31:23Z",
       "duration_sec": 39,
-      "views": 217218,
-      "likes": 3197,
+      "views": 217343,
+      "likes": 3199,
       "comments": 55,
-      "velocity": 1583.6,
+      "velocity": 1578.5,
       "x_factor": 0.78,
       "hot_score": 0.0023,
       "platform": "youtube",
@@ -3562,9 +3589,9 @@
         "display_name": "BoltMotivation",
         "platform": "youtube",
         "followers_count": 2830000,
-        "median_views": 277140
+        "median_views": 277738
       },
-      "trending_since": "2026-05-21T12:41:19.360516+00:00"
+      "trending_since": "2026-05-21T13:12:36.816030+00:00"
     },
     {
       "id": "F2K-bdWNvGw",
@@ -3631,7 +3658,7 @@
       "views": 1668,
       "likes": 14,
       "comments": 0,
-      "velocity": 24.6,
+      "velocity": 24.5,
       "x_factor": 1.0,
       "hot_score": 0.0022,
       "platform": "youtube",
@@ -3645,7 +3672,7 @@
         "followers_count": 293,
         "median_views": 1668
       },
-      "trending_since": "2026-05-21T12:41:19.359058+00:00"
+      "trending_since": "2026-05-21T13:12:36.815197+00:00"
     },
     {
       "id": "TsXP0pABcLc",
@@ -3655,10 +3682,10 @@
       "thumbnail_url": "https://i.ytimg.com/vi/TsXP0pABcLc/maxresdefault.jpg",
       "published_at": "2026-05-16T21:00:20Z",
       "duration_sec": 19,
-      "views": 77401,
-      "likes": 957,
+      "views": 77435,
+      "likes": 958,
       "comments": 6,
-      "velocity": 693.0,
+      "velocity": 690.1,
       "x_factor": 0.82,
       "hot_score": 0.0022,
       "platform": "youtube",
@@ -3672,7 +3699,7 @@
         "followers_count": 1200000,
         "median_views": 94352
       },
-      "trending_since": "2026-05-21T12:41:19.360892+00:00"
+      "trending_since": "2026-05-21T13:12:36.816369+00:00"
     },
     {
       "id": "Rz5FGmKWFV0",
@@ -3709,10 +3736,10 @@
       "thumbnail_url": "https://i.ytimg.com/vi/UFIpSfclRJk/maxresdefault.jpg",
       "published_at": "2026-05-14T23:00:23Z",
       "duration_sec": 24,
-      "views": 495375,
-      "likes": 7801,
+      "views": 495474,
+      "likes": 7802,
       "comments": 52,
-      "velocity": 3141.6,
+      "velocity": 3131.9,
       "x_factor": 5.25,
       "hot_score": 0.0021,
       "platform": "youtube",
@@ -3726,7 +3753,7 @@
         "followers_count": 1200000,
         "median_views": 94352
       },
-      "trending_since": "2026-05-21T12:41:19.360904+00:00"
+      "trending_since": "2026-05-21T13:12:36.816381+00:00"
     },
     {
       "id": "1RmbP20xfWg",
@@ -3736,10 +3763,10 @@
       "thumbnail_url": "https://i.ytimg.com/vi/1RmbP20xfWg/maxresdefault.jpg",
       "published_at": "2026-05-21T05:28:05Z",
       "duration_sec": 15,
-      "views": 1919,
+      "views": 1937,
       "likes": 5,
       "comments": 0,
-      "velocity": 265.8,
+      "velocity": 250.2,
       "x_factor": 1.0,
       "hot_score": 0.002,
       "platform": "youtube",
@@ -3751,9 +3778,9 @@
         "display_name": "SferaCar Shorts",
         "platform": "youtube",
         "followers_count": 2380,
-        "median_views": 1919
+        "median_views": 1937
       },
-      "trending_since": "2026-05-21T12:41:19.361293+00:00"
+      "trending_since": "2026-05-21T13:12:36.816712+00:00"
     },
     {
       "id": "h61epWDZY5I",
@@ -3763,10 +3790,10 @@
       "thumbnail_url": "https://i.ytimg.com/vi/h61epWDZY5I/maxresdefault.jpg",
       "published_at": "2026-05-16T14:04:39Z",
       "duration_sec": 11,
-      "views": 32895,
-      "likes": 356,
+      "views": 32968,
+      "likes": 358,
       "comments": 3,
-      "velocity": 277.3,
+      "velocity": 276.7,
       "x_factor": 1.11,
       "hot_score": 0.0019,
       "platform": "youtube",
@@ -3778,9 +3805,9 @@
         "display_name": "Village Recipe Shorts",
         "platform": "youtube",
         "followers_count": 19500,
-        "median_views": 29699
+        "median_views": 29736
       },
-      "trending_since": "2026-05-21T12:41:19.362548+00:00"
+      "trending_since": "2026-05-21T13:12:36.817806+00:00"
     },
     {
       "id": "Wj-qWbyD4O4",
@@ -3793,9 +3820,9 @@
       "views": 12687,
       "likes": 48,
       "comments": 4,
-      "velocity": 284.5,
-      "x_factor": 0.59,
-      "hot_score": 0.0017,
+      "velocity": 281.2,
+      "x_factor": 0.5,
+      "hot_score": 0.0016,
       "platform": "youtube",
       "niche": "авто",
       "lang": "ru",
@@ -3805,9 +3832,9 @@
         "display_name": "Kruzak Shorts | Лучшие Авто Видео со всей России",
         "platform": "youtube",
         "followers_count": 402000,
-        "median_views": 21681
+        "median_views": 25188
       },
-      "trending_since": "2026-05-21T12:41:19.361264+00:00"
+      "trending_since": "2026-05-21T13:12:36.816688+00:00"
     },
     {
       "id": "HBPOmFY5NLg",
@@ -3817,10 +3844,10 @@
       "thumbnail_url": "https://i.ytimg.com/vi/HBPOmFY5NLg/maxresdefault.jpg",
       "published_at": "2026-05-17T17:17:27Z",
       "duration_sec": 11,
-      "views": 2994,
+      "views": 3041,
       "likes": 20,
       "comments": 0,
-      "velocity": 32.8,
+      "velocity": 33.1,
       "x_factor": 1.0,
       "hot_score": 0.0014,
       "platform": "youtube",
@@ -3832,9 +3859,9 @@
         "display_name": "WESTMOTORS SHORTS",
         "platform": "youtube",
         "followers_count": 134000,
-        "median_views": 2994
+        "median_views": 3041
       },
-      "trending_since": "2026-05-21T12:41:19.361147+00:00"
+      "trending_since": "2026-05-21T13:12:36.816586+00:00"
     },
     {
       "id": "HE9pYTjyEmw",
@@ -3847,8 +3874,8 @@
       "views": 8651,
       "likes": 83,
       "comments": 2,
-      "velocity": 58.7,
-      "x_factor": 1.76,
+      "velocity": 58.5,
+      "x_factor": 1.72,
       "hot_score": 0.0014,
       "platform": "youtube",
       "niche": "юмор",
@@ -3859,9 +3886,9 @@
         "display_name": "Funny Prank Moments",
         "platform": "youtube",
         "followers_count": 802000,
-        "median_views": 4914
+        "median_views": 5043
       },
-      "trending_since": "2026-05-21T12:41:19.360407+00:00"
+      "trending_since": "2026-05-21T13:12:36.815940+00:00"
     },
     {
       "id": "EqPLg0CIZnw",
@@ -3874,7 +3901,7 @@
       "views": 2057,
       "likes": 14,
       "comments": 0,
-      "velocity": 17.8,
+      "velocity": 17.7,
       "x_factor": 1.23,
       "hot_score": 0.0012,
       "platform": "youtube",
@@ -3888,7 +3915,7 @@
         "followers_count": 293,
         "median_views": 1668
       },
-      "trending_since": "2026-05-21T12:41:19.359147+00:00"
+      "trending_since": "2026-05-21T13:12:36.815237+00:00"
     },
     {
       "id": "4AUFns6-Ens",
@@ -3901,7 +3928,7 @@
       "views": 1517,
       "likes": 6,
       "comments": 0,
-      "velocity": 22.4,
+      "velocity": 22.2,
       "x_factor": 0.91,
       "hot_score": 0.001,
       "platform": "youtube",
@@ -3915,7 +3942,7 @@
         "followers_count": 293,
         "median_views": 1668
       },
-      "trending_since": "2026-05-21T12:41:19.359115+00:00"
+      "trending_since": "2026-05-21T13:12:36.815217+00:00"
     },
     {
       "id": "1MQh2K_deWk",
@@ -3928,7 +3955,7 @@
       "views": 3968,
       "likes": 14,
       "comments": 0,
-      "velocity": 46.2,
+      "velocity": 45.9,
       "x_factor": 1.45,
       "hot_score": 0.0008,
       "platform": "youtube",
@@ -3940,9 +3967,9 @@
         "display_name": "BUDILOVICH SHORTS",
         "platform": "youtube",
         "followers_count": 5510,
-        "median_views": 2736
+        "median_views": 2735
       },
-      "trending_since": "2026-05-21T12:41:19.361133+00:00"
+      "trending_since": "2026-05-21T13:12:36.816572+00:00"
     },
     {
       "id": "4WE2yJUBnEg",
