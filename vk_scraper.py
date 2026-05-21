@@ -390,6 +390,15 @@ async def worker():
     group_views: dict[str, list] = {}
 
     async with httpx.AsyncClient(timeout=20) as client:
+        # Обновляем статистику существующих видео ВНУТРИ клиента
+        existing_all = []
+        if os.path.exists(OUTPUT_FILE):
+            try:
+                with open(OUTPUT_FILE) as f:
+                    existing_all = json.load(f).get("items", [])
+            except Exception:
+                pass
+
         for gid_str in check_gids:
             ginfo = real_groups[gid_str]
             gid   = ginfo["id"]
@@ -483,18 +492,9 @@ async def worker():
     all_items.sort(key=lambda x: x.get("hot_score") or 0, reverse=True)
     print(f"✓ Found {len(all_items)} short vertical videos")
 
-    # Обновляем статистику существующих видео
-    existing_all = []
-    if os.path.exists(OUTPUT_FILE):
-        try:
-            with open(OUTPUT_FILE) as f:
-                existing_all = json.load(f).get("items", [])
-        except Exception:
-            pass
+    # Обновляем статистику существующих видео (внутри async with выше)
     fresh_ids = {item["id"] for item in all_items}
     to_refresh = [v for v in existing_all if v["id"] not in fresh_ids]
-    if to_refresh:
-        await refresh_vk_stats(client, to_refresh)
 
     # Сохраняем группы с __meta__
     groups = {**real_groups, "__meta__": groups["__meta__"]}
