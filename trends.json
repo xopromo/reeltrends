@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-07-15T10:02:26.602154+00:00",
-  "total": 5873,
+  "updated_at": "2026-07-15T13:41:58.671945+00:00",
+  "total": 5868,
   "new_count": 0,
   "new_last_24h": 0,
-  "version": 609,
+  "version": 610,
   "items": [
     {
       "id": "ae9878f4-0a39-41bf-b2e2-cd2e92764b3e",
@@ -100723,35 +100723,6 @@
       "is_followed": false
     },
     {
-      "id": "bb01da92-d1ee-4df1-abb9-5ce42cba2b13",
-      "url": "https://www.instagram.com/p/DZk5Dg2BfgP/",
-      "caption": "Comment WEBSITE and I’ll send you the full build guide with every prompt ready to paste.\n\nClaude Code is brilliant at building things that work and terrible at making them look good.\n\nLeft alone, it gives you the same site as everyone else. The purple gradient, the Inter font, the identical bento cards.\n\nI built charliehills.ai anyway, in one evening, with three markdown files and a workflow that strips the AI look out completely.\n\nThe trick is not one-shotting “build me a website”. You approve documents, then Claude builds from them.\n\nEvery step and every prompt I used is on the slides. The site went from empty folder to production in one evening, and the deploy took 32 seconds.",
-      "thumbnail_url": "https://scontent-den2-1.cdninstagram.com/v/t51.71878-15/721842347_1341960367912399_2278215686333004478_n.jpg?stp=dst-jpg_e15_tt6&_nc_ht=scontent-den2-1.cdninstagram.com&_nc_cat=107&_nc_oc=Q6cZ2gFxOqfoP0Xz2KINkWmhFNDm5IvAx2rdrVoS1cz3MZMpZlVXeUopnvzaPNgLWn0xZFo&_nc_ohc=XE2mYp5wQdoQ7kNvwEMZ_Qo&_nc_gid=8ej3_nCUN-4dQyY7kwLgyw&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_Af_HtqzhSPbwMLLEOft3nFmteEIHjeJk3yuzwk002zkHWw&oe=6A3AE876&_nc_sid=8b3546",
-      "published_at": "2026-06-14T18:30:11",
-      "duration": null,
-      "views": 9418,
-      "likes": 317,
-      "comments": 342,
-      "x_factor": 4.56,
-      "velocity": 4.9,
-      "hot_score": 0.0145,
-      "niche": "vibe-coding",
-      "author": {
-        "profile_id": "c6ae7047-860a-4e6e-b160-66b0ec31207f",
-        "username": "charliehills",
-        "display_name": "Charlie Hills 🦩",
-        "platform": "instagram",
-        "followers_count": 81045,
-        "median_views": 2066.0,
-        "niche": "ai"
-      },
-      "is_parsed": false,
-      "library_reel_id": null,
-      "trending_since": "2026-06-15T10:48:01.432040Z",
-      "frame_count": 0,
-      "is_followed": false
-    },
-    {
       "id": "aab8cc66-a4d7-4e8e-bf82-165bbecf7028",
       "url": "https://www.instagram.com/p/DZaer4ohdxQ/",
       "caption": "Comment “Mav” and I’ll send you the full podcast👇\n\nHow I’d make $100K/month with AI. \n\n#ai #aimonk #makemoneywithai #claude #higgsfield",
@@ -137263,35 +137234,6 @@
       "is_followed": false
     },
     {
-      "id": "790338ca-8741-49cd-bd5f-624626cd1e3c",
-      "url": "https://www.instagram.com/p/DZkwLAcsWIK/",
-      "caption": "Империя топ дизайн 😍👍\n\nДля заказа и консультации 8963-171-17-45 ☎️ вотсап \n\n#ковры #рекомендации #скидки",
-      "thumbnail_url": "https://scontent-phl2-1.cdninstagram.com/v/t51.82787-15/722995391_18047316644782966_7472186556757883255_n.jpg?stp=dst-jpg_e15_tt6&_nc_ht=scontent-phl2-1.cdninstagram.com&_nc_cat=110&_nc_oc=Q6cZ2gGc-ilNiqkV796Yre873CKHhcnsGxEkB08uhHUA3lNHR0R6Mv4BDuGAeohuWe9I6mc&_nc_ohc=GTtuPrKZIcAQ7kNvwFQs1H_&_nc_gid=-Xa_kO0kNmlxcp30A7HGqg&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_Af8lUWeYQTsuBI4JDBA6uEgJ44_RDHlxZx6BWQbFneLAIg&oe=6A36BA9C&_nc_sid=8b3546",
-      "published_at": "2026-06-14T17:14:26",
-      "duration": null,
-      "views": 4967,
-      "likes": 121,
-      "comments": 19,
-      "x_factor": 3.1,
-      "velocity": 23.5,
-      "hot_score": 0.0108,
-      "niche": "design",
-      "author": {
-        "profile_id": "85c03770-cfb9-4b4f-99bc-347c5b47958f",
-        "username": "kovri_muslim",
-        "display_name": "КОВРЫ / ХАСАВЮРТ",
-        "platform": "instagram",
-        "followers_count": 151999,
-        "median_views": 1604.0,
-        "niche": "ecommerce"
-      },
-      "is_parsed": false,
-      "library_reel_id": null,
-      "trending_since": "2026-06-15T10:47:45.226272Z",
-      "frame_count": 0,
-      "is_followed": false
-    },
-    {
       "id": "df45c608-f21b-41bc-a4c1-5448cfb8b391",
       "url": "https://www.instagram.com/p/DZiVqoQJHrB/",
       "caption": "🥳🥳🥳",
@@ -151879,35 +151821,6 @@
       "is_followed": false
     },
     {
-      "id": "bbaf6f51-c62f-4845-8e29-b0f53c4b5d18",
-      "url": "https://www.instagram.com/p/DZdPuUWSBSo/",
-      "caption": "It was 95 degrees out so the intrusive thoughts won.",
-      "thumbnail_url": "https://scontent-lga3-1.cdninstagram.com/v/t51.71878-15/720268534_877261285093703_4611904680293482927_n.jpg?stp=dst-jpg_e15_tt6&_nc_ht=scontent-lga3-1.cdninstagram.com&_nc_cat=111&_nc_oc=Q6cZ2gHgKrxmlTiq1-7LcaT4aVB4lmlQBumQvB74jux9zc3rZhphFc-jYuFubpxAjxw2lb0&_nc_ohc=u0C2eLuFpIoQ7kNvwG-8ugV&_nc_gid=nrbe_Gfh_HKP1Jp9xSOZQQ&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_Af9kHkRxSOqVk-K8nImuS_v2XCYSevNUu0tnrbARt-beBA&oe=6A39D172&_nc_sid=8b3546",
-      "published_at": "2026-06-11T19:15:27",
-      "duration": null,
-      "views": 7842,
-      "likes": 533,
-      "comments": 24,
-      "x_factor": 2.76,
-      "velocity": 3.3,
-      "hot_score": 0.0089,
-      "niche": "mental-health",
-      "author": {
-        "profile_id": "787373ed-a6a6-4c01-b52f-206bd9f4af17",
-        "username": "davideby.wce",
-        "display_name": "David Eby",
-        "platform": "instagram",
-        "followers_count": 18045,
-        "median_views": 2837.5,
-        "niche": "real-estate"
-      },
-      "is_parsed": false,
-      "library_reel_id": null,
-      "trending_since": "2026-06-15T13:22:50.739346Z",
-      "frame_count": 0,
-      "is_followed": false
-    },
-    {
       "id": "132d1a76-db6f-4795-8117-bacb1153ed26",
       "url": "https://www.instagram.com/p/DZZezXyot84/",
       "caption": "🇰🇿🇭🇺Подвесная камера упала в метре от оператора во время футбольного матча Казахстана и Венгрии в Дебрецене\n\nНикто не пострадал. Камера загорелась, прожгла кабель и затем рухнула с высоты около 20 метров на боковую линию поля, сообщил венгерский портал 24.hu. \n\nТоварищеский матч завершился со счетом 3:1, защитник сборной Казахстана Сергей Малый забил гол в первом тайме.\n\nSputnik Казахстан",
@@ -164291,35 +164204,6 @@
       "is_followed": false
     },
     {
-      "id": "a9a5e661-f7f8-452d-b1c4-065c22446f35",
-      "url": "https://www.instagram.com/p/DZiHH-StQNY/",
-      "caption": "Многие хотят изменить жизнь, но продолжают жить прошлым.\n\nКто виноват. Что произошло. Почему так вышло. Но прошлое нужно только для выводов, а не для жизни в нём.\n\nНельзя двигаться вперёд, постоянно оглядываясь назад.\n\nПишите 8 в комментариях и приходите на «Ревизию жизни», чтобы увидеть свои цели и начать движение вперёд.\n\nВаши мысли сейчас чаще в прошлом или в будущем?",
-      "thumbnail_url": "https://scontent-lga3-1.cdninstagram.com/v/t51.82787-15/724045469_18453198304113370_3104198323574992868_n.jpg?stp=dst-jpg_e15_fr_p1080x1080_tt6&_nc_ht=scontent-lga3-1.cdninstagram.com&_nc_cat=110&_nc_oc=Q6cZ2gG525RDJ2zL2rwPWC191633kIQhDCI00eKAMG2YVjD1yKV0Jz7NqjyZWi2xq7wrlpk&_nc_ohc=ivS-rNvk1QgQ7kNvwFJAEf6&_nc_gid=d0AtF3xfCK2eRwkqmFlQ1A&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_Af-EpVTR-pNhDObIeRa3-x4oIbMhUHaFPINWZ8uiFMyCmA&oe=6A37536B&_nc_sid=8b3546",
-      "published_at": "2026-06-13T16:37:56",
-      "duration": null,
-      "views": 1667,
-      "likes": 64,
-      "comments": 1,
-      "x_factor": 2.11,
-      "velocity": 4.5,
-      "hot_score": 0.0062,
-      "niche": "self-development",
-      "author": {
-        "profile_id": "370ef53e-28bb-4caf-bf1a-f0e5da43d45f",
-        "username": "andreyantonov888",
-        "display_name": "Андрей Антонов | Управление мышлением",
-        "platform": "instagram",
-        "followers_count": 167008,
-        "median_views": 791.0,
-        "niche": "self-development"
-      },
-      "is_parsed": false,
-      "library_reel_id": null,
-      "trending_since": "2026-06-15T10:16:17.542534Z",
-      "frame_count": 0,
-      "is_followed": false
-    },
-    {
       "id": "37fbafd5-f51c-4403-9b43-63610a8f8470",
       "url": "https://www.instagram.com/p/DYz5SQ6Ae6F/",
       "caption": "crashing fruits",
@@ -168347,35 +168231,6 @@
       "is_parsed": false,
       "library_reel_id": null,
       "trending_since": "2026-06-16T08:32:48.250348Z",
-      "frame_count": 0,
-      "is_followed": false
-    },
-    {
-      "id": "db56a953-3e31-4fbe-9357-b69c7aecfac4",
-      "url": "https://www.instagram.com/p/DZjqESJxyNa/",
-      "caption": "Я выкладываю и слезы на глазах 🥹\nСвое приложение , это невероятно , я не верю \n\nНикогда не сдавайтесь , слышите никогда ♥️",
-      "thumbnail_url": "https://scontent-lga3-1.cdninstagram.com/v/t51.82787-15/724052704_18590929255027971_1567923329645598788_n.jpg?stp=dst-jpg_e35_p1080x1080_sh2.08_tt6&_nc_ht=scontent-lga3-1.cdninstagram.com&_nc_cat=103&_nc_oc=Q6cZ2gGV-T052DfrnRllLuJVJRYa3ljbnTrZwGTlz8IpFGbys2FVirAfK9YGdkTJAqX9u-8&_nc_ohc=2JVf9XYIM8QQ7kNvwFgaMAJ&_nc_gid=6BG3Q_iLHM-fKX9P9CnWxA&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_Af-beNBBzQMVXQ6KThum3O-Ly2t7MGmwhl93t-ZJgX724w&oe=6A3AE1EC&_nc_sid=8b3546",
-      "published_at": "2026-06-14T07:01:45",
-      "duration": null,
-      "views": 2194,
-      "likes": 24,
-      "comments": 6,
-      "x_factor": 2.46,
-      "velocity": 0.3,
-      "hot_score": 0.0045,
-      "niche": "vibe-coding",
-      "author": {
-        "profile_id": "9ca46f48-9679-4024-80a1-5d0de65524e1",
-        "username": "julya.soldatova",
-        "display_name": "Julya | Архитектор состояний",
-        "platform": "instagram",
-        "followers_count": 4942,
-        "median_views": 891.0,
-        "niche": "lifestyle"
-      },
-      "is_parsed": false,
-      "library_reel_id": null,
-      "trending_since": "2026-06-15T11:50:34.781357Z",
       "frame_count": 0,
       "is_followed": false
     },
