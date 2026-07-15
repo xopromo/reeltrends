@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-07-15T15:25:57.671656+00:00",
-  "total": 5865,
+  "updated_at": "2026-07-15T17:16:24.911423+00:00",
+  "total": 5863,
   "new_count": 0,
   "new_last_24h": 0,
-  "version": 611,
+  "version": 612,
   "items": [
     {
       "id": "ae9878f4-0a39-41bf-b2e2-cd2e92764b3e",
@@ -80162,35 +80162,6 @@
       "is_followed": false
     },
     {
-      "id": "217cf873-63ca-4673-aac3-dcc4a3f391a0",
-      "url": "https://www.instagram.com/p/DZkgO18odFL/",
-      "caption": "I'm hosting a live online workshop on Breaking Free of Autopilot. Link in bio to join the Waitlist @davidcaixeiro .\n.\nMore info coming soon\n.\n.\n.\n.\n.\n.\n.\n. \n.\n.\n.\n.\n#autopilot #lifechanging #habits\n#personalgrowth #motivation",
-      "thumbnail_url": "https://scontent-lga3-3.cdninstagram.com/v/t51.82787-15/722448318_18600358903034910_5665688240545090082_n.jpg?stp=dst-jpg_e15_tt6&_nc_ht=scontent-lga3-3.cdninstagram.com&_nc_cat=106&_nc_oc=Q6cZ2gEwIQZvnaOruU18qY7faks1i_DhICLtGv1dICeUZGVkUQWy5MUagiC6ah_BFYgzZVc&_nc_ohc=lzbsGC7AnXoQ7kNvwEMg2Xd&_nc_gid=wzOE-GFB8YEPRuOEFWXB8w&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_Af97TdOJmlTCimbA0YWH8D7qQE6YP-qOfdUxudoX2pP0Fw&oe=6A3D7103&_nc_sid=8b3546",
-      "published_at": "2026-06-14T14:55:06",
-      "duration": null,
-      "views": 8838,
-      "likes": 938,
-      "comments": 27,
-      "x_factor": 6.59,
-      "velocity": 4.9,
-      "hot_score": 0.0166,
-      "niche": "self-development",
-      "author": {
-        "profile_id": "46e2e903-7249-4540-b8f5-25e6f12b4eb6",
-        "username": "davidcaixeiro",
-        "display_name": "David Caixeiro 🇨🇦🇵🇹",
-        "platform": "instagram",
-        "followers_count": 41940,
-        "median_views": 1341.0,
-        "niche": "self-development"
-      },
-      "is_parsed": false,
-      "library_reel_id": null,
-      "trending_since": "2026-06-15T17:00:49.492294Z",
-      "frame_count": 0,
-      "is_followed": false
-    },
-    {
       "id": "b21841ca-0fb6-40b3-b52f-54e13cdcb6a7",
       "url": "https://www.instagram.com/p/DZjxni_s7Gs/",
       "caption": "@Zamzam_Brothers_Dubai #zamelectproperties #zamzamelectronics #zamzamperfumes #foryou",
@@ -158980,35 +158951,6 @@
       "is_parsed": false,
       "library_reel_id": null,
       "trending_since": "2026-06-17T08:54:57.023811Z",
-      "frame_count": 0,
-      "is_followed": false
-    },
-    {
-      "id": "d058387e-408d-43f1-8ec2-872d0f427215",
-      "url": "https://www.instagram.com/p/DZjo9j_sMjk/",
-      "caption": "больше идей в профиле 💌\nВаша ведущая 🫶🏻",
-      "thumbnail_url": "https://scontent-ord5-1.cdninstagram.com/v/t51.71878-15/722215305_1728557878339477_7439845938011996234_n.jpg?stp=dst-jpg_e15_tt6&_nc_ht=scontent-ord5-1.cdninstagram.com&_nc_cat=101&_nc_oc=Q6cZ2gGqWMvetFTMR52Cg7tpZmOKTlhU7N_zlrnYhAMZWFyQvZm2CcGG34ty_yZzsrl1aY4&_nc_ohc=ApOmDuktFzsQ7kNvwEHpSw1&_nc_gid=D5akAaWho7d30bgf90N_kw&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_Af-FTqRALuvIE5pcvrJc-P7jdseOOjbaiBPXKbO7QUWmBQ&oe=6A36A851&_nc_sid=8b3546",
-      "published_at": "2026-06-14T06:51:22",
-      "duration": null,
-      "views": 2674,
-      "likes": 111,
-      "comments": null,
-      "x_factor": 2.31,
-      "velocity": 3.7,
-      "hot_score": 0.0076,
-      "niche": "personal-brand",
-      "author": {
-        "profile_id": "02042488-ce14-4b61-81d7-43095ba2f16d",
-        "username": "kycevolovaolesya",
-        "display_name": "Олеся Куцеволова ВЕДУЩИЙ МОСКВА | МО",
-        "platform": "instagram",
-        "followers_count": 3433,
-        "median_views": 1159.0,
-        "niche": "entertainment"
-      },
-      "is_parsed": false,
-      "library_reel_id": null,
-      "trending_since": "2026-06-15T15:58:50.574838Z",
       "frame_count": 0,
       "is_followed": false
     },
