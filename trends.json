@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-07-15T19:09:47.204714+00:00",
-  "total": 5863,
+  "updated_at": "2026-07-15T20:59:22.382153+00:00",
+  "total": 5862,
   "new_count": 0,
   "new_last_24h": 0,
-  "version": 613,
+  "version": 614,
   "items": [
     {
       "id": "ae9878f4-0a39-41bf-b2e2-cd2e92764b3e",
@@ -138042,35 +138042,6 @@
       "is_parsed": false,
       "library_reel_id": null,
       "trending_since": "2026-06-18T21:02:05.638320Z",
-      "frame_count": 0,
-      "is_followed": false
-    },
-    {
-      "id": "28cf993b-bbe1-407e-8a04-c7b920565f22",
-      "url": "https://www.instagram.com/p/DZnK4OgsDU0/",
-      "caption": "Тренеры, что думаете на счет подобных тренировок?",
-      "thumbnail_url": "https://scontent-det1-1.cdninstagram.com/v/t51.71878-15/721441047_994934909583659_2225053395414102942_n.jpg?stp=dst-jpg_e15_tt6&_nc_ht=scontent-det1-1.cdninstagram.com&_nc_cat=111&_nc_oc=Q6cZ2gHQjmvEFBfJnjrWFxGCIgFwrK11TX4qRFYmWl6ojAIrd9Knj1JKw0TW57WokudWalc&_nc_ohc=z6MGb9pgLAAQ7kNvwEjeMJH&_nc_gid=FXHi3Ub3QmMDmND_e4Ab5Q&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_Af8HnyuaTfCAtCL7jBB0i8lU0gb7YtP8qLe0-ibjrtAIPw&oe=6A38661D&_nc_sid=8b3546",
-      "published_at": "2026-06-15T15:46:09",
-      "duration": null,
-      "views": 5369,
-      "likes": 115,
-      "comments": 55,
-      "x_factor": 2.87,
-      "velocity": 12.1,
-      "hot_score": 0.0107,
-      "niche": "fitness",
-      "author": {
-        "profile_id": "ef4af0e6-edba-4e03-9b14-ccf80e7e3ebb",
-        "username": "gleb.fostenko",
-        "display_name": "Основатель школы MFG | Обучение тренеров маркетингу и продажам",
-        "platform": "instagram",
-        "followers_count": 31794,
-        "median_views": 1868.5,
-        "niche": "coaching"
-      },
-      "is_parsed": false,
-      "library_reel_id": null,
-      "trending_since": "2026-06-15T20:09:49.819251Z",
       "frame_count": 0,
       "is_followed": false
     },
