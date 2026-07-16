@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-07-16T13:48:17.375820+00:00",
-  "total": 5839,
+  "updated_at": "2026-07-16T15:38:14.310675+00:00",
+  "total": 5838,
   "new_count": 0,
   "new_last_24h": 0,
-  "version": 619,
+  "version": 620,
   "items": [
     {
       "id": "ae9878f4-0a39-41bf-b2e2-cd2e92764b3e",
@@ -157907,35 +157907,6 @@
       "is_parsed": false,
       "library_reel_id": null,
       "trending_since": "2026-06-23T17:08:45.131049Z",
-      "frame_count": 0,
-      "is_followed": false
-    },
-    {
-      "id": "7200caf5-2cae-4780-8891-aeb6b03d4071",
-      "url": "https://www.instagram.com/p/DZnTuZ3BBY8/",
-      "caption": "🚇 Метро в Бразилии иногда выглядит как аттракцион без ремней. Вагон трясёт, людей качает, кто-то хватается за поручни, а со стороны кажется, будто поезд не едет по рельсам, а проходит испытание на выживание.\n\n😬 В метро и пригородных поездах сильная тряска может быть связана с состоянием пути, скоростью, стыками, торможением или конкретным участком линии. Для местных это может быть почти привычным, но для человека, который видит такое впервые, поездка выглядит как бесплатный экстремальный парк.\n\n😭 Самое смешное и страшное одновременно — лица пассажиров: одни уже смирились, другие явно впервые поняли, зачем в вагоне столько поручней. Ты бы спокойно доехал или вышел бы на следующей станции просто из уважения к своим нервам?\n\n🔥 Подписывайся, здесь ещё больше моментов, где обычная поездка превращается в приключение → @rizz.maker",
-      "thumbnail_url": "https://scontent-lax3-2.cdninstagram.com/v/t51.71878-15/723100352_27250580087967471_7692423785371511118_n.jpg?stp=dst-jpg_e15_tt6&_nc_ht=scontent-lax3-2.cdninstagram.com&_nc_cat=103&_nc_oc=Q6cZ2gEMCwyeAoSI1qU7oPBRtNNnnXMaxPc-CcF1Z-q9odn8I22NCx9xGs1j0xegYCXRheA&_nc_ohc=Fl9EsSlh8kYQ7kNvwH0s3HB&_nc_gid=ym40C2NMuqCyuIN8qAT6qw&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_Af-7ehidKbb0n7BR8O2CzgUSR66bBBsqpKSKA2VqqL2isQ&oe=6A3849E4&_nc_sid=8b3546",
-      "published_at": "2026-06-15T17:09:54",
-      "duration": null,
-      "views": 8794,
-      "likes": 46,
-      "comments": null,
-      "x_factor": 2.79,
-      "velocity": 28.3,
-      "hot_score": 0.0077,
-      "niche": "travel",
-      "author": {
-        "profile_id": "315c5369-8e9f-489d-9787-70ad8886b98f",
-        "username": "rizz.maker",
-        "display_name": "Influence Lab | Лаборатория Влияния",
-        "platform": "instagram",
-        "followers_count": 13423,
-        "median_views": 3156.0,
-        "niche": "entertainment"
-      },
-      "is_parsed": false,
-      "library_reel_id": null,
-      "trending_since": "2026-06-16T15:19:31.833302Z",
       "frame_count": 0,
       "is_followed": false
     },
