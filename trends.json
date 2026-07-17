@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-07-17T13:26:07.517932+00:00",
-  "total": 5804,
+  "updated_at": "2026-07-17T15:12:42.874268+00:00",
+  "total": 5802,
   "new_count": 0,
   "new_last_24h": 0,
-  "version": 629,
+  "version": 630,
   "items": [
     {
       "id": "ae9878f4-0a39-41bf-b2e2-cd2e92764b3e",
@@ -147471,35 +147471,6 @@
       "is_followed": false
     },
     {
-      "id": "50903422-c26c-4f7b-8e33-d1873c4bff5e",
-      "url": "https://www.instagram.com/p/DZcxStgMMv7/",
-      "caption": "Мы познакомились при поступлении Институт 🙈",
-      "thumbnail_url": "https://scontent-lax3-1.cdninstagram.com/v/t51.71878-15/722637691_1782009473177260_7070963443342322838_n.jpg?stp=dst-jpg_e15_tt6&_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_cat=104&_nc_oc=Q6cZ2gHIn7aJ9dxF55jK9u_nzXgZOsh0C-UyWwnGMuCKxA4xkhK953Rn93arQJjosNssUeM&_nc_ohc=2hOFPGMlTU4Q7kNvwHsD9O3&_nc_gid=WkFPxOUtsYv8YSoRssG1Lg&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_Af8YM0YvZwKwQ8AHhdg4YTkoox6GKO0j_ez-E605HIUekQ&oe=6A3160D5&_nc_sid=8b3546",
-      "published_at": "2026-06-11T14:49:48",
-      "duration": null,
-      "views": 3451,
-      "likes": 105,
-      "comments": 1,
-      "x_factor": 2.02,
-      "velocity": 90.4,
-      "hot_score": 0.0094,
-      "niche": "relationships",
-      "author": {
-        "profile_id": "b0be2276-60f6-4750-aa76-b2f95470d557",
-        "username": "veronika.zadorozhnaya",
-        "display_name": "ВЕРОНІКА ЗАДОРОЖНА/ЦИФРОВИЙ ПСИХОЛОГ МІЛЬЙОНЕРІВ",
-        "platform": "instagram",
-        "followers_count": 175229,
-        "median_views": 1705.5,
-        "niche": "numerology"
-      },
-      "is_parsed": false,
-      "library_reel_id": null,
-      "trending_since": "2026-06-17T13:33:21.963714Z",
-      "frame_count": 0,
-      "is_followed": false
-    },
-    {
       "id": "579ca9f4-decf-45e8-a831-923b1a283cb2",
       "url": "https://www.instagram.com/p/DZcYYvxI4hn/",
       "caption": "Поменял Ducati на 300 кубовый Benda. И ни разу не пожалел.\nDucati это адреналин на первый месяц, потом привыкаешь. В пробках неудобный, горячий, постоянно на нервах. Да и дети дома, инстинкт самосохранения работает быстрее любой динамики.\nBenda едет 100-120, легкий как скутер, спина не устает, голова не забита лишним. А Разницы с KTM 390 не почувствовал вообще.\n\nА ты на чем ездишь? Поделись в комментах, интересно.",
@@ -153644,35 +153615,6 @@
       "is_parsed": false,
       "library_reel_id": null,
       "trending_since": "2026-06-24T08:06:36.638546Z",
-      "frame_count": 0,
-      "is_followed": false
-    },
-    {
-      "id": "e40659c5-d895-486c-9070-292d70f739c8",
-      "url": "https://www.instagram.com/p/DZpOCtDIxxc/",
-      "caption": "Как за 41 секунду собрать базу потенциальных клиентов с помощью ИИ? 🚀\n\nВ этом видео показываю, как через Google Карты и Chat4Data получить контакты компаний, собрать аудиторию для таргета и запустить рекламу на самых заинтересованных клиентов 🎯\n\nХочешь получать заявки стабильно? 🔥\n\nПиши «Запуск» в комментариях или оставляй заявку по ссылке в шапке профиля 👆",
-      "thumbnail_url": "https://scontent-phl2-1.cdninstagram.com/v/t51.82787-15/724420136_17961980235069483_2551364809371305321_n.jpg?stp=dst-jpg_e15_fr_p1080x1080_tt6&_nc_ht=scontent-phl2-1.cdninstagram.com&_nc_cat=103&_nc_oc=Q6cZ2gFKJIvwTnaWjFG9CnP2V-XE8mXIDOH_WtIkYUzN9JjHyMWVd7shJmsAYDy-zdn1Et0&_nc_ohc=C6AH2AzJFpQQ7kNvwEGNseR&_nc_gid=6Mb-vt-PacYdk5HVK8z8yw&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_Af9iIaIH618_nANp4DYeRCQWHoFzxHK9n9l-BWAGUsgZ0w&oe=6A3FCFE8&_nc_sid=8b3546",
-      "published_at": "2026-06-16T10:53:16",
-      "duration": null,
-      "views": 4788,
-      "likes": 109,
-      "comments": 23,
-      "x_factor": 2.99,
-      "velocity": 2.8,
-      "hot_score": 0.0084,
-      "niche": "marketing",
-      "author": {
-        "profile_id": "2178ef65-8597-4300-a8fd-dafc7ac97553",
-        "username": "alex_ponyatov",
-        "display_name": "Александр Понятов",
-        "platform": "instagram",
-        "followers_count": 19272,
-        "median_views": 1599.0,
-        "niche": "marketing"
-      },
-      "is_parsed": false,
-      "library_reel_id": null,
-      "trending_since": "2026-06-17T13:33:43.541758Z",
       "frame_count": 0,
       "is_followed": false
     },
