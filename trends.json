@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-07-17T15:12:42.874268+00:00",
-  "total": 5802,
+  "updated_at": "2026-07-17T17:10:38.931635+00:00",
+  "total": 5801,
   "new_count": 0,
   "new_last_24h": 0,
-  "version": 630,
+  "version": 631,
   "items": [
     {
       "id": "ae9878f4-0a39-41bf-b2e2-cd2e92764b3e",
@@ -115335,35 +115335,6 @@
       "is_parsed": false,
       "library_reel_id": null,
       "trending_since": "2026-06-18T18:25:55.734968Z",
-      "frame_count": 0,
-      "is_followed": false
-    },
-    {
-      "id": "1ea02dc3-7351-4e8c-9f09-874b0c611b6c",
-      "url": "https://www.instagram.com/p/DZqUXqUs7mC/",
-      "caption": "Перешли тому кто делал твой сайт. Пусть проверит.\n\n7 ошибок в форме заявки которые убивают конверсию - и большинство владельцев бизнеса о них даже не догадываются. Одна правка в кнопке меняет цифры без касания рекламы.\n\nНапиши ФОРМА в комментариях - пришлю чеклист.",
-      "thumbnail_url": "https://scontent-mia3-1.cdninstagram.com/v/t51.71878-15/724270270_2068701064046951_648419759809743903_n.jpg?stp=dst-jpg_e15_tt6&_nc_ht=scontent-mia3-1.cdninstagram.com&_nc_cat=111&_nc_oc=Q6cZ2gFE55_LFNvN4lFggW2KaRcBqM0A3XpkR0SJtM8YeMG0LrTX7gHTlp9hD2fCNpzLVAY&_nc_ohc=p9kdaIOO-EAQ7kNvwFtrBan&_nc_gid=uzdabW695JyNU9NEIW5lgw&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_Af8srQRXJmKecKsy0Axa2aoBAptDb3M-orxWy700WxeIjA&oe=6A40CDC4&_nc_sid=8b3546",
-      "published_at": "2026-06-16T21:11:23",
-      "duration": null,
-      "views": 3917,
-      "likes": 148,
-      "comments": 58,
-      "x_factor": 5.13,
-      "velocity": 3.6,
-      "hot_score": 0.013,
-      "niche": "marketing",
-      "author": {
-        "profile_id": "eee884ea-1e36-4777-ae37-430256eb753a",
-        "username": "govoritradik",
-        "display_name": "Говорит Радик | Сайты, реклама, дизайн",
-        "platform": "instagram",
-        "followers_count": 5952,
-        "median_views": 764.0,
-        "niche": "marketing"
-      },
-      "is_parsed": false,
-      "library_reel_id": null,
-      "trending_since": "2026-06-17T15:50:42.174393Z",
       "frame_count": 0,
       "is_followed": false
     },
