@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-07-17T09:56:30.765539+00:00",
-  "total": 5809,
+  "updated_at": "2026-07-17T11:22:58.991713+00:00",
+  "total": 5808,
   "new_count": 0,
   "new_last_24h": 0,
-  "version": 627,
+  "version": 628,
   "items": [
     {
       "id": "ae9878f4-0a39-41bf-b2e2-cd2e92764b3e",
@@ -165128,35 +165128,6 @@
       "is_parsed": false,
       "library_reel_id": null,
       "trending_since": "2026-06-22T11:18:45.462481Z",
-      "frame_count": 0,
-      "is_followed": false
-    },
-    {
-      "id": "330d447d-0139-4441-834e-d9cffacb1b1d",
-      "url": "https://www.instagram.com/p/DZcwGtaiWrb/",
-      "caption": "📚 Жай ғана сабақ емес — көзге көрінетін нәтиже.\n\n🚀 Біз оқушылардың дағдыларын дамытып, білімін арттырып, өзіне сенімді түрде алға жылжуына жағдай жасаймыз.Сондықтан бізге ата-аналар да, ірі компаниялар да сенім артады. Оқу сапасы өз нәтижесімен дәлелденеді.\n\n✨ Біздің топтарға қосылып, нәтижеге бастар жолды бүгіннен бастаңыз!\n______\n\n📚 Не просто занятия, а результат, который заметен.\n\n🚀 Мы создаем среду, где ученики развивают навыки, получают знания и уверенно двигаются вперед.\nНам доверяют родители и крупные компании, потому что качество обучения говорит само за себя.\n\n✨ Присоединяйтесь к нашим группам и начните путь к результату уже сегодня!",
-      "thumbnail_url": "https://scontent-bos5-1.cdninstagram.com/v/t51.82787-15/719203723_18028238204827820_542231618283962465_n.jpg?stp=dst-jpg_e15_tt6&_nc_ht=scontent-bos5-1.cdninstagram.com&_nc_cat=108&_nc_oc=Q6cZ2gFHvt0Fz68GV6by_maCaVAliBZ_CnzmPVh32q7V4Wo0OX1kIVQ_vsouqmxn4spm33k&_nc_ohc=f_Jhq92__cgQ7kNvwH3Jx-S&_nc_gid=R0Pxx7pKQazDl4vHIRw3hA&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_Af_ky7Mz0pQn_kRCWfQ2H5Xm1GxvPDfMxj5EH3Msf9v-iQ&oe=6A39B6B7&_nc_sid=8b3546",
-      "published_at": "2026-06-11T14:50:01",
-      "duration": null,
-      "views": 1839,
-      "likes": 71,
-      "comments": 17,
-      "x_factor": 2.05,
-      "velocity": 0.7,
-      "hot_score": 0.0054,
-      "niche": "education",
-      "author": {
-        "profile_id": "c514b8b6-49d8-42d7-a488-1118e9d3a7a8",
-        "username": "uniteus.kz",
-        "display_name": "АНГЛИЙСКИЙ ЯЗЫК | Корпоративное обучение | ШЫМКЕНТ",
-        "platform": "instagram",
-        "followers_count": 3618,
-        "median_views": 897.5,
-        "niche": "education"
-      },
-      "is_parsed": false,
-      "library_reel_id": null,
-      "trending_since": "2026-06-17T09:56:52.079379Z",
       "frame_count": 0,
       "is_followed": false
     },
