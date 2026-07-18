@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-07-18T02:25:32.973494+00:00",
-  "total": 5779,
+  "updated_at": "2026-07-18T06:04:19.077699+00:00",
+  "total": 5778,
   "new_count": 0,
   "new_last_24h": 0,
-  "version": 635,
+  "version": 636,
   "items": [
     {
       "id": "ae9878f4-0a39-41bf-b2e2-cd2e92764b3e",
@@ -154340,35 +154340,6 @@
       "is_parsed": false,
       "library_reel_id": null,
       "trending_since": "2026-06-21T12:40:41.583843Z",
-      "frame_count": 0,
-      "is_followed": false
-    },
-    {
-      "id": "a6ecd2cb-4afe-4a6c-aa50-ffa1bd24fc44",
-      "url": "https://www.instagram.com/p/DZpHBywMMCF/",
-      "caption": "Машины которые были бы вам интересны, напишите в комментариях!",
-      "thumbnail_url": "https://scontent-hou1-1.cdninstagram.com/v/t51.71878-15/724980030_1724728102014350_6284757275688608283_n.jpg?stp=dst-jpg_e15_tt6&_nc_ht=scontent-hou1-1.cdninstagram.com&_nc_cat=102&_nc_oc=Q6cZ2gEJKRZr4_yOfzL9SL_8DcCHLoxn3ycMGOPylim9DVX0s1BGS82I-sK0jIVKcnizoJE&_nc_ohc=pCUITwAMpbEQ7kNvwGDzCN4&_nc_gid=DK2UotVKQACkwBhj_CJbvA&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_Af8gjLKiE-TwNqbLGffxYTnXlEhNsIhnAt0cKTZX3YGyEQ&oe=6A3F994F&_nc_sid=8b3546",
-      "published_at": "2026-06-16T10:05:29",
-      "duration": null,
-      "views": 5177,
-      "likes": 64,
-      "comments": 4,
-      "x_factor": 4.41,
-      "velocity": 0.1,
-      "hot_score": 0.0081,
-      "niche": "automotive",
-      "author": {
-        "profile_id": "098778f9-0195-475a-a943-a9b622e06793",
-        "username": "right_auto_official",
-        "display_name": "Андрей Никифоров | Все про авто",
-        "platform": "instagram",
-        "followers_count": 56,
-        "median_views": 1174.0,
-        "niche": "automotive"
-      },
-      "is_parsed": false,
-      "library_reel_id": null,
-      "trending_since": "2026-06-18T06:03:26.626537Z",
       "frame_count": 0,
       "is_followed": false
     },
