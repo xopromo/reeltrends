@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-07-18T09:24:23.764437+00:00",
-  "total": 5776,
+  "updated_at": "2026-07-18T11:02:45.643101+00:00",
+  "total": 5774,
   "new_count": 0,
   "new_last_24h": 0,
-  "version": 637,
+  "version": 638,
   "items": [
     {
       "id": "ae9878f4-0a39-41bf-b2e2-cd2e92764b3e",
@@ -140685,35 +140685,6 @@
       "is_followed": false
     },
     {
-      "id": "eae0ec59-0cd9-4a88-b626-79926c9952a6",
-      "url": "https://www.instagram.com/p/DZprx57uJHz/",
-      "caption": "Comment “retrieval” for the full pipeline with install commands 👇\n\nAnthropic published the exact recipe to cut your AI’s wrong answers by 67%. It’s not a better model. It’s not a better prompt.\n\nThe problem is boring. Your AI chops documents into chunks, and a chunk like “revenue grew 3%” has no idea which company or year it belongs to. So it retrieves the wrong one.\n\nThe four part fix:\n\nOne. Docling parses your documents cleanly. Tables and headings stay intact, not garbled.\n\nTwo. Contextual retrieval. Before you store each chunk, a cheap model reads the whole document and writes a short note explaining where the chunk sits. Now it knows it’s ACME, Q2, 2023.\n\nThree. Search two ways at once. Keyword and meaning. Fuse the results by rank. Keyword catches exact terms, meaning catches paraphrase.\n\nFour. A reranker reads your question and each result together and reorders the top 50 down to the best 5.\n\nThe gotcha: the context has to be added before you embed and before you index. Not at search time. Or you have to reprocess your entire library.\n\nThe stack: Docling + Anthropic Contextual Retrieval + hybrid BM25/vector + Cohere Rerank.\n\nComment “retrieval” for the full build pipeline plus the gotchas that break most first attempts 👇",
-      "thumbnail_url": "https://scontent-dfw5-2.cdninstagram.com/v/t51.71878-15/724256693_1326262469594104_6864655533998261592_n.jpg?stp=dst-jpg_e15_tt6&_nc_ht=scontent-dfw5-2.cdninstagram.com&_nc_cat=104&_nc_oc=Q6cZ2gHokn5bt3G1MbHm8O0TzAHV-4bXwFw5Ymvfoxo2CT1mfT2M40thf85rAB-3p164CEU&_nc_ohc=tqkpOpCVl3gQ7kNvwE-SE21&_nc_gid=G2T4ku4Z_D0JsB8q6FY6FQ&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_Af_1t5tD02ekzh8L7UHCO_id8yDQ3kT5Py-BL687Tqnfrw&oe=6A4013D0&_nc_sid=8b3546",
-      "published_at": "2026-06-16T15:12:02",
-      "duration": null,
-      "views": 4491,
-      "likes": 189,
-      "comments": 312,
-      "x_factor": 2.28,
-      "velocity": 1.5,
-      "hot_score": 0.0103,
-      "niche": "ai",
-      "author": {
-        "profile_id": "5a37a881-301d-4105-b465-69d2be9ffde0",
-        "username": "keshavsuki",
-        "display_name": "Keshav Sukirya | AI Consulting",
-        "platform": "instagram",
-        "followers_count": 14873,
-        "median_views": 1974.0,
-        "niche": "vibe-coding"
-      },
-      "is_parsed": false,
-      "library_reel_id": null,
-      "trending_since": "2026-06-18T10:09:33.615207Z",
-      "frame_count": 0,
-      "is_followed": false
-    },
-    {
       "id": "f291f081-1a53-4383-aa77-b5b8ae580b57",
       "url": "https://www.instagram.com/p/DZnfx7StYz1/",
       "caption": "Обязательно возьмите на заметку 🙌🏽\n\nСтудия ремонта «Сан Саныч»\n\n#ремонтспб #ремонтквартирспб #ремонтподключспб #ремонтквартирмосква #ремонтподключмосква",
@@ -159821,35 +159792,6 @@
       "is_parsed": false,
       "library_reel_id": null,
       "trending_since": "2026-06-14T11:36:33.106438Z",
-      "frame_count": 0,
-      "is_followed": false
-    },
-    {
-      "id": "e69eee01-8ade-4073-a27e-a9b68549425f",
-      "url": "https://www.instagram.com/p/DZh8LPNRA8o/",
-      "caption": "ЦЕНА: 13 500 ₸ \n\nДЛЯ КОНСУЛЬТАЦИИ ПО НАЛИЧИЮ И ЦЕНЕ ПИШИ В КОММЕНТАРИЯХ СЛОВО «ХОЧУ»\n\nЛЕТО 2026 🔥\n\n✔️Имеется Kaspi RED\n\n🚚Доставка по всему Казахстану",
-      "thumbnail_url": "https://instagram.fmkc1-1.fna.fbcdn.net/v/t51.82787-15/722753937_18471518314103934_4518491511149661632_n.jpg?stp=dst-jpg_e15_tt6&_nc_ht=instagram.fmkc1-1.fna.fbcdn.net&_nc_cat=106&_nc_oc=Q6cZ2gGIYfl8eWUnFo2vZU0XoK9FgR1uxHi6uiiHO9zmpzergu_uxMAUUZIgEuBswhu-mcU&_nc_ohc=7q9lrepK-mwQ7kNvwGLCbgR&_nc_gid=i6xSxbjB3jNeCD9Xgy9VHQ&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_Af9NSv6LF37AyZMqHn0xwp2fSo0Toi-TY8j79J-TJz6CBA&oe=6A3AE7A4&_nc_sid=8b3546",
-      "published_at": "2026-06-13T15:00:00",
-      "duration": null,
-      "views": 2884,
-      "likes": 89,
-      "comments": 21,
-      "x_factor": 2.18,
-      "velocity": 2.9,
-      "hot_score": 0.0069,
-      "niche": "ecommerce",
-      "author": {
-        "profile_id": "c40db24e-bff6-42f9-8bfe-e59ad896bf73",
-        "username": "dom_obuvi_astana",
-        "display_name": "ДОМ ОБУВИ•САПОЖОК•LIETA|AСТАНА",
-        "platform": "instagram",
-        "followers_count": 94444,
-        "median_views": 1325.0,
-        "niche": "ecommerce"
-      },
-      "is_parsed": false,
-      "library_reel_id": null,
-      "trending_since": "2026-06-18T09:38:34.631516Z",
       "frame_count": 0,
       "is_followed": false
     },
