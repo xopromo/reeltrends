@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-07-19T09:51:05.327850+00:00",
-  "total": 5745,
+  "updated_at": "2026-07-19T11:08:37.458262+00:00",
+  "total": 5743,
   "new_count": 0,
   "new_last_24h": 0,
-  "version": 647,
+  "version": 648,
   "items": [
     {
       "id": "ae9878f4-0a39-41bf-b2e2-cd2e92764b3e",
@@ -116006,35 +116006,6 @@
       "is_followed": false
     },
     {
-      "id": "9bc6258b-6798-4312-9091-6e973da4f7a5",
-      "url": "https://www.instagram.com/p/DZsRNPFN7ss/",
-      "caption": "Если используете Claude Code, Cursor, Codex или других AI-агентов для разработки, этот ресурс может сэкономить вам десятки часов.\n\nНашёл открытый каталог Skills, MCP-серверов и CLI-инструментов для российских сервисов:\n\n• 1С\n• Битрикс24\n• GigaChat\n• Яндекс\n• Wildberries\n• Ozon\n\nВместо того чтобы каждый раз объяснять нейросети API и бизнес-логику сервисов, можно подключить готовые инструменты и сразу приступить к работе.\n\nПодойдёт для вайбкодинга, автоматизации, AI-разработки и создания собственных агентов.\n\nОсобенно полезно тем, кто делает SaaS, Telegram-ботов, интеграции или внутренние корпоративные системы.\n\nПиши «РУ» в комментарии — отправлю ссылку.\n\n#buildinpublic #saas #claude #ai #вайбкодинг",
-      "thumbnail_url": "https://scontent-mia3-3.cdninstagram.com/v/t51.82787-15/726622023_17926105671350780_487818619672001468_n.jpg?stp=dst-jpg_e15_tt6&_nc_ht=scontent-mia3-3.cdninstagram.com&_nc_cat=108&_nc_oc=Q6cZ2gGu42AhtAlfIKohm1jx9GD9zNzGUTyq8xE1r3jtRFtWoxLykEZmNk_9uHXnmVqsVAXm8TchvsdK7ngqzTG5kUT_&_nc_ohc=uUT4wocrEzcQ7kNvwGy04KM&_nc_gid=t1ofYzPgo3i9SVRXeueZaA&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_Af_fgzK68XXJ1GS11_-FPUIUmn_Bdsy7dcB9bux4rsCcpg&oe=6A413CDF&_nc_sid=8b3546",
-      "published_at": "2026-06-17T15:17:25",
-      "duration": null,
-      "views": 6888,
-      "likes": 100,
-      "comments": 375,
-      "x_factor": 3.62,
-      "velocity": 1.0,
-      "hot_score": 0.0129,
-      "niche": "vibe-coding",
-      "author": {
-        "profile_id": "626969e9-fc30-4ff5-bfd7-2381f37d9dc3",
-        "username": "buhaistrikalo",
-        "display_name": "Кирилл • Вайб-кодинг • Solo dev",
-        "platform": "instagram",
-        "followers_count": 7985,
-        "median_views": 1902.0,
-        "niche": "vibe-coding"
-      },
-      "is_parsed": false,
-      "library_reel_id": null,
-      "trending_since": "2026-06-19T10:53:48.757068Z",
-      "frame_count": 0,
-      "is_followed": false
-    },
-    {
       "id": "b9f35759-a06d-4aa4-bae0-8c9239cf1d00",
       "url": "https://www.instagram.com/p/DZpshuLoNuP/",
       "caption": "Why does a Hugging Face model have so many files?\n\nThey may look random, but each file has a specific job.\n\nModel Card\nExplains what the model does, how to use it, its capabilities, limitations, benchmarks, and license.\n\nconfig.json\nDescribes the model architecture, including its layers, dimensions, attention setup, and model type.\n\n.safetensors\nContains the model weights: the billions of learned numbers that capture patterns from training. Large models split these weights across multiple files called shards.\n\nmodel.safetensors.index.json\nActs as a map, showing which shard contains each model weight.\n\ntokenizer.json\nStores the vocabulary and rules for converting text into tokens and token IDs.\n\ntokenizer_config.json\nStores additional tokenizer behaviour, including special tokens and chat formatting.\n\ngeneration_config.json\nContains default generation settings such as temperature, top-p, maximum output length, and special token IDs.\n\nThe easiest way to remember it:\n\nConfig builds the structure.\nWeights store the learning.\nThe index finds the weights.\nThe tokenizer prepares the input.\nGeneration config shapes the output.\n\nAnd normally, you do not load these files manually. from_pretrained() reads them and assembles everything for you.\n\n.\n.\n.\n[Hugging Face, Hugging Face Models, Model Repository, LLM, Large Language Models, DeepSeek, Model Card, config.json, Safetensors, Model Weights, Weight Shards, Model Checkpoint, Tokenizer, Tokenization, tokenizer.json, tokenizer_config.json, generation_config.json, Transformers, from_pretrained, AI Engineering, LLM Engineering, Machine Learning, Deep Learning, Generative AI, Model Inference, Open Source AI, Python, PyTorch]",
@@ -156283,35 +156254,6 @@
       "is_parsed": false,
       "library_reel_id": null,
       "trending_since": "2026-06-22T14:55:12.889499Z",
-      "frame_count": 0,
-      "is_followed": false
-    },
-    {
-      "id": "b7087db4-ee0d-4080-933b-b3189dc9f32e",
-      "url": "https://www.instagram.com/p/DZumfs7vDhb/",
-      "caption": "Спорт высоких достижений редко проходит без последствий для здоровья. Именно поэтому для людей важны не рекорды, а регулярное движение.\n\nЧтобы поддерживать здоровье, на самом деле нужно не так много: утренняя зарядка, ежедневная ходьба и умеренная физическая активность.\n\nГлавное здесь не интенсивность, а регулярность.\n\nЕсли хочешь внедрить ходьбу в привычку и делать это в поддерживающем окружении, присоединяйся к международному сообществу Walk&Talk. Это беспл•тно.\n\nПиши «ходьба» в комментариях, пришлю ссылку для регистрации.",
-      "thumbnail_url": "https://scontent-lax3-1.cdninstagram.com/v/t51.82787-15/725733435_18592791895060384_8534594846409855939_n.jpg?stp=dst-jpg_e15_fr_p1080x1080_tt6&_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_cat=104&_nc_oc=Q6cZ2gFhJefEqG_swcoj65Fm-7vCtI5-0eK7bXzyadCQgu57NbY__IStxx3OUZ_9AmfBBns&_nc_ohc=44RDyfDCIkoQ7kNvwGkAKj2&_nc_gid=7Bk7zUBuehPtfwfr82HR1Q&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_Af9nGCQ9qOPiVsaFqHY2LTXPcvT8313wTIMy1TTLbBPvHg&oe=6A406866&_nc_sid=8b3546",
-      "published_at": "2026-06-18T13:01:45",
-      "duration": null,
-      "views": 4493,
-      "likes": 107,
-      "comments": 5,
-      "x_factor": 3.08,
-      "velocity": 3.6,
-      "hot_score": 0.0076,
-      "niche": "health",
-      "author": {
-        "profile_id": "33b51535-955e-4310-bf5e-531dfaa1dbb7",
-        "username": "rey.natalya",
-        "display_name": "Наталья Рей | Северный Кипр | Путешествия | Осознанная ходьба",
-        "platform": "instagram",
-        "followers_count": 126917,
-        "median_views": 1458.0,
-        "niche": "health"
-      },
-      "is_parsed": false,
-      "library_reel_id": null,
-      "trending_since": "2026-06-19T10:21:11.042582Z",
       "frame_count": 0,
       "is_followed": false
     },
