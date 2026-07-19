@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-07-19T19:04:33.399815+00:00",
-  "total": 5729,
+  "updated_at": "2026-07-19T20:46:24.206997+00:00",
+  "total": 5728,
   "new_count": 0,
   "new_last_24h": 0,
-  "version": 652,
+  "version": 653,
   "items": [
     {
       "id": "ae9878f4-0a39-41bf-b2e2-cd2e92764b3e",
@@ -165534,35 +165534,6 @@
       "is_parsed": false,
       "library_reel_id": null,
       "trending_since": "2026-07-02T08:43:14.560957Z",
-      "frame_count": 0,
-      "is_followed": false
-    },
-    {
-      "id": "e24ee0aa-e8e4-4db2-b9ed-5f158603af84",
-      "url": "https://www.instagram.com/p/DZvAUL9t71G/",
-      "caption": "Сохраняй себе и подружке🫶🏻\n\nБрюки с WB\nАтласные #1084398293\nШоколад #1108930702\nАлладины #868724400",
-      "thumbnail_url": "https://scontent-lax7-1.cdninstagram.com/v/t51.71878-15/726794563_2418135525340021_2672520395496047709_n.jpg?stp=dst-jpg_e15_tt6&_nc_ht=scontent-lax7-1.cdninstagram.com&_nc_cat=101&_nc_oc=Q6cZ2gGx_hmUHxcNPZ94UsH0s2FwD_36EX9BTaUN2uKXowd-59B4bSjg7p7mIAi5YjX-qBo&_nc_ohc=Ejumb8rrrHAQ7kNvwFb7HNe&_nc_gid=jdsbv4j7OhdLXcpxxRfmZA&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_Af8CfAREMeYe-GQgkmKwFStEUeZ3AzAlpUqaZH0OWpHnHg&oe=6A4322CF&_nc_sid=8b3546",
-      "published_at": "2026-06-18T16:47:20",
-      "duration": null,
-      "views": 7038,
-      "likes": 79,
-      "comments": null,
-      "x_factor": 2.58,
-      "velocity": 1.2,
-      "hot_score": 0.0034,
-      "niche": "fashion",
-      "author": {
-        "profile_id": "1c1d977d-fe0e-4001-a075-4374585d0a64",
-        "username": "nata.style17",
-        "display_name": "Nata|Обзоры Одежды",
-        "platform": "instagram",
-        "followers_count": 4220,
-        "median_views": 2732.5,
-        "niche": "fashion"
-      },
-      "is_parsed": false,
-      "library_reel_id": null,
-      "trending_since": "2026-06-19T20:10:19.779369Z",
       "frame_count": 0,
       "is_followed": false
     },
