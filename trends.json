@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-07-21T02:35:56.077796+00:00",
-  "total": 5680,
+  "updated_at": "2026-07-21T06:27:26.682029+00:00",
+  "total": 5679,
   "new_count": 0,
   "new_last_24h": 0,
-  "version": 662,
+  "version": 663,
   "items": [
     {
       "id": "ae9878f4-0a39-41bf-b2e2-cd2e92764b3e",
@@ -144306,35 +144306,6 @@
       "is_parsed": false,
       "library_reel_id": null,
       "trending_since": "2026-06-26T12:30:46.067422Z",
-      "frame_count": 0,
-      "is_followed": false
-    },
-    {
-      "id": "1d3c79db-ada2-478d-825c-e1054c405a8b",
-      "url": "https://www.instagram.com/p/DZyUfLTNvWp/",
-      "caption": "I’ll do it tomorrow💀\nFollow (@11_rod ) For More Content‼️\n\n-\n\n-\n-\n#reels #fyp #tiktok #instagramreels #relatable",
-      "thumbnail_url": "https://instagram.fsac1-2.fna.fbcdn.net/v/t51.82787-15/726380594_18170436628421213_7195852607044656509_n.jpg?stp=dst-jpg_e35_p1080x1080_sh2.08_tt6&_nc_ht=instagram.fsac1-2.fna.fbcdn.net&_nc_cat=105&_nc_oc=Q6cZ2gGRnbTKijlOYCYZhPgt_gsaQt35AoFtkiApRhbGMtUAP3ycoR5ObcJfcBgN7sjWBIw&_nc_ohc=h8q86P5fe3UQ7kNvwH8uIJ4&_nc_gid=QZsCFLRGDNSW11T4JeqAFQ&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_Af9PdEdpxaibAInZDKh5Yn5i9Pj9QGKv4eiJzh6ESuX4ZQ&oe=6A44E4ED&_nc_sid=8b3546",
-      "published_at": "2026-06-19T23:41:36",
-      "duration": null,
-      "views": 6469,
-      "likes": 650,
-      "comments": 2,
-      "x_factor": 3.3,
-      "velocity": 2.4,
-      "hot_score": 0.0096,
-      "niche": "productivity",
-      "author": {
-        "profile_id": "eab28326-30bb-4209-bcb7-4bc0a195e9ec",
-        "username": "11_rod",
-        "display_name": "Jerod Isaiah Finney📸💻",
-        "platform": "instagram",
-        "followers_count": 37812,
-        "median_views": 1963.0,
-        "niche": "comedy"
-      },
-      "is_parsed": false,
-      "library_reel_id": null,
-      "trending_since": "2026-06-21T06:00:49.064831Z",
       "frame_count": 0,
       "is_followed": false
     },
