@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-07-21T15:42:45.777751+00:00",
-  "total": 5660,
+  "updated_at": "2026-07-21T17:18:31.889493+00:00",
+  "total": 5659,
   "new_count": 0,
   "new_last_24h": 0,
-  "version": 666,
+  "version": 667,
   "items": [
     {
       "id": "ae9878f4-0a39-41bf-b2e2-cd2e92764b3e",
@@ -159444,35 +159444,6 @@
       "is_parsed": false,
       "library_reel_id": null,
       "trending_since": "2026-07-04T15:03:45.248328Z",
-      "frame_count": 0,
-      "is_followed": false
-    },
-    {
-      "id": "aa535604-7f19-4d0f-86e5-61f0aa1a403d",
-      "url": "https://www.instagram.com/p/DZzhtelOxoG/",
-      "caption": "🚫Нассим Талеб назвал ежемесячную зарплату одной из самых пагубных зависимостей в мире. Почему именно ее он поставил в один ряд с тяжелыми веществами?\n\n❗️Все просто: это «н*ркотик» стабильности. Получая зарплату, вы добровольно отдаете свое время и таланты за комфортный минимум, который держит вас в иллюзии безопасности\n\nВы перестаете рисковать, перестаете искать возможности и, что самое страшное, - перестаете расти\n\nЭта зависимость отнимает самое ценное: вашу свободу распоряжаться собственной жизнью\n\n✅ Но выход есть. И он начинается с осознания того, как перестать «сидеть на игле» зарплаты и начать создавать собственный капитал \n\nКак это сделать безопасно, грамотно и с чего начать прямо сейчас? \n\n👉 Напишите в комментариях «11», и я пришлю то, что поможет сделать первые шаги к финансовой независимости @alexeylinetsky",
-      "thumbnail_url": "https://scontent-bos5-1.cdninstagram.com/v/t51.82787-15/727799027_18116257168896947_5500384556495625142_n.jpg?stp=dst-jpg_e15_tt6&_nc_ht=scontent-bos5-1.cdninstagram.com&_nc_cat=111&_nc_oc=Q6cZ2gE_W0Xs7k_6PS_PKCCuoZclGv4bePGSiTFoROUJkXWqw_sVOYg6Xlty1do7W5HdU2I&_nc_ohc=EKH5MH5nmuwQ7kNvwHVYAO-&_nc_gid=IznOIGduSMRHD49-9i4REA&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_Af9h5sScObZIx1Hn9k_VpO1wIyQFKI_C-bYI6xR8-1KMpQ&oe=6A443A4A&_nc_sid=8b3546",
-      "published_at": "2026-06-20T10:56:11",
-      "duration": null,
-      "views": 9277,
-      "likes": 107,
-      "comments": 22,
-      "x_factor": 2.57,
-      "velocity": 3.6,
-      "hot_score": 0.006,
-      "niche": "self-development",
-      "author": {
-        "profile_id": "b1ffc2db-09e2-4a47-8c0d-89e9fa89a193",
-        "username": "alexeylinetsky",
-        "display_name": "АЛЕКСЕЙ ЛИНЕЦКИЙ | ФИНАНСЫ И ИНВЕСТИЦИИ",
-        "platform": "instagram",
-        "followers_count": 130493,
-        "median_views": 3614.0,
-        "niche": "investing"
-      },
-      "is_parsed": false,
-      "library_reel_id": null,
-      "trending_since": "2026-06-21T16:49:11.055255Z",
       "frame_count": 0,
       "is_followed": false
     },
