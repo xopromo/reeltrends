@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-07-21T13:47:29.599062+00:00",
-  "total": 5661,
+  "updated_at": "2026-07-21T15:42:45.777751+00:00",
+  "total": 5660,
   "new_count": 0,
   "new_last_24h": 0,
-  "version": 665,
+  "version": 666,
   "items": [
     {
       "id": "ae9878f4-0a39-41bf-b2e2-cd2e92764b3e",
@@ -159183,35 +159183,6 @@
       "is_parsed": false,
       "library_reel_id": null,
       "trending_since": "2026-07-04T01:56:01.084579Z",
-      "frame_count": 0,
-      "is_followed": false
-    },
-    {
-      "id": "b39c98d2-043a-4362-8d04-c78008a1e643",
-      "url": "https://www.instagram.com/p/DZr6ncQM_68/",
-      "caption": "😁💪",
-      "thumbnail_url": "https://instagram.fmli2-1.fna.fbcdn.net/v/t51.82787-15/723613181_18598118110000437_1897723343722513435_n.jpg?stp=dst-jpg_e15_tt6&_nc_ht=instagram.fmli2-1.fna.fbcdn.net&_nc_cat=109&_nc_oc=Q6cZ2gGXjgDqTOvw03CYaOn6gM1FIb30ZJeQ9jZIcu8pbLwmEDMLOTWFs08EnXOeGNI_jhU&_nc_ohc=yLfaWqzFOOEQ7kNvwHezTQj&_nc_gid=BfNP8NYSmL75uQE17Nc1WQ&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_Af8Bqro9qgg0SphnLWX3qe5phtNUvpOUTNv6Ru_qsGVDMg&oe=6A3FDBCA&_nc_sid=8b3546",
-      "published_at": "2026-06-17T12:00:18",
-      "duration": null,
-      "views": 5215,
-      "likes": 165,
-      "comments": 7,
-      "x_factor": 2.07,
-      "velocity": 3.3,
-      "hot_score": 0.0061,
-      "niche": "fitness",
-      "author": {
-        "profile_id": "1e9ed6c5-3c97-4ff5-9bc0-4fc944adfe9d",
-        "username": "rita_volk_21",
-        "display_name": "Маргарита Волкова|Телеведущая|СПОРТСМЕН!Татарстан",
-        "platform": "instagram",
-        "followers_count": 9795,
-        "median_views": 2519.0,
-        "niche": "lifestyle"
-      },
-      "is_parsed": false,
-      "library_reel_id": null,
-      "trending_since": "2026-06-21T14:14:44.405411Z",
       "frame_count": 0,
       "is_followed": false
     },
