@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-07-22T19:17:12.832079+00:00",
-  "total": 5620,
+  "updated_at": "2026-07-22T21:06:10.967240+00:00",
+  "total": 5618,
   "new_count": 0,
   "new_last_24h": 0,
-  "version": 677,
+  "version": 678,
   "items": [
     {
       "id": "ae9878f4-0a39-41bf-b2e2-cd2e92764b3e",
@@ -117456,35 +117456,6 @@
       "is_followed": false
     },
     {
-      "id": "3b8fd774-bdd5-4b87-ab90-c81bf9d6f127",
-      "url": "https://www.instagram.com/p/DZ23GnOsMQF/",
-      "caption": "Girl’s trip is loading with our newest bag dropping tomorrow : the GIA mini bag 💛",
-      "thumbnail_url": "https://scontent-atl3-1.cdninstagram.com/v/t51.82787-15/726838304_18010115705870904_603520776318124121_n.jpg?stp=dst-jpg_e35_p1080x1080_sh2.08_tt6&_nc_ht=scontent-atl3-1.cdninstagram.com&_nc_cat=100&_nc_oc=Q6cZ2gEVkysBr3rlqPaRl98G_T3hjHP8gXlpGU_GW5xtrdXjBbB1BmfzSThdhYVrpRsCORE&_nc_ohc=CrBdyYrrzHQQ7kNvwEJ-osL&_nc_gid=-G466PAvN0sWrdhn0YSEFw&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_Af_m6OrKYpL6gLkiyXdgVSTd18tVZllKV-8DU1Ny5JU_xw&oe=6A46C88C&_nc_sid=8b3546",
-      "published_at": "2026-06-21T18:00:09",
-      "duration": null,
-      "views": 6744,
-      "likes": 297,
-      "comments": 30,
-      "x_factor": 4.96,
-      "velocity": 2.8,
-      "hot_score": 0.0126,
-      "niche": "fashion",
-      "author": {
-        "profile_id": "e6e145b1-75f8-49d4-898f-083783fad143",
-        "username": "tinybigbag",
-        "display_name": "Tinybigbag",
-        "platform": "instagram",
-        "followers_count": 50022,
-        "median_views": 1359.0,
-        "niche": "fashion"
-      },
-      "is_parsed": false,
-      "library_reel_id": null,
-      "trending_since": "2026-06-22T19:34:57.514159Z",
-      "frame_count": 0,
-      "is_followed": false
-    },
-    {
       "id": "02002a00-5a94-4c03-8d90-1ff6f411d92b",
       "url": "https://www.instagram.com/p/DZ2A1oFhpSC/",
       "caption": "Полная перепрошивка жизни на АРЕНЕ ссылка в шапке @ingvarvoitenko",
@@ -127167,35 +127138,6 @@
       "is_parsed": false,
       "library_reel_id": null,
       "trending_since": "2026-06-24T07:35:51.856331Z",
-      "frame_count": 0,
-      "is_followed": false
-    },
-    {
-      "id": "062835b4-f789-41aa-b69f-c1e650345c76",
-      "url": "https://www.instagram.com/p/DZ5JMuBR76g/",
-      "caption": "Who still needs SWEs?? #coding #claude #codex #ai #javascript",
-      "thumbnail_url": "https://scontent-ord5-3.cdninstagram.com/v/t51.82787-15/728243614_17893897935537336_7457015836844732293_n.jpg?stp=dst-jpg_e35_p1080x1080_sh2.08_tt6&_nc_ht=scontent-ord5-3.cdninstagram.com&_nc_cat=100&_nc_oc=Q6cZ2gGh4jJNqmkCJWhh6p6kMb5rTuB6esNCZI6bPOoNw2dJxCFCHTiXanN7POSJp59QRTQ&_nc_ohc=ZxP6xJVjaKUQ7kNvwF6HEbg&_nc_gid=NXVXsl3k99JnUEL1bY6DIg&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_Af80nyJVB9gyZRw0JLD4IbHnvFcDU16r9Ig6GOx3tkL0gw&oe=6A42FCD2&_nc_sid=8b3546",
-      "published_at": "2026-06-22T15:17:47",
-      "duration": null,
-      "views": 6841,
-      "likes": 212,
-      "comments": 17,
-      "x_factor": 4.93,
-      "velocity": 1.7,
-      "hot_score": 0.0116,
-      "niche": "ai",
-      "author": {
-        "profile_id": "bf167d64-6989-44f9-a13c-d2e4a4aca780",
-        "username": "andrhlt",
-        "display_name": "Andrew",
-        "platform": "instagram",
-        "followers_count": 4125,
-        "median_views": 1388.0,
-        "niche": "ai"
-      },
-      "is_parsed": false,
-      "library_reel_id": null,
-      "trending_since": "2026-06-22T20:36:09.111007Z",
       "frame_count": 0,
       "is_followed": false
     },
