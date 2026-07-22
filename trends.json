@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-07-22T15:41:38.020129+00:00",
-  "total": 5624,
+  "updated_at": "2026-07-22T17:18:09.272726+00:00",
+  "total": 5623,
   "new_count": 0,
   "new_last_24h": 0,
-  "version": 675,
+  "version": 676,
   "items": [
     {
       "id": "ae9878f4-0a39-41bf-b2e2-cd2e92764b3e",
@@ -133982,35 +133982,6 @@
       "is_parsed": false,
       "library_reel_id": null,
       "trending_since": "2026-06-25T11:06:14.683331Z",
-      "frame_count": 0,
-      "is_followed": false
-    },
-    {
-      "id": "4684b959-460f-4cba-a4d6-4e6ba4fac75e",
-      "url": "https://www.instagram.com/p/DZ2l0OmMP1n/",
-      "caption": "5 способов использовать перекись водорода — и ни один не про царапины. Растения, жёлтые пятна, плесень в ванной, зубные щётки — простое средство решает то, на что обычно тратят кучу денег. \n\nПодпишись и перешли подруге, которая травит семью химией👆\n\n×××××××××××× \nКонтент носит исключительно информационно-развлекательный характер. Видео выражает личное мнение автора. Сказанное в видео не является личной рекомендацией. Имеет противопоказания. Перед применением проконсультируйтесь с врачом.",
-      "thumbnail_url": "https://scontent-atl3-2.cdninstagram.com/v/t51.71878-15/727057725_1047318657969376_249859370255268254_n.jpg?stp=dst-jpg_e15_tt6&_nc_ht=scontent-atl3-2.cdninstagram.com&_nc_cat=104&_nc_oc=Q6cZ2gHmxZuANirVk-oBrv-VTV3rz8XfMg52vLR4gbNFdxXscyYmurgfJ2NdqVkJzfc4XIM&_nc_ohc=jhVK20YD7NsQ7kNvwHyy2h1&_nc_gid=O0k4Cvq6jIz6BTUdD-aVkg&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_Af95SxxIFhMF5VXGwbglG7uBkdnXznjB1XXIxmK0URH2lg&oe=6A405B29&_nc_sid=8b3546",
-      "published_at": "2026-06-21T15:29:28",
-      "duration": null,
-      "views": 8117,
-      "likes": 692,
-      "comments": 5,
-      "x_factor": 2.27,
-      "velocity": 34.6,
-      "hot_score": 0.0108,
-      "niche": "lifestyle",
-      "author": {
-        "profile_id": "20919f1d-23a4-4ece-9b18-f9b26a480617",
-        "username": "nelly_petrosian",
-        "display_name": "Nelli Petrosian",
-        "platform": "instagram",
-        "followers_count": 504634,
-        "median_views": 3573.0,
-        "niche": "health"
-      },
-      "is_parsed": false,
-      "library_reel_id": null,
-      "trending_since": "2026-06-22T16:59:20.065202Z",
       "frame_count": 0,
       "is_followed": false
     },
