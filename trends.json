@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-07-22T02:34:27.644354+00:00",
-  "total": 5645,
+  "updated_at": "2026-07-22T06:27:09.856485+00:00",
+  "total": 5644,
   "new_count": 0,
   "new_last_24h": 0,
-  "version": 671,
+  "version": 672,
   "items": [
     {
       "id": "ae9878f4-0a39-41bf-b2e2-cd2e92764b3e",
@@ -149323,35 +149323,6 @@
       "is_parsed": false,
       "library_reel_id": null,
       "trending_since": "2026-06-21T18:21:42.794696Z",
-      "frame_count": 0,
-      "is_followed": false
-    },
-    {
-      "id": "1d235ad6-f30d-4eca-89bd-8ca827524526",
-      "url": "https://www.instagram.com/p/DZ0eepuolSF/",
-      "caption": "Все по факту:",
-      "thumbnail_url": "https://scontent-iad3-1.cdninstagram.com/v/t51.71878-15/727057559_1673099250575000_536097733642205096_n.jpg?stp=dst-jpg_e15_tt6&_nc_ht=scontent-iad3-1.cdninstagram.com&_nc_cat=108&_nc_oc=Q6cZ2gHwfEwLPuRRORCglu2T0nrls6K7MFqFl6PpsqRe7HmmRB0jnP9wedRxV7KHqVC7UDg&_nc_ohc=ZSBGo1tRBbQQ7kNvwE69zpT&_nc_gid=lVzqIwLbJCbXgdyyF-1iRg&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_Af9co1jMl2bqpUjvuZRmjTQbbkQ8wAO4mTdH6kBpijQeDA&oe=6A457993&_nc_sid=8b3546",
-      "published_at": "2026-06-20T19:47:30",
-      "duration": null,
-      "views": 1460,
-      "likes": 80,
-      "comments": 4,
-      "x_factor": 3.18,
-      "velocity": 0.2,
-      "hot_score": 0.0086,
-      "niche": "other",
-      "author": {
-        "profile_id": "06cded31-9123-4949-bbc7-8d36fda54c11",
-        "username": "vlad.sagaydak",
-        "display_name": "АГЕНТ ПО ЭЛИТНОЙ НЕДВИЖИМОСТИ  Business | Premium | Deluxe",
-        "platform": "instagram",
-        "followers_count": 1303,
-        "median_views": 459.0,
-        "niche": "real-estate"
-      },
-      "is_parsed": false,
-      "library_reel_id": null,
-      "trending_since": "2026-06-22T02:36:32.254196Z",
       "frame_count": 0,
       "is_followed": false
     },
