@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-07-23T15:55:54.242491+00:00",
-  "total": 5591,
+  "updated_at": "2026-07-23T17:23:06.652810+00:00",
+  "total": 5590,
   "new_count": 0,
   "new_last_24h": 0,
-  "version": 684,
+  "version": 685,
   "items": [
     {
       "id": "ae9878f4-0a39-41bf-b2e2-cd2e92764b3e",
@@ -147119,35 +147119,6 @@
       "is_parsed": false,
       "library_reel_id": null,
       "trending_since": "2026-06-28T01:00:01.539833Z",
-      "frame_count": 0,
-      "is_followed": false
-    },
-    {
-      "id": "bf9b8c5b-95de-46d2-a723-776d8ecd4d40",
-      "url": "https://www.instagram.com/p/DZ5uHrYxbeF/",
-      "caption": "Молочные брюки на всё лето😍\n\nАрт на вб#1084398293",
-      "thumbnail_url": "https://scontent-phx1-1.cdninstagram.com/v/t51.82787-15/729186311_17893639044542324_8341765939305521265_n.jpg?stp=dst-jpg_e35_p1080x1080_sh2.08_tt6&_nc_ht=scontent-phx1-1.cdninstagram.com&_nc_cat=108&_nc_oc=Q6cZ2gGNgbwfA7AaSNQvWAFBbuf4RcWlqV1HS-QzI6wQDUaGvQUuDWklV5tqseR9Y2AZeLY&_nc_ohc=ee71EdyeBlwQ7kNvwHZFDU-&_nc_gid=pPJcyReSFz22lBJVEc8PWA&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_Af8qqkXr6CJTc3O_1ZZQBadtaTeN-qjn-o7Uk7UOB7PQfw&oe=6A473254&_nc_sid=8b3546",
-      "published_at": "2026-06-22T20:39:41",
-      "duration": null,
-      "views": 5271,
-      "likes": 67,
-      "comments": null,
-      "x_factor": 3.59,
-      "velocity": 8.7,
-      "hot_score": 0.0088,
-      "niche": "fashion",
-      "author": {
-        "profile_id": "c61fb0b1-d188-402d-8ae8-c14d11fb9b05",
-        "username": "milena_baloyan",
-        "display_name": "Милена • UGC",
-        "platform": "instagram",
-        "followers_count": 1267,
-        "median_views": 1468.0,
-        "niche": "fashion"
-      },
-      "is_parsed": false,
-      "library_reel_id": null,
-      "trending_since": "2026-06-23T16:06:59.839573Z",
       "frame_count": 0,
       "is_followed": false
     },
