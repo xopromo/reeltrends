@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-07-24T19:23:49.170244+00:00",
-  "total": 5548,
+  "updated_at": "2026-07-24T21:02:33.681081+00:00",
+  "total": 5546,
   "new_count": 0,
   "new_last_24h": 0,
-  "version": 695,
+  "version": 696,
   "items": [
     {
       "id": "ae9878f4-0a39-41bf-b2e2-cd2e92764b3e",
@@ -160463,35 +160463,6 @@
       "is_followed": false
     },
     {
-      "id": "4dd29fbc-6aa6-4b5a-a424-f7b31c472b1e",
-      "url": "https://www.instagram.com/p/DZzoXNeIsKU/",
-      "caption": "это розовый браш>>\nРозовый браш wb арт  #WW446678",
-      "thumbnail_url": "https://scontent-atl3-1.cdninstagram.com/v/t51.82787-15/725932294_17904290118442095_1240733072788897128_n.jpg?stp=dst-jpg_e35_p1080x1080_sh2.08_tt6&_nc_ht=scontent-atl3-1.cdninstagram.com&_nc_cat=103&_nc_oc=Q6cZ2gFe6MuSGgDzjRdNqa1RiKGpUWlK5J6rP_L003kMf2EJSkRJob6mS6nP9ZlFV98aFqk&_nc_ohc=sOxJKQqowYIQ7kNvwHe1NRI&_nc_gid=trzaA0oXw6fYs-j_L_JkXA&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_Af-iXaLwEE2INh4DdPugXy1ZR7xqnM83EYcCpHOMBdJKrA&oe=6A42D32E&_nc_sid=8b3546",
-      "published_at": "2026-06-20T11:54:08",
-      "duration": null,
-      "views": 3686,
-      "likes": 64,
-      "comments": null,
-      "x_factor": 2.37,
-      "velocity": 1.0,
-      "hot_score": 0.0033,
-      "niche": "nails",
-      "author": {
-        "profile_id": "73beb03a-35d3-4586-83e7-11b344d71fd5",
-        "username": "fichibrand",
-        "display_name": "Fichi Brand 🤍",
-        "platform": "instagram",
-        "followers_count": 8345,
-        "median_views": 1553.0,
-        "niche": "nails"
-      },
-      "is_parsed": false,
-      "library_reel_id": null,
-      "trending_since": "2026-06-24T20:03:47.198891Z",
-      "frame_count": 0,
-      "is_followed": false
-    },
-    {
       "id": "a3a776b0-295f-4442-bb6a-907c80ae1e60",
       "url": "https://www.instagram.com/p/DafvxsSA6Mw/",
       "caption": "Не показывайте сваим КАНКУРЕНТАМЬ!\nКак вам идейка попасть в тренды?\n#ии#тренды#мнение #нейронка#2026",
@@ -160546,35 +160517,6 @@
       "is_parsed": false,
       "library_reel_id": null,
       "trending_since": "2026-06-28T08:15:19.589188Z",
-      "frame_count": 0,
-      "is_followed": false
-    },
-    {
-      "id": "31187c17-dc47-473e-91c8-6aec2980bc85",
-      "url": "https://www.instagram.com/p/DZwU0aaoEcN/",
-      "caption": "Розовый браш wb арт  #WW446678",
-      "thumbnail_url": "https://instagram.fcae1-1.fna.fbcdn.net/v/t51.82787-15/726261987_17904103746442095_3155348997057608667_n.jpg?stp=dst-jpg_e15_tt6&_nc_ht=instagram.fcae1-1.fna.fbcdn.net&_nc_cat=103&_nc_oc=Q6cZ2gFWDCJ91JrFzxkyhzuUMYJNTNAN9DUHgOXrHY8qCc7siswTp8DxvzeIqJTEVMAmrlk&_nc_ohc=F0c3o0tOmuUQ7kNvwEpocme&_nc_gid=azwQK_vgjoK6RbACz2TgxQ&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_Af-Ra2osggvxGiUSd0CSyn2GmMyRsAsvKqXNG9-NuraZZw&oe=6A4145D9&_nc_sid=8b3546",
-      "published_at": "2026-06-19T05:05:34",
-      "duration": null,
-      "views": 3197,
-      "likes": 51,
-      "comments": null,
-      "x_factor": 2.13,
-      "velocity": 1.5,
-      "hot_score": 0.0032,
-      "niche": "nails",
-      "author": {
-        "profile_id": "73beb03a-35d3-4586-83e7-11b344d71fd5",
-        "username": "fichibrand",
-        "display_name": "Fichi Brand 🤍",
-        "platform": "instagram",
-        "followers_count": 8330,
-        "median_views": 1502.0,
-        "niche": "nails"
-      },
-      "is_parsed": false,
-      "library_reel_id": null,
-      "trending_since": "2026-06-24T20:03:47.183133Z",
       "frame_count": 0,
       "is_followed": false
     },
