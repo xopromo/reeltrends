@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-07-23T22:55:35.362295+00:00",
-  "total": 5578,
+  "updated_at": "2026-07-24T02:36:03.794840+00:00",
+  "total": 5575,
   "new_count": 0,
   "new_last_24h": 0,
-  "version": 688,
+  "version": 689,
   "items": [
     {
       "id": "ae9878f4-0a39-41bf-b2e2-cd2e92764b3e",
@@ -65633,35 +65633,6 @@
       "is_followed": false
     },
     {
-      "id": "b188548e-b9f9-4359-a4dc-21f0e33686a8",
-      "url": "https://www.instagram.com/p/DZ6e4CMCthP/",
-      "caption": "Fogo criado a partir de água? uma tecnologia que SEMPRE existiu, porém SEMPRE foi apagada!",
-      "thumbnail_url": "https://scontent-lga3-2.cdninstagram.com/v/t51.82787-15/728157798_18132094231559323_7103557002129620913_n.jpg?stp=dst-jpg_e15_fr_p1080x1080_tt6&_nc_ht=scontent-lga3-2.cdninstagram.com&_nc_cat=107&_nc_oc=Q6cZ2gFQcvmD08BPWAAHQanJm5nEhUYHRmTXjciiWkcQhGG5vvoJzIXUmV4yxUHHLX6l2ZY&_nc_ohc=9MEDrGYobQsQ7kNvwHlC6Mi&_nc_gid=AVJ5EKt1YpzgyP3c6uW-vg&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_Af_U4293WT-RkIJUapwk7QMQzCoH9mbtPqnVlRhr_zyvGQ&oe=6A410F57&_nc_sid=8b3546",
-      "published_at": "2026-06-23T03:46:44",
-      "duration": null,
-      "views": 1960,
-      "likes": 324,
-      "comments": 14,
-      "x_factor": 4.14,
-      "velocity": 90.3,
-      "hot_score": 0.0182,
-      "niche": "science",
-      "author": {
-        "profile_id": "6d7b2c3d-1823-40c2-9a00-134cd5c18093",
-        "username": "tartariaearcanum",
-        "display_name": "Tartariae Arcanum",
-        "platform": "instagram",
-        "followers_count": 29992,
-        "median_views": 473.0,
-        "niche": "history"
-      },
-      "is_parsed": false,
-      "library_reel_id": null,
-      "trending_since": "2026-06-23T23:20:27.869174Z",
-      "frame_count": 0,
-      "is_followed": false
-    },
-    {
       "id": "52794f24-976b-4842-b6a2-8c9aa05f451e",
       "url": "https://www.instagram.com/p/DZ5miklKVSU/",
       "caption": "Моя банда 💅🏻",
@@ -113367,35 +113338,6 @@
       "is_followed": false
     },
     {
-      "id": "3e205c00-9c5b-4344-ae88-1cfdfd4b03e7",
-      "url": "https://www.instagram.com/p/DZ7vwX0NgAu/",
-      "caption": "Claude Code получил постоянную память — теперь все ваши сессии сохраняются, а нагрузка на токены падает почти до нуля. Это значит, что лимиты почти невозможно достичь даже при долгой работе.\n\nВ проекте уже есть гибкий поиск по навыкам, веб-интерфейс и возможность запускать Claude прямиком с рабочего стола. Вся установка занимает одну команду и полностью бесплатна.\n\nAI стал полезнее и дешевле: полноценная память теперь доступна проще, чем когда-либо.",
-      "thumbnail_url": "https://instagram.fcae1-1.fna.fbcdn.net/v/t51.82787-15/729089015_18086101415541383_8894855451015746109_n.jpg?stp=dst-jpg_e15_tt6&_nc_ht=instagram.fcae1-1.fna.fbcdn.net&_nc_cat=111&_nc_oc=Q6cZ2gFOlj8nkxQ8Z-R5kic7esNYdvqoY_3W3MyC_-MVkZKe2EdvistEXDfYB2zg52-qg9c&_nc_ohc=r-eZ-8TfNGMQ7kNvwE-MriR&_nc_gid=j2veU6d87Tp4kuSejH2Mdg&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AQC-ca1egYKephxJHlGj_Jx4m5S3sCebUmbWhH3zhdm2Ug&oe=6A4939C2&_nc_sid=8b3546",
-      "published_at": "2026-06-23T15:33:11",
-      "duration": null,
-      "views": 4133,
-      "likes": 125,
-      "comments": 104,
-      "x_factor": 4.89,
-      "velocity": 0.3,
-      "hot_score": 0.013,
-      "niche": "ai",
-      "author": {
-        "profile_id": "eb1dc064-3209-4c5e-85d0-f80015f55bcf",
-        "username": "artemybagaev",
-        "display_name": "Артем про AI",
-        "platform": "instagram",
-        "followers_count": 2332,
-        "median_views": 845.0,
-        "niche": "ai"
-      },
-      "is_parsed": false,
-      "library_reel_id": null,
-      "trending_since": "2026-06-23T23:51:27.774786Z",
-      "frame_count": 0,
-      "is_followed": false
-    },
-    {
       "id": "84b6df40-e7bb-467e-adb0-dd2c651072f7",
       "url": "https://www.instagram.com/p/DZ7quZ8KZsk/",
       "caption": null,
@@ -154021,35 +153963,6 @@
       "is_parsed": false,
       "library_reel_id": null,
       "trending_since": "2026-07-03T12:21:44.511982Z",
-      "frame_count": 0,
-      "is_followed": false
-    },
-    {
-      "id": "6b3c93d8-17ac-43fd-818f-53d9a1766f49",
-      "url": "https://www.instagram.com/p/DZ7pjwCOqwD/",
-      "caption": "Amanhã é feriado, e elas juravam que hoje ia ser tranquilo 😂\n\nMas sempre tem alguém prestes a entrar, né? 😅\nEntão bora cuidar que tem MUITA coisa incrível na loja!\n\nTe esperamos hoje até as 18h • VEM!",
-      "thumbnail_url": "https://scontent-lga3-2.cdninstagram.com/v/t51.82787-15/729528677_18604865614033932_378051657460477647_n.jpg?stp=dst-jpg_e15_tt6&_nc_ht=scontent-lga3-2.cdninstagram.com&_nc_cat=100&_nc_oc=Q6cZ2gHf0hasVmNpuO7ht23mBGLw8KCd7_Ex_wlBNnj9-muHvokw9t90NIlcIEINm9JMITw&_nc_ohc=8BnjLHrsFVcQ7kNvwGzvCYq&_nc_gid=m2joNJLOBfkLYQtFYFBIKQ&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_Af_nw5TiN3TY3FklwD4BazsR4RliBTFglO60uA8w2JrzZw&oe=6A4807AF&_nc_sid=8b3546",
-      "published_at": "2026-06-23T14:41:57",
-      "duration": null,
-      "views": 4945,
-      "likes": 182,
-      "comments": 15,
-      "x_factor": 2.78,
-      "velocity": 1.6,
-      "hot_score": 0.0072,
-      "niche": "ecommerce",
-      "author": {
-        "profile_id": "2e2552bc-7f55-4bb4-8b9b-ade43c39e65a",
-        "username": "isla.otica",
-        "display_name": "ISLA // Ótica Conceito",
-        "platform": "instagram",
-        "followers_count": 116764,
-        "median_views": 1776.5,
-        "niche": "fashion"
-      },
-      "is_parsed": false,
-      "library_reel_id": null,
-      "trending_since": "2026-06-24T00:22:28.284538Z",
       "frame_count": 0,
       "is_followed": false
     },
