@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-07-24T23:00:28.313069+00:00",
-  "total": 5543,
+  "updated_at": "2026-07-25T02:34:02.924675+00:00",
+  "total": 5541,
   "new_count": 0,
   "new_last_24h": 0,
-  "version": 697,
+  "version": 698,
   "items": [
     {
       "id": "ae9878f4-0a39-41bf-b2e2-cd2e92764b3e",
@@ -120501,35 +120501,6 @@
       "is_followed": false
     },
     {
-      "id": "2a853a99-70ba-48f3-a76c-f544e334bf9a",
-      "url": "https://www.instagram.com/p/DZyB57kPq8l/",
-      "caption": "Sextou, né? 😂\n\nMas amanhã estaremos de volta, hein?\nLoja aberta neste SÁBADO das 9h às 13h 🧡\n\nTe esperamos 🔥",
-      "thumbnail_url": "https://scontent-ord5-3.cdninstagram.com/v/t51.82787-15/726767997_18603619252033932_130140937014905338_n.jpg?stp=dst-jpg_e15_tt6&_nc_ht=scontent-ord5-3.cdninstagram.com&_nc_cat=100&_nc_oc=Q6cZ2gE_iSh0B6jWpLiB79b0EGvXlksZ4eFY1kA796GLUaUpKfNpjkyWpIBCMm6TVdVd4ss&_nc_ohc=6mxO864Ol0YQ7kNvwGRG2ez&_nc_gid=XZe3EF045xa7-Q-OGzZ5-Q&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_Af8vLg0l5sB52aWlomYCLBk70Lis1RcO7dBSCGxybbxxeQ&oe=6A42ED8D&_nc_sid=8b3546",
-      "published_at": "2026-06-19T20:59:50",
-      "duration": null,
-      "views": 3385,
-      "likes": 177,
-      "comments": 4,
-      "x_factor": 2.03,
-      "velocity": 6.5,
-      "hot_score": 0.0123,
-      "niche": "ecommerce",
-      "author": {
-        "profile_id": "2e2552bc-7f55-4bb4-8b9b-ade43c39e65a",
-        "username": "isla.otica",
-        "display_name": "ISLA // Ótica Conceito",
-        "platform": "instagram",
-        "followers_count": 116651,
-        "median_views": 1671.5,
-        "niche": "fashion"
-      },
-      "is_parsed": false,
-      "library_reel_id": null,
-      "trending_since": "2026-06-25T01:17:09.030597Z",
-      "frame_count": 0,
-      "is_followed": false
-    },
-    {
       "id": "5bda12c1-627e-4f34-8c8b-7da8df462ffe",
       "url": "https://www.instagram.com/p/DZ2ElpVsNfb/",
       "caption": "Оставь любой смайлик в комментариях — скинем ссылку на бот где вы сможете создать любую песню по вашей истории всего за 5 минут! Текст к песне - БЕСПЛАТНО!",
@@ -145785,35 +145756,6 @@
       "is_parsed": false,
       "library_reel_id": null,
       "trending_since": "2026-06-25T21:31:09.968002Z",
-      "frame_count": 0,
-      "is_followed": false
-    },
-    {
-      "id": "c67a2e83-51dc-4791-8cf1-c2420571c6c2",
-      "url": "https://www.instagram.com/p/DZ2YCWOptRS/",
-      "caption": "Потому что постоянная тревога из-за денег не делает вас богаче.\n\nОна делает вас уставшей.\n\nЖенщина, которая живёт в страхе, начинает принимать плохие решения: соглашается на меньшее, терпит то, что давно пора оставить, боится просить больше, боится ин’вестировать, боится начинать.\n\nИ самое страшное - постепенно привыкает жить в режиме выживания.\n\nЧто делать?\n\nНе переживать о деньгах. Управлять ими.\n\nДаже если сейчас непростой период:\n- начните вести учёт расходов;\n- создайте подушку безопасности;\n- откладывайте хоть 1000 ₽ в месяц;\n- изучайте ин’вестиции;\n- создавайте свои источники до’хода.\n\nПотому что спокойствие женщины рождается не из надежды, что кто-то решит её проблемы.\n\nА из понимания: «Я справлюсь. У меня есть план».\n\nИменно с этого начинается настоящая финансовая уверенность.",
-      "thumbnail_url": "https://scontent-dfw5-2.cdninstagram.com/v/t51.82787-15/727415434_18058706474729368_5589501607199835277_n.jpg?stp=dst-jpg_e35_p1080x1080_sh2.08_tt6&_nc_ht=scontent-dfw5-2.cdninstagram.com&_nc_cat=104&_nc_oc=Q6cZ2gH85srs-I0qJA6soBvH5NikrGxbe2UJDhnLB4xjL5qFT6lSSvb4AF_OaX3XSn1uYAU&_nc_ohc=zdug7-A-7RkQ7kNvwHlZy3s&_nc_gid=3bPWF-coqVFocTPlHb1-fw&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_Af_Kb65bmbPayRno0e57XlCEiCY_bWNKkbY2kUbhnEGauw&oe=6A465F78&_nc_sid=8b3546",
-      "published_at": "2026-06-21T13:29:30",
-      "duration": null,
-      "views": 1057,
-      "likes": 19,
-      "comments": null,
-      "x_factor": 4.83,
-      "velocity": 0.4,
-      "hot_score": 0.0089,
-      "niche": "finance",
-      "author": {
-        "profile_id": "d5f2a096-e1ee-4be4-afb7-1013074adf52",
-        "username": "financebond",
-        "display_name": "ФИНАНСОВЫЙ КОНСУЛЬТАНТ | ИНВЕСТИЦИИ | ПСИХОЛОГИЯ ДЕНЕГ",
-        "platform": "instagram",
-        "followers_count": 8305,
-        "median_views": 219.0,
-        "niche": "finance"
-      },
-      "is_parsed": false,
-      "library_reel_id": null,
-      "trending_since": "2026-06-25T02:19:44.058924Z",
       "frame_count": 0,
       "is_followed": false
     },
