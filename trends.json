@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-07-26T09:58:23.219441+00:00",
-  "total": 5476,
+  "updated_at": "2026-07-26T11:23:30.146650+00:00",
+  "total": 5475,
   "new_count": 0,
   "new_last_24h": 0,
-  "version": 710,
+  "version": 711,
   "items": [
     {
       "id": "ae9878f4-0a39-41bf-b2e2-cd2e92764b3e",
@@ -45097,35 +45097,6 @@
       "is_parsed": false,
       "library_reel_id": null,
       "trending_since": "2026-07-03T17:38:44.054153Z",
-      "frame_count": 0,
-      "is_followed": false
-    },
-    {
-      "id": "0cda4a93-86e3-4974-9f1d-b410ed0aaa05",
-      "url": "https://www.instagram.com/p/DaBLcOEsdj7/",
-      "caption": "СТОП 🛑 \n\nТолько не говорите потом, что мы вас не предупреждали! \n\nВ Санкт‑Петербурге строится морской курорт по типу Дубай Марины — это будет настоящая сила притяжения города 🤩\n\nИ вот главное: квартиру неподалёку можно купить с платежом всего 45 000 рублей в месяц! \n\nНо самое главное — вы остаетесь наедине с природой, а не с шумом мегаполиса \n\n✅ Вид на лес — покой природы прямо из окна\n✅ Потолки 4,5 м – максимум воздуха и света \n✅ До метро 15 минут \n✅ До пляжа и экопарка можно дойти пешком \n✅ Вся инфраструктура рядом: школы, кафе, магазины уже работают \n\nСтавьте «+» — пришлём подробности в директ! 📩",
-      "thumbnail_url": "https://scontent-iad3-2.cdninstagram.com/v/t51.82787-15/731061263_17943465828242643_5248664894814024422_n.jpg?stp=dst-jpg_e15_tt6&_nc_ht=scontent-iad3-2.cdninstagram.com&_nc_cat=103&_nc_oc=Q6cZ2gHW6g1dxc_1EJx_fwoHboixzROi9uRaN9vWryqfdPgh5USX3LX8TjIDTTImRGaouSQ&_nc_ohc=aYd0FtwfKB0Q7kNvwFVzflC&_nc_gid=-x1TaVCkd9s3vOeLDjyXDQ&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AQCQdZ27Bcj7Ff0K1sIZv1B0ZleYApzcL2WwFqz4MiR70w&oe=6A4C0128&_nc_sid=8b3546",
-      "published_at": "2026-06-25T18:14:57",
-      "duration": null,
-      "views": 4454,
-      "likes": 25,
-      "comments": 34,
-      "x_factor": 23.08,
-      "velocity": 2.2,
-      "hot_score": 0.0211,
-      "niche": "real-estate",
-      "author": {
-        "profile_id": "dd2704b1-a2a0-46c3-a63a-f9258ecad712",
-        "username": "gate_spb",
-        "display_name": "Gate | новостройки Петербурга | без комиссии",
-        "platform": "instagram",
-        "followers_count": 427,
-        "median_views": 193.0,
-        "niche": "real-estate"
-      },
-      "is_parsed": false,
-      "library_reel_id": null,
-      "trending_since": "2026-06-26T10:26:43.095698Z",
       "frame_count": 0,
       "is_followed": false
     },
