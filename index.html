@@ -391,9 +391,12 @@ var GH_FILE = 'vk_groups.json';
 var GH_TOKEN = '';
 
 const REPO = 'xopromo/reeltrends';
-const IG_URL = 'https://raw.githubusercontent.com/'+REPO+'/main/trends.json';
-const YT_URL = 'https://raw.githubusercontent.com/'+REPO+'/main/youtube.json';
-const VK_JSON_URL = 'https://raw.githubusercontent.com/'+REPO+'/main/vk.json';
+const isLocal = window.location.protocol === 'file:';
+const getUrl = (filename) => isLocal ? `https://raw.githubusercontent.com/${REPO}/main/${filename}` : filename;
+
+const IG_URL = getUrl('trends.json');
+const YT_URL = getUrl('youtube.json');
+const VK_JSON_URL = getUrl('vk.json');
 // PER вычисляется динамически — кратно числу колонок
 function calcPER() {
   const gridWidth = document.getElementById('grid')?.offsetWidth || window.innerWidth - 280;
@@ -1063,7 +1066,7 @@ async function load() {
   document.getElementById('grid').innerHTML=skeletons();
   // GH_TOKEN будет доступен через Cloudflare Worker (в разработке)
   // Загружаем версию деплоя
-  fetch('https://raw.githubusercontent.com/xopromo/reeltrends/main/version.json?t='+Date.now())
+  fetch(getUrl('version.json') + '?t='+Date.now())
     .then(r=>r.ok?r.json():null)
     .then(v=>{
       if (!v) return;
@@ -1113,13 +1116,15 @@ async function load() {
     pruneSearchCache(); // тихая очистка устаревших
     restoreVkCache();   // восстанавливаем VK кеш
 
-    // Загружаем YouTube — он главный источник
-    await loadYouTubeData();
-    rebuildALL('');  // мержим оба источника
+    // Сразу рендерим Instagram и кешированные VK, чтобы скрыть скелетоны
+    applyFilters();
 
-    // Восстанавливаем YT поиск ПОСЛЕ загрузки данных
-    restoreYtSearch();
-    if (!ytSearchActive) applyFilters();
+    // Загружаем YouTube в фоновом режиме, не блокируя UI
+    loadYouTubeData().then(() => {
+      rebuildALL(state.platform); // мержим с учетом текущей выбранной платформы
+      restoreYtSearch();          // восстанавливаем YT поиск после загрузки
+      if (!ytSearchActive) applyFilters(); // перерендериваем ленту
+    });
 
   } catch(e) {
     document.getElementById('grid').innerHTML='<div class="empty">'+e.message+'</div>';
@@ -1717,7 +1722,7 @@ async function runVkScout() {
 
   let groups = {};
   try {
-    const r = await fetch('https://raw.githubusercontent.com/xopromo/reeltrends/main/vk_groups.json?t='+Date.now());
+    const r = await fetch(getUrl('vk_groups.json') + '?t='+Date.now());
     if (r.ok) groups = await r.json();
     await setProgress('✓ Загружено ' + Object.keys(groups).length + ' существующих групп');
   } catch(e) {
