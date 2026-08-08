@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-08-08T06:51:32.774852+00:00",
+  "updated_at": "2026-08-08T08:39:27.892257+00:00",
   "total": 8103,
   "new_count": 0,
   "new_last_24h": 0,
-  "version": 822,
+  "version": 823,
   "items": [
     {
       "id": "7b128c25-2ccc-467f-9e20-bcf815c702b0",
@@ -18802,36 +18802,6 @@
       "is_followed": false
     },
     {
-      "id": "0ee79054-1165-41c5-9640-89853010d6ec",
-      "url": "https://www.instagram.com/p/Dbk6dAmgG8k/",
-      "caption": "Comment \"ROLES\" and I'll send you the link\n\nAnthropic released a free pack of eleven plugins that give Claude a ready-made setup for sales, marketing, finance, support, and more.\n\nEach one comes preloaded so Claude already understands the job and connects to the tools that role uses.\n\nInstead of re-explaining what good work looks like every time, you install it once.\n\nIt's free and straight from the team behind Claude.\n\n#claude #claudeai #anthropic #aiforbusiness #aiplugins #aitools #aiproductivity",
-      "thumbnail_url": "https://instagram.fmxp12-1.fna.fbcdn.net/v/t51.71878-15/764618989_2140693983327232_1189540556555529359_n.jpg?stp=dst-jpg_e15_p480x480_tt6&_nc_cat=102&ig_cache_key=Mzk1NTU0MzQ1Mjk0NjU1ODc1NjE3OTI4NjgzMTY5MzYyOTgx.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNMSVBTLnhwaWRzLjY0MC5zZHIudmlkZW9fZGVmYXVsdF9jb3Zlcl9mcmFtZS5DMyJ9&_nc_ohc=5gWm6-dj7hUQ7kNvwEmRPXN&_nc_oc=AdrMWAr6YiwLxMqRGafICiDmeBo5XkaLKfdVMWNCHXyk3gCRxULc8YBltzUZo9Q9QAo&_nc_ad=z-m&_nc_cid=1093&_nc_zt=23&_nc_ht=instagram.fmxp12-1.fna&_nc_gid=I6whJb7NIxbe2-aNxMAeVA&_nc_ss=7a3ba&oh=00_AQHu078Tj48Eywln2VSkqvzT8BXrhsWhLT9QRDa2InNifg&oe=6A79B081",
-      "published_at": "2026-08-03T11:48:04",
-      "duration": 36.7,
-      "views": 69053,
-      "views_estimated": null,
-      "likes": 1197,
-      "comments": 2385,
-      "x_factor": 48.32,
-      "velocity": 208.3,
-      "hot_score": 0.0826,
-      "niche": "ai",
-      "author": {
-        "profile_id": "3883f6e8-6e91-461a-b51a-9844aca743be",
-        "username": "aifornontechies",
-        "display_name": "Brock Mesarich",
-        "platform": "instagram",
-        "followers_count": 38350,
-        "median_views": 1429.0,
-        "niche": "ai"
-      },
-      "is_parsed": false,
-      "library_reel_id": null,
-      "trending_since": "2026-08-03T17:39:39.156708Z",
-      "frame_count": 0,
-      "is_followed": false
-    },
-    {
       "id": "a148a7d8-a60b-4d9b-8cbc-693b286bfefd",
       "url": "https://www.instagram.com/p/DbTpYZUEzqy/",
       "caption": "#fyp #foryou #trending #viral #relatable",
@@ -20927,6 +20897,36 @@
       "is_parsed": false,
       "library_reel_id": null,
       "trending_since": "2026-07-28T11:47:31.717698Z",
+      "frame_count": 0,
+      "is_followed": false
+    },
+    {
+      "id": "0ee79054-1165-41c5-9640-89853010d6ec",
+      "url": "https://www.instagram.com/p/Dbk6dAmgG8k/",
+      "caption": "Comment \"ROLES\" and I'll send you the link\n\nAnthropic released a free pack of eleven plugins that give Claude a ready-made setup for sales, marketing, finance, support, and more.\n\nEach one comes preloaded so Claude already understands the job and connects to the tools that role uses.\n\nInstead of re-explaining what good work looks like every time, you install it once.\n\nIt's free and straight from the team behind Claude.\n\n#claude #claudeai #anthropic #aiforbusiness #aiplugins #aitools #aiproductivity",
+      "thumbnail_url": "https://instagram.fmxp12-1.fna.fbcdn.net/v/t51.71878-15/764618989_2140693983327232_1189540556555529359_n.jpg?stp=dst-jpg_e15_p480x480_tt6&_nc_cat=102&ig_cache_key=Mzk1NTU0MzQ1Mjk0NjU1ODc1NjE3OTI4NjgzMTY5MzYyOTgx.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNMSVBTLnhwaWRzLjY0MC5zZHIudmlkZW9fZGVmYXVsdF9jb3Zlcl9mcmFtZS5DMyJ9&_nc_ohc=5gWm6-dj7hUQ7kNvwEmRPXN&_nc_oc=AdrMWAr6YiwLxMqRGafICiDmeBo5XkaLKfdVMWNCHXyk3gCRxULc8YBltzUZo9Q9QAo&_nc_ad=z-m&_nc_cid=1093&_nc_zt=23&_nc_ht=instagram.fmxp12-1.fna&_nc_gid=I6whJb7NIxbe2-aNxMAeVA&_nc_ss=7a3ba&oh=00_AQHu078Tj48Eywln2VSkqvzT8BXrhsWhLT9QRDa2InNifg&oe=6A79B081",
+      "published_at": "2026-08-03T11:48:04",
+      "duration": 36.7,
+      "views": 69053,
+      "views_estimated": null,
+      "likes": 1197,
+      "comments": 2385,
+      "x_factor": 48.32,
+      "velocity": 208.3,
+      "hot_score": 0.075,
+      "niche": "ai",
+      "author": {
+        "profile_id": "3883f6e8-6e91-461a-b51a-9844aca743be",
+        "username": "aifornontechies",
+        "display_name": "Brock Mesarich",
+        "platform": "instagram",
+        "followers_count": 38375,
+        "median_views": 1429.0,
+        "niche": "ai"
+      },
+      "is_parsed": false,
+      "library_reel_id": null,
+      "trending_since": "2026-08-03T17:39:39.156708Z",
       "frame_count": 0,
       "is_followed": false
     },
