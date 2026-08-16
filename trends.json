@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-08-16T20:20:02.265005+00:00",
-  "total": 7938,
+  "updated_at": "2026-08-16T22:19:14.414493+00:00",
+  "total": 7937,
   "new_count": 0,
   "new_last_24h": 0,
-  "version": 922,
+  "version": 923,
   "items": [
     {
       "id": "3e44f195-8c75-470b-839d-7659a0b9cd29",
@@ -93,37 +93,6 @@
       "is_parsed": false,
       "library_reel_id": null,
       "trending_since": "2026-07-31T10:47:55.315459Z",
-      "frame_count": 0,
-      "is_followed": false
-    },
-    {
-      "id": "4dbd324e-e04f-4b6d-b7e1-00ed0b87a7c1",
-      "url": "https://www.instagram.com/p/DcEFhVyv0v3/",
-      "caption": "Comment “Watermark” and I’ll send you the guide 👇\n\nClaude just started leaving watermarks on everything it creates. Here’s how to get rid of them in 30 seconds.\n\nAnthropic just announced they’re watermarking all the text Claude writes. This watermark is completely invisible and even survives when you paste it outside Claude and re-edit the text.\n\nHere’s how to remove it:\n\n1. Search for the Claude skill “Watermarks Remover”, built by Guillaume Meyer (all the credit here goes to him because he built the entire thing)\n2. Go inside the skills folder → skill.md → Download Raw File\n3. Go to Claude → Customize → Skills → dropdown → Upload Skill\n4. Drag and drop the file in\n\nNow just type “/remove-ai-marks” and paste in your text.\n\nThe output comes back completely watermark free so you can copy and paste it and avoid detectors.\n\nFollow @mavgpt for more AI videos.\n\n#ai #claude #claudeskills #aitools #watermark",
-      "thumbnail_url": "https://instagram.fcgk27-1.fna.fbcdn.net/v/t51.82787-15/774407031_17904215898556240_5114154487693781475_n.jpg?stp=dst-jpg_e15_p480x480_tt6&_nc_cat=101&ig_cache_key=Mzk2NDMxNzg1MzM2ODE0MjgzOTE3OTA0MjE1ODk1NTU2MjQw.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNMSVBTLnhwaWRzLjEzMjAuc2RyLnZpZGVvX2RlZmF1bHRfY292ZXJfZnJhbWUuQzMifQ%3D%3D&_nc_ohc=PFjSNpPOgHYQ7kNvwHL52Cr&_nc_oc=AdpqHa8lrgBFyaYfKqLdlWHlFKQwe2i0jtrjBIhOTqOhBVfPgRiZTWXjStubLBzkvwk&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fcgk27-1.fna&_nc_gid=GQngpPr0EhxIBy4ju9DKvA&_nc_ss=7a3ba&oh=00_AQGk-6CHMR-beSFGkn_De9RNovl5MkaRvSuWnZ_ZpHvMyQ&oe=6A87D211",
-      "published_at": "2026-08-15T14:39:35",
-      "duration": 41.888,
-      "views": 1097912,
-      "views_estimated": null,
-      "likes": 18028,
-      "comments": 18811,
-      "x_factor": 36.34,
-      "velocity": 22803.3,
-      "hot_score": 0.4924,
-      "niche": "ai",
-      "author": {
-        "profile_id": "70d2a09d-95c3-4afb-839b-451e4987187f",
-        "username": "mavgpt",
-        "display_name": "Maverick Maltin | AI & ChatGPT",
-        "platform": "instagram",
-        "followers_count": 1264067,
-        "median_views": 30214.0,
-        "niche": "ai",
-        "norm_views": 53176.299750873724
-      },
-      "is_parsed": false,
-      "library_reel_id": null,
-      "trending_since": "2026-08-15T19:45:46.991462Z",
       "frame_count": 0,
       "is_followed": false
     },
@@ -274,6 +243,37 @@
       "is_parsed": false,
       "library_reel_id": null,
       "trending_since": "2026-07-30T20:18:05.176235Z",
+      "frame_count": 0,
+      "is_followed": false
+    },
+    {
+      "id": "4dbd324e-e04f-4b6d-b7e1-00ed0b87a7c1",
+      "url": "https://www.instagram.com/p/DcEFhVyv0v3/",
+      "caption": "Comment “Watermark” and I’ll send you the guide 👇\n\nClaude just started leaving watermarks on everything it creates. Here’s how to get rid of them in 30 seconds.\n\nAnthropic just announced they’re watermarking all the text Claude writes. This watermark is completely invisible and even survives when you paste it outside Claude and re-edit the text.\n\nHere’s how to remove it:\n\n1. Search for the Claude skill “Watermarks Remover”, built by Guillaume Meyer (all the credit here goes to him because he built the entire thing)\n2. Go inside the skills folder → skill.md → Download Raw File\n3. Go to Claude → Customize → Skills → dropdown → Upload Skill\n4. Drag and drop the file in\n\nNow just type “/remove-ai-marks” and paste in your text.\n\nThe output comes back completely watermark free so you can copy and paste it and avoid detectors.\n\nFollow @mavgpt for more AI videos.\n\n#ai #claude #claudeskills #aitools #watermark",
+      "thumbnail_url": "https://instagram.fcgk41-1.fna.fbcdn.net/v/t51.82787-15/774407031_17904215898556240_5114154487693781475_n.jpg?stp=dst-jpg_e15_p480x480_tt6&_nc_cat=101&ig_cache_key=Mzk2NDMxNzg1MzM2ODE0MjgzOTE3OTA0MjE1ODk1NTU2MjQw.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNMSVBTLnhwaWRzLjEzMjAuc2RyLnZpZGVvX2RlZmF1bHRfY292ZXJfZnJhbWUuQzMifQ%3D%3D&_nc_ohc=PFjSNpPOgHYQ7kNvwHfMZ8X&_nc_oc=Adqr3k_ekOrtOvKC6Ond5sgvyqOtNUNQvLxtYox4JMMUB1ctqC7nr4whd-Y1cvKrhwY&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fcgk41-1.fna&_nc_gid=V9VlldnKromavj5Ov0oMbA&_nc_ss=7a3ba&oh=00_AQFke_5wBDHRqLT2uAYOzw-6rkOc4KJfR_vLTAvXn06sPQ&oe=6A880A51",
+      "published_at": "2026-08-15T14:39:35",
+      "duration": 41.888,
+      "views": 1141613,
+      "views_estimated": null,
+      "likes": 18886,
+      "comments": 19664,
+      "x_factor": 37.78,
+      "velocity": 10237.3,
+      "hot_score": 0.4385,
+      "niche": "ai",
+      "author": {
+        "profile_id": "70d2a09d-95c3-4afb-839b-451e4987187f",
+        "username": "mavgpt",
+        "display_name": "Maverick Maltin | AI & ChatGPT",
+        "platform": "instagram",
+        "followers_count": 1264932,
+        "median_views": 30214.0,
+        "niche": "ai",
+        "norm_views": 53201.114007030854
+      },
+      "is_parsed": false,
+      "library_reel_id": null,
+      "trending_since": "2026-08-15T19:45:46.991462Z",
       "frame_count": 0,
       "is_followed": false
     },
@@ -12430,37 +12430,6 @@
       "is_followed": false
     },
     {
-      "id": "37e3a44b-ed5f-493f-975a-b00e5c69bb6d",
-      "url": "https://www.instagram.com/p/Db9N53NNU_0/",
-      "caption": "Comment “Secret” and I’ll send you all the prompts 👇\n\nWhat happens when you ask ChatGPT to tell you what it secretly knows about you?\n\nI tried this and it literally told me something about myself I’ve never said out loud to anyone.\n\nHere’s how:\n\nPrompt 1: “Based on every conversation we’ve ever had, tell me the 5 things you’ve figured out about me that I’ve never directly told you, and don’t hold back to make me feel good.”\n ChatGPT reads between the lines of everything you’ve ever typed to it. The first answer alone freaks people out.\n\nPrompt 2: “Tell me the patterns you see in how I think and make decisions, and the one thing I’m in denial about.”\n\nPrompt 3: “Predict my next 5 years if nothing changes. Then predict them again if I fix the one pattern that’s holding me back the most.”\n ChatGPT shows you two completely different versions of your future self side by side.\n\nBonus prompt: “Now write the one paragraph I should read every single morning based on everything you know about me.”\n\nFollow @mavgpt for more AI videos.\n\n#chatgpt #ai #chatgptprompts #selfimprovement #mindset",
-      "thumbnail_url": "https://scontent-cdg6-1.cdninstagram.com/v/t51.82787-15/774515223_17903656899556240_6889299061133243606_n.jpg?stp=dst-jpg_e15_p480x480_tt6&_nc_cat=105&ig_cache_key=Mzk2MjM4NDM5ODA0ODEyMDgyMDE3OTAzNjU2ODkzNTU2MjQw.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNMSVBTLnhwaWRzLjEzMjAuc2RyLnZpZGVvX2RlZmF1bHRfY292ZXJfZnJhbWUuQzMifQ%3D%3D&_nc_ohc=oOuQDtuLlvkQ7kNvwF47PcG&_nc_oc=AdqAy-CSeS4BIkNq7CXxioCUMQH5rqG8DRE5vM6rrX4BkwQPIj5oPd9oXaOzZRNzXrQ&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-cdg6-1.cdninstagram.com&_nc_gid=PIObOnzhwvymr9STmJEHdg&_nc_ss=7a3ba&oh=00_AQFxucgO2_K7ZCRMbmBn3q6hFvJMTEjJrYwJlew9lYwNgw&oe=6A854B40",
-      "published_at": "2026-08-12T22:19:07",
-      "duration": 43.733,
-      "views": 1225442,
-      "views_estimated": null,
-      "likes": 19303,
-      "comments": 13266,
-      "x_factor": 40.56,
-      "velocity": 1455.5,
-      "hot_score": 0.1231,
-      "niche": "ai",
-      "author": {
-        "profile_id": "70d2a09d-95c3-4afb-839b-451e4987187f",
-        "username": "mavgpt",
-        "display_name": "Maverick Maltin | AI & ChatGPT",
-        "platform": "instagram",
-        "followers_count": 1264067,
-        "median_views": 30214.0,
-        "niche": "ai",
-        "norm_views": 53176.299750873724
-      },
-      "is_parsed": false,
-      "library_reel_id": null,
-      "trending_since": "2026-08-13T05:20:20.652125Z",
-      "frame_count": 0,
-      "is_followed": false
-    },
-    {
       "id": "90129165-4ff8-4780-a4ab-2cbb45d672a0",
       "url": "https://www.instagram.com/p/DbVvcTdMlq8/",
       "caption": "В Цифровой Психологии энергия 4 (Раху) символизирует желания, амбиции и стремление к материальному миру.\n\nЭнергия 7 (Кету) направляет человека к мудрости, интуиции и поиску истинного смысла.\n\nПоэтому многие семёрки всю жизнь словно стоят между двумя мирами. С одной стороны - духовность и глубина. С другой - деньги, отношения, тело и желания.\n\nГлавная задача семёрки - перестать выбирать что-то одно.\n\nЕё путь - соединить духовное и материальное, научиться принимать себя целиком.\n\nКогда семёрка перестаёт отвергать свои чувства, тело и право жить в изобилии, раскрывается её истинная сила - глубокое понимание людей, мощная интуиция и способность вести других своим примером.\n\nКЛАССИЧЕСКАЯ СЕМЁРКА - 7\n\nУ людей, рождённых 7 числа, этот внутренний конфликт проявляется особенно ярко.\n\nС детства они часто чувствуют себя непохожими на других, могут ощущать одиночество, непонимание и сложности с принятием себя.\n\nГлавный урок семёрки - перестать жить ожиданиями окружающих, довериться своей природе и идти собственным путём.\n\nИменно тогда она перестаёт искать себя и начинает жить по-настоящему.\n\nПродолжение в комментах 👇👇",
@@ -13984,6 +13953,37 @@
       "is_parsed": false,
       "library_reel_id": null,
       "trending_since": "2026-08-02T01:30:16.529134Z",
+      "frame_count": 0,
+      "is_followed": false
+    },
+    {
+      "id": "37e3a44b-ed5f-493f-975a-b00e5c69bb6d",
+      "url": "https://www.instagram.com/p/Db9N53NNU_0/",
+      "caption": "Comment “Secret” and I’ll send you all the prompts 👇\n\nWhat happens when you ask ChatGPT to tell you what it secretly knows about you?\n\nI tried this and it literally told me something about myself I’ve never said out loud to anyone.\n\nHere’s how:\n\nPrompt 1: “Based on every conversation we’ve ever had, tell me the 5 things you’ve figured out about me that I’ve never directly told you, and don’t hold back to make me feel good.”\n ChatGPT reads between the lines of everything you’ve ever typed to it. The first answer alone freaks people out.\n\nPrompt 2: “Tell me the patterns you see in how I think and make decisions, and the one thing I’m in denial about.”\n\nPrompt 3: “Predict my next 5 years if nothing changes. Then predict them again if I fix the one pattern that’s holding me back the most.”\n ChatGPT shows you two completely different versions of your future self side by side.\n\nBonus prompt: “Now write the one paragraph I should read every single morning based on everything you know about me.”\n\nFollow @mavgpt for more AI videos.\n\n#chatgpt #ai #chatgptprompts #selfimprovement #mindset",
+      "thumbnail_url": "https://scontent-cdg6-1.cdninstagram.com/v/t51.82787-15/774515223_17903656899556240_6889299061133243606_n.jpg?stp=dst-jpg_e15_p480x480_tt6&_nc_cat=105&ig_cache_key=Mzk2MjM4NDM5ODA0ODEyMDgyMDE3OTAzNjU2ODkzNTU2MjQw.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNMSVBTLnhwaWRzLjEzMjAuc2RyLnZpZGVvX2RlZmF1bHRfY292ZXJfZnJhbWUuQzMifQ%3D%3D&_nc_ohc=oOuQDtuLlvkQ7kNvwF47PcG&_nc_oc=AdqAy-CSeS4BIkNq7CXxioCUMQH5rqG8DRE5vM6rrX4BkwQPIj5oPd9oXaOzZRNzXrQ&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-cdg6-1.cdninstagram.com&_nc_gid=PIObOnzhwvymr9STmJEHdg&_nc_ss=7a3ba&oh=00_AQFxucgO2_K7ZCRMbmBn3q6hFvJMTEjJrYwJlew9lYwNgw&oe=6A854B40",
+      "published_at": "2026-08-12T22:19:07",
+      "duration": 43.733,
+      "views": 1225442,
+      "views_estimated": null,
+      "likes": 19303,
+      "comments": 13266,
+      "x_factor": 40.56,
+      "velocity": 1455.5,
+      "hot_score": 0.1134,
+      "niche": "ai",
+      "author": {
+        "profile_id": "70d2a09d-95c3-4afb-839b-451e4987187f",
+        "username": "mavgpt",
+        "display_name": "Maverick Maltin | AI & ChatGPT",
+        "platform": "instagram",
+        "followers_count": 1264932,
+        "median_views": 30214.0,
+        "niche": "ai",
+        "norm_views": 53201.114007030854
+      },
+      "is_parsed": false,
+      "library_reel_id": null,
+      "trending_since": "2026-08-13T05:20:20.652125Z",
       "frame_count": 0,
       "is_followed": false
     },
@@ -150386,35 +150386,6 @@
       "is_parsed": false,
       "library_reel_id": null,
       "trending_since": "2026-05-21T15:03:49.772931Z",
-      "frame_count": 0,
-      "is_followed": false
-    },
-    {
-      "id": "f0f7a559-f235-4b97-8df0-071d83a7e246",
-      "url": "https://www.instagram.com/p/DYce_gmNwRF/",
-      "caption": "🤌🏾Пиши: «Гид» и забирай мою полную схему для набора подписчиков через рилс  в 2026 году 🤍",
-      "thumbnail_url": "https://scontent-lga3-3.cdninstagram.com/v/t51.71878-15/701207271_2083104262589186_5881874933704767833_n.jpg?stp=dst-jpg_e15_tt6&_nc_ht=scontent-lga3-3.cdninstagram.com&_nc_cat=102&_nc_oc=Q6cZ2gFzYExW2QMOgj_pgLk6RHGhmO9wOwJIbzXR57RQlQVZYEgGyeSeP1jQTxfEKk0ym5M&_nc_ohc=YGLSg7531VcQ7kNvwEQcqac&_nc_gid=bBH1nRFizdsCioETBdwd8Q&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_Af5ZZOtqyJH4W5w_b2tIM3xaSM_KoFuKoAhkoNb12t71dQ&oe=6A175E1C&_nc_sid=8b3546",
-      "published_at": "2026-05-17T15:38:38",
-      "duration": null,
-      "views": 89028,
-      "likes": 2683,
-      "comments": 803,
-      "x_factor": 3.63,
-      "velocity": 94.7,
-      "hot_score": 0.0152,
-      "niche": "personal-brand",
-      "author": {
-        "profile_id": "c99ea94d-ba13-4183-9f9b-e877a9ba8ef5",
-        "username": "liza.tkachyk",
-        "display_name": "Елизавета Ткачук",
-        "platform": "instagram",
-        "followers_count": null,
-        "median_views": 24492.0,
-        "niche": "ai"
-      },
-      "is_parsed": false,
-      "library_reel_id": null,
-      "trending_since": "2026-05-18T20:31:35.349480Z",
       "frame_count": 0,
       "is_followed": false
     },
