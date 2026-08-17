@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-08-17T04:40:28.780730+00:00",
-  "total": 7927,
+  "updated_at": "2026-08-17T06:52:52.042456+00:00",
+  "total": 7923,
   "new_count": 0,
   "new_last_24h": 0,
-  "version": 926,
+  "version": 927,
   "items": [
     {
       "id": "7b128c25-2ccc-467f-9e20-bcf815c702b0",
@@ -607,37 +607,6 @@
       "is_followed": false
     },
     {
-      "id": "4dbd324e-e04f-4b6d-b7e1-00ed0b87a7c1",
-      "url": "https://www.instagram.com/p/DcEFhVyv0v3/",
-      "caption": "Comment “Watermark” and I’ll send you the guide 👇\n\nClaude just started leaving watermarks on everything it creates. Here’s how to get rid of them in 30 seconds.\n\nAnthropic just announced they’re watermarking all the text Claude writes. This watermark is completely invisible and even survives when you paste it outside Claude and re-edit the text.\n\nHere’s how to remove it:\n\n1. Search for the Claude skill “Watermarks Remover”, built by Guillaume Meyer (all the credit here goes to him because he built the entire thing)\n2. Go inside the skills folder → skill.md → Download Raw File\n3. Go to Claude → Customize → Skills → dropdown → Upload Skill\n4. Drag and drop the file in\n\nNow just type “/remove-ai-marks” and paste in your text.\n\nThe output comes back completely watermark free so you can copy and paste it and avoid detectors.\n\nFollow @mavgpt for more AI videos.\n\n#ai #claude #claudeskills #aitools #watermark",
-      "thumbnail_url": "https://scontent-cgk2-2.cdninstagram.com/v/t51.82787-15/774407031_17904215898556240_5114154487693781475_n.jpg?stp=dst-jpg_e15_p480x480_tt6&_nc_cat=101&ig_cache_key=Mzk2NDMxNzg1MzM2ODE0MjgzOTE3OTA0MjE1ODk1NTU2MjQw.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNMSVBTLnhwaWRzLjEzMjAuc2RyLnZpZGVvX2RlZmF1bHRfY292ZXJfZnJhbWUuQzMifQ%3D%3D&_nc_ohc=PFjSNpPOgHYQ7kNvwFqJKqk&_nc_oc=AdpxsTKFI_4Ea5QQXM5gdxq9_oA28aegpgFIOQ44uZs8SC--12YPgf2L4FLgCfi7VMA&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-cgk2-2.cdninstagram.com&_nc_gid=K8Vs4d-g1EKYIPBpy1V1fg&_nc_ss=7a3ba&oh=00_AQFj5DVmQH7Pajr__4c7ZswnjE5UKP_Xc3vMxzAP9cdHhg&oe=6A884291",
-      "published_at": "2026-08-15T14:39:35",
-      "duration": 41.888,
-      "views": 1170151,
-      "views_estimated": null,
-      "likes": 19418,
-      "comments": 20219,
-      "x_factor": 38.73,
-      "velocity": 6525.1,
-      "hot_score": 0.3954,
-      "niche": "ai",
-      "author": {
-        "profile_id": "70d2a09d-95c3-4afb-839b-451e4987187f",
-        "username": "mavgpt",
-        "display_name": "Maverick Maltin | AI & ChatGPT",
-        "platform": "instagram",
-        "followers_count": 1265557,
-        "median_views": 30214.0,
-        "niche": "ai",
-        "norm_views": 53219.04002494656
-      },
-      "is_parsed": false,
-      "library_reel_id": null,
-      "trending_since": "2026-08-15T19:45:46.991462Z",
-      "frame_count": 0,
-      "is_followed": false
-    },
-    {
       "id": "8ed3d208-1176-4c34-a697-d3709813068e",
       "url": "https://www.instagram.com/p/Dbao_9eCFBg/",
       "caption": "今夜、@thv はハリウッドで行われた @gracieabrams と @dojacat のパフォーマンスを観客席から鑑賞しました。ファッションショーにも慣れている @bts.bighitofficial のスターは、ランウェイに登場してもおかしくないような装いで登場しました。",
@@ -1023,6 +992,37 @@
       "is_parsed": false,
       "library_reel_id": null,
       "trending_since": "2026-07-26T12:53:34.727775Z",
+      "frame_count": 0,
+      "is_followed": false
+    },
+    {
+      "id": "4dbd324e-e04f-4b6d-b7e1-00ed0b87a7c1",
+      "url": "https://www.instagram.com/p/DcEFhVyv0v3/",
+      "caption": "Comment “Watermark” and I’ll send you the guide 👇\n\nClaude just started leaving watermarks on everything it creates. Here’s how to get rid of them in 30 seconds.\n\nAnthropic just announced they’re watermarking all the text Claude writes. This watermark is completely invisible and even survives when you paste it outside Claude and re-edit the text.\n\nHere’s how to remove it:\n\n1. Search for the Claude skill “Watermarks Remover”, built by Guillaume Meyer (all the credit here goes to him because he built the entire thing)\n2. Go inside the skills folder → skill.md → Download Raw File\n3. Go to Claude → Customize → Skills → dropdown → Upload Skill\n4. Drag and drop the file in\n\nNow just type “/remove-ai-marks” and paste in your text.\n\nThe output comes back completely watermark free so you can copy and paste it and avoid detectors.\n\nFollow @mavgpt for more AI videos.\n\n#ai #claude #claudeskills #aitools #watermark",
+      "thumbnail_url": "https://instagram.ftrn5-2.fna.fbcdn.net/v/t51.82787-15/774407031_17904215898556240_5114154487693781475_n.jpg?stp=dst-jpg_e15_s640x640_tt6&_nc_cat=101&ig_cache_key=Mzk2NDMxNzg1MzM2ODE0MjgzOTE3OTA0MjE1ODk1NTU2MjQw.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNMSVBTLnhwaWRzLjEzMjAuc2RyLnZpZGVvX2RlZmF1bHRfY292ZXJfZnJhbWUuQzMifQ%3D%3D&_nc_ohc=PFjSNpPOgHYQ7kNvwHgpG7m&_nc_oc=AdrFZeqnEFcs0uzLIbmQG0RJMD0duWZRmCqStww5sm7L0WGNQkShQAFDSNtW9QgNTVc&_nc_ad=z-m&_nc_cid=1093&_nc_zt=23&_nc_ht=instagram.ftrn5-2.fna&_nc_gid=jpGQf_A1Rn6gYSdn424aRQ&_nc_ss=7a3ba&oh=00_AQEdJqjHd9gR3Icxbn1NbgXXh-QgTVuZrAC1YW85zz3kpw&oe=6A887AD1",
+      "published_at": "2026-08-15T14:39:35",
+      "duration": 41.888,
+      "views": 1199709,
+      "views_estimated": null,
+      "likes": 19974,
+      "comments": 20736,
+      "x_factor": 39.71,
+      "velocity": 6812.4,
+      "hot_score": 0.3644,
+      "niche": "ai",
+      "author": {
+        "profile_id": "70d2a09d-95c3-4afb-839b-451e4987187f",
+        "username": "mavgpt",
+        "display_name": "Maverick Maltin | AI & ChatGPT",
+        "platform": "instagram",
+        "followers_count": 1266196,
+        "median_views": 30214.0,
+        "niche": "ai",
+        "norm_views": 53237.36467540912
+      },
+      "is_parsed": false,
+      "library_reel_id": null,
+      "trending_since": "2026-08-15T19:45:46.991462Z",
       "frame_count": 0,
       "is_followed": false
     },
@@ -15186,37 +15186,6 @@
       "is_followed": false
     },
     {
-      "id": "37e3a44b-ed5f-493f-975a-b00e5c69bb6d",
-      "url": "https://www.instagram.com/p/Db9N53NNU_0/",
-      "caption": "Comment “Secret” and I’ll send you all the prompts 👇\n\nWhat happens when you ask ChatGPT to tell you what it secretly knows about you?\n\nI tried this and it literally told me something about myself I’ve never said out loud to anyone.\n\nHere’s how:\n\nPrompt 1: “Based on every conversation we’ve ever had, tell me the 5 things you’ve figured out about me that I’ve never directly told you, and don’t hold back to make me feel good.”\n ChatGPT reads between the lines of everything you’ve ever typed to it. The first answer alone freaks people out.\n\nPrompt 2: “Tell me the patterns you see in how I think and make decisions, and the one thing I’m in denial about.”\n\nPrompt 3: “Predict my next 5 years if nothing changes. Then predict them again if I fix the one pattern that’s holding me back the most.”\n ChatGPT shows you two completely different versions of your future self side by side.\n\nBonus prompt: “Now write the one paragraph I should read every single morning based on everything you know about me.”\n\nFollow @mavgpt for more AI videos.\n\n#chatgpt #ai #chatgptprompts #selfimprovement #mindset",
-      "thumbnail_url": "https://scontent-cdg6-1.cdninstagram.com/v/t51.82787-15/774515223_17903656899556240_6889299061133243606_n.jpg?stp=dst-jpg_e15_p480x480_tt6&_nc_cat=105&ig_cache_key=Mzk2MjM4NDM5ODA0ODEyMDgyMDE3OTAzNjU2ODkzNTU2MjQw.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNMSVBTLnhwaWRzLjEzMjAuc2RyLnZpZGVvX2RlZmF1bHRfY292ZXJfZnJhbWUuQzMifQ%3D%3D&_nc_ohc=oOuQDtuLlvkQ7kNvwF47PcG&_nc_oc=AdqAy-CSeS4BIkNq7CXxioCUMQH5rqG8DRE5vM6rrX4BkwQPIj5oPd9oXaOzZRNzXrQ&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-cdg6-1.cdninstagram.com&_nc_gid=PIObOnzhwvymr9STmJEHdg&_nc_ss=7a3ba&oh=00_AQFxucgO2_K7ZCRMbmBn3q6hFvJMTEjJrYwJlew9lYwNgw&oe=6A854B40",
-      "published_at": "2026-08-12T22:19:07",
-      "duration": 43.733,
-      "views": 1225442,
-      "views_estimated": null,
-      "likes": 19303,
-      "comments": 13266,
-      "x_factor": 40.56,
-      "velocity": 1455.5,
-      "hot_score": 0.1042,
-      "niche": "ai",
-      "author": {
-        "profile_id": "70d2a09d-95c3-4afb-839b-451e4987187f",
-        "username": "mavgpt",
-        "display_name": "Maverick Maltin | AI & ChatGPT",
-        "platform": "instagram",
-        "followers_count": 1265557,
-        "median_views": 30214.0,
-        "niche": "ai",
-        "norm_views": 53219.04002494656
-      },
-      "is_parsed": false,
-      "library_reel_id": null,
-      "trending_since": "2026-08-13T05:20:20.652125Z",
-      "frame_count": 0,
-      "is_followed": false
-    },
-    {
       "id": "fe30d8fe-f04d-4673-9f4e-624b3ad4cc7d",
       "url": "https://www.instagram.com/p/DbZdesnyVUi/",
       "caption": "To be clear, I don’t think traditional college is bad. It’s just overpriced.",
@@ -16533,6 +16502,37 @@
       "is_parsed": false,
       "library_reel_id": null,
       "trending_since": "2026-07-29T00:56:41.911518Z",
+      "frame_count": 0,
+      "is_followed": false
+    },
+    {
+      "id": "37e3a44b-ed5f-493f-975a-b00e5c69bb6d",
+      "url": "https://www.instagram.com/p/Db9N53NNU_0/",
+      "caption": "Comment “Secret” and I’ll send you all the prompts 👇\n\nWhat happens when you ask ChatGPT to tell you what it secretly knows about you?\n\nI tried this and it literally told me something about myself I’ve never said out loud to anyone.\n\nHere’s how:\n\nPrompt 1: “Based on every conversation we’ve ever had, tell me the 5 things you’ve figured out about me that I’ve never directly told you, and don’t hold back to make me feel good.”\n ChatGPT reads between the lines of everything you’ve ever typed to it. The first answer alone freaks people out.\n\nPrompt 2: “Tell me the patterns you see in how I think and make decisions, and the one thing I’m in denial about.”\n\nPrompt 3: “Predict my next 5 years if nothing changes. Then predict them again if I fix the one pattern that’s holding me back the most.”\n ChatGPT shows you two completely different versions of your future self side by side.\n\nBonus prompt: “Now write the one paragraph I should read every single morning based on everything you know about me.”\n\nFollow @mavgpt for more AI videos.\n\n#chatgpt #ai #chatgptprompts #selfimprovement #mindset",
+      "thumbnail_url": "https://scontent-cdg6-1.cdninstagram.com/v/t51.82787-15/774515223_17903656899556240_6889299061133243606_n.jpg?stp=dst-jpg_e15_p480x480_tt6&_nc_cat=105&ig_cache_key=Mzk2MjM4NDM5ODA0ODEyMDgyMDE3OTAzNjU2ODkzNTU2MjQw.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNMSVBTLnhwaWRzLjEzMjAuc2RyLnZpZGVvX2RlZmF1bHRfY292ZXJfZnJhbWUuQzMifQ%3D%3D&_nc_ohc=oOuQDtuLlvkQ7kNvwF47PcG&_nc_oc=AdqAy-CSeS4BIkNq7CXxioCUMQH5rqG8DRE5vM6rrX4BkwQPIj5oPd9oXaOzZRNzXrQ&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-cdg6-1.cdninstagram.com&_nc_gid=PIObOnzhwvymr9STmJEHdg&_nc_ss=7a3ba&oh=00_AQFxucgO2_K7ZCRMbmBn3q6hFvJMTEjJrYwJlew9lYwNgw&oe=6A854B40",
+      "published_at": "2026-08-12T22:19:07",
+      "duration": 43.733,
+      "views": 1225442,
+      "views_estimated": null,
+      "likes": 19303,
+      "comments": 13266,
+      "x_factor": 40.56,
+      "velocity": 1455.5,
+      "hot_score": 0.0959,
+      "niche": "ai",
+      "author": {
+        "profile_id": "70d2a09d-95c3-4afb-839b-451e4987187f",
+        "username": "mavgpt",
+        "display_name": "Maverick Maltin | AI & ChatGPT",
+        "platform": "instagram",
+        "followers_count": 1266196,
+        "median_views": 30214.0,
+        "niche": "ai",
+        "norm_views": 53237.36467540912
+      },
+      "is_parsed": false,
+      "library_reel_id": null,
+      "trending_since": "2026-08-13T05:20:20.652125Z",
       "frame_count": 0,
       "is_followed": false
     },
@@ -107326,35 +107326,6 @@
       "is_followed": false
     },
     {
-      "id": "fc47258d-c664-447f-b1b7-efe3e0ad7a02",
-      "url": "https://www.instagram.com/p/DYfBHTHqsSW/",
-      "caption": "ТОТ САМЫЙ ЖАҢАЛЫҚ🥹\nҚұттықтап қойсаңыздар болады🫂\n\nБірақ тіпті бұл да соңы емес...\n\n19.05.2026 SOON",
-      "thumbnail_url": "https://scontent-phx1-1.cdninstagram.com/v/t51.71878-15/702962676_1372201754955116_7091391327631519655_n.jpg?stp=dst-jpg_e15_tt6&_nc_ht=scontent-phx1-1.cdninstagram.com&_nc_cat=108&_nc_oc=Q6cZ2gHhx_XR9rvChnYOLTjVSYYeOrrndO1gDx0loTsQrpJmk9bQaYy2sW7VjM36JfQwcrA&_nc_ohc=PPGoCBrNuOoQ7kNvwHmnODm&_nc_gid=XSXBOxUgNaHekErTa4oWMA&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_Af4ZljnOztmGBN_jv-RBGSSqbAICyT8K-gnm6xCLlN0RCQ&oe=6A1318B5&_nc_sid=8b3546",
-      "published_at": "2026-05-18T15:17:04",
-      "duration": null,
-      "views": 25126,
-      "likes": 4454,
-      "comments": 575,
-      "x_factor": 3.91,
-      "velocity": 187.9,
-      "hot_score": 0.0194,
-      "niche": "entertainment",
-      "author": {
-        "profile_id": "b0f204c7-d6fb-49d0-b6a9-985b6d685520",
-        "username": "miss_bakhytova",
-        "display_name": "Dana Bakhytova | Английский | IELTS",
-        "platform": "instagram",
-        "followers_count": 56147,
-        "median_views": 6423.0,
-        "niche": "entertainment"
-      },
-      "is_parsed": false,
-      "library_reel_id": null,
-      "trending_since": "2026-05-19T06:42:37.670360Z",
-      "frame_count": 0,
-      "is_followed": false
-    },
-    {
       "id": "1ef32624-bce5-4d1d-9a1e-b7fc56cc6322",
       "url": "https://www.instagram.com/p/DYcGUi9suwm/",
       "caption": "@zamzam_brothers_dubai #zamelectproperties #zamzamelectronics #zamzamperfumes #foryou",
@@ -117648,35 +117619,6 @@
       "is_parsed": false,
       "library_reel_id": null,
       "trending_since": "2026-05-17T17:56:38.585342Z",
-      "frame_count": 0,
-      "is_followed": false
-    },
-    {
-      "id": "d0828888-c461-46f7-be28-fe89af738edd",
-      "url": "https://www.instagram.com/p/DYZvwiVtbv8/",
-      "caption": "Someone just solved the API problem for AI.\n\nThere’s a new open-source tool that lets you use ChatGPT, Claude, and every other top model for free. \n\nIt connects all your accounts directly into Cursor, VS Code, or whatever editor you’re working in. \n\nThen, you just paste in one config, and suddenly every model is live at the same time.\n\nSo when you send a prompt, all of them respond together. \n\nYou read through the answers, you pick the best one, and you keep building. \n\nThat means instead of paying for a bunch of different API subscriptions, you can just experiment freely.\n\n🔥 Comment “API” and I’ll send you the link to access it.",
-      "thumbnail_url": "https://scontent-mia3-3.cdninstagram.com/v/t51.82787-15/700325284_17931938085255681_1321323056308266825_n.jpg?stp=dst-jpg_e15_fr_p1080x1080_tt6&_nc_ht=scontent-mia3-3.cdninstagram.com&_nc_cat=109&_nc_oc=Q6cZ2gGdMSNtdKdw7hA_0_WwuUE92DOX7NfKEtVu-n6QfsU9m77N9ZB_t2TXOPTNhpZzw00&_nc_ohc=n6elYzVn8OMQ7kNvwE3eNsN&_nc_gid=oeFKjO_RmKWs-xyW4MyzYQ&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_Af5t2TcjQ2sSU47ObEsqG8z8b-dbIFXYTBJRHt6UpO-8pg&oe=6A171601&_nc_sid=8b3546",
-      "published_at": "2026-05-16T14:08:11",
-      "duration": null,
-      "views": 11629,
-      "likes": 755,
-      "comments": 1698,
-      "x_factor": 2.66,
-      "velocity": 21.0,
-      "hot_score": 0.0182,
-      "niche": "vibe-coding",
-      "author": {
-        "profile_id": "5cecb236-8ae6-4794-8da4-ee78d8c5b756",
-        "username": "drcintas",
-        "display_name": "Dr. Alvaro Cintas",
-        "platform": "instagram",
-        "followers_count": 132318,
-        "median_views": 4369.0,
-        "niche": "ai"
-      },
-      "is_parsed": false,
-      "library_reel_id": null,
-      "trending_since": "2026-05-19T06:42:46.484390Z",
       "frame_count": 0,
       "is_followed": false
     },
@@ -163957,35 +163899,6 @@
       "is_followed": false
     },
     {
-      "id": "8855a618-4538-462d-b35f-a8a3ce2b82db",
-      "url": "https://www.instagram.com/p/DYVqKbQM0nI/",
-      "caption": "If you are from the US 🇺🇸 comment “liver”\n\n#usa #health #healthtips #wellness",
-      "thumbnail_url": "https://scontent-phl2-1.cdninstagram.com/v/t51.71878-15/688709861_1337800281578925_3073151287173587370_n.jpg?stp=dst-jpg_e15_tt6&_nc_ht=scontent-phl2-1.cdninstagram.com&_nc_cat=109&_nc_oc=Q6cZ2gEOFyDYH55iss50YTgvQvDPNfNZDsWJlNZc8i8aZcujNGa6JviWMEKRDDrUcnYI8QM&_nc_ohc=YvypFk3SiicQ7kNvwFfhE5c&_nc_gid=GOAvnYjzDf0uqsbIpBJD2w&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_Af4yh48g61zgs9qmADWdIv2j5CWzjZU7-Ai_Lu-1MFHNIA&oe=6A15762E&_nc_sid=8b3546",
-      "published_at": "2026-05-15T00:00:11",
-      "duration": null,
-      "views": 74885,
-      "likes": 1277,
-      "comments": 2011,
-      "x_factor": 2.81,
-      "velocity": 68.0,
-      "hot_score": 0.0139,
-      "niche": "health",
-      "author": {
-        "profile_id": "252b619b-0d5f-4b75-85ce-7e6cd3aa6697",
-        "username": "healthylifesage",
-        "display_name": "John Valentine",
-        "platform": "instagram",
-        "followers_count": 1446436,
-        "median_views": 26610.5,
-        "niche": "health"
-      },
-      "is_parsed": false,
-      "library_reel_id": null,
-      "trending_since": "2026-05-19T05:41:29.492769Z",
-      "frame_count": 0,
-      "is_followed": false
-    },
-    {
       "id": "62604d9a-a04c-40ef-bee3-3141f703dab8",
       "url": "https://www.instagram.com/p/DZXV2Seoyzw/",
       "caption": "Сегодня без шуточек. Про маркетинг и продвижение просто ✨",
@@ -176357,35 +176270,6 @@
       "is_parsed": false,
       "library_reel_id": null,
       "trending_since": "2026-05-19T19:00:45.027070Z",
-      "frame_count": 0,
-      "is_followed": false
-    },
-    {
-      "id": "0cf2289e-b311-477f-8281-1fe8165a110f",
-      "url": "https://www.instagram.com/p/DYchjGJhVmI/",
-      "caption": "Альбому Tyler, The Creator “IGOR” исполнилось ровно семь лет! 🤯 Какие треки с него ваши самые любимые?\n⠀\nПроект стал новой вехой в карьере Тайлера, он полностью спродюсировал альбом сам и впервые отошёл от классического рэпа в сторону уникального звучания с элементами соула, фанка и психоделики.\n⠀\nПластинка дебютировала на 1 строчке в чарте Billboard 200 и разошлась тиражом в 165 тыс. копий за первую неделю. В 2020 году альбом выиграл Грэмми в номинации “Лучший рэп-альбом”.",
-      "thumbnail_url": "https://scontent-hou1-1.cdninstagram.com/v/t51.82787-15/702255354_18183759481378152_6330781714905837550_n.jpg?stp=dst-jpg_e35_p1080x1080_sh2.08_tt6&_nc_ht=scontent-hou1-1.cdninstagram.com&_nc_cat=100&_nc_oc=Q6cZ2gHO9HVczlAZQPxAgkOMYytR917Ob0ZQ05x6O0fAcUP7L5ED3LpMOaaoAn6sQVB04UQ&_nc_ohc=Liy39-JfbVkQ7kNvwGZjg20&_nc_gid=hK5GifgGjjIxExdnwYuwlw&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_Af6-oBs8U095bo0WFffzo9L5a8A4AInwC7q-qUy0ItNA2Q&oe=6A14A47C&_nc_sid=8b3546",
-      "published_at": "2026-05-17T15:59:22",
-      "duration": null,
-      "views": 82227,
-      "likes": 5997,
-      "comments": 25,
-      "x_factor": 2.32,
-      "velocity": 131.6,
-      "hot_score": 0.0128,
-      "niche": "cinema",
-      "author": {
-        "profile_id": "1c04bf0b-84ee-4152-89c3-10f6888d13db",
-        "username": "quicknrap",
-        "display_name": "РЭП / ХИП-ХОП / МУЗЫКА",
-        "platform": "instagram",
-        "followers_count": 488156,
-        "median_views": 35399.5,
-        "niche": "music"
-      },
-      "is_parsed": false,
-      "library_reel_id": null,
-      "trending_since": "2026-05-19T05:41:26.648197Z",
       "frame_count": 0,
       "is_followed": false
     },
