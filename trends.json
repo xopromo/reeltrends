@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-08-18T02:54:30.565360+00:00",
-  "total": 7875,
-  "new_count": 0,
+  "updated_at": "2026-08-18T04:34:18.331074+00:00",
+  "total": 7876,
+  "new_count": 1,
   "new_last_24h": 0,
-  "version": 937,
+  "version": 938,
   "items": [
     {
       "id": "7b128c25-2ccc-467f-9e20-bcf815c702b0",
@@ -3156,37 +3156,6 @@
       "is_followed": false
     },
     {
-      "id": "4dbd324e-e04f-4b6d-b7e1-00ed0b87a7c1",
-      "url": "https://www.instagram.com/p/DcEFhVyv0v3/",
-      "caption": "Comment “Watermark” and I’ll send you the guide 👇\n\nClaude just started leaving watermarks on everything it creates. Here’s how to get rid of them in 30 seconds.\n\nAnthropic just announced they’re watermarking all the text Claude writes. This watermark is completely invisible and even survives when you paste it outside Claude and re-edit the text.\n\nHere’s how to remove it:\n\n1. Search for the Claude skill “Watermarks Remover”, built by Guillaume Meyer (all the credit here goes to him because he built the entire thing)\n2. Go inside the skills folder → skill.md → Download Raw File\n3. Go to Claude → Customize → Skills → dropdown → Upload Skill\n4. Drag and drop the file in\n\nNow just type “/remove-ai-marks” and paste in your text.\n\nThe output comes back completely watermark free so you can copy and paste it and avoid detectors.\n\nFollow @mavgpt for more AI videos.\n\n#ai #claude #claudeskills #aitools #watermark",
-      "thumbnail_url": "https://instagram.fbcn2-1.fna.fbcdn.net/v/t51.82787-15/774407031_17904215898556240_5114154487693781475_n.jpg?stp=dst-jpg_e15_p480x480_tt6&_nc_cat=101&ig_cache_key=Mzk2NDMxNzg1MzM2ODE0MjgzOTE3OTA0MjE1ODk1NTU2MjQw.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNMSVBTLnhwaWRzLjEzMjAuc2RyLnZpZGVvX2RlZmF1bHRfY292ZXJfZnJhbWUuQzMifQ%3D%3D&_nc_ohc=PFjSNpPOgHYQ7kNvwE83sqm&_nc_oc=Adq8WSh1FmerrqPazIc48p5WpLgGhEDok8RAvtpua6F-Dm2m9MClVIfidOu5aUzS750&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fbcn2-1.fna&_nc_gid=CQ5rQ3r5INA4L1lUF7XspQ&_nc_ss=7a3ba&oh=00_AQEfSKle_F7ZrwsYsdzzFaWkDw114SAPLtURVOKCV1KtVg&oe=6A895BD1",
-      "published_at": "2026-08-15T14:39:35",
-      "duration": 41.888,
-      "views": 1266739,
-      "views_estimated": null,
-      "likes": 21212,
-      "comments": 22125,
-      "x_factor": 41.49,
-      "velocity": 2442.0,
-      "hot_score": 0.2498,
-      "niche": "ai",
-      "author": {
-        "profile_id": "70d2a09d-95c3-4afb-839b-451e4987187f",
-        "username": "mavgpt",
-        "display_name": "Maverick Maltin | AI & ChatGPT",
-        "platform": "instagram",
-        "followers_count": 1269051,
-        "median_views": 30528.0,
-        "niche": "ai",
-        "norm_views": 53319.2018309688
-      },
-      "is_parsed": false,
-      "library_reel_id": null,
-      "trending_since": "2026-08-15T19:45:46.991462Z",
-      "frame_count": 0,
-      "is_followed": false
-    },
-    {
       "id": "2d435327-f166-4a43-bb4f-22da7646160c",
       "url": "https://www.instagram.com/p/Dbd-5yLiKls/",
       "caption": "Phil Schneider se tornou uma das figuras mais controversas da ufologia ao afirmar que trabalhou na construção de instalações militares subterrâneas secretas.\n\nDurante suas palestras, Schneider dizia ter presenciado um confronto na suposta Base de Dulce, no Novo México, envolvendo militares e seres não humanos. Segundo seu relato, dezenas de pessoas teriam morrido e ele próprio teria sido gravemente ferido.\n\nEle também falou sobre extensas redes de túneis, tecnologias desconhecidas, acordos secretos e bases construídas muito abaixo da superfície.\n\nDepois de tornar essas histórias públicas, Phil Schneider foi encontrado morto em 1996. Oficialmente, sua morte foi considerada suicídio, mas familiares, pesquisadores e seguidores questionam as circunstâncias até hoje.\n\nEle inventou uma história impressionante… ou revelou informações que jamais deveriam chegar ao público?\n\nComente sua opinião e compartilhe com alguém que precisa conhecer o caso Phil Schneider.\n\n#TartariaeArcanum #PhilSchneider #BaseDeDulce #BasesSubterraneas #Alienigenas #UFO #Ovnis #Misterios #HistoriaOculta #TeoriaDaConspiracao",
@@ -3843,6 +3812,37 @@
       "is_parsed": false,
       "library_reel_id": null,
       "trending_since": "2026-07-31T01:57:41.098906Z",
+      "frame_count": 0,
+      "is_followed": false
+    },
+    {
+      "id": "4dbd324e-e04f-4b6d-b7e1-00ed0b87a7c1",
+      "url": "https://www.instagram.com/p/DcEFhVyv0v3/",
+      "caption": "Comment “Watermark” and I’ll send you the guide 👇\n\nClaude just started leaving watermarks on everything it creates. Here’s how to get rid of them in 30 seconds.\n\nAnthropic just announced they’re watermarking all the text Claude writes. This watermark is completely invisible and even survives when you paste it outside Claude and re-edit the text.\n\nHere’s how to remove it:\n\n1. Search for the Claude skill “Watermarks Remover”, built by Guillaume Meyer (all the credit here goes to him because he built the entire thing)\n2. Go inside the skills folder → skill.md → Download Raw File\n3. Go to Claude → Customize → Skills → dropdown → Upload Skill\n4. Drag and drop the file in\n\nNow just type “/remove-ai-marks” and paste in your text.\n\nThe output comes back completely watermark free so you can copy and paste it and avoid detectors.\n\nFollow @mavgpt for more AI videos.\n\n#ai #claude #claudeskills #aitools #watermark",
+      "thumbnail_url": "https://instagram.fbcn2-1.fna.fbcdn.net/v/t51.82787-15/774407031_17904215898556240_5114154487693781475_n.jpg?stp=dst-jpg_e15_p480x480_tt6&_nc_cat=101&ig_cache_key=Mzk2NDMxNzg1MzM2ODE0MjgzOTE3OTA0MjE1ODk1NTU2MjQw.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNMSVBTLnhwaWRzLjEzMjAuc2RyLnZpZGVvX2RlZmF1bHRfY292ZXJfZnJhbWUuQzMifQ%3D%3D&_nc_ohc=PFjSNpPOgHYQ7kNvwE83sqm&_nc_oc=Adq8WSh1FmerrqPazIc48p5WpLgGhEDok8RAvtpua6F-Dm2m9MClVIfidOu5aUzS750&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fbcn2-1.fna&_nc_gid=CQ5rQ3r5INA4L1lUF7XspQ&_nc_ss=7a3ba&oh=00_AQEfSKle_F7ZrwsYsdzzFaWkDw114SAPLtURVOKCV1KtVg&oe=6A895BD1",
+      "published_at": "2026-08-15T14:39:35",
+      "duration": 41.888,
+      "views": 1266739,
+      "views_estimated": null,
+      "likes": 21212,
+      "comments": 22125,
+      "x_factor": 41.49,
+      "velocity": 2442.0,
+      "hot_score": 0.23,
+      "niche": "ai",
+      "author": {
+        "profile_id": "70d2a09d-95c3-4afb-839b-451e4987187f",
+        "username": "mavgpt",
+        "display_name": "Maverick Maltin | AI & ChatGPT",
+        "platform": "instagram",
+        "followers_count": 1269636,
+        "median_views": 30528.0,
+        "niche": "ai",
+        "norm_views": 53335.9633347103
+      },
+      "is_parsed": false,
+      "library_reel_id": null,
+      "trending_since": "2026-08-15T19:45:46.991462Z",
       "frame_count": 0,
       "is_followed": false
     },
@@ -22496,37 +22496,6 @@
       "is_followed": false
     },
     {
-      "id": "37e3a44b-ed5f-493f-975a-b00e5c69bb6d",
-      "url": "https://www.instagram.com/p/Db9N53NNU_0/",
-      "caption": "Comment “Secret” and I’ll send you all the prompts 👇\n\nWhat happens when you ask ChatGPT to tell you what it secretly knows about you?\n\nI tried this and it literally told me something about myself I’ve never said out loud to anyone.\n\nHere’s how:\n\nPrompt 1: “Based on every conversation we’ve ever had, tell me the 5 things you’ve figured out about me that I’ve never directly told you, and don’t hold back to make me feel good.”\n ChatGPT reads between the lines of everything you’ve ever typed to it. The first answer alone freaks people out.\n\nPrompt 2: “Tell me the patterns you see in how I think and make decisions, and the one thing I’m in denial about.”\n\nPrompt 3: “Predict my next 5 years if nothing changes. Then predict them again if I fix the one pattern that’s holding me back the most.”\n ChatGPT shows you two completely different versions of your future self side by side.\n\nBonus prompt: “Now write the one paragraph I should read every single morning based on everything you know about me.”\n\nFollow @mavgpt for more AI videos.\n\n#chatgpt #ai #chatgptprompts #selfimprovement #mindset",
-      "thumbnail_url": "https://scontent-cdg6-1.cdninstagram.com/v/t51.82787-15/774515223_17903656899556240_6889299061133243606_n.jpg?stp=dst-jpg_e15_p480x480_tt6&_nc_cat=105&ig_cache_key=Mzk2MjM4NDM5ODA0ODEyMDgyMDE3OTAzNjU2ODkzNTU2MjQw.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNMSVBTLnhwaWRzLjEzMjAuc2RyLnZpZGVvX2RlZmF1bHRfY292ZXJfZnJhbWUuQzMifQ%3D%3D&_nc_ohc=oOuQDtuLlvkQ7kNvwF47PcG&_nc_oc=AdqAy-CSeS4BIkNq7CXxioCUMQH5rqG8DRE5vM6rrX4BkwQPIj5oPd9oXaOzZRNzXrQ&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-cdg6-1.cdninstagram.com&_nc_gid=PIObOnzhwvymr9STmJEHdg&_nc_ss=7a3ba&oh=00_AQFxucgO2_K7ZCRMbmBn3q6hFvJMTEjJrYwJlew9lYwNgw&oe=6A854B40",
-      "published_at": "2026-08-12T22:19:07",
-      "duration": 43.733,
-      "views": 1264096,
-      "views_estimated": null,
-      "likes": 19939,
-      "comments": 13844,
-      "x_factor": 41.41,
-      "velocity": 1608.8,
-      "hot_score": 0.0692,
-      "niche": "ai",
-      "author": {
-        "profile_id": "70d2a09d-95c3-4afb-839b-451e4987187f",
-        "username": "mavgpt",
-        "display_name": "Maverick Maltin | AI & ChatGPT",
-        "platform": "instagram",
-        "followers_count": 1269051,
-        "median_views": 30528.0,
-        "niche": "ai",
-        "norm_views": 53319.2018309688
-      },
-      "is_parsed": false,
-      "library_reel_id": null,
-      "trending_since": "2026-08-13T05:20:20.652125Z",
-      "frame_count": 0,
-      "is_followed": false
-    },
-    {
       "id": "b3e9be1b-6208-48fb-89f9-62c9788379c8",
       "url": "https://www.instagram.com/p/DbTrJxVsLfh/",
       "caption": "Эксклюзивный ковер за 200.000₽ ‼️📣 в размере 3/4м ✅\n\nВы точно такой еще не видели 😍\n\nДля заказа и консультации 8963-171-17-45 ☎️ вотсап \n\n#ковры #премиум",
@@ -23873,6 +23842,37 @@
       "is_parsed": false,
       "library_reel_id": null,
       "trending_since": "2026-07-29T19:30:16.679359Z",
+      "frame_count": 0,
+      "is_followed": false
+    },
+    {
+      "id": "37e3a44b-ed5f-493f-975a-b00e5c69bb6d",
+      "url": "https://www.instagram.com/p/Db9N53NNU_0/",
+      "caption": "Comment “Secret” and I’ll send you all the prompts 👇\n\nWhat happens when you ask ChatGPT to tell you what it secretly knows about you?\n\nI tried this and it literally told me something about myself I’ve never said out loud to anyone.\n\nHere’s how:\n\nPrompt 1: “Based on every conversation we’ve ever had, tell me the 5 things you’ve figured out about me that I’ve never directly told you, and don’t hold back to make me feel good.”\n ChatGPT reads between the lines of everything you’ve ever typed to it. The first answer alone freaks people out.\n\nPrompt 2: “Tell me the patterns you see in how I think and make decisions, and the one thing I’m in denial about.”\n\nPrompt 3: “Predict my next 5 years if nothing changes. Then predict them again if I fix the one pattern that’s holding me back the most.”\n ChatGPT shows you two completely different versions of your future self side by side.\n\nBonus prompt: “Now write the one paragraph I should read every single morning based on everything you know about me.”\n\nFollow @mavgpt for more AI videos.\n\n#chatgpt #ai #chatgptprompts #selfimprovement #mindset",
+      "thumbnail_url": "https://scontent-cdg6-1.cdninstagram.com/v/t51.82787-15/774515223_17903656899556240_6889299061133243606_n.jpg?stp=dst-jpg_e15_p480x480_tt6&_nc_cat=105&ig_cache_key=Mzk2MjM4NDM5ODA0ODEyMDgyMDE3OTAzNjU2ODkzNTU2MjQw.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNMSVBTLnhwaWRzLjEzMjAuc2RyLnZpZGVvX2RlZmF1bHRfY292ZXJfZnJhbWUuQzMifQ%3D%3D&_nc_ohc=oOuQDtuLlvkQ7kNvwF47PcG&_nc_oc=AdqAy-CSeS4BIkNq7CXxioCUMQH5rqG8DRE5vM6rrX4BkwQPIj5oPd9oXaOzZRNzXrQ&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-cdg6-1.cdninstagram.com&_nc_gid=PIObOnzhwvymr9STmJEHdg&_nc_ss=7a3ba&oh=00_AQFxucgO2_K7ZCRMbmBn3q6hFvJMTEjJrYwJlew9lYwNgw&oe=6A854B40",
+      "published_at": "2026-08-12T22:19:07",
+      "duration": 43.733,
+      "views": 1264096,
+      "views_estimated": null,
+      "likes": 19939,
+      "comments": 13844,
+      "x_factor": 41.41,
+      "velocity": 1608.8,
+      "hot_score": 0.0637,
+      "niche": "ai",
+      "author": {
+        "profile_id": "70d2a09d-95c3-4afb-839b-451e4987187f",
+        "username": "mavgpt",
+        "display_name": "Maverick Maltin | AI & ChatGPT",
+        "platform": "instagram",
+        "followers_count": 1269636,
+        "median_views": 30528.0,
+        "niche": "ai",
+        "norm_views": 53335.9633347103
+      },
+      "is_parsed": false,
+      "library_reel_id": null,
+      "trending_since": "2026-08-13T05:20:20.652125Z",
       "frame_count": 0,
       "is_followed": false
     },
@@ -30918,6 +30918,37 @@
       "is_parsed": false,
       "library_reel_id": null,
       "trending_since": "2026-07-28T11:48:50.630474Z",
+      "frame_count": 0,
+      "is_followed": false
+    },
+    {
+      "id": "8a6f8ed8-d524-44f7-b534-e98d57769b11",
+      "url": "https://www.instagram.com/p/Db8lEMeRq9z/",
+      "caption": "🛍️ Duty Free — не всегда значит «выгодно». Но есть способ покупать некоторые товары заметно дешевле обычной цены.\n\nСкидки могут доходить до 20–30%, и многие путешественники просто не знают, где и как их искать. ✈️\n\nВ ролике показываю, как работает этот способ и на что обратить внимание перед покупкой.\n\n📌 Сохраните себе перед следующим перелётом и отправьте тому, кто первым делом в аэропорту идёт в Duty Free 😄\n\n💬 А вы обычно что покупаете в Duty Free?\n\nБольше полезных фишек для путешествий — @olga_avatravel. Подписывайтесь!\n\n#dutyfree #путешествия #аэропорт #лайфхаки #avatravel",
+      "thumbnail_url": "https://instagram.fmxp12-1.fna.fbcdn.net/v/t51.71878-15/772939166_1319791839953974_7697277379046006259_n.jpg?stp=dst-jpg_e15_p240x240_tt6&_nc_cat=111&ig_cache_key=Mzk2MjIwNDc4ODE3MDg2MjQ1MQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNMSVBTLnhwaWRzLjY0MC5zZHIudmlkZW9fZGVmYXVsdF9jb3Zlcl9mcmFtZS5DMyJ9&_nc_ohc=AuEolbS9tSIQ7kNvwFj8php&_nc_oc=AdqSPrsvEDR04efzceKBz_SgaMcnVLwLfYZ5JY0W4UwVCX3z0RtUL1fZGtrgy37d5v8&_nc_ad=z-m&_nc_cid=1093&_nc_zt=23&_nc_ht=instagram.fmxp12-1.fna&_nc_gid=tdNvemrbJ_2ZWsYlurNN4Q&_nc_ss=7a3ba&oh=00_AQGitLkbhWg-KunZDzktIlhpg-Fz7EwPBM07PTkwV-FoBQ&oe=6A856C5C",
+      "published_at": "2026-08-12T16:20:00",
+      "duration": 19.6,
+      "views": 49254,
+      "views_estimated": null,
+      "likes": 229,
+      "comments": 3,
+      "x_factor": 22.61,
+      "velocity": 168.1,
+      "hot_score": 0.0438,
+      "niche": "travel",
+      "author": {
+        "profile_id": "546c894d-75ac-414a-9c77-2bf23c1e3119",
+        "username": "olga_avatravel",
+        "display_name": "Акименко Ольга | ANEX | Турция • Египет • Мальдивы",
+        "platform": "instagram",
+        "followers_count": 34924,
+        "median_views": 2178.0,
+        "niche": "travel",
+        "norm_views": 4599.614813722908
+      },
+      "is_parsed": false,
+      "library_reel_id": null,
+      "trending_since": "2026-08-13T05:53:36.013614Z",
       "frame_count": 0,
       "is_followed": false
     },
@@ -39118,37 +39149,6 @@
       "is_parsed": false,
       "library_reel_id": null,
       "trending_since": "2026-07-27T16:34:54.884110Z",
-      "frame_count": 0,
-      "is_followed": false
-    },
-    {
-      "id": "46784e79-07ed-485a-9c37-0ea370ab5d03",
-      "url": "https://www.instagram.com/p/Db5dmK8RfMy/",
-      "caption": "WAIT! ✋ Comment CLAUDE below, and I’ll send you the registration link.\n\nDoors to the Claude for Social Media Growth Masterclass close tomorrow—and the VIP package is almost sold out!\n\nVIP participants will receive a Certificate of Completion after completing the two-day class, so don’t miss this opportunity.\n\nAnd please share this Reel with your best friends—or anyone who could benefit from learning how to use Claude to grow on social media. 🚀\n\n#aicreator #aiinfluencer #aiavatar #claudeai #aicontent",
-      "thumbnail_url": "https://instagram.fqpa2-1.fna.fbcdn.net/v/t51.82787-15/770678369_17903318874535898_4509912208058508499_n.jpg?stp=dst-jpg_e15_s640x640_tt6&_nc_cat=105&ig_cache_key=Mzk2MTMyNzUxMzY4NjYzNTMxNDE3OTAzMzE4ODY4NTM1ODk4.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNMSVBTLnhwaWRzLjEzMjAuc2RyLnZpZGVvX2RlZmF1bHRfY292ZXJfZnJhbWUuQzMifQ%3D%3D&_nc_ohc=Mio72KM8GJYQ7kNvwEzCUpP&_nc_oc=AdqQWkCVzlgN-d6_9ZDbvdDbh505fmTNeS5QWPBYuyDCoRNHPqk2nzWTdHcWRNv3XtY&_nc_ad=z-m&_nc_cid=1007&_nc_zt=23&_nc_ht=instagram.fqpa2-1.fna&_nc_gid=aFIEcOWIkZTQZH1LpDlr5Q&_nc_ss=7a3ba&oh=00_AQEL7Hj5RrQbcrQiMYDQ2Sj2BLL0tSK-Q2SJhwdOSKYQsw&oe=6A83E6C9",
-      "published_at": "2026-08-11T11:18:33",
-      "duration": 30.046,
-      "views": 44142,
-      "views_estimated": null,
-      "likes": 2166,
-      "comments": 177,
-      "x_factor": 26.94,
-      "velocity": 20.0,
-      "hot_score": 0.0324,
-      "niche": "ai",
-      "author": {
-        "profile_id": "8262407c-e7e8-4c0c-9fee-5278f69abeff",
-        "username": "justamara.ai",
-        "display_name": "Amara | AI Creator and Influencer",
-        "platform": "instagram",
-        "followers_count": 14820,
-        "median_views": 1638.5,
-        "niche": "ai",
-        "norm_views": 2563.476761673253
-      },
-      "is_parsed": false,
-      "library_reel_id": null,
-      "trending_since": "2026-08-11T12:35:13.749458Z",
       "frame_count": 0,
       "is_followed": false
     },
@@ -65069,6 +65069,37 @@
       "is_followed": false
     },
     {
+      "id": "46784e79-07ed-485a-9c37-0ea370ab5d03",
+      "url": "https://www.instagram.com/p/Db5dmK8RfMy/",
+      "caption": "WAIT! ✋ Comment CLAUDE below, and I’ll send you the registration link.\n\nDoors to the Claude for Social Media Growth Masterclass close tomorrow—and the VIP package is almost sold out!\n\nVIP participants will receive a Certificate of Completion after completing the two-day class, so don’t miss this opportunity.\n\nAnd please share this Reel with your best friends—or anyone who could benefit from learning how to use Claude to grow on social media. 🚀\n\n#aicreator #aiinfluencer #aiavatar #claudeai #aicontent",
+      "thumbnail_url": "https://instagram.fqpa2-1.fna.fbcdn.net/v/t51.82787-15/770678369_17903318874535898_4509912208058508499_n.jpg?stp=dst-jpg_e15_s640x640_tt6&_nc_cat=105&ig_cache_key=Mzk2MTMyNzUxMzY4NjYzNTMxNDE3OTAzMzE4ODY4NTM1ODk4.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNMSVBTLnhwaWRzLjEzMjAuc2RyLnZpZGVvX2RlZmF1bHRfY292ZXJfZnJhbWUuQzMifQ%3D%3D&_nc_ohc=Mio72KM8GJYQ7kNvwEzCUpP&_nc_oc=AdqQWkCVzlgN-d6_9ZDbvdDbh505fmTNeS5QWPBYuyDCoRNHPqk2nzWTdHcWRNv3XtY&_nc_ad=z-m&_nc_cid=1007&_nc_zt=23&_nc_ht=instagram.fqpa2-1.fna&_nc_gid=aFIEcOWIkZTQZH1LpDlr5Q&_nc_ss=7a3ba&oh=00_AQEL7Hj5RrQbcrQiMYDQ2Sj2BLL0tSK-Q2SJhwdOSKYQsw&oe=6A83E6C9",
+      "published_at": "2026-08-11T11:18:33",
+      "duration": 30.046,
+      "views": 44142,
+      "views_estimated": null,
+      "likes": 2166,
+      "comments": 177,
+      "x_factor": 26.94,
+      "velocity": 20.0,
+      "hot_score": 0.0255,
+      "niche": "ai",
+      "author": {
+        "profile_id": "8262407c-e7e8-4c0c-9fee-5278f69abeff",
+        "username": "justamara.ai",
+        "display_name": "Amara | AI Creator and Influencer",
+        "platform": "instagram",
+        "followers_count": 14886,
+        "median_views": 1638.5,
+        "niche": "ai",
+        "norm_views": 2571.257171260613
+      },
+      "is_parsed": false,
+      "library_reel_id": null,
+      "trending_since": "2026-08-11T12:35:13.749458Z",
+      "frame_count": 0,
+      "is_followed": false
+    },
+    {
       "id": "405227c1-56f4-4de8-b4a9-f462d196f0ab",
       "url": "https://www.instagram.com/p/Dbn4WIfNROU/",
       "caption": "это qwen 3.8 max, а тг mmmorozov",
@@ -68368,37 +68399,6 @@
       "is_parsed": false,
       "library_reel_id": null,
       "trending_since": "2026-07-27T14:16:25.296858Z",
-      "frame_count": 0,
-      "is_followed": false
-    },
-    {
-      "id": "0c2ac611-a56d-4984-8259-2641aa66b60c",
-      "url": "https://www.instagram.com/p/Db4-AimuYbU/",
-      "caption": "Фокус-покус від @global_auto_logistic_lviv\nА ваш майстер так вміє ?😅",
-      "thumbnail_url": "https://scontent-cdg4-2.cdninstagram.com/v/t51.82787-15/771119070_17953902657198416_5427276876284649734_n.jpg?stp=dst-jpg_e15_p480x480_tt6&_nc_cat=107&ig_cache_key=Mzk2MTE4ODU4ODMxMjk1NDU4MDE3OTUzOTAyNjUxMTk4NDE2.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNMSVBTLnhwaWRzLjcyMC5zZHIudmlkZW9fZGVmYXVsdF9jb3Zlcl9mcmFtZS5DMyJ9&_nc_ohc=DJs1gELPf08Q7kNvwFr47Ch&_nc_oc=AdrFLUWXPVmU_NYLemDbSr9P7s3A0-N6IFXvopquTaN1D_mvQ8NRPPCTBuqzKqe2HuI&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-cdg4-2.cdninstagram.com&_nc_gid=3sxt4QXO-Sq_5pQaFYoRdg&_nc_ss=7a3ba&oh=00_AQEJLSsQDb7t89m1ZwMMB1caBEmXLFuvmopFtr2GwEm5tw&oe=6A842832",
-      "published_at": "2026-08-11T06:43:29",
-      "duration": 15.045,
-      "views": 119989,
-      "views_estimated": null,
-      "likes": 681,
-      "comments": 13,
-      "x_factor": 23.38,
-      "velocity": 113.6,
-      "hot_score": 0.0248,
-      "niche": "automotive",
-      "author": {
-        "profile_id": "0b44edd7-6dc0-4976-b57c-6d5b7d35ccc3",
-        "username": "ai_sashka.ua",
-        "display_name": "AI | Ai_Sashka | Нейромережі | Створення AI ФОТО та ВІДЕО",
-        "platform": "instagram",
-        "followers_count": 59356,
-        "median_views": 5132.0,
-        "niche": "ai",
-        "norm_views": 6604.102193167698
-      },
-      "is_parsed": false,
-      "library_reel_id": null,
-      "trending_since": "2026-08-11T11:00:23.236556Z",
       "frame_count": 0,
       "is_followed": false
     },
@@ -80276,6 +80276,37 @@
       "is_parsed": false,
       "library_reel_id": null,
       "trending_since": "2026-07-28T11:46:51.159439Z",
+      "frame_count": 0,
+      "is_followed": false
+    },
+    {
+      "id": "0c2ac611-a56d-4984-8259-2641aa66b60c",
+      "url": "https://www.instagram.com/p/Db4-AimuYbU/",
+      "caption": "Фокус-покус від @global_auto_logistic_lviv\nА ваш майстер так вміє ?😅",
+      "thumbnail_url": "https://scontent-cdg4-2.cdninstagram.com/v/t51.82787-15/771119070_17953902657198416_5427276876284649734_n.jpg?stp=dst-jpg_e15_p480x480_tt6&_nc_cat=107&ig_cache_key=Mzk2MTE4ODU4ODMxMjk1NDU4MDE3OTUzOTAyNjUxMTk4NDE2.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNMSVBTLnhwaWRzLjcyMC5zZHIudmlkZW9fZGVmYXVsdF9jb3Zlcl9mcmFtZS5DMyJ9&_nc_ohc=DJs1gELPf08Q7kNvwFr47Ch&_nc_oc=AdrFLUWXPVmU_NYLemDbSr9P7s3A0-N6IFXvopquTaN1D_mvQ8NRPPCTBuqzKqe2HuI&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-cdg4-2.cdninstagram.com&_nc_gid=3sxt4QXO-Sq_5pQaFYoRdg&_nc_ss=7a3ba&oh=00_AQEJLSsQDb7t89m1ZwMMB1caBEmXLFuvmopFtr2GwEm5tw&oe=6A842832",
+      "published_at": "2026-08-11T06:43:29",
+      "duration": 15.045,
+      "views": 119989,
+      "views_estimated": null,
+      "likes": 681,
+      "comments": 13,
+      "x_factor": 23.38,
+      "velocity": 113.6,
+      "hot_score": 0.0228,
+      "niche": "automotive",
+      "author": {
+        "profile_id": "0b44edd7-6dc0-4976-b57c-6d5b7d35ccc3",
+        "username": "ai_sashka.ua",
+        "display_name": "AI | Ai_Sashka | Нейромережі | Створення AI ФОТО та ВІДЕО",
+        "platform": "instagram",
+        "followers_count": 59368,
+        "median_views": 5132.0,
+        "niche": "ai",
+        "norm_views": 6605.012736922835
+      },
+      "is_parsed": false,
+      "library_reel_id": null,
+      "trending_since": "2026-08-11T11:00:23.236556Z",
       "frame_count": 0,
       "is_followed": false
     },
