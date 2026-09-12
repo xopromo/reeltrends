@@ -242,8 +242,48 @@ def save(items: dict, prev_ids: set):
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         json.dump(output, f, ensure_ascii=False, separators=(",", ":"))
 
+    # Сохраняем сверхлегкий trends_top.json для мгновенной первой загрузки
+    top_items = sorted_items[:200]
+    slim_top = []
+    for it in top_items:
+        slim_top.append({
+            "id": it["id"],
+            "url": it.get("url", ""),
+            "caption": (it.get("caption") or "")[:300],
+            "thumbnail_url": it.get("thumbnail_url", ""),
+            "published_at": it.get("published_at", ""),
+            "duration_sec": it.get("duration_sec") or it.get("duration"),
+            "views": it.get("views", 0),
+            "likes": it.get("likes", 0),
+            "comments": it.get("comments", 0),
+            "x_factor": it.get("x_factor"),
+            "velocity": it.get("velocity"),
+            "hot_score": it.get("hot_score"),
+            "niche": it.get("niche", ""),
+            "trending_since": it.get("trending_since", ""),
+            "author": {
+                "username": (it.get("author") or {}).get("username", ""),
+                "platform": (it.get("author") or {}).get("platform", "instagram"),
+                "followers_count": (it.get("author") or {}).get("followers_count", 0),
+                "avatar_url": (it.get("author") or {}).get("avatar_url", "")
+            }
+        })
+    top_output = {
+        "updated_at": now.isoformat(),
+        "total": len(sorted_items),
+        "top_count": len(slim_top),
+        "new_count": len(new_ids),
+        "new_last_24h": len(new_last_24h),
+        "version": cur_version + 1,
+        "items": slim_top,
+    }
+    with open("trends_top.json", "w", encoding="utf-8") as f:
+        json.dump(top_output, f, ensure_ascii=False, separators=(",", ":"))
+
     size_mb = os.path.getsize(OUTPUT_FILE) / 1024 / 1024
+    top_kb = os.path.getsize("trends_top.json") / 1024
     print(f"✓ Saved {len(sorted_items)} items ({len(new_ids)} new) → {OUTPUT_FILE} ({size_mb:.1f} MB)")
+    print(f"✓ Saved {len(slim_top)} items → trends_top.json ({top_kb:.1f} KB)")
     print(f"  New in last 24h: {len(new_last_24h)}")
 
 

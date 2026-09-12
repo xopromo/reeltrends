@@ -399,6 +399,7 @@ const isLocal = window.location.protocol === 'file:';
 const getUrl = (filename) => isLocal ? `https://raw.githubusercontent.com/${REPO}/main/${filename}` : filename;
 
 const IG_URL = getUrl('trends.json');
+const TOP_URL = getUrl('trends_top.json');
 const YT_URL = getUrl('youtube.json');
 const VK_JSON_URL = getUrl('vk.json');
 // PER вычисляется динамически — кратно числу колонок
@@ -1075,7 +1076,7 @@ setInterval(updateCombinedTimer,15000);
 // ── YouTube loader ────────────────────────────────────────────────
 async function loadVKData() {
   try {
-    const r = await fetch(VK_JSON_URL+'?t='+Date.now());
+    const r = await fetch(VK_JSON_URL);
     if (!r.ok) return;
     const data = await r.json();
     vkData = (data.items||[]).filter(i=>i.views>=500)
@@ -1087,7 +1088,7 @@ async function loadVKData() {
 
 async function loadYouTubeData() {
   try {
-    const r=await fetch(YT_URL+'?t='+Date.now());
+    const r=await fetch(YT_URL);
     if (!r.ok) return;
     const data=await r.json();
     ytData=(data.items||[]).filter(i=>i.views>=1000).map(i=>({...i,author:{...i.author,platform:'youtube'}}));
@@ -1098,12 +1099,37 @@ async function loadYouTubeData() {
   } catch(e){ console.warn('YT load failed:',e); }
 }
 
-// ── Main load ─────────────────────────────────────────────────────
+// ── Main load (Progressive Multi-Tier Architecture) ───────────────
+let fullArchiveLoaded = false;
+
 async function load() {
-  document.getElementById('grid').innerHTML=skeletons();
-  // GH_TOKEN будет доступен через Cloudflare Worker (в разработке)
-  // Загружаем версию деплоя
-  fetch(getUrl('version.json') + '?t='+Date.now())
+  loadSettings();
+  loadFilters();
+  updateResetBtn();
+
+  // Tier 0: Мгновенная отрисовка из локального кеша (0 мс)
+  let renderedFromCache = false;
+  try {
+    const cachedTop = localStorage.getItem('rt_top_cache');
+    if (cachedTop) {
+      const parsed = JSON.parse(cachedTop);
+      if (parsed && parsed.items && parsed.items.length) {
+        igData = parsed.items;
+        lastUpdAt = parsed.updated_at;
+        ALL = igData;
+        rebuildALL(state.platform);
+        applyFilters();
+        renderedFromCache = true;
+      }
+    }
+  } catch(e) {}
+
+  if (!renderedFromCache) {
+    document.getElementById('grid').innerHTML = skeletons();
+  }
+
+  // Версия деплоя
+  fetch(getUrl('version.json'))
     .then(r=>r.ok?r.json():null)
     .then(v=>{
       if (!v) return;
@@ -1117,56 +1143,93 @@ async function load() {
         vb.title = 'Задеплоено: '+deployedAt.toLocaleString('ru');
       }
     }).catch(()=>{});
+
+  // Tier 1: Сверхбыстрый топ trends_top.json (~130 КБ / ~25 КБ gzip) за 30-50 мс
   try {
-    const r=await fetch(IG_URL+'?t='+Date.now());
-    if (r.ok) {
-      const data=await r.json();
-      igData=data.items||[];
-      lastUpdAt=data.updated_at;
-      updateCombinedTimer();
+    const rTop = await fetch(TOP_URL);
+    if (rTop.ok) {
+      const dataTop = await rTop.json();
+      if (!fullArchiveLoaded && dataTop.items && dataTop.items.length) {
+        igData = dataTop.items;
+        lastUpdAt = dataTop.updated_at;
+        ALL = igData;
+        rebuildALL(state.platform);
+        applyFilters();
+        updateCombinedTimer();
 
-      const nb=document.getElementById('new-badge');
-      if (data.new_last_24h>0 && nb){nb.textContent='+'+data.new_last_24h+' новых';nb.style.display='inline';}
+        try {
+          localStorage.setItem('rt_top_cache', JSON.stringify({
+            updated_at: dataTop.updated_at,
+            items: dataTop.items.slice(0, 100)
+          }));
+        } catch(e) {}
 
-      const lv=localStorage.getItem(VK);
-      const btnN=document.getElementById('btn-new');
-      if (lv && btnN){
-        const cut=new Date(lv);
-        const ns=igData.filter(i=>{
-          const ref=i.published_at||i.trending_since;
-          return ref && new Date(ref)>cut;
-        });
-        if (ns.length>0){
-          btnN.style.display='inline-block';
-          btnN.textContent='Новое с визита ('+ns.length+')';
-          btnN._newItems=ns; // сохраняем список
+        const nb = document.getElementById('new-badge');
+        if (dataTop.new_last_24h > 0 && nb) {
+          nb.textContent = '+' + dataTop.new_last_24h + ' новых';
+          nb.style.display = 'inline';
         }
       }
-      if (!lv) localStorage.setItem(VK,new Date().toISOString());
-    } else {
-      console.warn('trends.json не найден или пуст');
     }
   } catch(e) {
-    console.warn('Ошибка загрузки Instagram:', e);
+    console.warn('Fast top fetch failed, waiting for archive:', e);
   }
 
-  ALL = igData;
-  loadSettings();
-  loadFilters();
-  updateResetBtn();
-  pruneSearchCache(); // тихая очистка устаревших
-  restoreVkCache();   // восстанавливаем VK кеш
+  pruneSearchCache();
+  restoreVkCache();
 
-  // Сразу рендерим доступные данные (Instagram и кешированные VK), чтобы скрыть скелетоны
-  rebuildALL(state.platform);
-  applyFilters();
-
-  // Загружаем YouTube и VK в фоновом режиме, не блокируя UI
+  // Фоновая подгрузка YouTube и VK
   Promise.allSettled([loadYouTubeData(), loadVKData()]).then(() => {
-    rebuildALL(state.platform);          // мержим с учетом текущей выбранной платформы
-    restoreYtSearch();                   // восстанавливаем YT поиск после загрузки
-    if (!ytSearchActive) applyFilters(); // перерендериваем ленту
+    rebuildALL(state.platform);
+    restoreYtSearch();
+    if (!ytSearchActive) applyFilters();
   });
+
+  // Tier 2: Фоновая тихая гидратация полной базы (5,370+ роликов) без блокировки экрана
+  setTimeout(() => {
+    fetch(IG_URL)
+      .then(r => r.ok ? r.json() : null)
+      .then(data => {
+        if (!data || !data.items) return;
+        fullArchiveLoaded = true;
+        igData = data.items;
+        lastUpdAt = data.updated_at;
+        updateCombinedTimer();
+
+        rebuildALL(state.platform);
+
+        // Если пользователь на 1 странице и без поискового запроса, обновляем счётчики
+        if (!state.q && state.page === 1) {
+          let arr = [...ALL].filter(passesSettings);
+          if (state.platform) arr = arr.filter(x=>(x.author?.platform||x.platform||'').toLowerCase()===state.platform);
+          filtered = arr;
+          const unit = state.platform === 'youtube' ? 'Shorts' : state.platform === 'vk' ? 'клипов' : state.platform === 'instagram' ? 'рилсов' : 'видео';
+          const pages = Math.max(1, Math.ceil(filtered.length / PER));
+          document.getElementById('cnt').textContent = filtered.length + ' ' + unit;
+          document.getElementById('pi').textContent = state.page + ' / ' + pages;
+          document.getElementById('nb').disabled = state.page >= pages;
+        } else {
+          applyFilters();
+        }
+
+        const lv = localStorage.getItem(VK);
+        const btnN = document.getElementById('btn-new');
+        if (lv && btnN) {
+          const cut = new Date(lv);
+          const ns = igData.filter(i => {
+            const ref = i.published_at || i.trending_since;
+            return ref && new Date(ref) > cut;
+          });
+          if (ns.length > 0) {
+            btnN.style.display = 'inline-block';
+            btnN.textContent = 'Новое с визита (' + ns.length + ')';
+            btnN._newItems = ns;
+          }
+        }
+        if (!lv) localStorage.setItem(VK, new Date().toISOString());
+      })
+      .catch(e => console.warn('Background full archive load failed:', e));
+  }, 100);
 }
 
 load();
