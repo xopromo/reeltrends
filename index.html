@@ -568,15 +568,13 @@ function resetAllFilters() {
   document.querySelectorAll('#sg .fb').forEach(b => b.classList.toggle('on', b.dataset.v === 'hot_score'));
   document.querySelectorAll('#pg .fb').forEach(b => { b.classList.remove('on','on-orange','on-cyan'); if (b.dataset.v === '') b.classList.add('on'); });
   document.querySelectorAll('#dg .fb').forEach(b => { b.classList.remove('on','on-cyan'); if (b.dataset.v === '') b.classList.add('on'); });
-  const qiEl = document.getElementById('qi'); if (qiEl) qiEl.value = '';
+  const inp = document.getElementById('yt-inline-input'); if (inp) inp.value = '';
 
   // Сбрасываем поиск если был активен
   if (ytSearchActive) {
     ytSearchActive = false;
     const cx = document.getElementById('yt-clear-x');
     if (cx) cx.style.display = 'none';
-    const inp = document.getElementById('yt-inline-input');
-    if (inp) inp.value = '';
   }
   rebuildALL('');
   state.page = 1;
@@ -897,7 +895,8 @@ function render() {
   PER = calcPER();
   const total=filtered.length, pages=Math.max(1,Math.ceil(total/PER));
   const p=Math.min(state.page,pages), slice=filtered.slice((p-1)*PER,p*PER);
-  document.getElementById('cnt').textContent=total+' рилсов';
+  const unit = state.platform === 'youtube' ? 'Shorts' : state.platform === 'vk' ? 'клипов' : state.platform === 'instagram' ? 'рилсов' : 'видео';
+  document.getElementById('cnt').textContent=total+' '+unit;
   document.getElementById('pi').textContent=p+' / '+pages;
   document.getElementById('pb').disabled=p<=1;
   document.getElementById('nb').disabled=p>=pages;
@@ -1082,54 +1081,54 @@ async function load() {
     }).catch(()=>{});
   try {
     const r=await fetch(IG_URL+'?t='+Date.now());
-    if (!r.ok) throw new Error('trends.json не найден — запусти Actions вручную');
-    const data=await r.json();
-    igData=data.items||[];
-    ALL=igData;
-    lastUpdAt=data.updated_at;
-    updateCombinedTimer();
+    if (r.ok) {
+      const data=await r.json();
+      igData=data.items||[];
+      lastUpdAt=data.updated_at;
+      updateCombinedTimer();
 
-    const nb=document.getElementById('new-badge');
-    if (data.new_last_24h>0){nb.textContent='+'+data.new_last_24h+' новых';nb.style.display='inline';}
+      const nb=document.getElementById('new-badge');
+      if (data.new_last_24h>0 && nb){nb.textContent='+'+data.new_last_24h+' новых';nb.style.display='inline';}
 
-    const lv=localStorage.getItem(VK);
-    const btnN=document.getElementById('btn-new');
-    if (lv){
-      const cut=new Date(lv);
-      const ns=ALL.filter(i=>{
-        const ref=i.published_at||i.trending_since;
-        return ref && new Date(ref)>cut;
-      });
-      if (ns.length>0){
-        btnN.style.display='inline-block';
-        btnN.textContent='Новое с визита ('+ns.length+')';
-        btnN._newItems=ns; // сохраняем список
+      const lv=localStorage.getItem(VK);
+      const btnN=document.getElementById('btn-new');
+      if (lv && btnN){
+        const cut=new Date(lv);
+        const ns=igData.filter(i=>{
+          const ref=i.published_at||i.trending_since;
+          return ref && new Date(ref)>cut;
+        });
+        if (ns.length>0){
+          btnN.style.display='inline-block';
+          btnN.textContent='Новое с визита ('+ns.length+')';
+          btnN._newItems=ns; // сохраняем список
+        }
       }
+      if (!lv) localStorage.setItem(VK,new Date().toISOString());
+    } else {
+      console.warn('trends.json не найден или пуст');
     }
-    // Записываем визит только когда пользователь нажмёт кнопку (см. showNewSinceVisit)
-    // Но если первый раз — запишем сразу
-    if (!lv) localStorage.setItem(VK,new Date().toISOString());
-
-    loadSettings();
-    loadFilters();
-    updateResetBtn();
-    pruneSearchCache(); // тихая очистка устаревших
-    restoreVkCache();   // восстанавливаем VK кеш
-
-    // Сразу рендерим Instagram и кешированные VK, чтобы скрыть скелетоны
-    applyFilters();
-
-    // Загружаем YouTube в фоновом режиме, не блокируя UI
-    loadYouTubeData().then(() => {
-      rebuildALL(state.platform); // мержим с учетом текущей выбранной платформы
-      restoreYtSearch();          // восстанавливаем YT поиск после загрузки
-      if (!ytSearchActive) applyFilters(); // перерендериваем ленту
-    });
-
   } catch(e) {
-    document.getElementById('grid').innerHTML='<div class="empty">'+e.message+'</div>';
-    document.getElementById('upd').textContent='нет данных';
+    console.warn('Ошибка загрузки Instagram:', e);
   }
+
+  ALL = igData;
+  loadSettings();
+  loadFilters();
+  updateResetBtn();
+  pruneSearchCache(); // тихая очистка устаревших
+  restoreVkCache();   // восстанавливаем VK кеш
+
+  // Сразу рендерим доступные данные (Instagram и кешированные VK), чтобы скрыть скелетоны
+  rebuildALL(state.platform);
+  applyFilters();
+
+  // Загружаем YouTube и VK в фоновом режиме, не блокируя UI
+  Promise.allSettled([loadYouTubeData(), loadVKData()]).then(() => {
+    rebuildALL(state.platform);          // мержим с учетом текущей выбранной платформы
+    restoreYtSearch();                   // восстанавливаем YT поиск после загрузки
+    if (!ytSearchActive) applyFilters(); // перерендериваем ленту
+  });
 }
 
 load();
@@ -1244,8 +1243,8 @@ async function doYtSearch(useApi) {
 
   const q = query.toLowerCase();
 
-  // Шаг 1: ищем в уже загруженных данных (ALL + ytData + igData)
-  const allData = [...new Map([...igData,...ytData].map(x=>[x.id,x])).values()];
+  // Шаг 1: ищем в уже загруженных данных (igData + ytData + vkData)
+  const allData = [...new Map([...igData,...ytData,...vkData].map(x=>[x.id,x])).values()];
   const localResults = allData.filter(item => {
     const text = ((item.title||'')+(item.caption||'')+(item.niche||'')+(item.author?.username||'')).toLowerCase();
     return text.includes(q);
@@ -1667,7 +1666,7 @@ async function fetchVkVideosFromGroups(groups, setProgress) {
           trending_since: new Date().toISOString(),
         });
       }
-      await new Promise(r => setTimeout(r, 100));
+      await new Promise(r => setTimeout(r, 350));
     } catch(e) {}
   }
 
@@ -1757,7 +1756,7 @@ async function runVkScout() {
           found++;
         }
       }
-      await new Promise(r=>setTimeout(r,150));
+      await new Promise(r=>setTimeout(r,350));
     } catch(e) {
       errors++;
       lastError = e.message;
@@ -1775,7 +1774,7 @@ async function runVkScout() {
           }
         }
       }
-      await new Promise(r=>setTimeout(r,150));
+      await new Promise(r=>setTimeout(r,350));
     } catch(e) {
       errors++;
     }

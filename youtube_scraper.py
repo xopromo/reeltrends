@@ -47,7 +47,7 @@ def load_quota_log() -> dict:
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     if os.path.exists(QUOTA_FILE):
         try:
-            with open(QUOTA_FILE) as f:
+            with open(QUOTA_FILE, encoding="utf-8") as f:
                 data = json.load(f)
             if data.get("date") == today:
                 return data
@@ -180,7 +180,7 @@ def load_channels() -> dict:
     """
     if os.path.exists(CHANNELS_FILE):
         try:
-            with open(CHANNELS_FILE) as f:
+            with open(CHANNELS_FILE, encoding="utf-8") as f:
                 return json.load(f)
         except Exception:
             pass
@@ -192,7 +192,10 @@ def atomic_write(path: str, data):
     tmp = path + ".tmp"
     try:
         with open(tmp, "w", encoding="utf-8") as f:
-            json.dump(data, f, ensure_ascii=False, indent=2)
+            if path.endswith(".json"):
+                json.dump(data, f, ensure_ascii=False, separators=(",", ":"))
+            else:
+                json.dump(data, f, ensure_ascii=False, indent=2)
         os.replace(tmp, path)  # атомарная операция на всех ОС
     except Exception:
         try:
@@ -792,7 +795,7 @@ async def scrape_youtube() -> list:
                     datetime.fromisoformat(short["published_at"].replace("Z", "+00:00"))
                 ).total_seconds() / 3600)
                 engagement = short["likes"] + short["comments"] * 3
-                short["hot_score"] = round(engagement / short["views"] / (1 + age_h / 24), 4)
+                short["hot_score"] = round(engagement / (short["views"] + 100) / (1 + age_h / 24), 4)
 
         print(f"✓ Found {len(shorts)} Shorts")
 
@@ -816,18 +819,26 @@ async def scrape_youtube() -> list:
 
 def get_ttl_days(item: dict) -> float:
     """
-    TTL считается от stats_updated_at (последнее обновление статистики),
-    а не от даты публикации — чтобы активно растущие видео не выбывали.
+    TTL считается от published_at (с фоллбэком на first_seen).
+    Видео, которые не взлетели, удаляются через 7-14 дней.
     """
     xf    = item.get("x_factor") or 0
     views = item.get("views") or 0
     vel   = item.get("velocity") or 0
+    # Супер-вирусные хиты (настоящий вечный архив)
     if xf > 10 and views > 500_000: return float("inf")
-    if vel > 100 and views > 100_000: return float("inf")
+    if vel > 100 and views > 500_000 and xf > 2: return float("inf")
+    # Вирусные видео длительного цикла
     if xf > 5  and views > 100_000: return 365
+    if xf > 2  and views > 50_000:  return 180
     if xf > 2  and views > 10_000:  return 90
-    if xf > 1  and views > 5_000:   return 60   # новый промежуточный уровень
-    return 30
+    if xf > 1.2 and views > 5_000:  return 60
+    # Базовые видео, показавшие результат на уровне канала
+    if xf >= 1.0 or views >= 5_000: return 30
+    # Не взлетели вовсе (слабые просмотры и сильно ниже среднего по каналу)
+    if views < 1_000 or xf < 0.5:   return 7
+    return 14
+
 
 
 def prune_old(items: list) -> list:
@@ -838,9 +849,8 @@ def prune_old(items: list) -> list:
         if ttl == float("inf"):
             kept.append(item)
             continue
-        # Используем stats_updated_at (последнее обновление статистики), а не published_at
-        # Это позволяет видео с растущими показателями оставаться в базе
-        ref_str = item.get("stats_updated_at") or item.get("first_seen") or item.get("added_at") or item.get("published_at")
+        # Возраст для очистки должен строго считаться от даты публикации видео
+        ref_str = item.get("published_at") or item.get("first_seen")
         if not ref_str:
             kept.append(item)
             continue
@@ -861,7 +871,7 @@ def prune_old(items: list) -> list:
 def load_existing() -> list:
     if os.path.exists(OUTPUT_FILE):
         try:
-            with open(OUTPUT_FILE) as f:
+            with open(OUTPUT_FILE, encoding="utf-8") as f:
                 return json.load(f).get("items", [])
         except Exception:
             pass
@@ -950,7 +960,15 @@ def apply_refreshed_stats(items: list, refreshed: dict) -> list:
         item["views"]    = stats["views"]
         item["likes"]    = stats["likes"]
         item["comments"] = stats["comments"]
-        item["velocity"] = calc_velocity(stats["views"], item.get("published_at", ""))
+        prev_updated = item.get("stats_updated_at")
+        if prev_updated and old_views > 0 and stats["views"] >= old_views:
+            try:
+                delta_h = max(0.5, (now - datetime.fromisoformat(prev_updated.replace("Z", "+00:00"))).total_seconds() / 3600)
+                item["velocity"] = round((stats["views"] - old_views) / delta_h, 1)
+            except Exception:
+                item["velocity"] = calc_velocity(stats["views"], item.get("published_at", ""))
+        else:
+            item["velocity"] = calc_velocity(stats["views"], item.get("published_at", ""))
         item["stats_updated_at"] = now.isoformat()  # обновляем метку последнего обновления статистики
 
         # Пересчитываем hot_score
@@ -960,7 +978,7 @@ def apply_refreshed_stats(items: list, refreshed: dict) -> list:
                     item["published_at"].replace("Z", "+00:00")
                 )).total_seconds() / 3600)
                 engagement = stats["likes"] + stats["comments"] * 3
-                item["hot_score"] = round(engagement / stats["views"] / (1 + age_h / 24), 4)
+                item["hot_score"] = round(engagement / (stats["views"] + 100) / (1 + age_h / 24), 4)
             except Exception:
                 pass
 

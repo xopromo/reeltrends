@@ -64,7 +64,10 @@ def atomic_write(path: str, data):
     tmp = path + ".tmp"
     try:
         with open(tmp, "w", encoding="utf-8") as f:
-            json.dump(data, f, ensure_ascii=False, indent=2)
+            if path.endswith(".json"):
+                json.dump(data, f, ensure_ascii=False, separators=(",", ":"))
+            else:
+                json.dump(data, f, ensure_ascii=False, indent=2)
         os.replace(tmp, path)
     except Exception:
         try:
@@ -111,7 +114,7 @@ def load_groups() -> dict:
     groups = {}
     if os.path.exists(GROUPS_FILE):
         try:
-            with open(GROUPS_FILE) as f:
+            with open(GROUPS_FILE, encoding="utf-8") as f:
                 groups = json.load(f)
         except Exception:
             pass
@@ -134,9 +137,21 @@ def save_groups(groups: dict):
 def is_short_vertical(item: dict) -> bool:
     """Короткое (≤60с) вертикальное видео."""
     dur = item.get("duration", 0)
-    w   = item.get("width", 1)
-    h   = item.get("height", 1)
-    return dur <= 60 and h > w
+    if dur > 60:
+        return False
+    # В VK API видео-объекты не содержат корневых width/height.
+    # Проверяем размеры кадров в first_frame или image
+    for frame in item.get("first_frame", []):
+        fw = frame.get("width", 0)
+        fh = frame.get("height", 0)
+        if fw > 0 and fh > 0:
+            return fh > fw
+    for img in item.get("image", []):
+        iw = img.get("width", 0)
+        ih = img.get("height", 0)
+        if iw > 100 and ih > 0:
+            return ih >= iw
+    return True
 
 
 def best_thumb(item: dict) -> str:
@@ -394,7 +409,7 @@ async def worker():
         existing_all = []
         if os.path.exists(OUTPUT_FILE):
             try:
-                with open(OUTPUT_FILE) as f:
+                with open(OUTPUT_FILE, encoding="utf-8") as f:
                     existing_all = json.load(f).get("items", [])
             except Exception:
                 pass
@@ -475,6 +490,12 @@ async def worker():
                 print(f"  ⚠ group {gid}: {e} — пропускаем")
                 real_groups[gid_str]["score"] = round(real_groups[gid_str].get("score", 0) - 0.5, 1)
 
+        # Обновляем статистику существующих видео
+        fresh_ids = {item["id"] for item in all_items}
+        to_refresh = [v for v in existing_all if v["id"] not in fresh_ids]
+        if to_refresh:
+            await refresh_vk_stats(client, to_refresh)
+
     # x_factor из исторической медианы группы
     for item in all_items:
         gid_str = item["author"]["channel_id"]
@@ -492,10 +513,6 @@ async def worker():
     all_items.sort(key=lambda x: x.get("hot_score") or 0, reverse=True)
     print(f"✓ Found {len(all_items)} short vertical videos")
 
-    # Обновляем статистику существующих видео (внутри async with выше)
-    fresh_ids = {item["id"] for item in all_items}
-    to_refresh = [v for v in existing_all if v["id"] not in fresh_ids]
-
     # Сохраняем группы с __meta__
     groups = {**real_groups, "__meta__": groups["__meta__"]}
     save_groups(groups)
@@ -503,17 +520,29 @@ async def worker():
 
 
 def get_ttl_days(item: dict) -> float:
+    """
+    TTL считается от published_at (с фоллбэком на first_seen).
+    Видео, которые не взлетели, удаляются через 7-14 дней.
+    """
     xf    = item.get("x_factor") or 0
     views = item.get("views") or 0
     vel   = item.get("velocity") or 0
     rep   = item.get("repost_rate") or 0
+    # Супер-вирусные хиты (настоящий вечный архив)
     if xf > 10 and views > 500_000: return float("inf")
-    if vel > 100 and views > 100_000: return float("inf")
-    if rep > 0.01 and views > 50_000: return float("inf")
+    if rep > 0.02 and views > 200_000 and xf > 3: return float("inf")
+    if vel > 100 and views > 500_000 and xf > 2: return float("inf")
+    # Вирусные видео длительного цикла
     if xf > 5  and views > 100_000: return 365
+    if xf > 2  and views > 50_000:  return 180
     if xf > 2  and views > 10_000:  return 90
-    if xf > 1  and views > 5_000:   return 60   # промежуточный уровень
-    return 30
+    if xf > 1.2 and views > 5_000:  return 60
+    # Базовые видео, показавшие результат на уровне сообщества
+    if xf >= 1.0 or views >= 5_000: return 30
+    # Не взлетели вовсе (слабые просмотры и сильно ниже среднего по группе)
+    if views < 500 or xf < 0.5:     return 7
+    return 14
+
 
 
 def prune_old(items: list) -> list:
@@ -524,8 +553,8 @@ def prune_old(items: list) -> list:
         if ttl == float("inf"):
             kept.append(item)
             continue
-        # TTL от stats_updated_at — активно растущие видео не вылетают
-        ref_str = item.get("stats_updated_at") or item.get("first_seen") or item.get("added_at") or item.get("published_at")
+        # Возраст для очистки должен строго считаться от даты публикации видео
+        ref_str = item.get("published_at") or item.get("first_seen")
         if not ref_str:
             kept.append(item)
             continue
@@ -547,7 +576,7 @@ def save_output(items: list):
     existing = {}
     if os.path.exists(OUTPUT_FILE):
         try:
-            with open(OUTPUT_FILE) as f:
+            with open(OUTPUT_FILE, encoding="utf-8") as f:
                 existing = {i["id"]: i for i in json.load(f).get("items", [])}
         except Exception:
             pass
