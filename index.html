@@ -83,8 +83,12 @@
   .card:hover{transform:scale(1.02);border-color:var(--border2);box-shadow:0 8px 28px rgba(0,0,0,.5)}
   .thumb{position:relative;aspect-ratio:3/4;background:var(--surface2);overflow:hidden}
   .thumb img{width:100%;height:100%;object-fit:cover;transition:transform .3s}
-  .card:hover .thumb img{transform:scale(1.05)}
   .thumb-empty{width:100%;height:100%;display:flex;align-items:center;justify-content:center;color:var(--cream-muted);font-size:11px}
+  .thumb-fallback{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;background:radial-gradient(ellipse at 50% 35%, rgba(131,58,180,.35), rgba(253,29,29,.2) 50%, rgba(252,176,69,.12) 100%), #131316;padding:12px;text-align:center;user-select:none}
+  .tf-icon{opacity:.75;transition:transform .25s ease}
+  .card:hover .tf-icon{transform:scale(1.12);opacity:1}
+  .tf-author{font-size:11px;font-weight:600;color:var(--cream);max-width:90%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .tf-badge{font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;padding:2px 7px;border-radius:6px;background:rgba(255,255,255,.08);color:var(--cream-dim);border:1px solid rgba(255,255,255,.1)}
   .thumb::before{content:'';position:absolute;inset-x:0;top:0;height:56px;background:linear-gradient(to bottom,rgba(0,0,0,.55),transparent);z-index:1;pointer-events:none}
   .thumb::after{content:'';position:absolute;inset-x:0;bottom:0;height:72px;background:linear-gradient(to top,rgba(0,0,0,.85),transparent);z-index:1;pointer-events:none}
   .thumb-top{position:absolute;top:7px;left:7px;display:flex;align-items:center;gap:5px;z-index:2}
@@ -721,6 +725,8 @@ function picon(platform) {
 }
 
 // ── Render ────────────────────────────────────────────────────────
+const failedThumbs = new Set();
+
 function tryNextThumb(img) {
   try {
     const fallbacks = JSON.parse(decodeURIComponent(img.dataset.fallbacks || '[]'));
@@ -728,12 +734,28 @@ function tryNextThumb(img) {
     if (fi < fallbacks.length) {
       img.dataset.fi = fi;
       img.src = fallbacks[fi];
-    } else {
-      img.outerHTML = '<div class="thumb-empty">нет фото</div>';
+      return;
     }
-  } catch(e) {
-    img.outerHTML = '<div class="thumb-empty">нет фото</div>';
+  } catch(e) {}
+
+  const sc = img.dataset.sc || '';
+  if (sc) failedThumbs.add(sc);
+
+  const cardEl = img.closest('.card');
+  if (cardEl) {
+    cardEl.classList.add('has-fallback-thumb');
+    if (S.hideNoThumb) {
+      cardEl.style.display = 'none';
+      return;
+    }
   }
+
+  const author = img.dataset.author ? `@${img.dataset.author}` : '';
+  img.outerHTML = `<div class="thumb-fallback">
+    <div class="tf-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="6" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/><circle cx="17" cy="7" r="1" fill="rgba(255,255,255,0.4)"/></svg></div>
+    <div class="tf-author">${author}</div>
+    <div class="tf-badge">архив</div>
+  </div>`;
 }
 
 function skeletons() {
@@ -751,7 +773,10 @@ function card(item, rank) {
   const ts=thumbUrl(item);
   const fallbacks = thumbFallbacks(item);
   const fbJson = encodeURIComponent(JSON.stringify(fallbacks));
-  const thumb=ts?`<img src="${ts}" loading="lazy" alt="" data-fallbacks="${fbJson}" data-fi="0" onerror="tryNextThumb(this)">`:`<div class="thumb-empty">нет фото</div>`;
+  const authorHandle = item.author?.username || '';
+  const parts = (item.url||'').split('/').filter(Boolean);
+  const sc = parts.length ? parts[parts.length-1] : '';
+  const thumb=ts?`<img src="${ts}" loading="lazy" alt="" data-sc="${sc}" data-author="${authorHandle}" data-fallbacks="${fbJson}" data-fi="0" onerror="tryNextThumb(this)">`:`<div class="thumb-fallback"><div class="tf-icon">${picon(platform)}</div><div class="tf-author">@${authorHandle||'—'}</div><div class="tf-badge">архив</div></div>`;
   const data=encodeURIComponent(JSON.stringify(item));
   const safeUrl = (item.url||'').replace(/'/g, '%27');
   return `<div class="card" onclick="handleCardClick(event,'${data}','${safeUrl}')">
@@ -857,7 +882,12 @@ function passesSettings(item) {
   }
 
   // Скрыть без картинки
-  if (S.hideNoThumb && !item.thumbnail_url) return false;
+  if (S.hideNoThumb) {
+    if (!item.thumbnail_url) return false;
+    const parts = (item.url||'').split('/').filter(Boolean);
+    const sc = parts.length ? parts[parts.length-1] : '';
+    if (sc && failedThumbs.has(sc)) return false;
+  }
 
   // Подписчики
   const minSubs = subsSteps[Math.min(S.subsMin, subsSteps.length-1)];

@@ -54,9 +54,9 @@ async def main():
         data = json.load(f)
     items = data.get('items', [])
     
-    by_xf = sorted(items, key=lambda x: x.get('x_factor') or 0, reverse=True)[:100]
-    by_hs = sorted(items, key=lambda x: x.get('hot_score') or 0, reverse=True)[:100]
-    by_vw = sorted(items, key=lambda x: x.get('views') or 0, reverse=True)[:100]
+    by_xf = sorted(items, key=lambda x: x.get('x_factor') or 0, reverse=True)[:300]
+    by_hs = sorted(items, key=lambda x: x.get('hot_score') or 0, reverse=True)[:300]
+    by_vw = sorted(items, key=lambda x: x.get('views') or 0, reverse=True)[:300]
     
     seen_ids = set()
     targets = []
@@ -66,7 +66,7 @@ async def main():
             targets.append(it)
             
     print(f'Total target reels to cache: {len(targets)}')
-    sem = asyncio.Semaphore(10)
+    sem = asyncio.Semaphore(15)
     
     async with httpx.AsyncClient(timeout=12, follow_redirects=True) as client:
         tasks = [fetch_thumb(client, sem, item) for item in targets]
