@@ -4,11 +4,14 @@ Scraper — собирает тренды с piratex.ai.
 """
 
 import asyncio
-import httpx
+import io
 import json
 import os
 import random
+import re
 from datetime import datetime, timezone
+import httpx
+from PIL import Image
 
 BASE_URL = "https://piratex.ai"
 
@@ -152,6 +155,51 @@ def prune_old(items: dict) -> dict:
     return kept
 
 
+def cache_thumbnail(item: dict) -> str:
+    """
+    Скачивает свежую обложку рилса, пережимает в WebP 360px и сохраняет в thumbs/<shortcode>.webp.
+    Возвращает путь thumbs/<shortcode>.webp при успехе.
+    """
+    url = item.get("url", "")
+    parts = [p for p in url.split("/") if p]
+    if not parts:
+        return item.get("thumbnail_url", "")
+    shortcode = parts[-1]
+    webp_path = os.path.join("thumbs", f"{shortcode}.webp")
+    if os.path.exists(webp_path):
+        return f"thumbs/{shortcode}.webp"
+
+    thumb_url = item.get("thumbnail_url")
+    if not thumb_url or thumb_url.startswith("thumbs/"):
+        return thumb_url or ""
+
+    try:
+        r = httpx.get(thumb_url, headers={"User-Agent": "Mozilla/5.0"}, timeout=10)
+        if r.status_code != 200:
+            ua_bot = "facebookexternalhit/1.1 (+http://www.facebook.com/externalhit_uatext.php)"
+            br = httpx.get(url, headers={"User-Agent": ua_bot}, follow_redirects=True, timeout=10)
+            m = re.search(r'<meta[^>]+property=["\']og:image["\'][^>]+content=["\']([^"\']+)["\']', br.text)
+            if not m:
+                m = re.search(r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+property=["\']og:image["\']', br.text)
+            if m:
+                fresh_img_url = m.group(1).replace("&amp;", "&")
+                r = httpx.get(fresh_img_url, headers={"User-Agent": "Mozilla/5.0"}, timeout=10)
+
+        if r.status_code == 200:
+            os.makedirs("thumbs", exist_ok=True)
+            img = Image.open(io.BytesIO(r.content)).convert("RGB")
+            w, h = img.size
+            new_w = 360
+            new_h = int(h * (360 / w))
+            img_resized = img.resize((new_w, new_h), Image.Resampling.LANCZOS)
+            img_resized.save(webp_path, format="WEBP", quality=75, method=4)
+            return f"thumbs/{shortcode}.webp"
+    except Exception as e:
+        print(f"  Warning: could not cache thumb for {shortcode}: {e}")
+
+    return thumb_url
+
+
 def save(items: dict, prev_ids: set):
     now = datetime.now(timezone.utc)
     sorted_items = sorted(
@@ -177,7 +225,7 @@ def save(items: dict, prev_ids: set):
     cur_version = 0
     if os.path.exists(OUTPUT_FILE):
         try:
-            with open(OUTPUT_FILE) as f:
+            with open(OUTPUT_FILE, encoding="utf-8") as f:
                 cur_version = json.load(f).get("version", 0)
         except Exception:
             pass
@@ -192,7 +240,7 @@ def save(items: dict, prev_ids: set):
     }
 
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
-        json.dump(output, f, ensure_ascii=False, indent=2)
+        json.dump(output, f, ensure_ascii=False, separators=(",", ":"))
 
     size_mb = os.path.getsize(OUTPUT_FILE) / 1024 / 1024
     print(f"✓ Saved {len(sorted_items)} items ({len(new_ids)} new) → {OUTPUT_FILE} ({size_mb:.1f} MB)")
@@ -205,6 +253,11 @@ async def main():
     prev_ids = set(existing.keys())
     print(f"  Existing: {len(existing)} items")
     fresh = await scrape()
+    print(f"  Caching thumbnails for {len(fresh)} fresh items...")
+    for item in fresh.values():
+        cached = cache_thumbnail(item)
+        if cached:
+            item["thumbnail_url"] = cached
     merged = {**existing, **fresh}
     merged = prune_old(merged)
     print(f"  Merged: {len(merged)} items")

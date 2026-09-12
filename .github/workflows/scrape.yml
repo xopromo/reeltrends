@@ -15,7 +15,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - run: pip install httpx
+      - run: pip install httpx pillow
       - run: python scraper.py
       - name: Update version
         run: |
@@ -24,7 +24,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add trends.json version.json
+          git add trends.json version.json thumbs/
           git diff --staged --quiet || git commit -m "instagram $(date -u +'%H:%M UTC')"
           git pull --rebase origin main
           git push

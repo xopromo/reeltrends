@@ -687,6 +687,9 @@ function thumbUrl(item) {
   if (!u) return null;
   const plt = item.author?.platform||item.platform||'';
   if (plt==='youtube'||plt==='vk') return u;
+  if (u.startsWith('thumbs/') || u.startsWith('./thumbs/')) {
+    return isLocal ? u : getUrl(u);
+  }
   return 'https://images.weserv.nl/?url='+encodeURIComponent(u)+'&w=400&output=jpg';
 }
 
@@ -695,7 +698,12 @@ function thumbFallbacks(item) {
   const u = item.thumbnail_url||'';
   if (!u) return [];
   const platform = item.author?.platform||item.platform||'';
-  if (platform === 'youtube') return [u];
+  if (platform === 'youtube' || platform === 'vk') return [u];
+  if (u.startsWith('thumbs/') || u.startsWith('./thumbs/')) {
+    const direct = isLocal ? u : getUrl(u);
+    const raw = `https://raw.githubusercontent.com/${REPO}/main/${u}`;
+    return [direct, raw];
+  }
   // Пробуем: weserv → прямой CDN URL → заглушка
   return [
     'https://images.weserv.nl/?url='+encodeURIComponent(u)+'&w=400&output=jpg',
