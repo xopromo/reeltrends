@@ -197,7 +197,7 @@ def cache_thumbnail(item: dict) -> str:
     except Exception as e:
         print(f"  Warning: could not cache thumb for {shortcode}: {e}")
 
-    return thumb_url
+    return ""
 
 
 def save(items: dict, prev_ids: set):
@@ -233,9 +233,9 @@ def save(items: dict, prev_ids: set):
     output = {
         "updated_at": now.isoformat(),
         "total": len(sorted_items),
-        "new_count": len(new_ids),           # новых с прошлого запуска
-        "new_last_24h": len(new_last_24h),   # новых за 24 часа
-        "version": cur_version + 1,          # растёт при каждом обновлении
+        "new_count": len(new_ids),
+        "new_last_24h": len(new_last_24h),
+        "version": cur_version + 1,
         "items": sorted_items,
     }
 
@@ -253,12 +253,16 @@ async def main():
     prev_ids = set(existing.keys())
     print(f"  Existing: {len(existing)} items")
     fresh = await scrape()
-    print(f"  Caching thumbnails for {len(fresh)} fresh items...")
-    for item in fresh.values():
+    print(f"  Caching thumbnails and validating {len(fresh)} fresh items...")
+    valid_fresh = {}
+    for vid, item in fresh.items():
         cached = cache_thumbnail(item)
         if cached:
             item["thumbnail_url"] = cached
-    merged = {**existing, **fresh}
+            valid_fresh[vid] = item
+        else:
+            print(f"  Dropping dead/unavailable reel: {item.get('url')}")
+    merged = {**existing, **valid_fresh}
     merged = prune_old(merged)
     print(f"  Merged: {len(merged)} items")
     save(merged, prev_ids)
